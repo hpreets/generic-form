@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_EDF_Board_Member__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This checkbox is checked by an After Save Flow when an Affiliation is created or updated where Status = Current
+Org Account = EDF Board of Trustees
+EDAF Board
+Environmental Defense Fund Europe Board</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This checkbox is checked by an After Save Flow. When an affiliation is created or updated where the Organization is = EDF Board or Committee and Status = Current, the corresponding Contact is updated.</inlineHelpText>
+    <label>Active EDF Board Member</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

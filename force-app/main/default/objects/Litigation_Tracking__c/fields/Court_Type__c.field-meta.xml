@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Court_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Court Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>International Tribunal</fullName>
+                <default>false</default>
+                <label>International Tribunal</label>
+            </value>
+            <value>
+                <fullName>State Appellate Court</fullName>
+                <default>false</default>
+                <label>State Appellate Court</label>
+            </value>
+            <value>
+                <fullName>State District Court</fullName>
+                <default>false</default>
+                <label>State District Court</label>
+            </value>
+            <value>
+                <fullName>State Supreme Court</fullName>
+                <default>false</default>
+                <label>State Supreme Court</label>
+            </value>
+            <value>
+                <fullName>US Court of Appeals</fullName>
+                <default>false</default>
+                <label>US Court of Appeals</label>
+            </value>
+            <value>
+                <fullName>US District Court</fullName>
+                <default>false</default>
+                <label>US District Court</label>
+            </value>
+            <value>
+                <fullName>US Supreme Court</fullName>
+                <default>false</default>
+                <label>US Supreme Court</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

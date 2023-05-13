@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Donor_Qualification_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Donor Qualification Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Research qualification pending</fullName>
+                <default>false</default>
+                <label>Research qualification pending</label>
+            </value>
+            <value>
+                <fullName>Research recommends -  need intro</fullName>
+                <default>false</default>
+                <label>Research recommends -  need intro</label>
+            </value>
+            <value>
+                <fullName>Research recommends CC portfolio</fullName>
+                <default>false</default>
+                <label>Research recommends CC portfolio</label>
+            </value>
+            <value>
+                <fullName>Research Recommends MG Portfolio</fullName>
+                <default>false</default>
+                <label>Research Recommends MG Portfolio</label>
+            </value>
+            <value>
+                <fullName>Research Recommends IG Portfolio</fullName>
+                <default>false</default>
+                <label>Research Recommends IG Portfolio</label>
+            </value>
+            <value>
+                <fullName>Research recommends Membership LT</fullName>
+                <default>false</default>
+                <label>Research recommends Membership LT</label>
+            </value>
+            <value>
+                <fullName>Research disqualified</fullName>
+                <default>false</default>
+                <label>Research disqualified</label>
+            </value>
+            <value>
+                <fullName>Gift officer qualification pending</fullName>
+                <default>false</default>
+                <label>Gift officer qualification pending</label>
+            </value>
+            <value>
+                <fullName>Gift officer qualified</fullName>
+                <default>false</default>
+                <label>Gift officer qualified</label>
+            </value>
+            <value>
+                <fullName>Gift officer recommends new portfolio</fullName>
+                <default>false</default>
+                <label>Gift officer recommends new portfolio</label>
+            </value>
+            <value>
+                <fullName>Gift officer recommends Membership LT</fullName>
+                <default>false</default>
+                <label>Gift officer recommends Membership LT</label>
+            </value>
+            <value>
+                <fullName>Gift officer disqualified</fullName>
+                <default>false</default>
+                <label>Gift officer disqualified</label>
+            </value>
+            <value>
+                <fullName>Gift Officer recommends cc portfolio</fullName>
+                <default>false</default>
+                <label>Gift Officer recommends cc portfolio</label>
+            </value>
+            <value>
+                <fullName>Catalyst Circle disqualified</fullName>
+                <default>false</default>
+                <label>Catalyst Circle disqualified</label>
+            </value>
+            <value>
+                <fullName>Associated Organization</fullName>
+                <default>false</default>
+                <label>Associated Organization</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

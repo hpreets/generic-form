@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Listing__c</fullName>
+    <description>Heller created 2021</description>
+    <externalId>false</externalId>
+    <label>Listing Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Annual Report - Prospect Listing</fullName>
+                <default>false</default>
+                <label>Annual Report - Prospect Listing</label>
+            </value>
+            <value>
+                <fullName>Annual Report - Advisory Board</fullName>
+                <default>false</default>
+                <label>Annual Report - Advisory Board</label>
+            </value>
+            <value>
+                <fullName>Annual Report-Bequest</fullName>
+                <default>false</default>
+                <label>Annual Report-Bequest</label>
+            </value>
+            <value>
+                <fullName>Annual Report - C4 Board</fullName>
+                <default>false</default>
+                <label>Annual Report - C4 Board</label>
+            </value>
+            <value>
+                <fullName>Annual Report - Honorary Trustees</fullName>
+                <default>false</default>
+                <label>Annual Report - Honorary Trustees</label>
+            </value>
+            <value>
+                <fullName>Annual Report-NC Advisory Board</fullName>
+                <default>false</default>
+                <label>Annual Report-NC Advisory Board</label>
+            </value>
+            <value>
+                <fullName>Annual Report-National Council</fullName>
+                <default>false</default>
+                <label>Annual Report-National Council</label>
+            </value>
+            <value>
+                <fullName>Annual Report-Osprey</fullName>
+                <default>false</default>
+                <label>Annual Report-Osprey</label>
+            </value>
+            <value>
+                <fullName>Annual Report-Trustee</fullName>
+                <default>false</default>
+                <label>Annual Report-Trustee</label>
+            </value>
+            <value>
+                <fullName>Annual Report-TX Advisory Board</fullName>
+                <default>false</default>
+                <label>Annual Report-TX Advisory Board</label>
+            </value>
+            <value>
+                <fullName>MethaneSAT - Donor Recognition Name</fullName>
+                <default>false</default>
+                <label>MethaneSAT - Donor Recognition Name</label>
+            </value>
+            <value>
+                <fullName>Annual Report - Bequest</fullName>
+                <default>false</default>
+                <label>Annual Report - Bequest</label>
+            </value>
+            <value>
+                <fullName>Annual Report - Osprey</fullName>
+                <default>false</default>
+                <label>Annual Report - Osprey</label>
+            </value>
+            <value>
+                <fullName>Annual Report - China Board</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Annual Report - China Board</label>
+            </value>
+            <value>
+                <fullName>Annual Report - EDF Ltd Board</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Annual Report - EDF Ltd Board</label>
+            </value>
+            <value>
+                <fullName>Annual Report - Economics Advisory Board</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Annual Report - Economics Advisory Board</label>
+            </value>
+            <value>
+                <fullName>Annual Report - NC Advisory Board</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Annual Report - NC Advisory Board</label>
+            </value>
+            <value>
+                <fullName>Annual Report - National Council</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Annual Report - National Council</label>
+            </value>
+            <value>
+                <fullName>Annual Report - Prospect Listing Entry</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Annual Report - Prospect Listing Entry</label>
+            </value>
+            <value>
+                <fullName>Annual Report - TX Advisory Board</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Annual Report - TX Advisory Board</label>
+            </value>
+            <value>
+                <fullName>Annual Report - Trustee</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Annual Report - Trustee</label>
+            </value>
+            <value>
+                <fullName>National Council Advisory Trustees</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>National Council Advisory Trustees</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

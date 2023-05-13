@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initial_PG_Sub_Constituent_Date__c</fullName>
+    <description>Date PG sub constituency was added to the record</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Date PG sub constituency was added to the record</inlineHelpText>
+    <label>Initial PG Sub Constituent Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

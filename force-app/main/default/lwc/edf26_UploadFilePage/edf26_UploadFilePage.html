@@ -1,0 +1,166 @@
+<template>
+  <template if:true={isModalOpen}>
+    <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_large"
+      aria-labelledby="modal-heading-01" aria-modal="true" style="min-height:25rem">
+      <div class="slds-modal__container" style="max-width: 70rem">
+       <!-- <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+          <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+          </svg>
+          <span class="slds-assistive-text">Cancel and close</span>
+        </button> -->
+        <header class="slds-modal__header slds-p-around_small">
+          <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+              <lightning-icon icon-name="utility:close"
+                  alternative-text="close"
+                  variant="inverse"
+                  size="small" ></lightning-icon>
+              <span class="slds-assistive-text">Close</span>
+          </button>
+      </header>
+
+        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" style="min-height: 30rem; max-height: 30rem">
+          <lightning-tabset variant="vertical" active-tab-value ="application"> 
+            <lightning-tab label="Application" value="application" class="custom-tab" onactive={handleActive}>
+              <div class="slds-align_absolute-left">
+                <h4>Manage Your Application Uploads</h4>
+              </div>
+              <lightning-tabset active-tab-value="applicationNewFiles">
+                <lightning-tab label="Uploaded Files" value="applicationExistingFiles" onactive={handleActive}>
+                  <template class="slds-scrollable_y" for:each={lstApplicationFiles} for:item="fileItem">
+                    <div key={fileItem.fileId}>
+                      <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_1-of-12">
+                          <div>
+                            <lightning-icon icon-name={fileItem.type} alternative-text="Utility image" title="Image"></lightning-icon>
+                          </div>
+                        </div>
+                        <div class="slds-col slds-size_8-of-12">
+                          <span class="slds-text-heading_small slds-m-right_large">{fileItem.fileName}</span>
+                          <lightning-badge label={fileItem.category}></lightning-badge>
+                          </br>
+                          <span class="slds-text-title">{fileItem.timeLapse}</span> <span class="slds-text-title"></span>
+                          &nbsp;&nbsp;&nbsp; -
+                          <span class="slds-text-title">{fileItem.lastModifiedDt}</span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12">
+                          <p></p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12">
+                          <lightning-badge label={fileItem.contentSize} class="custom-badge"></lightning-badge>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12">
+                            <lightning-button-menu icon-name="utility:threedots_vertical" alternative-text="Show menu" onselect={handleOnselect}>
+                                <lightning-menu-item value="Rename" label="Rename"></lightning-menu-item>
+                                <lightning-menu-item value={fileItem.deleteLabel}  label="Delete"></lightning-menu-item>
+                            </lightning-button-menu>
+                        </div>
+                      </div>
+                    </div>
+                  </template>
+                  <div class="slds-m-top_large slds-p-top_large"></div>
+                </lightning-tab>
+                <lightning-tab label="New Files" value="applicationNewFiles" onactive={handleActive}>
+                  <template if:true={applicationPicklistValues.data}>
+                    <lightning-combobox name="uploadTypeA" label="Select Upload Type" value={value}
+                      options={applicationPicklistValues.data.values} onchange={handleChange}>
+                    </lightning-combobox>
+                    <lightning-file-upload label="Attach receipt" name="fileUploader" accept={acceptedFormats}
+                      record-id={myRecordId} onuploadfinished={handleUploadFinished} multiple>
+                    </lightning-file-upload>
+                  </template>
+                </lightning-tab>
+              </lightning-tabset>
+            </lightning-tab>
+            <lightning-tab label="Fellowship" value="fellowShip"  class="custom-tab" onactive={handleActive}>
+              <div class="slds-align_absolute-left">
+                <h4>Manage Your Fellowship Uploads</h4>
+              </div>
+              <lightning-tabset active-tab-value="engagementNewFiles">
+                <lightning-tab label="Uploaded Files" value="engagementExistingFiles" onactive={handleActive}>
+                    <template class="slds-scrollable_y" for:each={lstEngagementFiles} for:item="fileItem">
+                      <div key={fileItem.fileId}>
+                        <div class="slds-grid slds-gutters">
+                          <div class="slds-col slds-size_1-of-12">
+                            <div>
+                              <lightning-icon icon-name={fileItem.type} alternative-text="Utility image" title="Image"></lightning-icon>
+                            </div>
+                          </div>
+                          <div class="slds-col slds-size_8-of-12">
+                            <span class="slds-text-heading_small slds-m-right_large">{fileItem.fileName}</span>
+                            <lightning-badge label={fileItem.category}></lightning-badge>
+                            </br>
+                            <span class="slds-text-title">{fileItem.timeLapse}</span> <span class="slds-text-title"></span>
+                            &nbsp;&nbsp;&nbsp; -
+                            <span class="slds-text-title">{fileItem.lastModifiedDt}</span>
+                          </div>
+                          <div class="slds-col slds-size_1-of-12">
+                            <p></p>
+                          </div>
+                          <div class="slds-col slds-size_1-of-12">
+                            <lightning-badge label={fileItem.contentSize} class="custom-badge"></lightning-badge>
+                          </div>
+                          <div class="slds-col slds-size_1-of-12">
+                              <lightning-button-menu icon-name="utility:threedots_vertical" class="identifierclass" alternative-text="Show menu" data-field={fileItem.fileId} onselect={handleOnselect}>
+                                  <lightning-menu-item value="Rename" label="Rename"  data-field={fileItem.fileId}></lightning-menu-item>
+                                  <lightning-menu-item value={fileItem.deleteLabel} label="Delete"  data-field={fileItem.fileId}></lightning-menu-item>
+                              </lightning-button-menu>
+                          </div>
+                        </div>
+                      </div>
+                    </template>
+                    <div class="slds-m-top_large slds-p-top_large"></div>
+                  <!--<template class="slds-scrollable_y" for:each={lstEngagementFiles} for:item="fileItem">
+                    <div key={fileItem.fileId}>
+                      <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_1-of-12">
+                          <div>
+                            <lightning-icon icon-name={fileItem.type} alternative-text="Utility image" title="Image"></lightning-icon>
+                          </div>
+                        </div>
+                        <div class="slds-col slds-size_8-of-12">
+                          <span class="slds-text-heading_small slds-m-right_large">{fileItem.fileName}</span>
+                          <lightning-badge label={fileItem.category}></lightning-badge>
+                          </br>
+                          <span class="slds-text-title">{fileItem.timeLapse}</span> <span class="slds-text-title"></span>
+                          &nbsp;&nbsp;&nbsp; -
+                          <span class="slds-text-title">{fileItem.lastModifiedDt}</span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12">
+                          <p></p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12">
+                          <lightning-badge label={fileItem.contentSize} class="custom-badge"></lightning-badge>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12">
+                            <lightning-button-menu icon-name="utility:threedots_vertical" alternative-text="Show menu" onselect={handleOnselect}>
+                                <lightning-menu-item value="Rename" label="Rename"></lightning-menu-item>
+                                <lightning-menu-item value="Delete" label="Delete"></lightning-menu-item>
+                            </lightning-button-menu>
+                        </div>
+                      </div>
+                    </div>
+                  </template>-->
+                </lightning-tab>
+                <lightning-tab label="New Files" value="engagementNewFiles" onactive={handleActive}>
+                  <template if:true={engagementPicklistValues.data}>
+                    <lightning-combobox name="uploadTypeE" label="Select Upload Type" value={value}
+                      options={engagementPicklistValues.data.values} onchange={handleChange}>
+                    </lightning-combobox>
+                    <lightning-file-upload label="Attach receipt" name="fileUploader" accept={acceptedFormats}
+                      record-id={myRecordId} onuploadfinished={handleUploadFinished} multiple>
+                    </lightning-file-upload>
+                  </template>
+                </lightning-tab>
+              </lightning-tabset>
+            </lightning-tab>
+          </lightning-tabset>
+        </div>
+        <!-- Modal/Popup Box LWC footer starts here -->
+      <footer class="slds-modal__footer">
+      </footer>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+  </template>
+</template>

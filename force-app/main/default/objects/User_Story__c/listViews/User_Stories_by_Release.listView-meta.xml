@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Stories_by_Release</fullName>
+    <columns>NAME</columns>
+    <columns>User_Story_Description__c</columns>
+    <columns>User_Story_Title__c</columns>
+    <columns>Epic__c</columns>
+    <columns>Theme__c</columns>
+    <columns>Status__c</columns>
+    <columns>Iteration__c</columns>
+    <columns>Release__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed,Cancelled</value>
+    </filters>
+    <filters>
+        <field>Release__c</field>
+        <operation>equals</operation>
+        <value>Release 2,Release 4</value>
+    </filters>
+    <label>User Stories by Release</label>
+</ListView>

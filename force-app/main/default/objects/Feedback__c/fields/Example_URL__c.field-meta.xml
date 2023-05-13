@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Example_URL__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Copy the URL from your browser&apos;s address bar and paste it into this field. *This is required for all Migration feedback.</inlineHelpText>
+    <label>Example URL</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

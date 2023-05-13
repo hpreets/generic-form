@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Assigned_Feedbacks</fullName>
+    <booleanFilter>(1 AND 2) OR (1 AND 5 AND 6) OR (3 AND 4)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Feedback_Status__c</columns>
+    <columns>Priority__c</columns>
+    <columns>QC_Assigned_To__c</columns>
+    <columns>Feedback_Type__c</columns>
+    <columns>Feedback_Title__c</columns>
+    <columns>User_Story__c</columns>
+    <columns>Deployment_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Assigned_To__c</field>
+        <operation>startsWith</operation>
+        <value>bre</value>
+    </filters>
+    <filters>
+        <field>Feedback_Status__c</field>
+        <operation>equals</operation>
+        <value>New,Open,In Process,Further Discussion Required,Resolution Documented,To Be Resolved at Launch</value>
+    </filters>
+    <filters>
+        <field>QC_Assigned_To__c</field>
+        <operation>startsWith</operation>
+        <value>bre</value>
+    </filters>
+    <filters>
+        <field>Feedback_Status__c</field>
+        <operation>equals</operation>
+        <value>Completed</value>
+    </filters>
+    <filters>
+        <field>Feedback_Status__c</field>
+        <operation>equals</operation>
+        <value>Completed,QC Passed</value>
+    </filters>
+    <filters>
+        <field>Deployment_Status__c</field>
+        <operation>equals</operation>
+        <value>Not Started,Added to Change Set</value>
+    </filters>
+    <label>Bre&apos;s Assigned Feedbacks</label>
+</ListView>

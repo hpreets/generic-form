@@ -1,0 +1,366 @@
+<!--
+  @description       :
+  @author            : Sai Teja
+  @last modified on  : 07-11-2022
+  @last modified by  : Sai Teja
+-->
+<template>
+    <template if:false={isChild}>
+        <c-e-d-f13_-header></c-e-d-f13_-header>
+        <c-e-d-f28_-dashboard-menu></c-e-d-f28_-dashboard-menu>
+    </template>
+
+    <!-- body tag div -->
+    <div class={backgroundImageClass}>
+        <div class="bg-welcome">
+            <div class="registration-application-section">
+                <div class="registration-application-section-inner">
+                    <div class="registration-application-section-sub">
+                        <h3>Contact Information</h3>
+                        <div class="registration-application-form-wrap">
+                            <form action="" method="post">
+                                <!-- <div class="row">
+                                    <div class="col-12 form-group">
+                                        <lightning-combobox
+                                            label="Which Fellowship are you applying to?"
+                                            options={fellowshipApplyingForPickList.data}
+                                            value={fellowshipApplyingFor}
+                                            class="fellow-ship-apply-for"
+                                        ></lightning-combobox>-->
+                                        <!--<label>Which Fellowship are you applying to?</label>
+                                        <template if:true={fellowshipApplyingForPickList.data}>
+                                        <lightning-combobox label="Which Fellowship are you applying to?" value={fellowshipApplyingFor} class="fellow-ship-apply-for"  onchange={fellowshipApplyChangeHandler} options={fellowshipApplyingForPickList.data.values}></lightning-combobox>
+                                        </template>
+                                    </div>
+                                </div> -->
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+
+                                        <lightning-input type="text" label="First Name" class="firstname" placeholder="" value={firstName} onchange={firstNameChangeHandler} required={firsNameRequired} read-only={readOnly}></lightning-input>
+                                        <span class="error-field-note" hidden>First name is necessary</span>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+
+                                        <lightning-input type="text" label="Last Name" class="lastname" placeholder="" value={lastName} onchange={lastNameChangeHandler} required={lastNameRequired} read-only={readOnly}></lightning-input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+
+                                        <lightning-input type="email" label="Email address" class="email" placeholder="" value={email} onchange={emailChangeHandler} required={emailRequired} readonly></lightning-input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <template if:true={fellowshipApplyingForPickList.data}>
+                                          <lightning-combobox label="Which Fellowship are you applying to?" value={fellowshipApplyingFor} class="fellow-ship-apply-for"  onchange={fellowshipApplyChangeHandler} options={fellowshipApplyingForPickList.data.values} required={fellowshipRequired} read-only={readOnly}></lightning-combobox>
+                                        </template>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group phone-field">
+
+                                        <span class="registration-application-field-note phone-field-note">This information
+                                            will help us address you by the correct pronouns</span>
+                                            <template if:true={pronounsPickList.data}>
+                                          <lightning-combobox label="Pronouns" value={pronouns} class="pronouns" options={pronounsPickList.data.values} onchange={pronounsChangeHandler} required={pronounsRequired} read-only={readOnly}>
+                                         </lightning-combobox>
+                                        </template>
+                                    </div>
+                                </div>
+                                <template if:true={isPronounsSelfDescribe}>
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+
+                                            <lightning-input type="text" label="Pronouns Self Describe" class="pronounsselfdescribe" placeholder="" value={pronounsSelfDescribe} onchange={pronounsSelfDescribeChangeHandler} read-only={readOnly}></lightning-input>
+                                        </div>
+                                    </div>
+                                </template>
+                                <div class="row">
+                                    <div class="col-12 form-group phone-field">
+
+                                        <span class="registration-application-field-note phone-field-note">Include country
+                                            code if outside U.S</span>
+                                        <lightning-input type="text" label="Phone" class="phone" placeholder="" value={phone} onchange={phoneChangeHandler} required={phoneRequired} read-only={readOnly}></lightning-input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                         <lightning-combobox
+                                            name="country"
+                                            label="Country"
+                                            value={country}
+                                            placeholder="-- None --"
+                                            options={countryPickListValues}
+                                            onchange={countryChangeHandler} required={countryRequired} read-only={readOnly}></lightning-combobox>
+
+
+                                       <!--<label>Country</label>
+                                        <lightning-combobox label="Country" class="country" onchange={countryChangeHandler} required={countryRequired}>
+                                            <option>-None-</option>
+                                            <template for:each={countryPickListValues} for:item="item">
+                                                <option key={item} value={item}>{item}</option>
+                                            </template>
+                                        </lightning-combobox>-->
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+
+                                        <lightning-input type="text" label="Postal Code" class="postalcode" placeholder="" value={postalCode} onchange={postalCodeChangeHandler} required={postalCodeRequired} read-only={readOnly}></lightning-input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                        <template if:true = {isDropDownField}>
+                                        <lightning-combobox
+                                        name="state"
+                                        label="State"
+                                        value={state}
+                                        placeholder="-- None --"
+                                        options={statePickListValues}
+                                        onchange={stateChangeHandler} required={stateRequired} read-only={readOnly}></lightning-combobox>
+                                        </template>
+                                        <template if:false = {isDropDownField}>
+                                            <lightning-input type="text" value={state} label="State" onchange={stateChangeHandler} required={stateRequired} read-only={readOnly}></lightning-input>
+                                    </template>
+                                        <!--<label>-</label>
+                                        <lightning-combobox class="state" onchange={stateChangeHandler} required={stateRequired}>
+                                            <option>-None-</option>
+                                            <template for:each={statePickListValues} for:item="item">
+                                                <option key={item.value} value={item.value}>{item.value}</option>
+                                                <option key={item} value={item}>{item}</option>
+                                            </template>
+                                        </lightning-combobox>-->
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+
+                                        <lightning-input type="text" label="City" class="city" placeholder="" value={city} onchange={cityChangeHandler} required={cityRequired} read-only={readOnly}></lightning-input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+
+                                        <lightning-input type="text" label="Permanent Street Address Line 1" class="address1" placeholder="" value={permanentStreetAddressLine1} onchange={permanentStreetAddressLine1ChangeHandler} required={address1Required} read-only={readOnly}></lightning-input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+
+                                        <lightning-input type="text" label="Permanent Street Address Line 2" class="address2" placeholder="" value={permanentStreetAddressLine2} onchange={permanentStreetAddressLine2ChangeHandler} read-only={readOnly}></lightning-input>
+                                    </div>
+                                </div>
+                                <template if:true={isChinaFellowShip}>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <lightning-input type="text" label="Skype ID" name="skypeid" class="skypeid" placeholder="" value={skypeID} onchange={skypeIDChangeHandler} required={skypeIdRequired} read-only={readOnly}></lightning-input>
+                                    </div>
+                                </div>
+                                </template>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <template if:true={howDidYouFindUsPickList.data}>
+                                        <lightning-combobox class="how-did-you-find-us" value={howDidYouFindUs} label="How did you find out about Climate Corps?" options={howDidYouFindUsPickList.data.values} onchange={howDidYouFindUsChangeHandler} required={howDidYouFindCCRequired} read-only={readOnly}>
+                                        </lightning-combobox>
+                                    </template>
+                                    </div>
+                                </div>
+                                <template if:true={isOtherHowDidYouFindUs}>
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <label>If other, please describe</label>
+                                            <textarea name="otherreason" class="form-control" rows="5" onchange={howDidYouFindUsIfOtherChangeHandler}>{howDidYouFindUsIfOther}</textarea>
+                                        </div>
+                                    </div>
+                                </template>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <template if:true={returnerFellowPickList.data}>
+                                        <lightning-combobox class="returner-fellow" value={returnerFellow} label="Have you participated in the Climate Corps program in the past?" options={returnerFellowPickList.data.values} onchange={returnerFellowChangeHandler} required={haveYouParticipatedRequired} read-only={readOnly}>
+                                         </lightning-combobox>
+                                         </template>
+                                    </div>
+                                </div>
+
+                                <div class="form-repeat-section">
+                                    <h3>Identity Information</h3>
+                                    <template if:false={isChinaFellowShip}>
+                                        <div class="row note-info-wrap">
+                                            <div class="col-12 form-group note-info">
+                                                <div class="note-info-inner clearfix">
+                                                    <!--<span class="note-info-icon"></span> -->
+                                                    <span class="note-info-content">
+                                                        Climate Corps is committed to creating a diverse environment and is proud to be an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, gender, gender identity or expression, sexual orientation, national origin, genetics, disability, age, or veteran status. Please note that this section of the application is voluntary and your responses will be fully confidential. Providing us information about your identity will allow us to track the effectiveness of our recruiting and DEI efforts and ensure that the needs of all fellows are taken into consideration.
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <!--<label class="label-info-tool-tip-icon">Gender Identity
+                                            </label>-->
+                                            <template if:true={genderPickList.data}>
+                                            <lightning-combobox label ="Gender Identity" name="gender" class="gender" value={gender} options={genderPickList.data.values} onchange={genderChangeHandler} read-only={readOnly}>
+                                            </lightning-combobox>
+                                        </template>
+                                        </div>
+                                    </div>
+                                    <template if:true={isGenderSelfDescribe}>
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <label class="label-info-tool-tip-icon">Gender, Self Describe
+                                            </label>
+                                            <lightning-input name="genderdescribe" type="text" class="genderSelf" placeholder="" value={genderSelfDescribe} onchange={genderSelfDescribeChangeHandler} read-only={readOnly}></lightning-input>
+                                        </div>
+                                    </div>
+                                </template>
+                                <template if:false={isChinaFellowShip}>
+                                    <div class="row" style="margin-bottom: -30px">
+                                        <div class="col-12 form-group">
+                                            <span>Race/Ethnicity</span> &nbsp;
+                                            <a style="cursor: pointer; color: #00985F;" onclick={showRaceDefinition}>Click here for definitions</a>
+                                            <template if:true={showRaceDefinitionModel}>
+                                                <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="modal-heading-01" aria-modal="true">
+                                                <div class="slds-modal__container">
+                                                    <!-- <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+                                                        <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                                        </svg>
+                                                        <span class="slds-assistive-text">Cancel and close</span>
+                                                    </button> -->
+                                                    <div class="slds-modal__header">
+                                                        <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Race/Ethnicity</h1>
+                                                    </div>
+                                                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                                        <ul>
+                                                            <li><b>American Indian or Alaska Native</b>-A person having origins in any of the original peoples of North and South America (including Central America), and who maintain tribal affiliation or community attachment.</li>
+                                                            <li><b>Asian</b>-A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian Subcontinent, including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam.</li>
+                                                            <li><b>Black or African American</b>-A person having origins in any of the black racial groups of Africa.</li>
+                                                            <li><b>Pacific Islander</b>-A person having origins in any of the peoples of Hawaii, Guam, Samoa, or other Pacific Islands.</li>
+                                                            <li><b>White</b>-A person having origins in any of the original peoples of Europe, the Middle East, or North Africa.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="slds-modal__footer">
+                                                        <button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={hideRaceDefinition}>Close</button>
+                                                    </div>
+                                                </div>
+                                                </section>
+                                                <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+                                            </template>
+                                        </div>
+                                    </div>
+                                    <div class="row custom-lightning-combobox-arrow-wrap">
+                                        <div class="col-12 form-group">
+                                            <lightning-dual-listbox name="race"
+
+                                                                        source-label="Available"
+                                                                        selected-label="Chosen"
+                                                                        value={lstRaceSelected}
+                                                                        options={lstRaceOptions}
+                                                                        onchange={raceChangeHandler} disabled={readOnly}>
+                                            </lightning-dual-listbox>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <!--<label>Do you identify as Latinx or Hispanic?</label>-->
+                                            <template if:true={latinxOrHispanicPickList.data}>
+                                            <lightning-combobox value={latinxOrHispanic} label="Do you identify as Latinx or Hispanic?" name="latinx-or-hispanic" options={latinxOrHispanicPickList.data.values} class="latinx-or-hispanic" onchange={latinxOrHispanicChangeHandler} read-only={readOnly}>
+                                            </lightning-combobox>
+                                        </template>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <!--<label>Veteran Status</label>-->
+                                            <template if:true={veteranStatusPickList.data}>
+                                            <lightning-combobox value={veteranStatus} label="Veteran Status" name="veteran-status" options={veteranStatusPickList.data.values} class="veteran-status" onchange={veteranStatusChangeHandler} read-only={readOnly}>
+                                             </lightning-combobox>
+                                            </template>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top: -21px;">
+                                        <div class="col-12 form-group">
+                                            <a style="cursor: pointer; color: #00985F;" onclick={showVeteranStatusDefinition}>Click here for definitions</a>
+                                            <template if:true={showVeteranStatusDefinitionModel}>
+                                                <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="modal-heading-02" aria-modal="true">
+                                                <div class="slds-modal__container">
+                                                    <div class="slds-modal__header">
+                                                        <h1 id="modal-heading-02" class="slds-modal__title slds-hyphenate">Classifications of Protected Veterans</h1>
+                                                    </div>
+                                                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                                                        <ul>
+                                                            <li class="slds-p-bottom_medium">
+                                                                &#9679; A "disabled veteran" is one of the following:
+                                                                <ul>
+                                                                    <li class="slds-p-bottom_medium slds-p-top_medium" style="margin-left: 50px;">&#x25CB; a veteran of the U.S. military, ground, naval or air service who is entitled to compensation (or who but for the receipt of military retired pay would be entitled to compensation) under laws administered by the Secretary of Veterans Affairs; or</li>
+                                                                    <li class="slds-p-bottom_medium" style="margin-left: 50px;">&#x25CB; a person who was discharged or released from active duty because of a service-connected disability.</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="slds-p-bottom_medium">&#9679; A "recently separated veteran" means any veteran during the three-year period beginning on the date of such veteran's discharge or release from active duty in the U.S. military, ground, naval, or air service.</li>
+                                                            <li class="slds-p-bottom_medium">&#9679; An “active duty wartime or campaign badge veteran” means a veteran who served on active duty in the U.S. military, ground, naval or air service during a war, or in a campaign or expedition for which a campaign badge has been authorized under the laws administered by the Department of Defense.</li>
+                                                            <li class="slds-p-bottom_medium">&#9679; An “Armed forces service medal veteran” means a veteran who, while serving on active duty in the U.S. military, ground, naval or air service, participated in a United States military operation for which an Armed Forces service medal was awarded pursuant to <a href="https://www.federalregister.gov/executive-order/12985" target="_blank">Executive Order 12985.</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="slds-modal__footer">
+                                                        <button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={hideVeteranStatusDefinition}>Close</button>
+                                                    </div>
+                                                </div>
+                                                </section>
+                                                <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+                                            </template>
+                                        </div>
+                                     </div>
+                                    <!-- <div class="row">
+                                        <div>
+                                            <lightning-dual-listbox name="race"
+                                                                    label="Race/Ethnicity"
+                                                                    source-label="Race/Ethnicity"
+                                                                    lightning-comboboxed-label="Chosen"
+                                                                    field-level-help="lightning-combobox your preferred Race/Ethnicity"
+                                                                    options={lstRaceOptions}
+                                                                    onchange={raceChangeHandler}></lightning-dual-listbox>
+                                                                    <br/>
+                                            <template if:true={lstRacelightning-comboboxed}>
+                                                <strong>You lightning-comboboxed: </strong>
+                                                <template for:each={lstRacelightning-comboboxed} for:item="sel">
+                                                    <p key={sel}>{sel}</p>
+                                                </template>
+                                            </template>
+                                        </div>
+                                    </div> -->
+                                </template>
+                                </div>
+
+                                <div class="form-button-wrap no-padding-top">
+                                    <template if:false={isChild}>
+                                        <template if:false={isDeadlinePassed}>
+                                            <button type="button" class="btn btn-primary green-button margin-right" onclick={saveFellowApp}>Save and next</button>
+                                        </template>
+                                        <button type="button" class="btn btn-primary white-button" onclick={navigateToDashboard}>Cancel</button>
+                                    </template>
+                                    <template if:true={isChild}>
+                                        <template if:false={isDeadlinePassed}>
+                                                <template if:true={readOnly}>
+                                                <button type="button" disabled class="btn btn-primary green-button margin-right" onclick={saveFellowApp}>Save</button>
+                                            </template>
+                                            <template if:false={readOnly}>
+                                                <button type="button" class="btn btn-primary green-button margin-right" onclick={saveFellowApp}>Save</button>
+                                            </template>
+                                        </template>
+                                    </template>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- End of body tag div -->
+    <template if:false={isChild}>
+        <c-e-d-f22_footer></c-e-d-f22_footer>
+    </template>
+
+</template>

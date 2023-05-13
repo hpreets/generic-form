@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Testing_Team__c</fullName>
+    <externalId>false</externalId>
+    <label>Testing Team</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Development Data</fullName>
+                <default>false</default>
+                <label>Development Data</label>
+            </value>
+            <value>
+                <fullName>Membership</fullName>
+                <default>false</default>
+                <label>Membership</label>
+            </value>
+            <value>
+                <fullName>Development Finance</fullName>
+                <default>false</default>
+                <label>Development Finance</label>
+            </value>
+            <value>
+                <fullName>SRM</fullName>
+                <default>false</default>
+                <label>SRM</label>
+            </value>
+            <value>
+                <fullName>Salesforce IT</fullName>
+                <default>false</default>
+                <label>Salesforce IT</label>
+            </value>
+            <value>
+                <fullName>Dev Comms</fullName>
+                <default>false</default>
+                <label>Dev Comms</label>
+            </value>
+            <value>
+                <fullName>Donor Engagement</fullName>
+                <default>false</default>
+                <label>Donor Engagement</label>
+            </value>
+            <value>
+                <fullName>Planned Giving</fullName>
+                <default>false</default>
+                <label>Planned Giving</label>
+            </value>
+            <value>
+                <fullName>Major Gifts</fullName>
+                <default>false</default>
+                <label>Major Gifts</label>
+            </value>
+            <value>
+                <fullName>Government Partnerships</fullName>
+                <default>false</default>
+                <label>Government Partnerships</label>
+            </value>
+            <value>
+                <fullName>Institutional Giving</fullName>
+                <default>false</default>
+                <label>Institutional Giving</label>
+            </value>
+            <value>
+                <fullName>Prospect Research</fullName>
+                <default>false</default>
+                <label>Prospect Research</label>
+            </value>
+            <value>
+                <fullName>Climate Corps</fullName>
+                <default>false</default>
+                <label>Climate Corps</label>
+            </value>
+            <value>
+                <fullName>Integrations</fullName>
+                <default>false</default>
+                <label>Integrations</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

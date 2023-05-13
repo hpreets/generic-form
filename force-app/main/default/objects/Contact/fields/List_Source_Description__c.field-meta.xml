@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>List_Source_Description__c</fullName>
+    <description>Descripiton of list purchased for prospecting. (i.e. NRDC High Donors, Nature Conservancy 2010 donors)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Descripiton of list purchased for prospecting. (i.e. NRDC High Donors, Nature Conservancy 2010 donors)</inlineHelpText>
+    <label>List Source Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

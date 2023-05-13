@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <name>Set_Initial_PG_Sub_Constituent_Date</name>
+        <label>Set (Initial PG Sub Constituent Date)</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Initial_PG_Sub_Constituent_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Only when sub-constituencies is first saved to include one of the following values:
+
+Development - Planned Giving Estates
+Development - Planned Giving Ospreys
+Development - Planned Giving Prospects
+
+Set the Initial PG Sub Constituent Date to today&apos;s date.
+
+Optimized per FB-1490
+
+v4 Set run order</description>
+    <environments>Default</environments>
+    <interviewLabel>Contact (Before Insert/Update) --&gt; Initial PG Sub Constituent Date {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Contact (Before Insert/Update) --&gt; Initial PG Sub Constituent Date</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Initial_PG_Sub_Constituent_Date</targetReference>
+        </connector>
+        <filterFormula>{!$Permission.Flow_Automations_Off} &lt;&gt; TRUE
+&amp;&amp;
+not(isblank({!$Record.Sub_Constituency__c}))
+&amp;&amp;
+(isnew() || ischanged({!$Record.Sub_Constituency__c}))
+&amp;&amp;
+( contains({!$Record.Sub_Constituency_Text__c}, &quot;Development - Planned Giving Estates&quot;) || contains({!$Record.Sub_Constituency_Text__c}, &quot;Development - Planned Giving Ospreys&quot;) || contains({!$Record.Sub_Constituency_Text__c}, &quot;Development - Planned Giving Prospects&quot;))
+&amp;&amp;
+isblank({!$Record.Initial_PG_Sub_Constituent_Date__c})</filterFormula>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <triggerOrder>2</triggerOrder>
+</Flow>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Host_Dropped_Unable_to_Rematch__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Applicants who have this checked off are being treated as part of the Network</description>
+    <externalId>false</externalId>
+    <label>Host Dropped, Unable to Rematch</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

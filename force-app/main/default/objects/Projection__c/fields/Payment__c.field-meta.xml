@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Payment</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>npe01__OppPayment__c.npe01__Opportunity__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Projection__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>npe01__OppPayment__c.npe01__Paid__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>npe01__OppPayment__c</referenceTo>
+    <relationshipLabel>Projections</relationshipLabel>
+    <relationshipName>Projections</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

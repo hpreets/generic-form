@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EDF_Member_Services_Contact_Compact_Layout</fullName>
+    <fields>MailingAddress</fields>
+    <fields>Phone</fields>
+    <fields>Email</fields>
+    <fields>Primary_Handler__c</fields>
+    <label>EDF Member Services Contact Compact Layout</label>
+</CompactLayout>

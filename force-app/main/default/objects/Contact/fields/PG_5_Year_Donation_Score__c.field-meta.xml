@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PG_5_Year_Donation_Score__c</fullName>
+    <description>Score based on the # of Donations in the 5 years. Stage = Received or Received as Pledge. Excludes Planned Gifts or Pledge Installments.</description>
+    <externalId>false</externalId>
+    <formula>IF ( of_Donations_Last_5_Years__c &gt;=9,3,
+IF ( of_Donations_Last_5_Years__c&gt;=6,2,
+IF ( of_Donations_Last_5_Years__c &gt;=2,1,0)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Score based on the # of Donations in the 5 years. Stage = Received or Received as Pledge. Excludes Planned Gifts or Pledge Installments.
+2-5 = 1
+6-8 = 2
+9+ = 3
+0-1 = 0</inlineHelpText>
+    <label>PG 5 Year Donation Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subcategory__c</fullName>
+    <externalId>false</externalId>
+    <label>Subcategory</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Arts/Culture</fullName>
+                <default>false</default>
+                <label>Arts/Culture</label>
+            </value>
+            <value>
+                <fullName>Climate</fullName>
+                <default>false</default>
+                <label>Climate</label>
+            </value>
+            <value>
+                <fullName>Community Development</fullName>
+                <default>false</default>
+                <label>Community Development</label>
+            </value>
+            <value>
+                <fullName>Ecosystems- Agriculture</fullName>
+                <default>false</default>
+                <label>Ecosystems- Agriculture</label>
+            </value>
+            <value>
+                <fullName>Ecosystems- Land/Water</fullName>
+                <default>false</default>
+                <label>Ecosystems- Land/Water</label>
+            </value>
+            <value>
+                <fullName>Ecosystems- Parks/Gardens</fullName>
+                <default>false</default>
+                <label>Ecosystems- Parks/Gardens</label>
+            </value>
+            <value>
+                <fullName>Ecosystems- Wildlife/Animals</fullName>
+                <default>false</default>
+                <label>Ecosystems- Wildlife/Animals</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Energy</fullName>
+                <default>false</default>
+                <label>Energy</label>
+            </value>
+            <value>
+                <fullName>Environmental Health</fullName>
+                <default>false</default>
+                <label>Environmental Health</label>
+            </value>
+            <value>
+                <fullName>Healthcare - Advocacy</fullName>
+                <default>false</default>
+                <label>Healthcare - Advocacy</label>
+            </value>
+            <value>
+                <fullName>Healthcare - Hospitals</fullName>
+                <default>false</default>
+                <label>Healthcare - Hospitals</label>
+            </value>
+            <value>
+                <fullName>Healthcare - Research</fullName>
+                <default>false</default>
+                <label>Healthcare - Research</label>
+            </value>
+            <value>
+                <fullName>Higher Education</fullName>
+                <default>false</default>
+                <label>Higher Education</label>
+            </value>
+            <value>
+                <fullName>Humanitarian Aid</fullName>
+                <default>false</default>
+                <label>Humanitarian Aid</label>
+            </value>
+            <value>
+                <fullName>Human Services</fullName>
+                <default>false</default>
+                <label>Human Services</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>Legal/Advocacy</fullName>
+                <default>false</default>
+                <label>Legal/Advocacy</label>
+            </value>
+            <value>
+                <fullName>Literacy</fullName>
+                <default>false</default>
+                <label>Literacy</label>
+            </value>
+            <value>
+                <fullName>Natural History</fullName>
+                <default>false</default>
+                <label>Natural History</label>
+            </value>
+            <value>
+                <fullName>Oceans</fullName>
+                <default>false</default>
+                <label>Oceans</label>
+            </value>
+            <value>
+                <fullName>Public Policy</fullName>
+                <default>false</default>
+                <label>Public Policy</label>
+            </value>
+            <value>
+                <fullName>Religion Related</fullName>
+                <default>false</default>
+                <label>Religion Related</label>
+            </value>
+            <value>
+                <fullName>Science</fullName>
+                <default>false</default>
+                <label>Science</label>
+            </value>
+            <value>
+                <fullName>Women</fullName>
+                <default>false</default>
+                <label>Women</label>
+            </value>
+            <value>
+                <fullName>Youth Development</fullName>
+                <default>false</default>
+                <label>Youth Development</label>
+            </value>
+            <value>
+                <fullName>Other environmentally related</fullName>
+                <default>false</default>
+                <label>Other environmentally related</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

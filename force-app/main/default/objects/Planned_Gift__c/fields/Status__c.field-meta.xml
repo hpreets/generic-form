@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>true</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>INFO - requested more information</fullName>
+                <default>false</default>
+                <label>INFO - requested more information</label>
+            </value>
+            <value>
+                <fullName>PROP - proposed, gift not received</fullName>
+                <default>false</default>
+                <label>PROP - proposed, gift not received</label>
+            </value>
+            <value>
+                <fullName>PLDG - Pledged not legally binding</fullName>
+                <default>false</default>
+                <label>PLDG - Pledged not legally binding</label>
+            </value>
+            <value>
+                <fullName>IREV - Irrevocable, legally binding</fullName>
+                <default>false</default>
+                <label>IREV - Irrevocable, legally binding</label>
+            </value>
+            <value>
+                <fullName>MATR - Donor deceased, waiting for distribution</fullName>
+                <default>false</default>
+                <label>MATR - Donor deceased, waiting for distribution</label>
+            </value>
+            <value>
+                <fullName>CLSD - Donor deceased, money received</fullName>
+                <default>false</default>
+                <label>CLSD - Donor deceased, money received</label>
+            </value>
+            <value>
+                <fullName>RNCE - Gift in, donor renounced income</fullName>
+                <default>false</default>
+                <label>RNCE - Gift in, donor renounced income</label>
+            </value>
+            <value>
+                <fullName>RVK - Donor revoked legacy plan pledge</fullName>
+                <default>false</default>
+                <label>RVK - Donor revoked legacy plan pledge</label>
+            </value>
+            <value>
+                <fullName>CDNO - Contingency did not occur</fullName>
+                <default>false</default>
+                <label>CDNO - Contingency did not occur</label>
+            </value>
+            <value>
+                <fullName>IRA - IRA Rollover</fullName>
+                <default>false</default>
+                <label>IRA - IRA Rollover</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

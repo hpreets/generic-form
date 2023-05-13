@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Recipient is coded in the Email Alert to be the current Heller Lead</description>
+        <name>Send_Email_to_Lead</name>
+        <label>Send Email to Lead</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <actionName>Feedback__c.Critical_Feedback_Alert_Heller_Lead</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <description>Email Heller&apos;s Lead Consultant if a Feedback is Critical</description>
+    <environments>Default</environments>
+    <interviewLabel>Feedback-AFTER SAVE-Critical Email Lead {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Feedback-AFTER SAVE-Critical Email Heller Lead</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_Email_to_Lead</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>AND(
+{!$Permission.Flow_Automations_Off}=FALSE,
+ISPICKVAL({!$Record.Priority__c},&quot;Critical&quot;),
+ISPICKVAL({!$Record.Feedback_Status__c},&quot;Open&quot;),
+ISBLANK({!$Record.Assigned_To__c})
+)</filterFormula>
+        <object>Feedback__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

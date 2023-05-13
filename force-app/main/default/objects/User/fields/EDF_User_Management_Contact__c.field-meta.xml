@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EDF_User_Management_Contact__c</fullName>
+    <description>Primary EDF Staff contact responsible for managing user record, access and training.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Primary EDF Staff contact responsible for managing user record, access and training.</inlineHelpText>
+    <label>EDF User Management Contact</label>
+    <relationshipName>Salesforce_User_Management</relationshipName>
+    <restrictedAdminField>false</restrictedAdminField>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Hierarchy</type>
+</CustomField>

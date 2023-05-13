@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Hold_on_Interview_2_Email</name>
+        <label>Hold on Interview 2 Email</label>
+        <locationX>1106</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Hold_on_Interview_2</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Hold_on_Matching_Wave_1_Email</name>
+        <label>Hold on Matching - Wave 1 Email</label>
+        <locationX>1370</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Hold_on_Matching_Wave_1</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Interview_1_2_Not_Moving_on_Email</name>
+        <label>Interview 1/2 - Not Moving on Email</label>
+        <locationX>578</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Interview_1_2_Complete_Not_Moving_On</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Not_Qualified_Email</name>
+        <label>Not Qualified Email</label>
+        <locationX>50</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Not_Qualified_and_Notified</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_to_Matching_Wave_1_Email</name>
+        <label>Send to Matching - Wave 1 Email</label>
+        <locationX>1634</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Send_to_Matching_Pool_Wave_1</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Sent_Invite_to_Interview_2_Wave_1</name>
+        <label>Sent Invite to Interview 2 - Wave 1</label>
+        <locationX>842</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Send_Invite_to_Interview_2_Wave_1</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Waitlist_Interview_1_email</name>
+        <label>Waitlist- Interview 1 email</label>
+        <locationX>1898</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Waitlist_Interview_1</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <decisions>
+        <name>Applicant_Stage</name>
+        <label>Applicant Stage</label>
+        <locationX>1370</locationX>
+        <locationY>288</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Interview_1_Not_Moving_On</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Interview 1 Complete- Not Moving On</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Interview 2 Complete- Not Moving On</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Interview_1_2_Not_Moving_on_Email</targetReference>
+            </connector>
+            <label>Interview 1/2 Complete - Not Moving On</label>
+        </rules>
+        <rules>
+            <name>Send_to_Interview_2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Send Invite for Interview 2</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Sent_Invite_to_Interview_2_Wave_1</targetReference>
+            </connector>
+            <label>Send to Interview 2</label>
+        </rules>
+        <rules>
+            <name>Hold_on_Interview_2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Hold on Interview 2</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Hold_on_Interview_2_Email</targetReference>
+            </connector>
+            <label>Hold on Interview 2</label>
+        </rules>
+        <rules>
+            <name>Hold_on_Matching</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Hold on Matching</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Hold_on_Matching_Wave_1_Email</targetReference>
+            </connector>
+            <label>Hold on Matching</label>
+        </rules>
+        <rules>
+            <name>Send_to_Matching_Pool</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Send to Matching Pool</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_to_Matching_Wave_1_Email</targetReference>
+            </connector>
+            <label>Send to Matching Pool</label>
+        </rules>
+        <rules>
+            <name>Waitlist_Interview_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Waitlist- Interview 1</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Waitlist_Interview_1_email</targetReference>
+            </connector>
+            <label>Waitlist- Interview 1</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Fellow_Applicant_Status_Immediate_Send</name>
+        <label>Fellow Applicant Status - Immediate Send</label>
+        <locationX>182</locationX>
+        <locationY>288</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Not_Qualified</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Not Qualified and Notified</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Not_Qualified_Email</targetReference>
+            </connector>
+            <label>Not Qualified</label>
+        </rules>
+    </decisions>
+    <description>Handles email alerts for Fellow Application Stage changes (immediate send and two day wait).</description>
+    <environments>Default</environments>
+    <interviewLabel>Fellow Application - US Email Alerts {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Fellow Application - US Email Alerts</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>650</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Fellow_Applicant_Status_Immediate_Send</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>{!$Permission.Flow_Automations_Off} &lt;&gt; TRUE
+&amp;&amp;
+ispickval({!$Record.Fellowship_Applying_for__c}, &quot;U.S. Fellowship&quot;)
+&amp;&amp;
+ispickval({!$Record.Status__c},&quot;Interview 1 Complete- Not Moving On&quot;)  || ispickval({!$Record.Status__c}, &quot;Send invite for Interview 2&quot;) || ispickval({!$Record.Status__c}, &quot;Hold on Interview 2&quot;) || ispickval({!$Record.Status__c},&quot;Send to Matching Pool&quot;) || ispickval({!$Record.Status__c}, &quot;Interview 2 Complete- Not Moving On&quot;) || ispickval({!$Record.Status__c}, &quot;Hold on Matching&quot;) || ispickval({!$Record.Status__c}, &quot;Not Qualified and Notified&quot;) || ispickval({!$Record.Status__c}, &quot;Waitlist- Interview 1&quot;)</filterFormula>
+        <object>Fellow_Application__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>Wait_Two_Days</name>
+            <connector>
+                <targetReference>Applicant_Stage</targetReference>
+            </connector>
+            <label>Wait Two Days</label>
+            <maxBatchSize>25</maxBatchSize>
+            <offsetNumber>2</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

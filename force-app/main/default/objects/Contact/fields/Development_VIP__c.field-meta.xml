@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Development_VIP__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Contact should receive development VIP treatment</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check if contact should receive development VIP treatment</inlineHelpText>
+    <label>Development VIP</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

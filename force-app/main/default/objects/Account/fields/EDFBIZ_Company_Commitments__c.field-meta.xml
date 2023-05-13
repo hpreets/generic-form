@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EDFBIZ_Company_Commitments__c</fullName>
+    <description>These are internal commitments or procedures companies take to lower their own carbon footprints.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>These are internal commitments or procedures companies take to lower their own carbon footprints.</inlineHelpText>
+    <label>EDFBIZ Company Actions</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>c$</fullName>
+                <default>false</default>
+                <label>c$</label>
+            </value>
+            <value>
+                <fullName>RE100</fullName>
+                <default>false</default>
+                <label>RE100</label>
+            </value>
+            <value>
+                <fullName>SBT</fullName>
+                <default>false</default>
+                <label>SBT</label>
+            </value>
+            <value>
+                <fullName>Net Zero Commitment</fullName>
+                <default>false</default>
+                <label>Net Zero Commitment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Handler__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Formerly Primary Handler field</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Formerly Primary Handler field</inlineHelpText>
+    <label>Relationship Manager</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Contacts (Primary Handler)</relationshipLabel>
+    <relationshipName>Contacts5</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

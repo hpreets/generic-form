@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>India_Shortcuts</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>NamespacePrefix</columns>
+    <columns>Title__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>FellowshipApplyingFor__c</field>
+        <operation>equals</operation>
+        <value>India Fellowship</value>
+    </filters>
+    <label>India Shortcuts</label>
+    <language>en_US</language>
+</ListView>

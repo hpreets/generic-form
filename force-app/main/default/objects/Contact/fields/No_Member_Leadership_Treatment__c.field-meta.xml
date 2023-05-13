@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Member_Leadership_Treatment__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check if constituent has asked not to receive membership leadership treatment</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check if constituent has asked not to receive membership leadership treatment</inlineHelpText>
+    <label>No Member Leadership Treatment</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

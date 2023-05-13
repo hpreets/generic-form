@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Verified__c</fullName>
+    <description>Date this information was last confirmed</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What was the last day this information was verified/updated?</inlineHelpText>
+    <label>Last Verified</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

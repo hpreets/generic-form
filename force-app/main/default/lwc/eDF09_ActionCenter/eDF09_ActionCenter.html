@@ -1,0 +1,33 @@
+<!--
+  @description       :
+  @author            : Sai Teja
+  @last modified on  : 05-02-2022
+  @last modified by  : Sai Teja
+-->
+<template>
+    <div class="dashboard-wrap">
+         <div class="action-center-wrap">
+             <h2>{label.FellowPortalHomepage_HeadingLabel_ActionCenter}</h2>
+             <div class="row action-center-card-wrap">
+                 <template if:true={actionCenterTiles}>
+                     <template for:each={actionCenterTiles} for:item="item">
+                        <div key={item.id} class="col-12 col-md-4 col-lg-3 col-xl-3 action-center-card">
+                            <div class="action-center-card-inn">
+                                <figure class="action-card-icon">
+                                    <img src={item.image} alt="" title="" />
+                                </figure>
+                                <div class="action-card-content">
+                                    <h5>{item.title}</h5>
+                                    <p>{item.description}</p>
+                                </div>
+                                <div class="action-card-footer">
+                                    <button type="button" class="btn btn-primary" onclick={navigate} data-pagetype={item.pageType} data-pagename={item.pageName} data-url={item.url}> {item.buttonText}</button>
+                                </div>
+                            </div>
+                        </div>
+                     </template>
+                 </template>
+             </div>
+         </div>
+    </div>
+</template>

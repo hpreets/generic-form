@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>View_All_Accounts</fullName>
+    <availability>online</availability>
+    <description>Mimic the view all url at the bottom of the Activity Related List and replace the Standard View All button on Development Page Layouts</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>View All</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/lightning/r/Account/{!Account.Id}/related/ActivityHistories/view</url>
+</WebLink>

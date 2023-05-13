@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <description>Heller Data Migration 2021.</description>
+    <externalId>false</externalId>
+    <label>Stage</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>On invite list</fullName>
+                <default>false</default>
+                <label>On invite list</label>
+            </value>
+            <value>
+                <fullName>On B list invites</fullName>
+                <default>false</default>
+                <label>On B list invites</label>
+            </value>
+            <value>
+                <fullName>On C list invites</fullName>
+                <default>false</default>
+                <label>On C list invites</label>
+            </value>
+            <value>
+                <fullName>Wait list</fullName>
+                <default>false</default>
+                <label>Wait list</label>
+            </value>
+            <value>
+                <fullName>Invited</fullName>
+                <default>false</default>
+                <label>Invited</label>
+            </value>
+            <value>
+                <fullName>Registered</fullName>
+                <default>false</default>
+                <label>Registered</label>
+            </value>
+            <value>
+                <fullName>Declined</fullName>
+                <default>false</default>
+                <label>Declined</label>
+            </value>
+            <value>
+                <fullName>Canceled by Constituent</fullName>
+                <default>false</default>
+                <label>Canceled by Constituent</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

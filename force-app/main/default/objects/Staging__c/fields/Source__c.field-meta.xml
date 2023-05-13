@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source__c</fullName>
+    <externalId>false</externalId>
+    <label>Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Checks - Cager</fullName>
+                <default>false</default>
+                <label>Checks - Cager</label>
+            </value>
+            <value>
+                <fullName>Checks - NY</fullName>
+                <default>false</default>
+                <label>Checks - NY</label>
+            </value>
+            <value>
+                <fullName>Checks - State Street</fullName>
+                <default>false</default>
+                <label>Checks - State Street</label>
+            </value>
+            <value>
+                <fullName>Condition Met - Conditional Pledge</fullName>
+                <default>false</default>
+                <label>Condition Met - Conditional Pledge</label>
+            </value>
+            <value>
+                <fullName>Conditional Pledge</fullName>
+                <default>false</default>
+                <label>Conditional Pledge</label>
+            </value>
+            <value>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+                <label>Credit Card</label>
+            </value>
+            <value>
+                <fullName>Credit Card - Recurring</fullName>
+                <default>false</default>
+                <label>Credit Card - Recurring</label>
+            </value>
+            <value>
+                <fullName>EFT</fullName>
+                <default>false</default>
+                <label>EFT</label>
+            </value>
+            <value>
+                <fullName>In-Kind</fullName>
+                <default>false</default>
+                <label>In-Kind</label>
+            </value>
+            <value>
+                <fullName>Merkle Upload File</fullName>
+                <default>false</default>
+                <label>Merkle Upload File</label>
+            </value>
+            <value>
+                <fullName>PayPal</fullName>
+                <default>false</default>
+                <label>PayPal</label>
+            </value>
+            <value>
+                <fullName>Stock</fullName>
+                <default>false</default>
+                <label>Stock</label>
+            </value>
+            <value>
+                <fullName>Stock - State Street</fullName>
+                <default>false</default>
+                <label>Stock - State Street</label>
+            </value>
+            <value>
+                <fullName>Wire</fullName>
+                <default>false</default>
+                <label>Wire</label>
+            </value>
+            <value>
+                <fullName>Wire - State Street</fullName>
+                <default>false</default>
+                <label>Wire - State Street</label>
+            </value>
+            <value>
+                <fullName>Unconditional Pledge</fullName>
+                <default>false</default>
+                <label>Unconditional Pledge</label>
+            </value>
+            <value>
+                <fullName>Checks - Lockbox</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Checks - Lockbox</label>
+            </value>
+            <value>
+                <fullName>Checks - NY or State Street</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Checks - NY or State Street</label>
+            </value>
+            <value>
+                <fullName>Checks - SF</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Checks - SF</label>
+            </value>
+            <value>
+                <fullName>Major Gift - DMP, Web, or Upgrade</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Major Gift - DMP, Web, or Upgrade</label>
+            </value>
+            <value>
+                <fullName>Pledge</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pledge</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

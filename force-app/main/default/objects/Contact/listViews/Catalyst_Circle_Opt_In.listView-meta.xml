@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Catalyst_Circle_Opt_In</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account.Capacity__c</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>No_invitations__c</columns>
+    <columns>No_mass_email__c</columns>
+    <columns>Primary_Handler__c</columns>
+    <columns>Portfolio_Manager__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Primary_Handler__c</field>
+        <operation>equals</operation>
+        <value>Brian Dill,Monika von Hillebrandt</value>
+    </filters>
+    <filters>
+        <field>npsp__Deceased__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>No_mass_email__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Catalyst Circle - Opt In</label>
+</ListView>

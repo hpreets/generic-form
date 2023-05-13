@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Program__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Program</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Subprogram</valueSetName>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

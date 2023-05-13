@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unidentified_Donor__c</fullName>
+    <description>Open text field to indicate Donor&apos;s Name (Contact Last Name, First Name or Organization)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicate Donor&apos;s Name (Household Contact First Name Last Name or Organization Name)</inlineHelpText>
+    <label>Unidentified Donor</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

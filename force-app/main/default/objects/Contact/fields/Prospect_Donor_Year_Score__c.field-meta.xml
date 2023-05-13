@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospect_Donor_Year_Score__c</fullName>
+    <description>Score based on Total # of years as EDF Donor.</description>
+    <externalId>false</externalId>
+    <formula>IF ( of_Years_as_EDF_Donor__c &gt;=10,1,
+IF ( of_Years_as_EDF_Donor__c &gt;=5,2,
+IF ( of_Years_as_EDF_Donor__c &gt;=3,3,4)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Score based on Total # of years as EDF Donor.</inlineHelpText>
+    <label>Prospect Donor Year Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

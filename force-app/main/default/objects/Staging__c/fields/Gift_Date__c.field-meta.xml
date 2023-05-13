@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gift_Date__c</fullName>
+    <description>This is the Bank Deposit Date.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the Bank Deposit Date or the date the conditional deliverable was met.</inlineHelpText>
+    <label>Close Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>C_Anaya_Opt_in_List_No_mass_email_only</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>npsp__Primary_Affiliation__c</columns>
+    <columns>Employer__c</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>No_invitations__c</columns>
+    <columns>No_mass_email__c</columns>
+    <columns>Primary_Handler__c</columns>
+    <columns>Portfolio_Manager__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Primary_Handler__c</field>
+        <operation>equals</operation>
+        <value>Cyane Anaya</value>
+    </filters>
+    <filters>
+        <field>npsp__Deceased__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>No_mass_email__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>C. Anaya Opt-in List (No mass email only</label>
+</ListView>

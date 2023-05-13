@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SRM_Program_Interest_Account_EDF__c</fullName>
+    <description>Programs this contact is interested in. For Program Staff use</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Programs this contact is interested in</inlineHelpText>
+    <label>SRM Program Interest</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Program</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Topic__c</fullName>
+    <description>Heller created 2021</description>
+    <externalId>false</externalId>
+    <label>Case Topic</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Reason</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Request (Non-AD/Exchange)</fullName>
+                <default>false</default>
+                <label>Account Request (Non-AD/Exchange)</label>
+            </value>
+            <value>
+                <fullName>Activism</fullName>
+                <default>false</default>
+                <label>Activism</label>
+            </value>
+            <value>
+                <fullName>AD/Exchange Admin</fullName>
+                <default>false</default>
+                <label>AD/Exchange Admin</label>
+            </value>
+            <value>
+                <fullName>Animal Testing</fullName>
+                <default>false</default>
+                <label>Animal Testing</label>
+            </value>
+            <value>
+                <fullName>Annual Report Listing</fullName>
+                <default>false</default>
+                <label>Annual Report Listing</label>
+            </value>
+            <value>
+                <fullName>Backup/Restore Request</fullName>
+                <default>false</default>
+                <label>Backup/Restore Request</label>
+            </value>
+            <value>
+                <fullName>Becoming a Sustainer</fullName>
+                <default>false</default>
+                <label>Becoming a Sustainer</label>
+            </value>
+            <value>
+                <fullName>Business Portal</fullName>
+                <default>false</default>
+                <label>Business Portal</label>
+            </value>
+            <value>
+                <fullName>BYOD Request</fullName>
+                <default>false</default>
+                <label>BYOD Request</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Catalyst Circle</fullName>
+                <default>false</default>
+                <label>Catalyst Circle</label>
+            </value>
+            <value>
+                <fullName>Cease Contact</fullName>
+                <default>false</default>
+                <label>Cease Contact</label>
+            </value>
+            <value>
+                <fullName>Change Amount</fullName>
+                <default>false</default>
+                <label>Change Amount</label>
+            </value>
+            <value>
+                <fullName>Change Request</fullName>
+                <default>false</default>
+                <label>Change Request</label>
+            </value>
+            <value>
+                <fullName>Climate - General</fullName>
+                <default>false</default>
+                <label>Climate - General</label>
+            </value>
+            <value>
+                <fullName>Complaints</fullName>
+                <default>false</default>
+                <label>Complaints</label>
+            </value>
+            <value>
+                <fullName>Contact Information Update</fullName>
+                <default>false</default>
+                <label>Contact Information Update</label>
+            </value>
+            <value>
+                <fullName>Corporate Partnerships</fullName>
+                <default>false</default>
+                <label>Corporate Partnerships</label>
+            </value>
+            <value>
+                <fullName>Credit Card Update</fullName>
+                <default>false</default>
+                <label>Credit Card Update</label>
+            </value>
+            <value>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+                <label>Cultivation</label>
+            </value>
+            <value>
+                <fullName>Deceased Donor</fullName>
+                <default>false</default>
+                <label>Deceased Donor</label>
+            </value>
+            <value>
+                <fullName>Defend Our Future</fullName>
+                <default>false</default>
+                <label>Defend Our Future</label>
+            </value>
+            <value>
+                <fullName>DLO</fullName>
+                <default>false</default>
+                <label>DLO</label>
+            </value>
+            <value>
+                <fullName>Donation History Inquiry</fullName>
+                <default>false</default>
+                <label>Donation History Inquiry</label>
+            </value>
+            <value>
+                <fullName>Donor Error</fullName>
+                <default>false</default>
+                <label>Donor Error</label>
+            </value>
+            <value>
+                <fullName>Donor Request</fullName>
+                <default>false</default>
+                <label>Donor Request</label>
+            </value>
+            <value>
+                <fullName>Duplicate Record</fullName>
+                <default>false</default>
+                <label>Duplicate Record</label>
+            </value>
+            <value>
+                <fullName>Duplicate Sustainer</fullName>
+                <default>false</default>
+                <label>Duplicate Sustainer</label>
+            </value>
+            <value>
+                <fullName>Ecosystems - General</fullName>
+                <default>false</default>
+                <label>Ecosystems - General</label>
+            </value>
+            <value>
+                <fullName>EDAction Fund</fullName>
+                <default>false</default>
+                <label>EDAction Fund</label>
+            </value>
+            <value>
+                <fullName>EDF Error</fullName>
+                <default>false</default>
+                <label>EDF Error</label>
+            </value>
+            <value>
+                <fullName>EDF Operations</fullName>
+                <default>false</default>
+                <label>EDF Operations</label>
+            </value>
+            <value>
+                <fullName>Email  List Request</fullName>
+                <default>false</default>
+                <label>Email  List Request</label>
+            </value>
+            <value>
+                <fullName>Employment Status Change</fullName>
+                <default>false</default>
+                <label>Employment Status Change</label>
+            </value>
+            <value>
+                <fullName>FRx Forecaster</fullName>
+                <default>false</default>
+                <label>FRx Forecaster</label>
+            </value>
+            <value>
+                <fullName>FRx Reporter</fullName>
+                <default>false</default>
+                <label>FRx Reporter</label>
+            </value>
+            <value>
+                <fullName>General Positive</fullName>
+                <default>false</default>
+                <label>General Positive</label>
+            </value>
+            <value>
+                <fullName>Remarks</fullName>
+                <default>false</default>
+                <label>Remarks</label>
+            </value>
+            <value>
+                <fullName>Hardware Support</fullName>
+                <default>false</default>
+                <label>Hardware Support</label>
+            </value>
+            <value>
+                <fullName>Health - General</fullName>
+                <default>false</default>
+                <label>Health - General</label>
+            </value>
+            <value>
+                <fullName>HR</fullName>
+                <default>false</default>
+                <label>HR</label>
+            </value>
+            <value>
+                <fullName>Issue EDF Is Not Working On</fullName>
+                <default>false</default>
+                <label>Issue EDF Is Not Working On</label>
+            </value>
+            <value>
+                <fullName>Known Issue</fullName>
+                <default>false</default>
+                <label>Known Issue</label>
+            </value>
+            <value>
+                <fullName>Legislation and Questions</fullName>
+                <default>false</default>
+                <label>Legislation and Questions</label>
+            </value>
+            <value>
+                <fullName>Lost/Stolen Equipment</fullName>
+                <default>false</default>
+                <label>Lost/Stolen Equipment</label>
+            </value>
+            <value>
+                <fullName>Mailing Preferences</fullName>
+                <default>false</default>
+                <label>Mailing Preferences</label>
+            </value>
+            <value>
+                <fullName>Major Gifts</fullName>
+                <default>false</default>
+                <label>Major Gifts</label>
+            </value>
+            <value>
+                <fullName>Mail Donation Form EDF</fullName>
+                <default>false</default>
+                <label>Mail Donation Form EDF</label>
+            </value>
+            <value>
+                <fullName>Mail Donation form EDAF</fullName>
+                <default>false</default>
+                <label>Mail Donation Form EDAF</label>
+            </value>
+            <value>
+                <fullName>Mail Donation Form PAC</fullName>
+                <default>false</default>
+                <label>Mail Donation Form PAC</label>
+            </value>
+            <value>
+                <fullName>Making a Donation</fullName>
+                <default>false</default>
+                <label>Making a Donation</label>
+            </value>
+            <value>
+                <fullName>Matching Gifts</fullName>
+                <default>false</default>
+                <label>Matching Gifts</label>
+            </value>
+            <value>
+                <fullName>Mobile Device Support</fullName>
+                <default>false</default>
+                <label>Mobile Device Support</label>
+            </value>
+            <value>
+                <fullName>Name Change</fullName>
+                <default>false</default>
+                <label>Name Change</label>
+            </value>
+            <value>
+                <fullName>Natural Gas</fullName>
+                <default>false</default>
+                <label>Natural Gas</label>
+            </value>
+            <value>
+                <fullName>New Hire</fullName>
+                <default>false</default>
+                <label>New Hire</label>
+            </value>
+            <value>
+                <fullName>Oceans - General</fullName>
+                <default>false</default>
+                <label>Oceans - General</label>
+            </value>
+            <value>
+                <fullName>OCR</fullName>
+                <default>false</default>
+                <label>OCR</label>
+            </value>
+            <value>
+                <fullName>Opposed to Climate Change</fullName>
+                <default>false</default>
+                <label>Opposed to Climate Change</label>
+            </value>
+            <value>
+                <fullName>Outage</fullName>
+                <default>false</default>
+                <label>Outage</label>
+            </value>
+            <value>
+                <fullName>Planned Giving</fullName>
+                <default>false</default>
+                <label>Planned Giving</label>
+            </value>
+            <value>
+                <fullName>Premium Inquiry</fullName>
+                <default>false</default>
+                <label>Premium Inquiry</label>
+            </value>
+            <value>
+                <fullName>Prospect Delete</fullName>
+                <default>false</default>
+                <label>Prospect Delete</label>
+            </value>
+            <value>
+                <fullName>Purchase Request</fullName>
+                <default>false</default>
+                <label>Purchase Request</label>
+            </value>
+            <value>
+                <fullName>Receipt Request</fullName>
+                <default>false</default>
+                <label>Receipt Request</label>
+            </value>
+            <value>
+                <fullName>Renewal Question</fullName>
+                <default>false</default>
+                <label>Renewal Question</label>
+            </value>
+            <value>
+                <fullName>Request for Support</fullName>
+                <default>false</default>
+                <label>Request for Support</label>
+            </value>
+            <value>
+                <fullName>Sales Pitch</fullName>
+                <default>false</default>
+                <label>Sales Pitch</label>
+            </value>
+            <value>
+                <fullName>Seafood Selector</fullName>
+                <default>false</default>
+                <label>Seafood Selector</label>
+            </value>
+            <value>
+                <fullName>Seeking staff member</fullName>
+                <default>false</default>
+                <label>Seeking staff member</label>
+            </value>
+            <value>
+                <fullName>Send Personally</fullName>
+                <default>false</default>
+                <label>Send Personally</label>
+            </value>
+            <value>
+                <fullName>Sent to Webteam</fullName>
+                <default>false</default>
+                <label>Sent to Webteam</label>
+            </value>
+            <value>
+                <fullName>Smart Power</fullName>
+                <default>false</default>
+                <label>Smart Power</label>
+            </value>
+            <value>
+                <fullName>Software Support</fullName>
+                <default>false</default>
+                <label>Software Support</label>
+            </value>
+            <value>
+                <fullName>Special Requests</fullName>
+                <default>false</default>
+                <label>Special Requests</label>
+            </value>
+            <value>
+                <fullName>Stock Gifts</fullName>
+                <default>false</default>
+                <label>Stock Gifts</label>
+            </value>
+            <value>
+                <fullName>Student Question</fullName>
+                <default>false</default>
+                <label>Student Question</label>
+            </value>
+            <value>
+                <fullName>Technical Error</fullName>
+                <default>false</default>
+                <label>Technical Error</label>
+            </value>
+            <value>
+                <fullName>Telecom Support</fullName>
+                <default>false</default>
+                <label>Telecom Support</label>
+            </value>
+            <value>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+                <label>Telemarketing</label>
+            </value>
+            <value>
+                <fullName>Termination</fullName>
+                <default>false</default>
+                <label>Termination</label>
+            </value>
+            <value>
+                <fullName>Trouble Making a Donation Online</fullName>
+                <default>false</default>
+                <label>Trouble Making a Donation Online</label>
+            </value>
+            <value>
+                <fullName>Unknown Concern</fullName>
+                <default>false</default>
+                <label>Unknown Concern</label>
+            </value>
+            <value>
+                <fullName>Unsubscribe</fullName>
+                <default>false</default>
+                <label>Unsubscribe</label>
+            </value>
+            <value>
+                <fullName>Vendor Error</fullName>
+                <default>false</default>
+                <label>Vendor Error</label>
+            </value>
+            <value>
+                <fullName>Virus/Malware</fullName>
+                <default>false</default>
+                <label>Virus/Malware</label>
+            </value>
+            <value>
+                <fullName>Vocus PR/GR</fullName>
+                <default>false</default>
+                <label>Vocus PR/GR</label>
+            </value>
+            <value>
+                <fullName>Walmart</fullName>
+                <default>false</default>
+                <label>Walmart</label>
+            </value>
+            <value>
+                <fullName>Wrong Number</fullName>
+                <default>false</default>
+                <label>Wrong Number</label>
+            </value>
+            <value>
+                <fullName>Facilities Request</fullName>
+                <default>false</default>
+                <label>Facilities Request</label>
+            </value>
+            <value>
+                <fullName>HR Request</fullName>
+                <default>false</default>
+                <label>HR Request</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Other Issues</controllingFieldValue>
+            <valueName>Complaints</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Issues</controllingFieldValue>
+            <valueName>EDF Operations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Issues</controllingFieldValue>
+            <valueName>General Positive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Issues</controllingFieldValue>
+            <valueName>HR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Issues</controllingFieldValue>
+            <valueName>Request for Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Issues</controllingFieldValue>
+            <valueName>Sales Pitch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Issues</controllingFieldValue>
+            <valueName>Seeking staff member</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Issues</controllingFieldValue>
+            <valueName>Student Question</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Issues</controllingFieldValue>
+            <valueName>Unknown Concern</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Issues</controllingFieldValue>
+            <valueName>Wrong Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Issues</controllingFieldValue>
+            <controllingFieldValue>Online giving and activism</controllingFieldValue>
+            <controllingFieldValue>Refund</controllingFieldValue>
+            <controllingFieldValue>Sustainer</controllingFieldValue>
+            <controllingFieldValue>Development</controllingFieldValue>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <controllingFieldValue>Program Work</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HR Issue</controllingFieldValue>
+            <valueName>HR Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online giving and activism</controllingFieldValue>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Contact Information Update</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online giving and activism</controllingFieldValue>
+            <valueName>Email  List Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online giving and activism</controllingFieldValue>
+            <valueName>Legislation and Questions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online giving and activism</controllingFieldValue>
+            <valueName>Technical Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online giving and activism</controllingFieldValue>
+            <valueName>Trouble Making a Donation Online</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online giving and activism</controllingFieldValue>
+            <valueName>Unsubscribe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refund</controllingFieldValue>
+            <valueName>Donor Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refund</controllingFieldValue>
+            <valueName>Donor Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refund</controllingFieldValue>
+            <valueName>EDF Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refund</controllingFieldValue>
+            <valueName>Vendor Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sustainer</controllingFieldValue>
+            <valueName>Becoming a Sustainer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sustainer</controllingFieldValue>
+            <valueName>Cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sustainer</controllingFieldValue>
+            <valueName>Change Amount</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sustainer</controllingFieldValue>
+            <valueName>Credit Card Update</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sustainer</controllingFieldValue>
+            <valueName>Duplicate Sustainer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development</controllingFieldValue>
+            <valueName>Catalyst Circle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development</controllingFieldValue>
+            <valueName>Major Gifts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development</controllingFieldValue>
+            <valueName>Planned Giving</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development</controllingFieldValue>
+            <valueName>Stock Gifts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Annual Report Listing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Cease Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Cultivation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Deceased Donor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Donation History Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Duplicate Record</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Mailing Preferences</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Mail Donation Form EDF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Mail Donation form EDAF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Mail Donation Form PAC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Making a Donation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Matching Gifts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Premium Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Prospect Delete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Receipt Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Renewal Question</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Member Services</controllingFieldValue>
+            <valueName>Telemarketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program Work</controllingFieldValue>
+            <valueName>Animal Testing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program Work</controllingFieldValue>
+            <valueName>Climate - General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program Work</controllingFieldValue>
+            <valueName>Corporate Partnerships</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program Work</controllingFieldValue>
+            <valueName>Ecosystems - General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program Work</controllingFieldValue>
+            <valueName>Health - General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program Work</controllingFieldValue>
+            <valueName>Natural Gas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program Work</controllingFieldValue>
+            <valueName>Oceans - General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program Work</controllingFieldValue>
+            <valueName>Seafood Selector</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program Work</controllingFieldValue>
+            <valueName>Smart Power</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program Work</controllingFieldValue>
+            <valueName>Walmart</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Facilities Issue</controllingFieldValue>
+            <valueName>Facilities Request</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

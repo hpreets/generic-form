@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Testing_Status__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicate the testing status.</inlineHelpText>
+    <label>Testing Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ready for Heller Review</fullName>
+                <default>false</default>
+                <label>Ready for Heller Review</label>
+            </value>
+            <value>
+                <fullName>Ready for EDF IT Review</fullName>
+                <default>false</default>
+                <label>Ready for EDF IT Review</label>
+            </value>
+            <value>
+                <fullName>Ready to Test in Developer Sandbox</fullName>
+                <default>false</default>
+                <label>Ready to Test in Developer Sandbox</label>
+            </value>
+            <value>
+                <fullName>Testing in Progress</fullName>
+                <default>false</default>
+                <label>Testing in Progress</label>
+            </value>
+            <value>
+                <fullName>Tested - Passed in Developer Sandbox</fullName>
+                <default>false</default>
+                <label>Tested - Passed in Developer Sandbox</label>
+            </value>
+            <value>
+                <fullName>Tested - Failed in Developer Sandbox</fullName>
+                <default>false</default>
+                <label>Tested - Failed in Developer Sandbox</label>
+            </value>
+            <value>
+                <fullName>Ready for Retesting - Developer Sandbox</fullName>
+                <default>false</default>
+                <label>Ready for Retesting - Developer Sandbox</label>
+            </value>
+            <value>
+                <fullName>Ready to Test in Full Sandbox</fullName>
+                <default>false</default>
+                <label>Ready to Test in Full Sandbox</label>
+            </value>
+            <value>
+                <fullName>Tested - Passed in Full Sandbox</fullName>
+                <default>false</default>
+                <label>Tested - Passed in Full Sandbox</label>
+            </value>
+            <value>
+                <fullName>Tested - Failed in Full Sandbox</fullName>
+                <default>false</default>
+                <label>Tested - Failed in Full Sandbox</label>
+            </value>
+            <value>
+                <fullName>Ready for Retesting - Full Sandbox</fullName>
+                <default>false</default>
+                <label>Ready for Retesting - Full Sandbox</label>
+            </value>
+            <value>
+                <fullName>Unable to Test - Blocked</fullName>
+                <default>false</default>
+                <label>Unable to Test - Blocked</label>
+            </value>
+            <value>
+                <fullName>Ready for Production QC</fullName>
+                <default>false</default>
+                <label>Ready for Production QC</label>
+            </value>
+            <value>
+                <fullName>QC Passed in Prod</fullName>
+                <default>false</default>
+                <label>QC Passed in Prod</label>
+            </value>
+            <value>
+                <fullName>N/A - Configuration Deprecated</fullName>
+                <default>false</default>
+                <label>N/A - Configuration Deprecated</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

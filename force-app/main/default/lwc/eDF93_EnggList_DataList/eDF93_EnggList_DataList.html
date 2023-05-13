@@ -1,0 +1,267 @@
+<!--
+  @description       :
+  @author            : Harpreet Singh
+  @last modified on  : 08-Dec-2022
+  @last modified by  : Harpreet Singh
+-->
+<template>
+
+    <!-- START: Search Topics Modal Dialog -->
+    <!-- END: Search Topics Modal Dialog -->
+
+    <!-- START: Engagement Instruction, Search, Filters and List -->
+    <div class="">
+        <div class="">
+            <div class="">
+                <div class="">
+                    <div class="">
+
+                        <!-- START: Engagement Instruction -->
+                        <!-- END: Engagement Instruction -->
+
+                        <!-- START: Engagement Search and Filters -->
+                        <!-- Search Engagements Start -->
+                        <!-- Search Engagements End -->
+
+                        <!-- Filter Engagements Start -->
+                        <!-- Filter Engagements End -->
+                        <!-- END: Engagement Search and Filters -->
+
+                        <!-- START: Engagements Table Section -->
+                        <template if:true={isEngagementExist}>
+                            <div class="engagements-table-section-wrap">
+                                <div class="engagements-table-title-filter">
+                                    <h3 class="engagements-table-title">{headingEngagementList}</h3>
+
+                                    <!-- Engagements Table Title Filter Section Start -->
+                                    <div class="engagements-table-filter-wrap">
+                                        <lightning-combobox name="progress" data-cname="tableFilter" placeholder="Filter"
+                                            options={filterOptions} onchange={handleTableFilterChange} value={selTableFilter}>
+                                        </lightning-combobox>
+                                    </div>
+                                    <!-- Engagements Table Title Filter Section End -->
+
+                                </div>
+                                <!-- Engagements Table Section Start -->
+                                <div class="engagements-table">
+                                    <div class="table-responsive">
+                                        <table class="table engagements-table-data">
+                                            <!-- Engagements Table Header Row -->
+                                            <thead>
+                                                <tr>
+                                                    <!--th class="slds-text-body_small slds-p-right_none slds-p-left_xx-small">CONSIDER <br/> ME</th -->
+                                                    <th class='slds-p-left_xx-small slds-text-body_small'>&nbsp; <!-- MORE <br/> DETAILS --></th>
+                                                    <th class="slds-text-body_small" onclick={sortData} data-id="AccountName">{colHeadingHostOrganization}</th>
+                                                    <th class="slds-text-body_small" onclick={sortData} data-id="Industry">{colHeadingIndustry}</th>
+                                                    <th class="slds-text-body_small" onclick={sortData} data-id="Accessible_by_public_transportation">{colHeadingAccToPublicTransport}</th>
+                                                    <th class="slds-text-body_small" onclick={sortData} data-id="Fellowship_City">{colHeadingFellowshipCity}</th>
+                                                    <th class="slds-text-body_small" onclick={sortData} data-id="Fellowship_State">{colHeadingFellowshipState}</th>
+                                                    <th class="slds-text-body_small" onclick={sortData} data-id="Project_Type">{colHeadingProjectType}</th>
+                                                    <th class="slds-text-body_small" onclick={sortData} data-id="Fellowship_Location_Preference">{colHeadingFellowshipLocationPref}</th>
+                                                    <!-- th class="slds-text-body_small">FELLOWSHIP<br/> PROGRAM</th -->
+                                                    <th class="slds-text-body_small">{colHeadingSubmissionStatus}</th>
+                                                </tr>
+                                            </thead>
+                                            <!-- Engagements Table Header Row -->
+
+                                            <tbody>
+                                            <template if:true={engagementRecords}>
+                                                <template for:each={engagementRecords} for:item="engagement">
+                                                    {engagement.Industry_Classification__c}
+                                                    <tr data-toggle="collapse" data-target=".engagements-table-accordion1"
+                                                        class="accordion-toggle accordion-toggle-outer accordion-green-bg accordion-orange-bg" key={engagement.eId}>
+                                                        <!-- td>
+                                                        </td -->
+                                                        <td class="table-dropdown-arrow table-rating-star-icon" nowrap>
+
+                                                            <!-- Since checkbox was not required, we display:none the checbox but still utilizing it in code -->
+                                                            <!-- If checkbox is to be displayed, move the below lightning-input to above commented `TD` tag -->
+                                                            <!-- Checkbox is checked anytime an engagement is ranked, bookmarked, added comments or if it already is saved in SF -->
+                                                            <lightning-input
+                                                                type="checkbox"
+                                                                name="considermecheck"
+                                                                data-name="considermecheck"
+                                                                data-id={engagement.eId}
+                                                                onchange={handleConsiderMeCheckBox}
+                                                                checked={engagement.considerMeChecked}
+                                                                style="display:none"
+                                                            >
+                                                            </lightning-input>
+
+                                                            <!-- Collapse Icon -->
+                                                            <button type="button"
+                                                                class="btn table-accordion-arrow table-dropdown-arrow-right-down" data-id={engagement.eId} key={engagement.eId} onclick={handleCollapsebar}>
+                                                            </button>
+
+                                                            <!-- Gold / Blue star -->
+                                                            <template if:true={engagement.isStarGold}>
+                                                                <img src={starOrange} alt="" title=""
+                                                                    class="star-orange-icon" key={engagement.eId}/>
+                                                            </template>
+                                                            <template if:true={engagement.isStarBlue}>
+                                                                <img src={starBlue} alt="" title=""
+                                                                    class="star-orange-icon" key={engagement.eId}/>
+                                                            </template>
+                                                        </td>
+
+                                                        <!-- Table columns -->
+                                                        <td><p>{engagement.AccountName}</p></td>
+                                                        <td><p>{engagement.Industry}</p></td>
+                                                        <td><p>{engagement.Accessible_by_public_transportation}</p></td>
+                                                        <td><p>{engagement.Fellowship_City}</p></td>
+                                                        <td><p>{engagement.Fellowship_State}</p></td>
+                                                        <td><p>{engagement.Project_Type}</p></td>
+                                                        <td><p>{engagement.Fellowship_Location_Preference}</p></td>
+                                                        <!-- td><p>[engagement_Engagement_Program]</p></td -->
+
+                                                        <!-- Status column along with red, yellow, green icons -->
+                                                        <td class="status-icon-wrap">
+                                                            <!-- // FB-1917 Harpreet -->
+                                                            <template if:true={engagement.considerMeMatch.Status__c}>
+                                                                <span class="status-icon notsubmittedicon" key={engagement.eId} style={engagement.statusBgColor}> </span>
+                                                                {engagement.statusText}
+                                                            </template>
+                                                        </td>
+                                                    </tr>
+
+                                                    <!-- Engagement's More Details Section -->
+                                                    <template if:true={engagement.showMoreDetails}>
+                                                        <tr key={engagement.eId}>
+                                                            <td colspan="9" class="hiddenRow">
+
+                                                                <div class="accordian-body engagements-table-accordion-wrap engagements-table-accordion1" key={engagement.eId}>
+                                                                    <!-- id="engagements-table-accordion1"> -->
+                                                                    <div class="engagements-table-accordion-left">
+                                                                        <div class="engagements-table-accordion-left-action-wrap">
+
+                                                                            <!-- Engagement's Bookmark Start -->
+                                                                            <template if:false={isSubmitted}>
+                                                                                <div class="table-bage-icon-wrap">
+                                                                                    <template if:false={engagement.bookmarked}>
+                                                                                        <button data-id={engagement.eId} type="button"
+                                                                                        class="btn table-bage-icon" onclick={handleBookmark}></button>
+                                                                                    </template>
+                                                                                    <template if:true={engagement.bookmarked}>
+                                                                                        <button type="button" data-id={engagement.eId}
+                                                                                        class="btn table-bage-icon table-bage-icon-active" onclick={handleBookmark}></button>
+                                                                                    </template>
+                                                                                </div>
+                                                                            </template>
+                                                                            <!-- Engagement's Bookmark End -->
+
+
+                                                                            <!-- Engagement's Ranking Start -->
+                                                                            <div class="table-flag-section-wrap">
+                                                                                <template if:false={isSubmitted}>
+                                                                                    <button type="button"
+                                                                                        class="btn table-flag-arrow table-flag-up-arrow" data-bname="uparraow" data-id={engagement.eId} onclick={handleRanking}>
+                                                                                    </button>
+                                                                                </template>
+                                                                                <div if:false={engagement.isRankingAvailable} class="table-flag">
+                                                                                    <span class="table-flag-text">
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div if:true={engagement.isRankingAvailable} class="table-flag table-flag-active"> <!-- added class 'table-flag' -->
+                                                                                    <span style="align-content: center; color: white; font-weight: bold;"> <!-- padding-left: 0.4rem; -->
+                                                                                        {engagement.ranking}
+                                                                                    </span>
+                                                                                </div>
+                                                                                <template if:false={isSubmitted}>
+                                                                                    <button type="button"
+                                                                                        class="btn table-flag-arrow table-flag-down-arrow" data-bname="downarraow" data-id={engagement.eId} onclick={handleRanking}>
+                                                                                    </button>
+                                                                                </template>
+                                                                            </div>
+                                                                            <!-- Engagement's Ranking Start -->
+
+                                                                        </div>
+
+                                                                        <!-- Engagement's Workplan Start -->
+                                                                        <div class="engagements-table-accordion-left-content-wrap">
+                                                                            <div class="overflow-auto" data-spy="scroll">
+                                                                                <div class="slds-text-body_regular" style="white-space: break-spaces;">{engagement.Workplan_from_App}</div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- Engagement's Workplan End -->
+                                                                    </div>
+
+                                                                    <!-- Engagement's Consider Me Input Start -->
+                                                                    <div class="engagements-table-accordion-right">
+                                                                        <div class="table-accordion-right-inner">
+                                                                            <h5>{labelConsiderMeField}</h5> <!-- FB-1970 -->
+                                                                            <div class="form-group">
+                                                                                <!-- value need to be updated with ethe salesfore data later -->
+                                                                                <span class="registration-application-field-note phone-field-note">{labelMaxCharLimitConsiderMe}</span>
+                                                                                <lightning-textarea
+                                                                                    name="considermeTextArea"
+                                                                                    data-id={engagement.eId}
+                                                                                    onchange={handleConsiderMeChange}
+                                                                                    value={engagement.considerMeComments}
+                                                                                    max-length="1500"
+                                                                                    disabled={isSubmitted}
+                                                                                >
+                                                                                </lightning-textarea>
+                                                                            </div>
+                                                                            <!-- FB-2136 -->
+                                                                            <!-- div
+                                                                                class="form-button-wrap no-padding-top d-flex justify-content-end">
+                                                                                <button type="button" data-bname="considerMeButton" data-id={engagement.eId}
+                                                                                    class="btn btn-primary green-button" onclick={handleConsiderMeSave}>{engagement.considerMeSave}</button>
+                                                                            </div -->
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Engagement's Consider Me Input Start -->
+
+                                                                </div>
+
+                                                            </td>
+                                                        </tr>
+                                                    </template>
+                                                </template>
+                                            </template>
+
+                                            <template if:true={engagementRecordsError}>
+                                                <p>Inside Errors</p>
+                                                {engagementRecordsError}
+                                            </template>
+
+                                            <!-- Engagement's Save and Submit Buttons Start -->
+                                            <tr>
+                                                <td colspan="10" style="text-align: center;">
+                                                    <template if:false={isSubmitted}>
+                                                        <lightning-button disabled={isSubmitted} label={labelSubmitBtn} variant="brand" onclick={submitEngagements}></lightning-button> &nbsp; &nbsp;
+                                                        <lightning-button disabled={isSubmitted} label={labelSaveAllBtn} variant="brand" onclick={saveEngagements}></lightning-button>
+                                                    </template> &nbsp;
+                                                </td>
+                                            </tr>
+                                            <!-- Engagement's Save and Submit Buttons END -->
+                                        </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- Engagements Table Section End -->
+                            </div>
+                        </template>
+
+                        <!-- No Engagements Section Start -->
+                        <template if:false={isEngagementExist}>
+                            <lightning-card>
+                                <h3>{msgNoEngagementRecords}</h3>
+                            </lightning-card>
+                        </template>
+                        <!-- No Engagements Section End -->
+
+                        <!-- END: Engagements Table Section -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Engagement Instruction, Search, Filters and List -->
+
+    <template if:true={isSearchCriteria}>
+        <lightning-spinner size="large" variant="brand"></lightning-spinner>
+    </template>
+
+</template>

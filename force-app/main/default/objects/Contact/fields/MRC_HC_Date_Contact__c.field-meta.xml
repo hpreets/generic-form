@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MRC_HC_Date_Contact__c</fullName>
+    <description>Date of most recent contribution (hard credit).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Date of most recent contribution (hard credit).</inlineHelpText>
+    <label>MRC HC Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

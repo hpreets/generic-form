@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adjustment_Reason_edf__c</fullName>
+    <description>Enter the reason the adjustment was made</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the reason the adjustment was made</inlineHelpText>
+    <label>Adjustment Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

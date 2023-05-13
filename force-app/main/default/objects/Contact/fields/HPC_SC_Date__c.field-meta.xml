@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HPC_SC_Date__c</fullName>
+    <description>Highest previous contribution amount (soft credit) for this contact</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Highest previous contribution (soft credit).</inlineHelpText>
+    <label>HPC SC Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Development1</fullName>
+    <columns>NAME</columns>
+    <columns>User_Story_Description__c</columns>
+    <columns>Initial_Configuration_Approach__c</columns>
+    <columns>Build_Assigned_To__c</columns>
+    <columns>Epic__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>Iteration__c</field>
+        <operation>equals</operation>
+        <value>Iteration 1</value>
+    </filters>
+    <label>Development</label>
+    <queue>Development</queue>
+</ListView>

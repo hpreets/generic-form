@@ -1,0 +1,97 @@
+<!--
+  @description       :
+  @author            : Harpreet Singh
+  @last modified on  : 08-Dec-2022
+  @last modified by  : Harpreet Singh
+-->
+<template>
+
+    <!-- START: Search Topics Modal Dialog -->
+    <template if:true={showTips}>
+        <section  class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModalAction}>
+                       <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+                    </button>
+                    <h5 class="modal-title">{headingSearchTipsDialog}</h5>
+                 </header>
+
+                 <div class="slds-modal__content slds-p-around_medium">
+
+                    <div>
+                        <ul class="engagements-search-tips-list">
+                            <lightning-formatted-rich-text value={label.searchTip1}></lightning-formatted-rich-text>
+                            <lightning-formatted-rich-text value={label.searchTip2}></lightning-formatted-rich-text>
+                            <lightning-formatted-rich-text value={label.searchTip3}></lightning-formatted-rich-text>
+                            <lightning-formatted-rich-text value={label.searchTip4}></lightning-formatted-rich-text>
+                            <lightning-formatted-rich-text value={label.searchTip5}></lightning-formatted-rich-text>
+                        </ul>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    <!-- END: Search Topics Modal Dialog -->
+
+    <!-- START: Engagement Instruction, Search, Filters and List -->
+    <div>
+        <div>
+            <div class="">
+                <div class="">
+                    <div class="">
+
+                        <!-- START: Engagement Instruction -->
+                        <div class="engagements-instructions-wrap">
+                            <div class="engagements-instructions-top">
+                                <h5><img src={instructionsImageURL} alt="" title="" /> {headingInstruction}</h5>
+
+                                <!-- Search Tips Start -->
+                                <div class="search-tips-wrap clearfix" data-toggle="modal"
+                                    data-target=".engagements-search-tips-modal" onclick={openTipsModel}>
+                                    <img src={infoImageURL} alt="" title=""
+                                        class="search-tips-info-icon" />
+                                    <p>{labelSearchTips}</p>
+
+                                </div>
+                                <!-- Search Tips End -->
+
+                            </div>
+
+                            <!-- Individual Instructions Section Start -->
+                            <div class="engagements-instructions-content-wrap">
+                                <lightning-formatted-rich-text value={label.instruction1}></lightning-formatted-rich-text>
+                                <lightning-formatted-rich-text value={label.instruction2}></lightning-formatted-rich-text>
+                                <lightning-formatted-rich-text value={label.instruction3}></lightning-formatted-rich-text>
+                                <lightning-formatted-rich-text value={label.instruction4}></lightning-formatted-rich-text>
+                            </div>
+                            <!-- Individual Instructions Section End -->
+
+                        </div>
+                        <!-- END: Engagement Instruction -->
+                        <!-- START: Engagement Search and Filters -->
+
+                        <!-- Filter Engagements Start -->
+                        <!-- Filter Engagements End -->
+                        <!-- END: Engagement Search and Filters -->
+
+                        <!-- START: Engagements Table Section -->
+
+                        <!-- No Engagements Section Start -->
+                        <!-- No Engagements Section End -->
+
+                        <!-- END: Engagements Table Section -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Engagement Instruction, Search, Filters and List -->
+
+    <template if:true={isSearchCriteria}>
+        <lightning-spinner size="large" variant="brand"></lightning-spinner>
+    </template>
+
+</template>

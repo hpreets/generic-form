@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Planned_Gift_ID__c</fullName>
+    <description>We have 2 fields to support continuing the Planned Gift ID number values from LCRM in NPSP (Planned Gift Autonumber Backup and PG ID). When a record has a blank value in Planned Gift Autonumber Backup and a value in PG ID, it was a migrated record from LCRM. When a record has a value in both fields and they don&apos;t match, it means the record was created during the Delta. It has a value in the Planned Gift Autonumber Backup field, but it was created in LCRM, so it retains that value. When the field values match, it is an entirely new record.</description>
+    <displayFormat>PG-{00000}</displayFormat>
+    <externalId>false</externalId>
+    <label>Planned Gift Autonumber Backup</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>

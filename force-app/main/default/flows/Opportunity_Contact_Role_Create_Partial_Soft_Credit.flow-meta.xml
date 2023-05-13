@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <name>AssignValues</name>
+        <label>AssignValues</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <assignmentItems>
+            <assignToReference>PartialSoftCreditRecord.npsp__Opportunity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OpportunityId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>PartialSoftCreditRecord.npsp__Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>PartialSoftCreditRecord.npsp__Amount__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>AmountFormula</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>PartialSoftCreditRecord.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Created from OCR</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>PartialSoftCreditRecord.npsp__Role_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Role</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>CreatePartialSoftCredit</targetReference>
+        </connector>
+    </assignments>
+    <description>On Create Only and if Role equals Funder-Soft Credit, DAF, Workplace Giving, Sponsor, Agency, Corporate Match
+Updated per FB-1450</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>AmountFormula</name>
+        <dataType>Currency</dataType>
+        <expression>IF(( ISBLANK({!$Record.Opportunity.Close_Amount__c}) || {!$Record.Opportunity.Close_Amount__c} = 0),
+{!$Record.Opportunity.Amount},{!$Record.Opportunity.Close_Amount__c})</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Opportunity Contact Role --&gt;Create Partial Soft Credit {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity Contact Role --&gt;Create Partial Soft Credit</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>CreatePartialSoftCredit</name>
+        <label>CreatePartialSoftCredit</label>
+        <locationX>176</locationX>
+        <locationY>455</locationY>
+        <inputReference>PartialSoftCreditRecord</inputReference>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>AssignValues</targetReference>
+        </connector>
+        <filterFormula>{!$Permission.Flow_Automations_Off} &lt;&gt; TRUE
+&amp;&amp;
+(ispickval({!$Record.Role}, &quot;Workplace Giving&quot;) || ispickval({!$Record.Role}, &quot;Funder - Soft Credit&quot;) || ispickval({!$Record.Role}, &quot;Agency&quot;) || ispickval({!$Record.Role}, &quot;Sponsor&quot;) || ispickval({!$Record.Role}, &quot;DAF&quot;))</filterFormula>
+        <object>OpportunityContactRole</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>PartialSoftCreditRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>npsp__Partial_Soft_Credit__c</objectType>
+    </variables>
+</Flow>

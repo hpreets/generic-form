@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <defaultValue>&quot;Current&quot;</defaultValue>
+    <description>Status of email on record.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates if email is current or former.</inlineHelpText>
+    <label>Status</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Current</fullName>
+                <default>true</default>
+                <label>Current</label>
+            </value>
+            <value>
+                <fullName>Undeliverable</fullName>
+                <default>false</default>
+                <label>Undeliverable</label>
+            </value>
+            <value>
+                <fullName>Former</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Former</label>
+            </value>
+            <value>
+                <fullName>Former_Archived</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Former_Archived</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

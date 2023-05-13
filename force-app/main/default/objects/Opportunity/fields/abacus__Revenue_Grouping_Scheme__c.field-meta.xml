@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>abacus__Revenue_Grouping_Scheme__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Automatically set to indicate how allocation Ledger Entries are generated in this Opportunity&apos;s accounting data, maintaining its behavior even if the org-wide setting changes. If set to 1, an allocation Ledger Entry is created for each GAU Allocation. If set to 2, an allocation Ledger Entry is created for each Payment Allocation.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If set to 1, an allocation Ledger Entries is created for each GAU Allocation. If set to 2, an allocation Ledger Entry is created for each Payment Allocation. Do not edit.</inlineHelpText>
+    <label>DEPRECATED - Revenue Grouping Scheme</label>
+    <length>2</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

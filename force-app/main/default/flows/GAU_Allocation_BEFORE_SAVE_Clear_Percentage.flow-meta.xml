@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <description>Remove the Percentage value from Payment Allocations</description>
+    <environments>Default</environments>
+    <interviewLabel>GAU Allocation BEFORE SAVE Clear Percentage {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GAU Allocation BEFORE SAVE Clear Percentage</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Remove_Percentage</name>
+        <label>Remove Percentage</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <inputAssignments>
+            <field>npsp__Percent__c</field>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Remove_Percentage</targetReference>
+        </connector>
+        <filterFormula>AND({!$Permission.Flow_Automations_Off}=FALSE,
+NOT(ISBLANK({!$Record.npsp__Payment__c})),
+NOT(ISBLANK({!$Record.npsp__Percent__c}))
+)</filterFormula>
+        <object>npsp__Allocation__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <triggerOrder>1</triggerOrder>
+</Flow>

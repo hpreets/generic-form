@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estate_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Links PG record to an Account for the Donor&apos;s estate.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Link to an Account for the Donor&apos;s estate.</inlineHelpText>
+    <label>Estate Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Planned Gifts</relationshipLabel>
+    <relationshipName>Planned_Gifts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

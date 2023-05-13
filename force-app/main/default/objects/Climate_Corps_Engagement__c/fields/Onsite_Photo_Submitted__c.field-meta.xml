@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onsite_Photo_Submitted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>checkbox is checked when the onsite photo is uploaded</description>
+    <externalId>false</externalId>
+    <inlineHelpText>checkbox is checked when the onsite photo is uploaded</inlineHelpText>
+    <label>Onsite Photo Submitted</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

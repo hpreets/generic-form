@@ -1,0 +1,88 @@
+<!--
+  @description       :
+  @author            : Sai Teja
+  @last modified on  : 04-21-2022
+  @last modified by  : Sai Teja
+-->
+<template>
+    <c-e-d-f13_-header application-status={applicationStatus}></c-e-d-f13_-header>
+    <div class="body-bg-image-registration" style={backgroundstyle}>
+        <template if:true={navigateFromDashboard}>
+            <!-- Header Bottom Section Start -->
+            <div class="header-bottom">
+                <div class="header-bottom-inner">
+                    <!-- Breadcrumb Menu Start -->
+                    <div class="breadcrumb-menu-wrap">
+                        <ul class="breadcrumb-menu">
+                            <li>
+                                <a href="javascript:void(0);" title="" onclick={navigateToDashboard}>Dashboard</a>
+                            </li>
+                            <li class="current-page">
+                                Application
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Breadcrumb Menu End -->
+                </div>
+            </div>
+            <!-- Header Bottom Section End -->
+</template>
+
+        <div class="bg-welcome">
+            <div class="registration-application-section">
+                <div class="registration-application-section-inner">
+                    <div class="registration-application-section-sub post-registration-section-sub">
+                        <div class="application-title-pdf-icon clearfix">
+                            <h3>{textPageHeading}</h3>
+                            <div class="application-pdf-format-wrap">
+                                <figure class="application-pdf-format-icon"><img src={iconPDF}
+                                        alt="" title="" /></figure>
+                                <a href="javascript:void(0);" title="" onclick={applicationPDF}>
+                                    <span class="application-pdf-format-text">
+                                        <span>{textGetYourAppPDFLine1}</span>
+                                        {textGetYourAppPDFLine2}
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row slds-p-top_large slds-p-left_large" if:true={blockRegister} style="color: #325b6f;">
+                            <b><span>{textThankYouForSubmitted} Click here to return to the
+                                <span>
+                                   <a href="#" onclick={navigateToDashboard}> Dashboard.</a>
+                                </span>
+                            </span></b>
+                        </div>
+                        <div class="registration-application-form-wrap post-registration-application-form-wrap">
+                            <div style="background-color:#FFFFFF;">
+                                <!-- <lightning-accordion allow-multiple-sections-open="true" active-section-name="contactInformation"> -->
+                                <lightning-accordion allow-multiple-sections-open="true">
+                                    <lightning-accordion-section name="contactInformation" label={labelContactInformationSection}>
+                                        <c-e-d-f14_-contact-information background-image-class='' is-child read-only={readOnly}></c-e-d-f14_-contact-information>
+                                    </lightning-accordion-section>
+                                    <lightning-accordion-section name="educationInformation" label={labelEducationInformationSection}>
+                                        <c-e-d-f15_-education-information background-image-class='' is-child read-only={readOnly}></c-e-d-f15_-education-information>
+                                    </lightning-accordion-section>
+                                    <lightning-accordion-section name="backgroundInformation" label={labelBackgroundInformationSection}>
+                                        <c-e-d-f16_-background-information background-image-class='' is-child read-only={readOnly}></c-e-d-f16_-background-information>
+                                    </lightning-accordion-section>
+                                    <lightning-accordion-section name="matchPreferences" label={labelMatchPreferenceSection}>
+                                        <c-e-d-f17_-match-preferences background-image-class='' is-child read-only={readOnly}></c-e-d-f17_-match-preferences>
+                                    </lightning-accordion-section>
+                                    <lightning-accordion-section name="coverLetterResume" label={labelCoverLetterResumeSection}>
+                                        <c-e-d-f18_-cover-letter background-image-class='' is-child read-only={readOnly}></c-e-d-f18_-cover-letter>
+                                    </lightning-accordion-section>
+                                    <template if:false={isDeadlinePassed}>
+                                    <div class="form-button-wrap no-padding-top">
+                                        <button disabled={blockRegister} class="btn btn-primary green-button margin-right" onclick={submitApplication}>{labelSubmitAppBtn}</button>
+                                    </div>
+                                    </template>
+                                </lightning-accordion>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <c-e-d-f22_footer></c-e-d-f22_footer>
+</template>

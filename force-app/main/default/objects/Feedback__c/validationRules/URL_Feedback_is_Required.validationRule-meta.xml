@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>URL_Feedback_is_Required</fullName>
+    <active>true</active>
+    <description>Example URL field is required if Feedback Type is &quot;Migrated Data&quot; OR ‘requires update to data map’ – TRUE</description>
+    <errorConditionFormula>AND
+(
+	OR
+	(
+		ISPICKVAL(Feedback_Type__c, &apos;Migrated Data&apos;),
+		Requires_update_to_Datamap__c
+	),
+	ISBLANK(Example_URL__c) 
+)</errorConditionFormula>
+    <errorMessage>Example URL field is required if Feedback Type is &quot;Migrated Data&quot; OR ‘Requires update to data map’ – TRUE</errorMessage>
+</ValidationRule>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Writer_Assigned__c</fullName>
+    <externalId>false</externalId>
+    <label>Writer Assigned</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Allison Cobb</fullName>
+                <default>false</default>
+                <label>Allison Cobb</label>
+            </value>
+            <value>
+                <fullName>Emily Whitted</fullName>
+                <default>false</default>
+                <label>Emily Whitted</label>
+            </value>
+            <value>
+                <fullName>Erika Reuter</fullName>
+                <default>false</default>
+                <label>Erika Reuter</label>
+            </value>
+            <value>
+                <fullName>Gabrielle Antoniadis</fullName>
+                <default>false</default>
+                <label>Gabrielle Antoniadis</label>
+            </value>
+            <value>
+                <fullName>Jason Martin</fullName>
+                <default>false</default>
+                <label>Jason Martin</label>
+            </value>
+            <value>
+                <fullName>Jen Coleman</fullName>
+                <default>false</default>
+                <label>Jen Coleman</label>
+            </value>
+            <value>
+                <fullName>Jennifer Freeman</fullName>
+                <default>false</default>
+                <label>Jennifer Freeman</label>
+            </value>
+            <value>
+                <fullName>Judy Stoeven Davies</fullName>
+                <default>false</default>
+                <label>Judy Stoeven Davies</label>
+            </value>
+            <value>
+                <fullName>Katie Wang</fullName>
+                <default>false</default>
+                <label>Katie Wang</label>
+            </value>
+            <value>
+                <fullName>Laura Lea Rubino</fullName>
+                <default>false</default>
+                <label>Laura Lea Rubino</label>
+            </value>
+            <value>
+                <fullName>Lindsay Ross</fullName>
+                <default>false</default>
+                <label>Lindsay Ross</label>
+            </value>
+            <value>
+                <fullName>Lisa Fullerton</fullName>
+                <default>false</default>
+                <label>Lisa Fullerton</label>
+            </value>
+            <value>
+                <fullName>Lucy Henry</fullName>
+                <default>false</default>
+                <label>Lucy Henry</label>
+            </value>
+            <value>
+                <fullName>Sharon Nadel</fullName>
+                <default>false</default>
+                <label>Sharon Nadel</label>
+            </value>
+            <value>
+                <fullName>No Writer Assigned</fullName>
+                <default>false</default>
+                <label>No Writer Assigned</label>
+            </value>
+            <value>
+                <fullName>Portfolio Manager</fullName>
+                <default>false</default>
+                <label>Portfolio Manager</label>
+            </value>
+            <value>
+                <fullName>Dana Weidig</fullName>
+                <default>false</default>
+                <label>Dana Weidig</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

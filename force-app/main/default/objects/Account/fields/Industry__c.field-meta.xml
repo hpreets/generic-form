@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry__c</fullName>
+    <externalId>false</externalId>
+    <label>Industry</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Industry_Group__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Auto Components</fullName>
+                <default>false</default>
+                <label>Auto Components</label>
+            </value>
+            <value>
+                <fullName>Automobiles</fullName>
+                <default>false</default>
+                <label>Automobiles</label>
+            </value>
+            <value>
+                <fullName>Banks</fullName>
+                <default>false</default>
+                <label>Banks</label>
+            </value>
+            <value>
+                <fullName>Thrifts &amp; Mortgage Finance</fullName>
+                <default>false</default>
+                <label>Thrifts &amp; Mortgage Finance</label>
+            </value>
+            <value>
+                <fullName>Aerospace &amp; Defense</fullName>
+                <default>false</default>
+                <label>Aerospace &amp; Defense</label>
+            </value>
+            <value>
+                <fullName>Building Products</fullName>
+                <default>false</default>
+                <label>Building Products</label>
+            </value>
+            <value>
+                <fullName>Construction &amp; Engineering</fullName>
+                <default>false</default>
+                <label>Construction &amp; Engineering</label>
+            </value>
+            <value>
+                <fullName>Electrical Equipment</fullName>
+                <default>false</default>
+                <label>Electrical Equipment</label>
+            </value>
+            <value>
+                <fullName>Industrial Conglomerates</fullName>
+                <default>false</default>
+                <label>Industrial Conglomerates</label>
+            </value>
+            <value>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+                <label>Machinery</label>
+            </value>
+            <value>
+                <fullName>Trading Companies &amp; Distributors</fullName>
+                <default>false</default>
+                <label>Trading Companies &amp; Distributors</label>
+            </value>
+            <value>
+                <fullName>Commercial Services &amp; Supplies</fullName>
+                <default>false</default>
+                <label>Commercial Services &amp; Supplies</label>
+            </value>
+            <value>
+                <fullName>Professional Services</fullName>
+                <default>false</default>
+                <label>Professional Services</label>
+            </value>
+            <value>
+                <fullName>Household Durables</fullName>
+                <default>false</default>
+                <label>Household Durables</label>
+            </value>
+            <value>
+                <fullName>Leisure Products</fullName>
+                <default>false</default>
+                <label>Leisure Products</label>
+            </value>
+            <value>
+                <fullName>Textiles, Apparel &amp; Luxury Goods</fullName>
+                <default>false</default>
+                <label>Textiles, Apparel &amp; Luxury Goods</label>
+            </value>
+            <value>
+                <fullName>Diversified Consumer Services</fullName>
+                <default>false</default>
+                <label>Diversified Consumer Services</label>
+            </value>
+            <value>
+                <fullName>Hotels, Restaurants &amp; Leisure</fullName>
+                <default>false</default>
+                <label>Hotels, Restaurants &amp; Leisure</label>
+            </value>
+            <value>
+                <fullName>Capital Markets</fullName>
+                <default>false</default>
+                <label>Capital Markets</label>
+            </value>
+            <value>
+                <fullName>Consumer Finance</fullName>
+                <default>false</default>
+                <label>Consumer Finance</label>
+            </value>
+            <value>
+                <fullName>Diversified Financial Services</fullName>
+                <default>false</default>
+                <label>Diversified Financial Services</label>
+            </value>
+            <value>
+                <fullName>Mortgage Real Estate Investment Trusts (REITs)</fullName>
+                <default>false</default>
+                <label>Mortgage Real Estate Investment Trusts (REITs)</label>
+            </value>
+            <value>
+                <fullName>Energy Equipment &amp; Services</fullName>
+                <default>false</default>
+                <label>Energy Equipment &amp; Services</label>
+            </value>
+            <value>
+                <fullName>Oil, Gas &amp; Consumable Fuels</fullName>
+                <default>false</default>
+                <label>Oil, Gas &amp; Consumable Fuels</label>
+            </value>
+            <value>
+                <fullName>Food &amp; Staples Retailing</fullName>
+                <default>false</default>
+                <label>Food &amp; Staples Retailing</label>
+            </value>
+            <value>
+                <fullName>Beverages</fullName>
+                <default>false</default>
+                <label>Beverages</label>
+            </value>
+            <value>
+                <fullName>Food Products</fullName>
+                <default>false</default>
+                <label>Food Products</label>
+            </value>
+            <value>
+                <fullName>Tobacco</fullName>
+                <default>false</default>
+                <label>Tobacco</label>
+            </value>
+            <value>
+                <fullName>Health Care Equipment &amp; Supplies</fullName>
+                <default>false</default>
+                <label>Health Care Equipment &amp; Supplies</label>
+            </value>
+            <value>
+                <fullName>Health Care Providers &amp; Services</fullName>
+                <default>false</default>
+                <label>Health Care Providers &amp; Services</label>
+            </value>
+            <value>
+                <fullName>Health Care Technology</fullName>
+                <default>false</default>
+                <label>Health Care Technology</label>
+            </value>
+            <value>
+                <fullName>Household Products</fullName>
+                <default>false</default>
+                <label>Household Products</label>
+            </value>
+            <value>
+                <fullName>Personal Products</fullName>
+                <default>false</default>
+                <label>Personal Products</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Chemicals</fullName>
+                <default>false</default>
+                <label>Chemicals</label>
+            </value>
+            <value>
+                <fullName>Construction Materials</fullName>
+                <default>false</default>
+                <label>Construction Materials</label>
+            </value>
+            <value>
+                <fullName>Containers &amp; Packaging</fullName>
+                <default>false</default>
+                <label>Containers &amp; Packaging</label>
+            </value>
+            <value>
+                <fullName>Metals &amp; Mining</fullName>
+                <default>false</default>
+                <label>Metals &amp; Mining</label>
+            </value>
+            <value>
+                <fullName>Paper &amp; Forest Products</fullName>
+                <default>false</default>
+                <label>Paper &amp; Forest Products</label>
+            </value>
+            <value>
+                <fullName>Media</fullName>
+                <default>false</default>
+                <label>Media</label>
+            </value>
+            <value>
+                <fullName>Biotechnology</fullName>
+                <default>false</default>
+                <label>Biotechnology</label>
+            </value>
+            <value>
+                <fullName>Life Sciences Tools &amp; Services</fullName>
+                <default>false</default>
+                <label>Life Sciences Tools &amp; Services</label>
+            </value>
+            <value>
+                <fullName>Pharmaceuticals</fullName>
+                <default>false</default>
+                <label>Pharmaceuticals</label>
+            </value>
+            <value>
+                <fullName>Equity Real Estate Investment Trusts (REITs)</fullName>
+                <default>false</default>
+                <label>Equity Real Estate Investment Trusts (REITs)</label>
+            </value>
+            <value>
+                <fullName>Real Estate Management &amp; Development</fullName>
+                <default>false</default>
+                <label>Real Estate Management &amp; Development</label>
+            </value>
+            <value>
+                <fullName>Distributors</fullName>
+                <default>false</default>
+                <label>Distributors</label>
+            </value>
+            <value>
+                <fullName>Internet &amp; Direct Marketing Retail</fullName>
+                <default>false</default>
+                <label>Internet &amp; Direct Marketing Retail</label>
+            </value>
+            <value>
+                <fullName>Multiline Retail</fullName>
+                <default>false</default>
+                <label>Multiline Retail</label>
+            </value>
+            <value>
+                <fullName>Specialty Retail</fullName>
+                <default>false</default>
+                <label>Specialty Retail</label>
+            </value>
+            <value>
+                <fullName>Semiconductors &amp; Semiconductor Equipment</fullName>
+                <default>false</default>
+                <label>Semiconductors &amp; Semiconductor Equipment</label>
+            </value>
+            <value>
+                <fullName>Internet Software &amp; Services</fullName>
+                <default>false</default>
+                <label>Internet Software &amp; Services</label>
+            </value>
+            <value>
+                <fullName>IT Services</fullName>
+                <default>false</default>
+                <label>IT Services</label>
+            </value>
+            <value>
+                <fullName>Software</fullName>
+                <default>false</default>
+                <label>Software</label>
+            </value>
+            <value>
+                <fullName>Communications Equipment</fullName>
+                <default>false</default>
+                <label>Communications Equipment</label>
+            </value>
+            <value>
+                <fullName>Electronic Equipment, Instruments &amp; Components</fullName>
+                <default>false</default>
+                <label>Electronic Equipment, Instruments &amp; Components</label>
+            </value>
+            <value>
+                <fullName>Technology Hardware, Storage &amp; Peripherals</fullName>
+                <default>false</default>
+                <label>Technology Hardware, Storage &amp; Peripherals</label>
+            </value>
+            <value>
+                <fullName>Diversified Telecommunication Services</fullName>
+                <default>false</default>
+                <label>Diversified Telecommunication Services</label>
+            </value>
+            <value>
+                <fullName>Wireless Telecommunication Services</fullName>
+                <default>false</default>
+                <label>Wireless Telecommunication Services</label>
+            </value>
+            <value>
+                <fullName>Air Freight &amp; Logistics</fullName>
+                <default>false</default>
+                <label>Air Freight &amp; Logistics</label>
+            </value>
+            <value>
+                <fullName>Airlines</fullName>
+                <default>false</default>
+                <label>Airlines</label>
+            </value>
+            <value>
+                <fullName>Marine</fullName>
+                <default>false</default>
+                <label>Marine</label>
+            </value>
+            <value>
+                <fullName>Road &amp; Rail</fullName>
+                <default>false</default>
+                <label>Road &amp; Rail</label>
+            </value>
+            <value>
+                <fullName>Transportation Infrastructure</fullName>
+                <default>false</default>
+                <label>Transportation Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Electric Utilities</fullName>
+                <default>false</default>
+                <label>Electric Utilities</label>
+            </value>
+            <value>
+                <fullName>Gas Utilities</fullName>
+                <default>false</default>
+                <label>Gas Utilities</label>
+            </value>
+            <value>
+                <fullName>Independent Power and Renewable Electricity Producers</fullName>
+                <default>false</default>
+                <label>Independent Power and Renewable Electricity Producers</label>
+            </value>
+            <value>
+                <fullName>Multi-Utilities</fullName>
+                <default>false</default>
+                <label>Multi-Utilities</label>
+            </value>
+            <value>
+                <fullName>Water Utilities</fullName>
+                <default>false</default>
+                <label>Water Utilities</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Health Care Equipment &amp; Services</controllingFieldValue>
+            <valueName>Health Care Equipment &amp; Supplies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Health Care Equipment &amp; Services</controllingFieldValue>
+            <valueName>Health Care Providers &amp; Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Health Care Equipment &amp; Services</controllingFieldValue>
+            <valueName>Health Care Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecommunication Services</controllingFieldValue>
+            <valueName>Diversified Telecommunication Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecommunication Services</controllingFieldValue>
+            <valueName>Wireless Telecommunication Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Household &amp; Personal Products</controllingFieldValue>
+            <valueName>Household Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Household &amp; Personal Products</controllingFieldValue>
+            <valueName>Personal Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transportation</controllingFieldValue>
+            <valueName>Air Freight &amp; Logistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transportation</controllingFieldValue>
+            <valueName>Airlines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transportation</controllingFieldValue>
+            <valueName>Marine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transportation</controllingFieldValue>
+            <valueName>Road &amp; Rail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transportation</controllingFieldValue>
+            <valueName>Transportation Infrastructure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Utilities</controllingFieldValue>
+            <valueName>Electric Utilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Utilities</controllingFieldValue>
+            <valueName>Gas Utilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Utilities</controllingFieldValue>
+            <valueName>Independent Power and Renewable Electricity Producers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Utilities</controllingFieldValue>
+            <valueName>Multi-Utilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Utilities</controllingFieldValue>
+            <valueName>Water Utilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Materials</controllingFieldValue>
+            <valueName>Chemicals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Materials</controllingFieldValue>
+            <valueName>Construction Materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Materials</controllingFieldValue>
+            <valueName>Containers &amp; Packaging</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Materials</controllingFieldValue>
+            <valueName>Metals &amp; Mining</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Materials</controllingFieldValue>
+            <valueName>Paper &amp; Forest Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media</controllingFieldValue>
+            <valueName>Media</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmaceuticals, Biotechnology &amp; Life Sciences</controllingFieldValue>
+            <valueName>Biotechnology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmaceuticals, Biotechnology &amp; Life Sciences</controllingFieldValue>
+            <valueName>Life Sciences Tools &amp; Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pharmaceuticals, Biotechnology &amp; Life Sciences</controllingFieldValue>
+            <valueName>Pharmaceuticals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate</controllingFieldValue>
+            <valueName>Equity Real Estate Investment Trusts (REITs)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate</controllingFieldValue>
+            <valueName>Real Estate Management &amp; Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retailing</controllingFieldValue>
+            <valueName>Distributors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retailing</controllingFieldValue>
+            <valueName>Internet &amp; Direct Marketing Retail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retailing</controllingFieldValue>
+            <valueName>Multiline Retail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retailing</controllingFieldValue>
+            <valueName>Specialty Retail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Semiconductors &amp; Semiconductor Equipment</controllingFieldValue>
+            <valueName>Semiconductors &amp; Semiconductor Equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobiles &amp; Components</controllingFieldValue>
+            <valueName>Auto Components</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automobiles &amp; Components</controllingFieldValue>
+            <valueName>Automobiles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Banks</controllingFieldValue>
+            <valueName>Banks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Banks</controllingFieldValue>
+            <valueName>Thrifts &amp; Mortgage Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Capital Goods</controllingFieldValue>
+            <valueName>Aerospace &amp; Defense</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Capital Goods</controllingFieldValue>
+            <valueName>Building Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Capital Goods</controllingFieldValue>
+            <valueName>Construction &amp; Engineering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Capital Goods</controllingFieldValue>
+            <valueName>Electrical Equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Capital Goods</controllingFieldValue>
+            <valueName>Industrial Conglomerates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Capital Goods</controllingFieldValue>
+            <valueName>Machinery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Capital Goods</controllingFieldValue>
+            <valueName>Trading Companies &amp; Distributors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial &amp; Professional Services</controllingFieldValue>
+            <valueName>Commercial Services &amp; Supplies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial &amp; Professional Services</controllingFieldValue>
+            <valueName>Professional Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Durables &amp; Apparel</controllingFieldValue>
+            <valueName>Household Durables</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Durables &amp; Apparel</controllingFieldValue>
+            <valueName>Leisure Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Durables &amp; Apparel</controllingFieldValue>
+            <valueName>Textiles, Apparel &amp; Luxury Goods</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Services</controllingFieldValue>
+            <valueName>Diversified Consumer Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Services</controllingFieldValue>
+            <valueName>Hotels, Restaurants &amp; Leisure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Diversified Financials</controllingFieldValue>
+            <valueName>Capital Markets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Diversified Financials</controllingFieldValue>
+            <valueName>Consumer Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Diversified Financials</controllingFieldValue>
+            <valueName>Diversified Financial Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Diversified Financials</controllingFieldValue>
+            <valueName>Mortgage Real Estate Investment Trusts (REITs)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Energy</controllingFieldValue>
+            <valueName>Energy Equipment &amp; Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Energy</controllingFieldValue>
+            <valueName>Oil, Gas &amp; Consumable Fuels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food &amp; Staples Retailing</controllingFieldValue>
+            <valueName>Food &amp; Staples Retailing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Software &amp; Services</controllingFieldValue>
+            <valueName>Internet Software &amp; Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Software &amp; Services</controllingFieldValue>
+            <valueName>IT Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Software &amp; Services</controllingFieldValue>
+            <valueName>Software</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food, Beverage &amp; Tobacco</controllingFieldValue>
+            <valueName>Beverages</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food, Beverage &amp; Tobacco</controllingFieldValue>
+            <valueName>Food Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food, Beverage &amp; Tobacco</controllingFieldValue>
+            <valueName>Tobacco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technology Hardware &amp; Equipment</controllingFieldValue>
+            <valueName>Communications Equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technology Hardware &amp; Equipment</controllingFieldValue>
+            <valueName>Electronic Equipment, Instruments &amp; Components</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technology Hardware &amp; Equipment</controllingFieldValue>
+            <valueName>Technology Hardware, Storage &amp; Peripherals</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

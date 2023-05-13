@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="placeholderSearchEngagementText" label="Global Text Search placeholder" type="String" default="Search host organizations and project descriptions"></property>
+
+            <property name="showFellowshipCityFilter" label="Show Fellowship City Filter?" type="Boolean" default="true"></property>
+            <property name="labelFellowshipCityFilter" label="Fellowship City Filter label" type="String" default="Fellowship City"></property>
+            <property name="showFellowshipStateFilter" label="Show Fellowship State Filter?" type="Boolean" default="true"></property>
+            <property name="labelFellowshipStateFilter" label="Fellowship State Filter label" type="String" default="Fellowship State"></property>
+            <property name="showAccessibleToPublicTransportFilter" label="Show Accessible to Public Transport Filter?" type="Boolean" default="true"></property>
+            <property name="labelAccessibleToPublicTransportFilter" label="Accessible to Public Transport Filter label" type="String" default="Accessible to Public Transport"></property>
+            <property name="showIndustryFilter" label="Show Industry Filter?" type="Boolean" default="true"></property>
+            <property name="labelIndustryFilter" label="Industry Filter label" type="String" default="Industry"></property>
+            <property name="showProjectTypeFilter" label="Show Project Type Filter?" type="Boolean" default="true"></property>
+            <property name="labelProjectTypeFilter" label="Project Type Filter label" type="String" default="Project Type"></property>
+            <property name="showFellowshipLocationPreferenceFilter" label="Show Fellowship Location Preference Filter?" type="Boolean" default="true"></property>
+            <property name="labelFellowshipLocationPreferenceFilter" label="Fellowship Location Preference Filter label" type="String" default="Fellowship Location Preference"></property>
+
+            <property name="bookmarkRankFilterLabels" label="Bookmark and Rank Filter Options" type="String" default="Show Ranked, Show Bookmarked, Show Ranked &amp; Bookmarked, Show All"></property>
+            <property name="headingEngagementPage" label="Engagement Page Heading" type="String" default="Engagement List"></property>
+            <property name="headingEngagementList" label="Engagement List Heading" type="String" default="Engagements"></property>
+            <property name="msgNoEngagementRecords" label="No Engagement records message" type="String" default="There are no available Engagements."></property>
+
+            <property name="headingInstruction" label="Instruction Heading" type="String" default="Instructions"></property>
+            <property name="labelSearchTips" label="Search Tips label" type="String" default="Search Tips"></property>
+            <property name="headingSearchTipsDialog" label="Search Tips Dialog Heading" type="String" default="Engagement Search Tips"></property>
+
+            <property name="colHeadingHostOrganization" label="Host Organization column heading" type="String" default="HOST ORGANIZATION"></property>
+            <property name="colHeadingIndustry" label="Industry column heading" type="String" default="INDUSTRY"></property>
+            <property name="colHeadingAccToPublicTransport" label="Accessible to Public Transport column heading" type="String" default="ACCESSIBLE TO PUBLIC TRANSPORT"></property>
+            <property name="colHeadingFellowshipCity" label="Fellowship City column heading" type="String" default="FELLOWSHIP CITY"></property>
+            <property name="colHeadingFellowshipState" label="Fellowship State column heading" type="String" default="FELLOWSHIP STATE"></property>
+            <property name="colHeadingProjectType" label="Project Type column heading" type="String" default="PROJECT TYPE"></property>
+            <property name="colHeadingFellowshipLocationPref" label="Fellowship Location Preference column heading" type="String" default="FELLOWSHIP LOCATION PREFERANCE"></property>
+            <property name="colHeadingSubmissionStatus" label="Submission Status column heading" type="String" default="SUBMISSION STATUS"></property>
+
+            <property name="labelConsiderMeField" label="Consider Me field label" type="String" default="Let us know why we should consider you"></property>
+            <property name="maxCharConsiderMe" label="Max Character Limit" type="String" default="1500"></property>
+            <property name="labelMaxCharLimitConsiderMe" label="Max Character Limit message" type="String" default="1500 characters max"></property>
+
+            <property name="colorSubmitted" label="Icon color for Submitted" type="Color" default="rgb(98, 171, 108)"></property>
+            <property name="colorNotSubmitted" label="Icon color for Non-Submitted" type="Color" default="rgb(227, 82, 35)"></property>
+            <property name="colorRanked" label="Icon color for Ranked" type="Color" default="rgb(227, 82, 35)"></property>
+            <property name="colorBookmarked" label="Icon color for Bookmarked" type="Color" default="rgb(255, 255, 0)"></property>
+            <property name="txtSubmitted" label="Label Status - Submitted" type="String" default="Top 5 - Submitted"></property>
+            <property name="txtNotSubmitted" label="Label Status - Not Submitted" type="String" default="Not Submitted"></property>
+            <property name="txtRanked" label="Label Status - Ranked" type="String" default="Ranked"></property>
+            <property name="txtBookmarked" label="Label Status - Bookmarked" type="String" default="Interested"></property>
+
+
+            <property name="msgMultiEnggSameRanking" label="Error Msg - Multiple Engagement same ranking" type="String" default="Multiple Engagement records given same ranking. Please select the ranking in the order as 1,2,3,..."></property>
+            <property name="msg5EnggNotSelected" label="Error Msg - Less or more Engagements submitted" type="String" default="Please rank 5 engagements before submitting. Make sure to add comments too."></property>
+            <property name="msgNoCommentsOnEngg" label="Error Msg - Comments not added" type="String" default="One or more Enagagements do not have comments added"></property>
+            <property name="msgSaveSuccess" label="Success Save Msg" type="String" default="Records have been saved successfully."></property>
+
+            <property name="msgSubmitConfirm" label="Submit Confirmation Msg" type="String" default="Are you sure? You can't make any edits after you click Submit. If you aren't ready to Submit, click Save All to make changes later. Click OK to Submit, click Cancel to go back."></property>
+            <property name="labelResetCriteriaBtn" label="Reset Criteria button label" type="String" default="Reset Criteria"></property>
+            <property name="labelSearchBtn" label="Search button label" type="String" default="Search"></property>
+            <property name="labelSubmitBtn" label="Submit button label" type="String" default="Submit"></property>
+            <property name="labelSaveAllBtn" label="Save All button label" type="String" default="Save All"></property>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

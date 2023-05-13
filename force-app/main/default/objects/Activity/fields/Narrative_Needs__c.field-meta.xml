@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Narrative_Needs__c</fullName>
+    <description>Include any specific narrative instructions from the donor – ie. report length, requested progress details, etc.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Include any specific narrative instructions from the donor – ie. report length, requested progress details, etc.</inlineHelpText>
+    <label>Narrative Needs</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

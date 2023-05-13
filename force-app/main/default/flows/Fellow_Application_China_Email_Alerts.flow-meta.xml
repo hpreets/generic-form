@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Hold_on_Interview_2_ChinaEmail</name>
+        <label>Hold on Interview 2 China</label>
+        <locationX>578</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Hold_on_Interview_2_China</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Hold_on_MatchingChina</name>
+        <label>Hold on Matching</label>
+        <locationX>1370</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Hold_on_Matching_China</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Invite_from_Interview</name>
+        <label>Invite from Interview</label>
+        <locationX>2426</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Invite_to_Interview_from_Waitlist_China</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Invite_Interview_1_China</name>
+        <label>Invite Interview 1 China</label>
+        <locationX>2162</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Send_Invite_for_Interview_1_China</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Not_Moving_Forward_Waitlist</name>
+        <label>Not Moving Forward Waitlist</label>
+        <locationX>1634</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Not_Moving_Forward_From_Waitlist_China</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Not_Moving_On_China</name>
+        <label>Not Moving On China</label>
+        <locationX>1106</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Interview_1_2_Complete_Not_Moving_On_China</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Not_Qualified_and_Notified_China</name>
+        <label>Not Qualified and Notified China</label>
+        <locationX>50</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Not_Qualified_and_Notified_China</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Invite_Interview_2_China</name>
+        <label>Send Invite Interview 2 China</label>
+        <locationX>2690</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Send_Invite_for_Interview_2_China</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Waitlist_Interview_1_China</name>
+        <label>Waitlist Interview 1 China</label>
+        <locationX>314</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Waitlist_Interview_1_China</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <decisions>
+        <name>Applicant_Stage</name>
+        <label>Applicant Stage</label>
+        <locationX>1502</locationX>
+        <locationY>288</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Interview_1_Not_Moving_On</name>
+            <conditionLogic>3 and (1 OR 2)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Interview 1 Complete- Not Moving On</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Interview 2 Complete- Not Moving On</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Fellowship_Applying_for__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>China Fellowship</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Not_Moving_On_China</targetReference>
+            </connector>
+            <label>Interview 1/2 Complete - Not Moving On</label>
+        </rules>
+        <rules>
+            <name>Hold_on_Matching</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Hold on Matching</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Fellowship_Applying_for__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>China Fellowship</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Hold_on_MatchingChina</targetReference>
+            </connector>
+            <label>Hold on Matching</label>
+        </rules>
+        <rules>
+            <name>Not_Moving_Forward</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Not Moving Forward from Waitlist</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Fellowship_Applying_for__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>China Fellowship</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Not_Moving_Forward_Waitlist</targetReference>
+            </connector>
+            <label>Not Moving Forward</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Application_Stage_Change_One_Day_Wait</name>
+        <label>Application Stage Change - One Day Wait</label>
+        <locationX>2558</locationX>
+        <locationY>288</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Send_Invite_for_Interview_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Send Invite for Interview 1</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Fellowship_Applying_for__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>China Fellowship</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Invite_Interview_1_China</targetReference>
+            </connector>
+            <label>Send Invite for Interview 1</label>
+        </rules>
+        <rules>
+            <name>Invite_to_Interview_from_Waitlist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Invite to Interview from Waitlist</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Fellowship_Applying_for__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>China Fellowship</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Invite_from_Interview</targetReference>
+            </connector>
+            <label>Invite to Interview from Waitlist</label>
+        </rules>
+        <rules>
+            <name>Send_Invite_for_Interview_2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Send Invite for Interview 2</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Fellowship_Applying_for__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>China Fellowship</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Invite_Interview_2_China</targetReference>
+            </connector>
+            <label>Send Invite for Interview 2</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Fellow_Applicant_Status_Immediate_Send</name>
+        <label>Fellow Applicant Status - Immediate Send</label>
+        <locationX>446</locationX>
+        <locationY>288</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Not_Qualified</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Not Qualified and Notified</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Fellowship_Applying_for__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>China Fellowship</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Not_Qualified_and_Notified_China</targetReference>
+            </connector>
+            <label>Not Qualified</label>
+        </rules>
+        <rules>
+            <name>Waitlist_Interview_1_new</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Waitlist- Interview 1</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Fellowship_Applying_for__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>China Fellowship</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Waitlist_Interview_1_China</targetReference>
+            </connector>
+            <label>Waitlist Interview 1 new</label>
+        </rules>
+        <rules>
+            <name>Hold_on_Interview_2_China</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Hold on Interview 2</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Fellowship_Applying_for__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>China Fellowship</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Hold_on_Interview_2_ChinaEmail</targetReference>
+            </connector>
+            <label>Hold on Interview 2</label>
+        </rules>
+    </decisions>
+    <description>Fellow application email alerts for China applicants (immediate send, one day wait, two day wait)</description>
+    <environments>Default</environments>
+    <interviewLabel>Fellow Application - China Email Alerts {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Fellow Application - China Email Alerts</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>1376</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Fellow_Applicant_Status_Immediate_Send</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>{!$Permission.Flow_Automations_Off} &lt;&gt; TRUE</filterFormula>
+        <object>Fellow_Application__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <scheduledPaths>
+            <name>Wait_Two_Days</name>
+            <connector>
+                <targetReference>Applicant_Stage</targetReference>
+            </connector>
+            <label>Wait Two Days</label>
+            <maxBatchSize>25</maxBatchSize>
+            <offsetNumber>2</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Wait_One_Day</name>
+            <connector>
+                <targetReference>Application_Stage_Change_One_Day_Wait</targetReference>
+            </connector>
+            <label>Wait One Day</label>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

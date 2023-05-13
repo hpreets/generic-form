@@ -1,0 +1,1011 @@
+<!--
+  @description       :
+  @author            : Sai Teja
+  @last modified on  : 05-25-2022
+  @last modified by  : Sai Teja
+-->
+<template>
+  <!-- <c-e-d-f13_-header></c-e-d-f13_-header> -->
+
+  <template if:true={navigateFromDashboard}>
+    <!-- Header Bottom Section Start -->
+    <div class="header-bottom">
+      <div class="header-bottom-inner">
+        <!-- Breadcrumb Menu Start -->
+        <div class="breadcrumb-menu-wrap">
+          <ul class="breadcrumb-menu">
+            <li>
+              <a href="javascript:void(0);" title="" onclick={navigateToDashboard}>Dashboard</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" title="" onclick={navigateToItems}>{previousPageLabel}</a>
+              </li>
+            <li class="current-page">{currentPageLabel}</li>
+
+          </ul>
+        </div>
+        <!-- Breadcrumb Menu End -->
+      </div>
+    </div>
+    <!-- Header Bottom Section End -->
+  </template>
+
+  <div class="body-bg-image-registration" style={backgroundstyle}>
+    <div class="registration-application-section">
+      <div class="registration-application-section-inner">
+        <lightning-card>
+          <div>
+            <div class="header">
+              <p class="pageHeadingText">{label.PortalDeliverable_Heading_Text}</p> <!-- Portal Deliverables -->
+              <hr class="poralstriped-border" />
+
+              <!-- START END DATE WORKPLAN -->
+              <template lwc:if={visibility.Section_StartEndDateWorkplan}>
+                <div class="slds-box">
+                  <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-grow-none sectionHeadingLeftIcon">
+                      <lightning-icon icon-name={label.PortalDeliverable_SectionHeadingIcon_DatesAndWorkplan} size="small"> </lightning-icon> <!-- "utility:note" -->
+                    </div>
+                    <div class="slds-col sectionHeadingText" onclick={changeIcon}>
+                      {label.ITEM_FOR_EDF_HELP_dates_and_workplan_here}
+                    </div>
+                    <div class="slds-col slds-grow-none slds-col_bump-right">
+                      <lightning-icon icon-name={startEndDateIcon} onclick={changeIcon} size="small"> </lightning-icon>
+                    </div>
+                  </div>
+                  <div if:true={openDateSection}>
+                    <hr style="margin-top: 1rem" />
+                    <div class="sectionContent">
+
+                      <!-- START DATE -->
+                      <template lwc:if={visibility.Field_StartDate}>
+                        <div class="slds-text-heading_small">
+                          <span class="slds-text-body_regular labelForDateField">
+                            {label.PortalDeliverable_FieldLabel_FellowshipStartDate} <!-- Fellowship start date -->
+                            <span class={styleClass.startDate} style={pillStyle.startDate}> {approvalStatus.startDate} </span>
+                          </span>
+                          <lightning-input type="date" name="startDate" class="dateInputWithoutLabel" value={ccEngagement.Start_Date__c}>
+                          </lightning-input>
+                        </div>
+                        <br />
+                      </template>
+
+                      <!-- END DATE -->
+                      <template lwc:if={visibility.Field_EndDate}>
+                        <div class="slds-text-heading_small">
+                          <span class="slds-text-body_regular labelForDateField">
+                            {label.PortalDeliverable_FieldLabel_FellowshipEndDate}<!-- Fellowship end date -->
+                            <span class={styleClass.endDate} style={pillStyle.endDate}>{approvalStatus.endDate}</span>
+                          </span>
+                          <lightning-input type="date" name="endDate" value={ccEngagement.End_date__c} class="dateInputWithoutLabel">
+                          </lightning-input>
+                        </div>
+                        <br />
+                      </template>
+
+                      <!-- WORKPLAN -->
+                      <template lwc:if={visibility.Field_Workplan}>
+
+                        <!-- WORKPLAN BOX -->
+                        <div>
+                          <span class="slds-text-body_regular labelForBoxField">
+                            {label.PortalDeliverable_FieldLabel_UploadYourWorkplan} <!-- Upload your workplan -->
+                            <span class={styleClass.workplan} style={pillStyle.workplan}>{approvalStatus.workplan}</span>
+                          </span>
+                          <div class="slds-box innerSectionbox">
+                            <div class="slds-grid">
+                              <div class="slds-col slds-size_2-of-12">
+                                <lightning-icon icon-name="utility:list" size="medium" style="padding-bottom: 1rem"> </lightning-icon>
+                              </div>
+                              <div class="slds-col slds-size_1-of-12"></div>
+                              <div class="slds-col slds-size_9-of-12">
+                                <p class="headingOneWithinBox">
+                                  {label.PortalDeliverable_Label_Download}
+                                </p> <!-- Download -->
+                                <p class="headingTwoWithinBox">
+                                  {label.PortalDeliverable_Label_WorkplanTemplate}
+                                </p> <!-- Workplan Template  -->
+                                <p class="slds-text-body_regular">
+                                  {label.ITEMS_FOR_EDF_Help_Text_Workplan_Template}
+                                </p>
+                                <br />
+                                <div>
+                                  <a href={files.PortalDeliverable_FileURL_WorkplanTemplate} target="_blank" class="urlLinkWithinBox">
+                                    <u>{label.PortalDeliverable_Label_ClickHereToDownload}</u>
+                                  </a> <!-- Click here to download -->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- WORKPLAN FILE UPLOAD AND UPLOADED FILE -->
+                        <div>
+                          <lightning-file-upload
+                            name="uploadWorkPlan"
+                            record-id={ccEngagement.Id}
+                            onuploadfinished={handleWorkPlanUpload}
+                            class="textInputWithoutLabel"
+                            multiple="false"></lightning-file-upload>
+
+                          <template for:each={workplanFilesList} for:item="file">
+                            <div key={file.value}>
+                                <div class="slds-grid whitespaceNoWrap">
+                                  <div class="slds-col">
+                                    <lightning-button-icon icon-name="utility:delete"
+                                      alternative-text={label.PortalDeliverable_Label_Delete}
+                                      class="slds-m-left_xx-small"
+                                      title={label.PortalDeliverable_Label_Delete}
+                                      data-title={file.label}
+                                      data-fileprefix={constants.CC_ENGAGEMENT_WORKPLAN_FILE_TITLE_PREFIX}
+                                      data-field={file.value} onclick={handleFileDelete}>
+                                    </lightning-button-icon>
+                                    &nbsp;
+                                    <a href={file.url} download>{file.label}</a>
+                                  </div> <!-- Delete -->
+                                  <!-- div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-size_12-of-12">
+                                    <a href={file.url} download>{file.label}</a>
+                                  </div -->
+                                </div>
+                            </div>
+                          </template>
+                          <br />
+                        </div>
+                        <br />
+                      </template>
+
+                      <!-- SAVE BUTTON for START DATE | END DATE | WORKPLAN -->
+                      <div class="saveBtnDiv">
+                        <button class="slds-button slds-button_success savebtn" onclick={onClickSaveDates}>
+                          {label.PortalDeliverable_ButtonLabel_Save}
+                        </button> <!-- Save -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br />
+              </template>
+
+              <!--MEDIA PROFILE-->
+              <template lwc:if={visibility.Section_MediaProfile}>
+                <div class="slds-box">
+                  <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-grow-none sectionHeadingLeftIcon">
+                      <lightning-icon icon-name={label.PortalDeliverable_SectionHeadingIcon_MediaProfile} size="small"></lightning-icon> <!-- "utility:note" -->
+                    </div>
+                    <div class="slds-col sectionHeadingText" onclick={mediaChangeIcon}>
+                      {label.PortalDeliverable_SectionHeading_MediaProfile}
+                    </div> <!-- Media Profile -->
+                    <div class="slds-col slds-grow-none slds-col_bump-right">
+                      <lightning-icon icon-name={mediaProfileAccordIcon} onclick={mediaChangeIcon} size="small"> </lightning-icon>
+                    </div>
+                  </div>
+
+                  <div if:true={openMediaProfileSection}>
+                    <hr style="margin: revert" />
+                    <div class="sectionContent">
+
+                      <!-- UPLOAD YOUR HEADSHOT -->
+                      <template lwc:if={visibility.Field_Headshot}>
+
+                        <div>
+                          <span class="slds-text-heading_small labelForFileUploadField">
+                            <span class="slds-text-body_regular">
+                              {label.PortalDeliverable_FieldLabel_UploadYourHeadshot} <!-- Upload your headshot -->
+                              <lightning-helptext content={label.ITEMS_FOR_EDF_Help_Text_Photo}> </lightning-helptext>
+                            </span>
+                          </span>
+                          <div class="fileUploadInput">
+                            <lightning-file-upload
+                              name="fileUploader"
+                              accept={acceptedPhotoFormats}
+                              record-id={ccEngagement.Id}
+                              onuploadfinished={handlePhotoUpload}
+                              multiple="false"
+                            >
+                            </lightning-file-upload>
+
+                            <div>
+                              <div if:true={photoLoading}>
+                                <lightning-spinner size="small"></lightning-spinner>
+                              </div>
+                              <template for:each={photoFilesList} for:item="file">
+                                <div key={file.value}>
+                                  <div class="slds-grid whitespaceNoWrap">
+                                    <div class="slds-col">
+                                      <lightning-button-icon icon-name="utility:delete"
+                                        alternative-text={label.PortalDeliverable_Label_Delete}
+                                        class="slds-m-left_xx-small"
+                                        title={label.PortalDeliverable_Label_Delete}
+                                        data-title={file.label}
+                                        data-fileprefix={constants.CC_ENGAGEMENT_PHOTO_FILE_TITLE_PREFIX}
+                                        data-field={file.value} onclick={handleFileDelete}>
+                                      </lightning-button-icon>
+                                    <!-- </div> Delete -->
+                                    &nbsp;
+                                    <!-- <div class="slds-col"> -->
+                                        <a href={file.url} download>{file.label}</a>
+                                    </div>
+
+                                  </div>
+                                </div>
+                              </template>
+                            </div>
+                            <!--<template for:each={showFileName} for:item="file" for:index="index">
+                              <div class="slds-p-left_small" key={file.contentVersionId}>
+                                {file.name}
+                              </div>
+                            </template>-->
+                          </div>
+                        </div>
+                        <br />
+                      </template>
+
+                      <!-- TWITTER -->
+                      <template lwc:if={visibility.Field_Twitter}>
+                        <div>
+                          <span class="slds-text-body_regular labelForInputField">
+                            {label.PortalDeliverable_FieldLabel_TwitterHandle} <!-- Twitter Handle -->
+                            <lightning-helptext content={label.ITEMS_FOR_EDF_Help_Text_Twitter}> </lightning-helptext>
+                          </span>
+                          <lightning-input
+                            type="text"
+                            name="twitterUserName"
+                            class="textInputWithoutLabel"
+                            value={ccEngagement.Fellow_Application__r.Applicant__r.Twitter_Handle__c}
+                          >
+                          </lightning-input>
+                        </div>
+                        <br />
+                      </template>
+
+                      <!-- LINKED IN -->
+                      <template lwc:if={visibility.Field_LinkedIn}>
+                        <div>
+                          <span class="slds-text-body_regular labelForInputField">
+                            {label.PortalDeliverable_FieldLabel_LinkedInProfile} <!-- Add a LinkedIn profile -->
+                            <lightning-helptext content={label.ITEMS_FOR_EDF_Help_Text_LinkedIn}> </lightning-helptext>
+                          </span>
+                          <lightning-input
+                            type="text"
+                            name="linkedInUserName"
+                            class="textInputWithoutLabel"
+                            value={ccEngagement.Fellow_Application__r.Applicant__r.LinkedIn_Profile__c}
+                          >
+                          </lightning-input>
+                        </div>
+                        <br />
+                      </template>
+
+                      <!-- PHOTO RELEASE FORM BOX -->
+                      <template lwc:if={visibility.Field_PhotoReleaseForm}>
+                        <div>
+                          <span class="slds-text-body_regular labelForBoxField">
+                            {label.PortalDeliverable_FieldLabel_PhotoReleaseForm} <!-- Photo release form -->
+                            <!--<lightning-helptext
+                              style="margin-left: 0.2rem"
+                              content="Climate Crops is committed to creating a diverse environment and is proud to be an"
+                            >
+                            </lightning-helptext
+                          >--></span>
+                          <div class="slds-box innerSectionbox">
+                            <div class="slds-grid">
+                              <div class="slds-col slds-size_2-of-12">
+                                <lightning-icon icon-name="utility:list" size="large" style="padding-bottom: 1rem"> </lightning-icon>
+                              </div>
+                              <div class="slds-col slds-size_1-of-12"></div>
+                              <div class="slds-col slds-size_9-of-12">
+                                <p class="headingOneWithinBox">
+                                  {label.PortalDeliverable_Label_Download}
+                                </p> <!-- Download -->
+                                <p style="font-size: medium; color: #00008B;">
+                                  {label.ItemsForEDF_Download_Training_Pre_work}
+                                </p>
+                                <p class="slds-text-body_regular">
+                                  {label.ITEMS_FOR_EDF_Help_Text_Complete_Training_PreWork}
+                                </p>
+                                <br />
+                                <div>
+                                  <a href={files.PortalDeliverable_FileURL_PhotoReleaseForm} target="_blank" class="urlLinkWithinBox">
+                                    <u>{label.PortalDeliverable_Label_ClickHereToDownload}</u>
+                                  </a> <!-- Click here to download -->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- PHOTO RELEASE FILE UPLOAD AND UPLOADED FILE -->
+                        <div>
+                          <span class="slds-text-body_regular labelForFileUploadField">
+                            {label.PortalDeliverable_FieldLabel_PhotoReleaseUpload}
+                          </span>
+                          <div class="fileUploadInput">
+                            <!--button class="slds-button slds-button_outline-brand uploadbtn"
+                                          onclick={onClickWatchOrientation}>Upload</button-->
+
+                            <lightning-file-upload
+                              name="photoReleaseForm"
+                              accept={acceptedFormats}
+                              record-id={ccEngagement.Id}
+                              onuploadfinished={handlePhotoReleaseUpload}> <!-- "Photo Release Upload" -->
+                            </lightning-file-upload>
+                            <template for:each={photoReleaseFilesList} for:item="file">
+                              <div key={file.value}>
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col">
+                                      <lightning-button-icon icon-name="utility:delete"
+                                        alternative-text={label.PortalDeliverable_Label_Delete}
+                                        class="slds-m-left_xx-small"
+                                        title={label.PortalDeliverable_Label_Delete}
+                                        data-title={file.label}
+                                        data-fileprefix={constants.CC_ENGAGEMENT_PHOTO_RELEASE_FILE_TITLE_PREFIX}
+                                        data-field={file.value} onclick={handleFileDelete}>
+                                      </lightning-button-icon>
+                                    <!-- Delete -->
+                                    &nbsp;
+                                    <!-- <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-size_12-of-12"> -->
+                                      <a href={file.url} download>{file.label}</a>
+                                    </div>
+
+                                  </div>
+                              </div>
+                            </template>
+                          </div>
+                        </div>
+                        <br />
+                      </template>
+
+                      <!-- SAVE BUTTON for START DATE | END DATE | WORKPLAN -->
+                      <div class="saveBtnDiv">
+                        <button class="slds-button slds-button_success savebtn" onclick={onClickSaveMedia}>
+                          {label.PortalDeliverable_ButtonLabel_Save}
+                        </button> <!-- Save -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br />
+              </template>
+
+              <!--TRAINING INFO SHEET-->
+              <template lwc:if={visibility.Section_PreTraining}>
+                <div class="slds-box">
+                  <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-grow-none sectionHeadingLeftIcon">
+                      <lightning-icon icon-name={label.PortalDeliverable_SectionHeadingIcon_PreTrainingItems} size="small"> </lightning-icon> <!-- "utility:user_role" -->
+                    </div>
+                    <div class="slds-col sectionHeadingText" onclick={trainingChangeIcon}>
+                      {label.PortalDeliverable_SectionHeading_PreTrainingItems} <!-- Pre-Training Items -->
+                    </div>
+                    <div class="slds-col slds-grow-none slds-col_bump-right">
+                      <lightning-icon icon-name={trainingAccordIcon} onclick={trainingChangeIcon} size="small"> </lightning-icon>
+                    </div>
+                  </div>
+                  <div if:true={openTrainingSection}>
+                    <hr style="margin: revert" />
+                    <br />
+                    <div class="sectionContent"> <!-- style="padding-right: 2rem; padding-left: 2rem" -->
+                      <!-- TRAINING INFO SHEET -->
+                      <template lwc:if={visibility.Field_TrainingInfoSheet}>
+                        <div class="slds-box innerSectionbox">
+                          <div class="slds-grid">
+                            <div class="slds-col slds-size_2-of-12">
+                              <lightning-icon icon-name="utility:download" size="large" style="padding-bottom: 1rem"> </lightning-icon>
+                            </div>
+                            <div class="slds-col slds-size_1-of-12"></div>
+                            <div class="slds-col slds-size_9-of-12">
+                              <p class="headingOneWithinBox">
+                                {label.PortalDeliverable_Label_Download}
+                              </p> <!-- Download -->
+                              <p class="headingTwoWithinBox">
+                                {label.PortalDeliverable_Label_TrainingInfoSheet} {dates.Training_Info_Sheet}
+                              </p> <!-- Training info sheet -->
+                              <br />
+                              <div>
+                                <a href={files.PortalDeliverable_FileUrl_TrainingInfoSheet} target="_blank" class="urlLinkWithinBox">
+                                  <u>{label.PortalDeliverable_Label_ClickHereToRead}</u>
+                                </a> <!-- Click here to read -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <br />
+                      </template>
+
+                      <!-- PRE TRAINING SURVEY -->
+                      <template lwc:if={visibility.Field_PreTrainingSurvey}>
+                        <div class="slds-box innerSectionbox">
+                          <div class="slds-grid">
+                            <div class="slds-col slds-size_2-of-12">
+                              <lightning-icon icon-name="utility:upload" size="large" style="padding-bottom: 1rem"> </lightning-icon>
+                            </div>
+                            <div class="slds-col slds-size_1-of-12"></div>
+                            <div class="slds-col slds-size_9-of-12">
+                              <p class="headingOneWithinBox">
+                                {label.PortalDeliverable_Label_Submit}
+                              </p> <!-- Submit -->
+                              <p class="headingTwoWithinBox">
+                                {label.PortalDeliverable_Label_PreTrainingSurveyBy} {dates.Pre_Training_Survey}
+                              </p> <!-- Pre-Training Survey by -->
+                              <br />
+                              <div>
+                                <a href={files.PortalDeliverable_FileUrl_PreTrainingSurvey} target="_blank" class="urlLinkWithinBox">
+                                  <u>{label.PortalDeliverable_Label_ClickHereToSubmit}</u>
+                                </a> <!-- Click here to submit -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--added as part of FB-0586-->
+                        <br/>
+                      </template>
+
+                      <!-- FELLOW AGREEMENT -->
+                      <template lwc:if={visibility.Field_FellowAgreement}>
+                        <div class="slds-box innerSectionbox">
+                          <div class="slds-grid">
+                            <div class="slds-col slds-size_2-of-12">
+                              <lightning-icon icon-name="utility:download" size="large" style="padding-bottom: 1rem"> </lightning-icon>
+                            </div>
+                            <div class="slds-col slds-size_1-of-12"></div>
+                            <div class="slds-col slds-size_9-of-12">
+                              <p class="headingOneWithinBox">
+                                {label.PortalDeliverable_Label_Download}
+                              </p> <!-- Submit -->
+                              <p class="headingTwoWithinBox">
+                                {label.PortalDeliverable_Label_FellowAgreement}
+                              </p> <!-- Pre-Training Survey by -->
+                              <br />
+                              <div>
+                                <a href={files.PortalDeliverable_FileUrl_FellowAgreement} target="_blank" class="urlLinkWithinBox">
+                                  <u>{label.PortalDeliverable_Label_ClickHereToDownload}</u>
+                                </a> <!-- Click here to submit -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--added as part of FB-0586-->
+                        <br/>
+                      </template>
+
+                      <!-- TRAINING PRE WORK -->
+                      <template lwc:if={visibility.Field_TrainingPreWork}>
+                        <div class="slds-box innerSectionbox">
+                          <div class="slds-grid">
+                            <div class="slds-col slds-size_2-of-12">
+                              <lightning-icon icon-name="utility:upload" size="large" style="padding-bottom: 1rem"> </lightning-icon>
+                            </div>
+                            <div class="slds-col slds-size_1-of-12"></div>
+                            <div class="slds-col slds-size_9-of-12">
+                              <p class="headingOneWithinBox">
+                                {label.PortalDeliverable_Label_CompletePreWork}
+                              </p> <!-- Complete Pre-Work -->
+                              <p class="headingTwoWithinBox">
+                                {label.PortalDeliverable_Label_CompleteNecessaryPreWork} {dates.Complete_Pre_Work}
+                              </p> <!-- Before the training, please complete the necessary pre-work. -->
+
+                              <br />
+                              <div>
+                                <a href={files.PortalDeliverable_FileUrl_PreWork} target="_blank" class="urlLinkWithinBox">
+                                  <u>{label.PortalDeliverable_LinkLabel_CompletePreWork}</u>
+                                </a> <!-- Complete pre-work -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <br />
+                      </template>
+                    </div>
+                  </div>
+                </div>
+                <br />
+              </template>
+
+              <!--POST TRAINING ITEMS-->
+              <template lwc:if={visibility.Section_PostTraining}>
+                <div class="slds-box">
+                  <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-grow-none sectionHeadingLeftIcon">
+                      <lightning-icon icon-name={label.PortalDeliverable_SectionHeadingIcon_PostTrainingItems} size="small"> </lightning-icon> <!-- "utility:copy" -->
+                    </div>
+                    <div class="slds-col sectionHeadingText" onclick={postTrainingChangeIcon}>
+                      {label.PortalDeliverable_SectionHeading_PostTrainingItems} <!-- Post-Training Items -->
+                    </div>
+                    <div class="slds-col slds-grow-none slds-col_bump-right">
+                      <lightning-icon icon-name={postTrainingAccordIcon} onclick={postTrainingChangeIcon} size="small"> </lightning-icon>
+                    </div>
+                  </div>
+                  <div if:true={openPostTrainingSection}>
+                    <hr style="margin: revert" />
+                    <br />
+                    <div class="sectionContent"> <!-- style="padding-right: 2rem; padding-left: 2rem" -->
+
+                      <!-- ATTENDED TRAINING SESSION -->
+                      <template lwc:if={visibility.Field_AttendedTrainingSession}>
+                        <div class="slds-box innerSectionBigbox">
+                          <div class="slds-grid">
+                            <div class="slds-col slds-size_2-of-12">
+                              <lightning-icon icon-name="utility:upload" size="large" style="padding-bottom: 1rem"> </lightning-icon>
+                            </div>
+                            <!--<div class="slds-col slds-size_1-of-12"></div> -->
+                            <div class="slds-col slds-size_9-of-12">
+                              <p class="headingOneWithinBox">
+                                {label.PortalDeliverable_Label_CertifyTrainingAttendance}
+                                <!-- I certify that I have attended (either live or by watching recordings) the required amount of fellow Training sessions in
+                                order to be compensated for the week. -->
+                              </p>
+                              <p class="headingTwoWithinBox">
+                                {label.PortalDeliverable_Label_DueBy} {dates.Certify_Training_Session_Attended}
+                              </p> <!-- Due by -->
+                              <br />
+                              <div>
+                                <p class="headingTwoWithinBox">
+                                  {label.PortalDeliverable_Label_MissedTrainingSession} &nbsp; <!-- If you missed any sessions during training or you still need to meet your Training requirement: -->
+                                  <a href={files.Post_Training_Recordings} target="_blank" class="urlLinkWithinBox">
+                                    <u>{label.PortalDeliverable_LinkLabel_ClickHereToAccessRecordings}</u>
+                                  </a>
+                                </p> <!-- Click here to access recordings. -->
+                              </div>
+                              <lightning-input
+                                type="text"
+                                label={label.PortalDeliverable_FieldLabel_Initials}
+                                name="postTrainingInitials"
+                                data-name="postTrainingInitials"
+                                value={ccEngagement.Fellow_Training_Confirmation__c}
+                                onchange={handleFieldChange}
+                              > <!-- "Initials" -->
+
+                              </lightning-input>
+                            </div>
+                          </div>
+                        </div>
+                        <br />
+                      </template>
+
+                      <!-- POST TRAINING SURVEY -->
+                      <template lwc:if={visibility.Field_PostTrainingSurvey}>
+                        <div class="slds-box innerSectionBigbox">
+                          <div class="slds-grid">
+                            <div class="slds-col slds-size_2-of-12">
+                              <lightning-icon icon-name="utility:upload" size="large" style="padding-bottom: 1rem"> </lightning-icon>
+                            </div>
+                            <!-- <div class="slds-col slds-size_1-of-12"></div> -->
+                            <div class="slds-col slds-size_9-of-12">
+                              <p class="headingOneWithinBox">
+                                {label.PortalDeliverable_Label_CompletePostTrainingSurvey}
+                              </p> <!-- Complete Post Training Survey -->
+                              <p class="headingTwoWithinBox">
+                                {label.PortalDeliverable_Label_DueBy} {dates.Complete_Post_Training_Survey}
+                              </p> <!-- Due by -->
+                              <br />
+                              <div>
+                                <p class="headingTwoWithinBox">
+                                  {label.PortalDeliverable_Label_ReminderFillSurvey} &nbsp;
+                                  <a href={files.Post_Training_Survey} target="_blank" class="urlLinkWithinBox">
+                                    <u>{label.PortalDeliverable_LinkLabel_ClickHereToComplete}</u>
+                                  </a> <!-- Click here to complete. -->
+                                </p>
+                              </div>
+
+                              <lightning-input
+                                type="text"
+                                label={label.PortalDeliverable_FieldLabel_Initials}
+                                name="postTrainingSurveyInitials"
+                                data-name="postTrainingSurveyInitials"
+                                value={ccEngagement.Fellow_Training_Survey_Confirmation__c}
+                                onchange={handleFieldChange}
+                              > <!-- "Initials" -->
+
+                              </lightning-input>
+                            </div>
+                          </div>
+                        </div>
+                        <br />
+                      </template>
+                    </div>
+
+
+                    <!-- SAVE BUTTON FOR POST TRAINING - ATTENDED TRAINING INITIALS -->
+                    <div class="saveBtnDiv">
+                      <button class="slds-button slds-button_success savebtn" onclick={onClickSavePostTraining}>
+                        {label.PortalDeliverable_ButtonLabel_Save}
+                      </button> <!-- Save -->
+                    </div>
+
+                  </div>
+                </div>
+                <br />
+              </template>
+
+              <!--FINAL DELIVERABLE-->
+              <template lwc:if={visibility.Section_FinalDeliverables}>
+                <div class="slds-box">
+                  <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-grow-none sectionHeadingLeftIcon">
+                      <lightning-icon icon-name={label.PortalDeliverable_SectionHeadingIcon_FinalDeliverables} size="small"> </lightning-icon> <!-- "utility:copy" -->
+                    </div>
+                    <div class="slds-col sectionHeadingText" onclick={finalDeliverableChangeIcon}>
+                      {label.PortalDeliverable_SectionHeading_FinalDeliverables} <!-- Final Deliverables -->
+                    </div>
+                    <div class="slds-col slds-grow-none slds-col_bump-right">
+                      <lightning-icon icon-name={finalDeliverableAccordIcon} onclick={finalDeliverableChangeIcon} size="small"> </lightning-icon>
+                    </div>
+                  </div>
+                  <div if:true={openFinalDeliverablSection}>
+                    <hr style="margin: revert" />
+                    <br />
+                    <div class="sectionContent"> <!-- style="padding-right: 2rem; padding-left: 2rem" -->
+
+                      <!-- FINAL DELIVERABLES INSTRUCTIONS -->
+                      <template lwc:if={visibility.Field_FinalDeliverablesInstructions}>
+                        <div class="slds-box innerSectionbox">
+                          <div class="slds-grid">
+                            <div class="slds-col slds-size_2-of-12">
+                              <lightning-icon icon-name="utility:upload" size="large" style="padding-bottom: 1rem"> </lightning-icon>
+                            </div>
+                            <div class="slds-col slds-size_1-of-12"></div>
+                            <div class="slds-col slds-size_9-of-12">
+                              <p class="headingOneWithinBox">
+                                {label.ITEMS_FOR_EDF_Help_Text_Final_Deliverables_Instructions_and_Template}
+                              </p>
+                              <p class="headingTwoWithinBox">
+                                {label.PortalDeliverable_Label_DueBy} {dates.Final_Deliverables_Instructions}
+                              </p> <!-- Due by -->
+                              <br />
+                              <div>
+                                <a href={files.PortalDeliverable_FileUrl_FinalDeliverableInstructions} target="_blank" class="urlLinkWithinBox">
+                                  <u>{label.PortalDeliverable_LinkLabel_ClickHereToComplete}</u>
+                                </a> <!-- Click here to complete. -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <br />
+                      </template>
+
+                      <!-- FINAL DELIVERABLES INSTRUCTIONS -->
+                      <template lwc:if={visibility.Field_HeadingPart1PublicDeliverables}>
+                        <hr style="margin: revert" />
+                        <p class="slds-text-heading_small finalDeliverableSubHeading">
+                          {label.ITEMS_FOR_EDF_Help_Text_Headding_Part1}
+                        </p> <!--class="finalDeliverableSubHeading"-->
+                        <hr style="margin: revert" />
+                      </template>
+
+                      <!-- PUBLIC SUMMARY APPROVAL -->
+                      <template lwc:if={visibility.Field_PublicSummaryApprovalStatus}>
+                        <span>
+
+                          <div class="slds-text-heading_x-small" > <!--style="font-size: medium; font-weight: 400"-->
+
+                            <!-- FINAL DELIVERABLES INSTRUCTIONS -->
+                            <template lwc:if={visibility.Field_HeadingPublicSummaryApprovalStatus}>
+                              <b>{label.ITEMS_FOR_EDF_Help_Text_Public_Summary_Approval_Status}</b>
+                              <lightning-helptext style="margin-left: 0.2rem" content={label.ITEMS_FOR_EDF_Help_Text_Approved_Project_Summary}>
+                              </lightning-helptext></br>
+                              <br />
+                            </template>
+
+
+                            <span class="slds-text-body_regular labelForTextAreaInputField">
+                              {label.ITEMS_FOR_EDF_Help_Text_Have_you_submitted_to_Host}
+                            </span>
+                            <lightning-textarea
+                              name="publicSummary"
+                              class="textInputWithoutLabel"
+                              value={ccEngagement.Public_Summary_Approval_Status__c}
+                            >
+                            </lightning-textarea>
+                          </div>
+                        </span>
+                      </template>
+
+                      <!-- THREE ONSITE PHOTOS -->
+                      <template lwc:if={visibility.Field_OnsitePhotos}>
+                        <div>
+                          <span class="slds-text-heading_small labelForFileUploadField">
+                            <span class="slds-text-body_regular">
+                              {label.PortalDeliverable_LinkLabel_ThreeOnsitePhotos}<!-- Three Onsite Photos -->
+                            </span>
+                            <lightning-helptext style="margin-left: 0.2rem" content={label.ITEMS_FOR_EDF_Help_Text_Onsite_Photo}> </lightning-helptext>
+                          </span>
+                          <lightning-file-upload
+                            name="fileUploader"
+                            accept={acceptedPhotoFormats}
+                            record-id={ccEngagement.Id}
+                            onuploadfinished={handleOnSitePhotoUploadFinished}
+                            multiple="true"
+                          >
+                          </lightning-file-upload>
+                          <template for:each={photoOnsiteFilesList} for:item="file">
+                            <div key={file.value}>
+                              <div class="slds-grid whitespaceNoWrap">
+                                  <div class="slds-col">
+                                    <lightning-button-icon icon-name="utility:delete"
+                                      alternative-text={label.PortalDeliverable_Label_Delete}
+                                      class="slds-m-left_xx-small"
+                                      title={label.PortalDeliverable_Label_Delete}
+                                      data-title={file.label}
+                                      data-fileprefix={constants.CC_ENGAGEMENT_ONSITE_PHOTO_FILE_TITLE_PREFIX}
+                                      data-field={file.value} onclick={handleFileDelete}>
+                                    </lightning-button-icon>
+                                    <!-- Delete -->
+                                    &nbsp;
+                                    <!-- <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-size_12-of-12"> -->
+                                    <a href={file.url} download>{file.label}</a>
+                                  </div>
+                                </div>
+                          </div>
+                        </template>
+                        </div>
+                      </template>
+
+                      <!-- SAVE BUTTON FOR FINAL DELIVERABLES - PART 1 -->
+                      <div class="saveBtnDiv">
+                        <button class="slds-button slds-button_success savebtn" onclick={onClickSubmitEDFDeliverable}>
+                          {label.PortalDeliverable_ButtonLabel_Save}
+                        </button> <!-- Save -->
+                      </div>
+                      <br />
+
+
+
+                      <!-- HEADING PART 2 EDF DELIVERABLES -->
+                      <template lwc:if={visibility.Field_HeadingPart2EDFDeliverables}>
+                        <br />
+                        <hr style="margin: revert" />
+                        <p class="slds-text-heading_small finalDeliverableSubHeading">
+                          {label.PortalDeliverable_SectionHeading_Part2InternalToEDFDeliverables}
+                        </p> <!-- Part 2: Internal to EDF deliverables (these are not shared) -->
+                        <hr style="margin: revert" />
+                        <br />
+                      </template>
+
+                      <!-- PROJECT AREA -->
+                      <template lwc:if={visibility.Field_FinalDeliverablesProjectArea}>
+                        <div class="slds-grid">
+                          <div class="slds-col slds-size_12-of-12" if:true={FINAL_DELIVERABLE_PROJ_Val.data}>
+                            <span class="slds-text-body_regular labelForCheckboxField">
+                              {label.ITEMS_FOR_EDF_Help_Text_What_Areas_in_your_fellowship}
+                            </span>
+                            <lightning-checkbox-group
+                              name="FINAL_DELIVERABLE"
+                              options={FINAL_DELIVERABLE_PROJ_Val.data.values}
+                              value={finalDeliverableSelected}
+                              onchange={handleFinalDelivrableChange}
+                            >
+                            </lightning-checkbox-group>
+                              <lightning-input
+                            type="text"
+                            name="FinalDelOtherArea"
+                            class="textInputWithoutLabel"
+                            value={ccEngagement.Final_Deliverables_Other_Area__c}
+                            onchange={handleFieldChange}
+                            maxlength={maxlengthFinalDeliverableOtherArea}
+                            ></lightning-input>
+
+                          </div>
+                        </div>
+                        <br />
+                      </template>
+
+
+                      <!-- GHG TARGET TYPE -->
+                      <template lwc:if={visibility.Field_GHGTargetType}>
+                        <div>
+                          <!--p style="font-size: medium;color: cadetblue;">If you worked on a goal setting project,
+                                        what type of CHG/energy reduction/renewable energy goals or targets did you help
+                                        develop or advance ?
+                                    </p-->
+                          <div if:true={GHG_TARGETTYPE_EXP_Val.data}>
+                            <span class="slds-text-body_regular labelForCheckboxField">
+                              {label.ITEMS_FOR_EDF_Help_Text_Prior_Goal_Setting_Projects}
+                            </span>
+                            <lightning-checkbox-group
+                              name="Goal_Setting_Projects"
+                              options={GHG_TARGETTYPE_EXP_Val.data.values}
+                              value={goalSettingSelected}
+                              onchange={handleGoalSettingsChange}
+                            >
+                            </lightning-checkbox-group>
+                          </div>
+                        </div>
+                        <br />
+                      </template>
+
+                      <!-- GHG TARGET TYPE -->
+                      <template lwc:if={visibility.Field_BuildingDataAnalyzed}>
+                        <div>
+                          <span class="slds-text-body_regular labelForInputField">
+                            {label.ITEMS_FOR_EDF_Help_Text_For_how_many_building_did_you_analyze_data}
+                          </span>
+                          <lightning-input
+                            type="number"
+                            name="analyzeData"
+                            class="textInputWithoutLabel"
+                            value={ccEngagement.Building_Data_Analyzed__c}
+                          >
+                          </lightning-input>
+                        </div>
+                        <br />
+                      </template>
+
+                      <!-- NUMBER OF SUPPLIERS -->
+                      <template lwc:if={visibility.Field_NumberOfSuppliers}>
+                        <div>
+                          <span class="slds-text-body_regular labelForInputField">
+                            {label.ITEMS_FOR_EDF_Help_Text_If_you_worked_on_a_supply_chain}
+                          </span>
+                          <lightning-input type="number" name="chainSupply"
+                            class="textInputWithoutLabel"
+                            value={ccEngagement.Number_of_Suppliers__c}>
+                          </lightning-input>
+                        </div>
+                        <br />
+                      </template>
+
+                      <!-- NUMBER OF VEHICLES -->
+                      <template lwc:if={visibility.Field_NumberOfVehicles}>
+                        <div>
+                          <span class="slds-text-body_regular labelForInputField">
+                            {label.zeroEmissionVehicleProjectLabel}
+                          </span>
+                          <lightning-input type="number" name="zeroEmission"
+                            class="textInputWithoutLabel"
+                            value={ccEngagement.Zero_Emission_vehicles_rectifications__c}>
+                          </lightning-input>
+                        </div>
+                        <br />
+                      </template>
+
+                      <!-- COMPLETED ACTIVITIES REPORT -->
+                      <template lwc:if={visibility.Field_CompletedActivitiesReport}>
+
+                        <!-- COMPLETED ACTIVITIES REPORT - TEMPLATE -->
+                        <div>
+                          <span class="slds-text-body_regular labelForLabelField">
+                            {label.PortalDeliverable_Label_DownloadExcelTemplateForCompletedActivitiesReport}
+                          </span> <!-- Download excel template for completed activities report -->
+                          <br />
+                          <a href={files.PortalDeliverable_FileURL_CompletedActivitiesReport} target="_blank">
+                            {label.PortalDeliverable_LinkLabel_ExcelTemplatXlsx}
+                          </a> <!-- Excel template.xlsx -->
+                        </div>
+
+                        <!-- COMPLETED ACTIVITIES REPORT - TO BE UPLOADED -->
+                        <div>
+                          <span class="slds-text-body_regular labelForFileUploadField">
+                            {label.PortalDeliverable_FieldLabel_CompletedActivitiesReport}
+                          </span> <!-- Completed Activities Report -->
+                          <lightning-file-upload
+                            name="fileUploader"
+                            accept={acceptedFormats}
+                            record-id={ccEngagement.Id}
+                            onuploadfinished={handleCompletedActivitiesUpload}
+                            multiple="false"
+                          >
+                          </lightning-file-upload>
+                          <template for:each={projectDBFilesList} for:item="file">
+                            <div key={file.value}>
+                              <div class="slds-grid slds-wrap slds-text-heading_small">
+                                <div class="slds-col">
+                                  <lightning-button-icon icon-name="utility:delete"
+                                    alternative-text={label.PortalDeliverable_Label_Delete}
+                                    class="slds-m-left_xx-small"
+                                    title={label.PortalDeliverable_Label_Delete}
+                                    data-title={file.label}
+                                    data-fileprefix={constants.CC_ENGAGEMENT_ACTIVITY_REPORT_FILE_TITLE_PREFIX}
+                                    data-field={file.value}
+                                    onclick={handleFileDelete}></lightning-button-icon>
+                                  <!-- Delete -->
+                                  &nbsp;
+                                  <!-- <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-size_12-of-12"> -->
+                                  <a href={file.url} download>{file.label}</a>
+                                </div>
+                              </div>
+                            </div>
+                          </template>
+                        </div>
+                      </template>
+
+                      <!-- FINAL DELIVERABLES UPLOAD -->
+                      <template lwc:if={visibility.Field_FinalDeliverablesUpload}>
+                        <span class="slds-text-body_regular labelForFileUploadField">{label.PortalDeliverable_FieldLabel_FinalDeliverables}</span> <!-- Final Deliverables -->
+                        <lightning-file-upload
+                          name="fileUploader"
+                          accept={acceptedFormats}
+                          record-id={ccEngagement.Id}
+                          onuploadfinished={handleFinalDeliverableUpload}
+                          multiple="true"
+                        >
+                        </lightning-file-upload>
+
+                        <template for:each={remainingDelFilesList} for:item="file">
+                          <div key={file.value}>
+                            <div class="slds-grid slds-wrap slds-text-heading_small">
+                                <div class="slds-col">
+                                  <lightning-button-icon icon-name="utility:delete"
+                                    alternative-text={label.PortalDeliverable_Label_Delete}
+                                    class="slds-m-left_xx-small"
+                                    title={label.PortalDeliverable_Label_Delete}
+                                    data-title={file.label}
+                                    data-fileprefix={constants.CC_ENGAGEMENT_FINAL_DELIVERABLES_FILE_TITLE_PREFIX}
+                                    data-field={file.value} onclick={handleFileDelete}></lightning-button-icon>
+                                  <!-- Delete -->
+                                  &nbsp;
+                                  <!-- <div class="slds-col slds-large-size_4-of-12 slds-medium-size_4-of-12 slds-size_12-of-12"> -->
+                                  <a href={file.url} download>{file.label}</a>
+                                </div>
+
+                              </div>
+                          </div>
+                        </template>
+                        <br />
+                      </template>
+
+                      <!-- COMMENTS ON FINAL DELIVERABLES -->
+                      <template lwc:if={visibility.Field_CommentOnFinalDeliverables}>
+                        <span class="slds-text-body_regular labelForTextAreaInputField">{label.ITEMS_FOR_EDF_Help_Text_Comments_on_your_final_deliverables}</span>
+                        <lightning-textarea
+                          name="commentOnFinalDel"
+                          class="textInputWithoutLabel"
+                          value={ccEngagement.Comment_On_Final_Deliverables__c}
+                        >
+                        </lightning-textarea>
+                        <br />
+                      </template>
+
+                      <!-- PERSONAL EMAIL -->
+                      <template lwc:if={visibility.Field_PersonalEmail}>
+                        <span class="slds-text-body_regular labelForTextAreaInputField">{label.ITEMS_FOR_EDF_Help_Text_Personal_email_address}</span>
+                        <lightning-input type="email"
+                          name="personalEmailAddress"
+                          class="textInputWithoutLabel"
+                          value={ccEngagement.Fellow_Application__r.Applicant__r.npe01__HomeEmail__c}> </lightning-input>
+                        <br />
+                      </template>
+
+                      <!-- FELLOW INITIALS BOX -->
+                      <template lwc:if={visibility.Field_FellowInitials}>
+                        <div class="slds-box innerSectionBigbox">
+                          <div class="slds-grid">
+                            <div class="slds-col slds-size_2-of-12">
+                              <lightning-icon icon-name="utility:list" size="medium" style="padding-bottom: 1rem"> </lightning-icon>
+                            </div>
+                            <div class="slds-col slds-size_10-of-12">
+                              <p style="color: #00008B; font-size: 1.1rem; font-weight: 500">
+                                <b>{label.ITEMS_FOR_EDF_Submitted_Final_Deliverables}</b>
+                              </p>
+                              <lightning-input
+                                type="text"
+                                name="fellowInitials"
+                                class="textInputWithoutLabel"
+                                value={ccEngagement.Fellow_Initials__c}
+                              >
+                              </lightning-input>
+                            </div>
+                          </div>
+                        </div>
+                        <br />
+                      </template>
+
+                      <!-- SAVE BUTTON FOR FINAL DELIVERABLES - PART 2 -->
+                      <div class="saveBtnDiv">
+                        <button class="slds-button slds-button_success savebtn" onclick={onClickSubmitEDFDeliverable}>{label.PortalDeliverable_ButtonLabel_Save}</button> <!-- Save -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+        </lightning-card>
+      </div>
+    </div>
+  </div>
+  <div if:true={showSpinner}>
+    <lightning-spinner size="medium"></lightning-spinner>
+  </div>
+  <!-- <c-e-d-f22_footer></c-e-d-f22_footer> -->
+</template>

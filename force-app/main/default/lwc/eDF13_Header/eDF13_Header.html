@@ -1,0 +1,59 @@
+<template>
+             <div class="header">
+            <div class="header-inner">
+                <!-- Logo Start -->
+                <div class="logo-wrap">
+                    <div class="logo">
+                        <a href="javascript:void(0);" title=""><img src={headerLogo} alt="" title="" /></a>
+                    </div>
+                    <!-- <span class="logo-line">Climate Corps</span> -->
+                </div>
+                <!-- Logo End -->
+    
+                <!-- Header Top Right Section Start -->
+                <div class="header-top-right-section">
+                    <!-- Header Top Right User & Status Start -->
+                    <div class="header-user-status-outer" onclick={showHideUserLogout}>
+                        <div class="header-user-status-wrap clearfix">
+                            <figure class="header-top-right-user">
+                                <!-- <img src="/EDFCCFellowPortal/resource/1640672525000/bootstrapdata/assets/img/user-pic.svg" alt="" title="" /> -->
+                                <lightning-icon icon-name="utility:user"></lightning-icon>
+                            </figure>
+                            <span class="header-top-right-user-status">
+                                <!-- <span class="user-name">Welcome, Mr {userName}</span> -->
+                                <span class="user-name">{userName.data}</span>
+                                <span class="user-name">{applicationStatus}</span>
+                                <!-- Application Status: Engagement Confirmed -->
+                            </span>
+                        </div>
+
+                        <!-- Dropdown Section Start -->
+                        <template if:true={showUserLogout}>
+                            <div class="dropdown-user-logout-manage-wrap">
+                                <ul class="dropdown-user-menu">
+                                    <!-- <li class="current-page">
+                                        <a href="javascript:void(0);" title=""><img src={uploadIcon} alt="" />
+                                            Manage Uploads</a>
+                                    </li> -->
+                                    <li class="logout-menu">
+                                        <a href={logoutLink} title=""><img src={logoutIcon} alt="" />Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </template>
+                        
+                        <!-- Dropdown Section End -->
+                    </div>
+                    <!-- Header Top Right User & Status End -->
+    
+                    <!-- Header Menu Start -->
+                    <div class="header-menu">
+                        <span class="header-menu"></span>
+                    </div>
+                    <!-- Header Menu End -->
+                </div>
+                <!-- Header Top Right Section End -->
+            </div>
+        </div>
+        <!-- Header End -->
+</template>

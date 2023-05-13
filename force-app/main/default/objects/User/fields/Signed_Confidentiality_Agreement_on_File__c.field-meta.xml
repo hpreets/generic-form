@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Signed_Confidentiality_Agreement_on_File__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Salesforce user has a Signed Confidentiality Agreement on File (SharePoint or Workday)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Salesforce user has a Signed Confidentiality Agreement on File (SharePoint or Workday)</inlineHelpText>
+    <label>Signed Confidentiality Agreement on File</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

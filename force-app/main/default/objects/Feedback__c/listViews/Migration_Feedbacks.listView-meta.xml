@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Migration_Feedbacks</fullName>
+    <booleanFilter>1 AND 2 AND 3</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Script_Status__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Feedback_Title__c</columns>
+    <columns>Feedback_Status__c</columns>
+    <columns>Assigned_To__c</columns>
+    <columns>Object__c</columns>
+    <columns>Data_Migration_Notes__c</columns>
+    <columns>Fields__c</columns>
+    <columns>Migrated_Data_Update_Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Feedback_Title__c</field>
+        <operation>notContain</operation>
+        <value>TC Exception File</value>
+    </filters>
+    <filters>
+        <field>Feedback_Status__c</field>
+        <operation>notEqual</operation>
+        <value>EDF Discussion Required,Ready for IT Approval,Completed,QC Passed,Duplicate,Not An Issue,Address via User Story</value>
+    </filters>
+    <filters>
+        <field>Script_Status__c</field>
+        <operation>equals</operation>
+        <value>Data Table Request,Question,In Process - New Data,Ready to Update,In Progress</value>
+    </filters>
+    <label>Migration Feedbacks Open</label>
+</ListView>

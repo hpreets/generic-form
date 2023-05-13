@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Originating_Bank__c</fullName>
+    <externalId>false</externalId>
+    <label>Originating Bank</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>C3</fullName>
+                <default>false</default>
+                <label>C3</label>
+            </value>
+            <value>
+                <fullName>C4</fullName>
+                <default>false</default>
+                <label>C4</label>
+            </value>
+            <value>
+                <fullName>EDF Mexico</fullName>
+                <default>false</default>
+                <label>EDF Mexico</label>
+            </value>
+            <value>
+                <fullName>EDF Europe</fullName>
+                <default>false</default>
+                <label>EDF Europe</label>
+            </value>
+            <value>
+                <fullName>MethaneSAT</fullName>
+                <default>false</default>
+                <label>MethaneSAT</label>
+            </value>
+            <value>
+                <fullName>PAC</fullName>
+                <default>false</default>
+                <label>PAC</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

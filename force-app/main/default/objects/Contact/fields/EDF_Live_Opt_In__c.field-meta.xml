@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EDF_Live_Opt_In__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to track opt ins for our virtual events and streamline event list management</description>
+    <externalId>false</externalId>
+    <label>EDF Live Opt-In</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PM_Equals_Current_User__c</fullName>
+    <description>Is true if PM is the same as the current user. For reporting.</description>
+    <externalId>false</externalId>
+    <formula>(Portfolio_Manager__r.FirstName + &quot; &quot; +  Portfolio_Manager__r.LastName) =  ($User.FirstName + &quot; &quot; +  $User.LastName)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>PM Equals Current User</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

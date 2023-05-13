@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Residency_in_china__c</fullName>
+    <description>Fellow for china should choose it</description>
+    <externalId>false</externalId>
+    <label>Residency_in_china</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mainland Resident</fullName>
+                <default>false</default>
+                <label>Mainland Resident</label>
+            </value>
+            <value>
+                <fullName>Taiwan Resident</fullName>
+                <default>false</default>
+                <label>Taiwan Resident</label>
+            </value>
+            <value>
+                <fullName>Hong Kong Resident</fullName>
+                <default>false</default>
+                <label>Hong Kong Resident</label>
+            </value>
+            <value>
+                <fullName>Macau Resident</fullName>
+                <default>false</default>
+                <label>Macau Resident</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

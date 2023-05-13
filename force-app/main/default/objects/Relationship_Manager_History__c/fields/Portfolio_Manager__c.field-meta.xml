@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portfolio_Manager__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Portfolio Manager</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Relationship Manager History (Portfolio Manager)</relationshipLabel>
+    <relationshipName>Former_Portfolio_Managers1</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

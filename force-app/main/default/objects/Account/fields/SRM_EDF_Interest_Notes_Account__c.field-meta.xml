@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SRM_EDF_Interest_Notes_Account__c</fullName>
+    <description>More detail on this contact’s interests. For Program Staff use</description>
+    <externalId>false</externalId>
+    <inlineHelpText>More detail on this contact’s interests</inlineHelpText>
+    <label>SRM EDF Interest Notes</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

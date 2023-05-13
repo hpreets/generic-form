@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>NPSP_Compact_Layout</compactLayoutAssignment>
+    <description>Use this Record Type for Events</description>
+    <label>Event</label>
+    <picklistValues>
+        <picklist>Constituency_Code__c</picklist>
+        <values>
+            <fullName>D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Constituency__c</picklist>
+        <values>
+            <fullName>Climate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDAF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Alumni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDFBIZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elected Official</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal and Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MarComm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MethaneSAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oceans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office of the Chief Scientist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political Affairs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Entity_Code__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Entity__c</picklist>
+        <values>
+            <fullName>C3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CFF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Methane SAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NC PAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas PAC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Program_Segment__c</picklist>
+        <values>
+            <fullName>Event</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planned</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Constituency__c</picklist>
+        <values>
+            <fullName>Climate - Global Climate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Climate - Legal and Regulatory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development - Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development - Institutional Giving</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development - Major Gifts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development - Planned Giving Estates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development - Planned Giving Ospreys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development - Planned Giving Prospects</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDFBIZ - Climate Corps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDFBIZ - Corporate Climate Leadership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Strategy - China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Strategy - Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MarComm - Ambassador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MarComm - Performance Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership - Catalyst Circle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oceans - Fishery Solutions Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political Affairs - Advocacy Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political Affairs - C4 Defend Our Future</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political Affairs - C4 Moms Clean Air Force</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political Affairs - Defend Our Future</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political Affairs - Moms Clean Air Force</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Board Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Breakfast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dinner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lunch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reception</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trip</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

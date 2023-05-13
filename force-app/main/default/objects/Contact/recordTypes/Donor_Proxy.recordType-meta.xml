@@ -1,0 +1,4257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Donor_Proxy</fullName>
+    <active>true</active>
+    <label>Donor Proxy</label>
+    <picklistValues>
+        <picklist>Advocacy_Network_Tier__c</picklist>
+        <values>
+            <fullName>Bottom Tier-Engager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mid-Tier Engager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Top-Tier Engager</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Birthdate_Month__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Birthdate_Source__c</picklist>
+        <values>
+            <fullName>Anecdotal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Screening</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Birthday_Day__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>26</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>27</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>28</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>31</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Capacity__c</picklist>
+        <values>
+            <fullName>%24100M%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%24100k%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2410M%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2410k%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%241M%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2425M%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2425k%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%24500k%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2450M%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%245M%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%245k%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%3C5k%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Undetermined</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Constituency__c</picklist>
+        <values>
+            <fullName>CFF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Climate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diversity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDAF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Alumni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDFBIZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecosystems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elected Official</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Climate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal and Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MarComm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MethaneSAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oceans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office of the Chief Economist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office of the Chief Scientist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political Affairs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Climate %26 Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Climate Legal and Regulatory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Engagement__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deceased_Day__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>26</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>27</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>28</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>31</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deceased_Info_Source__c</picklist>
+        <values>
+            <fullName>Anecdotal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>News source</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Postal Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Screening</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deceased_Month__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Development_Constituent_Source__c</picklist>
+        <values>
+            <fullName>5K %2B New Donor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5K%2B Upgrade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catalyst Circle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catalyst Circle reassessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conference %2F non-EDF event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formerly in portfolio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foundation Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Friend%2FVolunteer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership %E2%80%93 Screening</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planned Giving</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program prospecting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategic Partners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trustee</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Development_tags__c</picklist>
+        <values>
+            <fullName>CC Tailored Handling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Action Influentials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental Leaders Initiative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Influential</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Potential Board Candidate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Potential China Board Candidate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Potential Development Invites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Potential Domestic Traveler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Potential EDF Action Board Candidate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Potential Europe Board Candidate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Potential Event Host</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Potential International Traveler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research Recommends %E2%80%93 Need Intro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Top 25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Top 50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Up-and-Comer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Donor_Qualification_Interests__c</picklist>
+        <values>
+            <fullName>China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clean Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Climate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Climate Corps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conservative Leadership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Defend Our Future</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDFBIZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Economics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecosystems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latin America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MCAF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MethaneSat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Natural Gas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oceans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>c4</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Donor_Qualification_Status__c</picklist>
+        <values>
+            <fullName>Associated Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catalyst Circle disqualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gift Officer Recommends CC Portfolio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gift officer disqualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gift officer qualification pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gift officer qualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gift officer recommends Membership LT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gift officer recommends new portfolio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research Recommends IG Portfolio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research Recommends MG Portfolio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research disqualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research qualification pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research recommends - need intro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research recommends CC portfolio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research recommends Membership LT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research recommends PG portfolio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research recommends as influential</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EDFBIZ_Company_Commitments__c</picklist>
+        <values>
+            <fullName>GHG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RE100</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SBT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>c%24</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EDFBIZ_Company_Memberships__c</picklist>
+        <values>
+            <fullName>BELC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bicep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Carbon 2%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USCAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WASI</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EDFBIZ_Tags__c</picklist>
+        <values>
+            <fullName>F100</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EDF_CC_Role__c</picklist>
+        <values>
+            <fullName>Active Advocacy Network Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advocacy Participant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alumni Advisory Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BETC Participant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China Network - Experts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China Network - Recruitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Supervisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fellow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Level Sponsor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Host Network Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Press Contact</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EDF_CC_Years__c</picklist>
+        <values>
+            <fullName>2007</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2008</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2009</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2010</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2011</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2012</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2013</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2014</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2015</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2016</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2019</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2022</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2023</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2026</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2027</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2028</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2029</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2030</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EM_Communication_Skills_Rating__c</picklist>
+        <values>
+            <fullName>Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Echelon__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ecosystem_Tags__c</picklist>
+        <values>
+            <fullName>Resilience Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Top Producers Network</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Entity_Interest__c</picklist>
+        <values>
+            <fullName>C3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Methane SAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas PAC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Entity__c</picklist>
+        <values>
+            <fullName>C3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Methane SAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NC PAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas PAC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Europe_GDPR_Consent__c</picklist>
+        <values>
+            <fullName>Opted-in</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opted-out</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fisherman_Type__c</picklist>
+        <values>
+            <fullName>Charter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Headboat</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Gender__c</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Binary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prefer Not To Say</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>High_Priority_or_High_Interest__c</picklist>
+        <values>
+            <fullName>High Interest from Candidate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Priority bc Relationship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Priority bc Superstar Candidate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Highest_Level_of_Education__c</picklist>
+        <values>
+            <fullName>Attended Vocational Technical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed College</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Graduate School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed High School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Some College</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Some High School or Less</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Highest_Previous_DL__c</picklist>
+        <values>
+            <fullName>Donor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lapsed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leadership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mid-Level</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Principal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supporter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zero Dollar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Inclination__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Influencer_Network_Rank__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Influencer_Network_Status__c</picklist>
+        <values>
+            <fullName>Active Influencer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Potential Influencer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LCRM_Address_Correction_Status__c</picklist>
+        <values>
+            <fullName>Manually Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Standardized - Incomplete Address</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Standardized - Unknown Address</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standardization Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standardized</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LCRM_Duplicate_Match_Check_Status__c</picklist>
+        <values>
+            <fullName>Does Not Need Check</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Check</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jigsaw</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Legacy_Source_Table__c</picklist>
+        <values>
+            <fullName>Contact</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Loyalty_Insights__c</picklist>
+        <values>
+            <fullName>BEST OF THE BEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BOB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONSTANT LOW DOLLAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HABITUALLY GENEROUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HBG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEW AND NOTEWORTHY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NOT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NOT THAT INTO YOU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIPPERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRULY CONNECTED</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marital_Status__c</picklist>
+        <values>
+            <fullName>Divorced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Married</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Widowed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Ambassador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baroness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bishop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brig%2E General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Captain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chaplain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colonel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commander</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deacon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Del%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Father</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Governor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Honorable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Judge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lady</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lord</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lt%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lt%2E Col</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lt%2ECdr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Major</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Major General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mayor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Midshipman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miss</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monsignor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mother</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mstr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mx%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pastor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ph%2ED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>President</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Principal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reverend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%2ESgt%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secretary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sensei</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sgt%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sister</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vice President</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OCS_Designation__c</picklist>
+        <values>
+            <fullName>Main Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secondary Contact</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Oceans_Industry__c</picklist>
+        <values>
+            <fullName>Aquarium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chefs %26 Restauranteurs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fishermen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seafood %26 Marine</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin__c</picklist>
+        <values>
+            <fullName>Administrator Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advocacy Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auction Upload</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Constituent API</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Sync</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Upload</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event Guest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forwarded Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gift Notification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Import</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joint Donation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LDAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luminate CRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Memorial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>News Contribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Events Attendee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Events Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Events Host</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quick Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RSVP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self-Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent eCard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey Participant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TeamRaiser Company Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TeamRaiser Donor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TeamRaiser Event Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TeamRaiser Event Chairperson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TeamRaiser Family Participant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TeamRaiser Friend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TeamRaiser Participant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tell-a-Friend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ticket Purchase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tribute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tributes Champion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tributes Fund</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Undefined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown Auto-Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Volunteer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Widgets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eCommerce Purchase</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PG_MarketSmart_Consideration_Stage__c</picklist>
+        <values>
+            <fullName>Considering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left a Gift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Might Consider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Will Not Consider</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PG_Qualification_Status__c</picklist>
+        <values>
+            <fullName>PG Gift Officer Disqualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PG Gift Officer Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PG Gift Officer Qualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research Recommends PG Portfolio</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PG_Qualified_Donor_Ranking__c</picklist>
+        <values>
+            <fullName>0 %E2%80%93 Dual Constituent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 %E2%80%93 Identification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 %E2%80%93 Qualification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 %E2%80%93 Cultivation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 %E2%80%93 Solicitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 %E2%80%93 Stewardship</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PG_Stelter_Score__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unranked</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PG_Type__c</picklist>
+        <values>
+            <fullName>Closed Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Osprey - Honorary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Osprey - Legacy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Osprey - PG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PG Proposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philanthropic Advisor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Philanthropic_Propensity__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Political_Affiliation__c</picklist>
+        <values>
+            <fullName>Democrat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Green Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Independent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Libertarian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Republican</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Working Families</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Potential_Impact_Influence__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Potential_Impact_Scale__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Potential_PG_Type_Source__c</picklist>
+        <values>
+            <fullName>Planned Giving</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Potential_PG_Type__c</picklist>
+        <values>
+            <fullName>Osprey - Legacy Plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Osprey - PG</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Preferred_Contact_Method__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Preferred_Pronoun__c</picklist>
+        <values>
+            <fullName>He%2FHim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>She%2FHer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>They%2FThem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ze%2FZir</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Professionalism__c</picklist>
+        <values>
+            <fullName>Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strong Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Program_Interest__c</picklist>
+        <values>
+            <fullName>Climate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Climate and Air</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDFBIZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Economics and Policy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecosystems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oceans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office of the Chief Economist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office of the Chief Scientist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political Affairs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategic Partners</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Qualified_Donor_Ranking__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Recommend_fellow_for_1_1_VIP_meeting__c</picklist>
+        <values>
+            <fullName>Maybe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Recommend_fellow_for_group_speaking__c</picklist>
+        <values>
+            <fullName>Maybe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Regional_Interest__c</picklist>
+        <values>
+            <fullName>Asia-Pacific</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belize</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brazil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada Alberta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada British Columbia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada Manitoba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada New Brunswick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada Newfoundland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada Nova Scotia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada Ontario</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada Prince Edward Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada Quebec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada Saskatchewan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caribbean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cuba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eurasia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>European Union</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gulf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humboldt Current</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indonesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mid-Atlantic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Middle East %26 Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Midwest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mountain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Myanmar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netherlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New England</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PNA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pacific</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philippines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plains</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portugal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puerto Rico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sweden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Alabama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Alaska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Arizona</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Arkansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Colorado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Connecticut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Delaware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Georgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Hawaii</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Idaho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Illinois</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Indiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Iowa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Kansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Kentucky</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Lousiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Maine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Maryland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Massachusetts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Michigan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Minnesota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Mississippi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Missouri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Montana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Nebraska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Nevada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US New Hampshire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US New Jersey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US New Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US North Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US North Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Ohio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Oklahoma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Oregon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Pennsylvania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Rhode Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US South Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US South Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Tennessee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Texas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Utah</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Vermont</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Washington</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Wisconsin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Wyoming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Western Pacific</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Regional_Network__c</picklist>
+        <values>
+            <fullName>Atlanta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Austin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boston</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chicago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Los Angeles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miami</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NYC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philadelphia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Raleigh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SF Bay Area</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seattle</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Religion_edf__c</picklist>
+        <values>
+            <fullName>Agnostic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Atheist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Buddist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Christian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hindu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jewish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Muslim</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SRM_EDF_Entity_Interest__c</picklist>
+        <values>
+            <fullName>C3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Methane SAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas PAC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SRM_Program_Interest__c</picklist>
+        <values>
+            <fullName>Climate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDFBIZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Economics and Policy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecosystems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oceans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office of the Chief Economist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office of the Chief Scientist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political Affairs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SRM_Program_Sub_Interest__c</picklist>
+        <values>
+            <fullName>CLC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy - Natural Gas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy Transition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Climate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Clean Air</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Climate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SRM_Regional_Interest__c</picklist>
+        <values>
+            <fullName>Asia-Pacific</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belize</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brazil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada Alberta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada British Columbia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada Manitoba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada New Brunswick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada Newfoundland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada Nova Scotia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada Ontario</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada Prince Edward Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada Quebec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada Saskatchewan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caribbean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cuba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eurasia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>European Union</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gulf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humboldt Current</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indonesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mid-Atlantic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Middle East %26 Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Midwest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mountain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Myanmar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netherlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New England</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PNA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pacific</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philippines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plains</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portugal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puerto Rico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sweden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Alabama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Alaska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Arizona</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Arkansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Colorado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Connecticut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Delaware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Georgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Hawaii</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Idaho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Illinois</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Indiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Iowa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Kansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Kentucky</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Lousiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Maine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Maryland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Massachusetts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Michigan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Minnesota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Mississippi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Missouri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Montana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Nebraska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Nevada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US New Hampshire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US New Jersey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US New Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US North Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US North Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Ohio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Oklahoma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Oregon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Pennsylvania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Rhode Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US South Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US South Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Tennessee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Texas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Utah</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Vermont</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Washington</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US West Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Wisconsin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Wyoming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Western Pacific</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Screened_Capacity__c</picklist>
+        <values>
+            <fullName>%24100M%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%24100k%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2410M%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2410k%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%241M%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2425M%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2425k%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%24500k%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2450M%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%245M%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%245k%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%3C5k%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Undetermined</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Source_of_Income_Info__c</picklist>
+        <values>
+            <fullName>Anecdotal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holt Compensation Study</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>News source</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Source_of_Net_Worth_Info__c</picklist>
+        <values>
+            <fullName>Anecdotal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epsilon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forbes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>London Times</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rich Register</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wealth-X</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Source_of_Wealth__c</picklist>
+        <values>
+            <fullName>Career</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>State_Office__c</picklist>
+        <values>
+            <fullName>Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Constituency__c</picklist>
+        <values>
+            <fullName>Climate - Global Climate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Climate - Legal and Regulatory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development - Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development - Institutional Giving</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development - Major Gifts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development - Planned Giving Estates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development - Planned Giving Ospreys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development - Planned Giving Prospects</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDFBIZ - Climate Corps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDFBIZ - Corporate Climate Leadership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDFBIZ - Energy and Innovation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDFBIZ - Growth States</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDFBIZ - Supply Chain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDFBIZ - Sustainable Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecosystems - Coastal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecosystems - Habitats</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecosystems - Sustainable Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecosystems - Water</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Strategy - China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Strategy - Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MarComm - Ambassador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MarComm - Performance Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership - Catalyst Circle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oceans - Fishery Solutions Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political Affairs - Advocacy Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political Affairs - C4 Defend Our Future</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political Affairs - C4 Moms Clean Air Force</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political Affairs - Defend Our Future</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political Affairs - Moms Clean Air Force</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Interest__c</picklist>
+        <values>
+            <fullName>AB32</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Academic Partnerships</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advisory Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agriculture %2F On-Farm Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alternative Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CLC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campaigns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cap and Trade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catch Shares %2F Fisheries Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chesapeake Bay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China Energy Modeling Forum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clean Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clean Power Plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Climate Corps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coastal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coastal Louisiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colorado River Delta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conservative Leadership Council</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Defend Our Future</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF%2FTNC Partnership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy - Natural Gas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy Efficiency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy Transition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental Justice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fisheries Solution Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geoengineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Climate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Green Supply Chain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Habitat Restoration%26Protection%2FLand Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Habitats</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heating Oil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International Climate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investor Confidence Project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal %26 regulatory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Living Cities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marine Protected Areas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mom%27s clean Air Force</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moms Clean Air Fund</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Natural Gas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oil %26 Gas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On-Bill Repayment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organizational Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organizational capacity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Equity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REDD %28Rainforests%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rivers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sacramento Bay Delta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>San Francisco Bay Delta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smart Power</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sustainable Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sustainable Seafood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toxics and Chemicals Policy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Clean Air</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Climate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Walmart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Water</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Water Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wetlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wildlife %2F Endangered Species</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Super_PAC_Donor_Level__c</picklist>
+        <values>
+            <fullName>Donor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lapsed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leadership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mid-Level</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Principal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supporter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zero Dollar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Target_Analytics_Wealth_Rating__c</picklist>
+        <values>
+            <fullName>A1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unrated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npe01__PreferredPhone__c</picklist>
+        <values>
+            <fullName>Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npe01__Preferred_Email__c</picklist>
+        <values>
+            <fullName>Alternate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Work</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npe01__Primary_Address_Type__c</picklist>
+        <values>
+            <fullName>Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npe01__Secondary_Address_Type__c</picklist>
+        <values>
+            <fullName>Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npe01__SystemAccountProcessor__c</picklist>
+        <values>
+            <fullName>Individual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One-to-One</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npo02__Naming_Exclusions__c</picklist>
+        <values>
+            <fullName>Household%5F%5Fc%2EFormal_Greeting%5F%5Fc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Household%5F%5Fc%2EInformal_Greeting%5F%5Fc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Household%5F%5Fc%2EName</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npo02__SystemHouseholdProcessor__c</picklist>
+        <values>
+            <fullName>All Individual Contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>All New or Edited Contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Contacts</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npsp__Sustainer__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Former</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lapsed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

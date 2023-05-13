@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gift_Aid_Eligible__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Constituent or Organization has applied for Gift Aid and EDF can receive matching funds from UK government</description>
+    <externalId>false</externalId>
+    <label>UK Gift Aid Eligible</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

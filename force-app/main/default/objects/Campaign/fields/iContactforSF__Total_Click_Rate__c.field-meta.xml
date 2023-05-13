@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>iContactforSF__Total_Click_Rate__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Total click rate for messages in &quot;Released&quot; status for this campaign (used to calculate average click rate).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Total click rate for messages in &quot;Released&quot; status for this campaign (used to calculate average click rate).</inlineHelpText>
+    <label>Total Click Rate</label>
+    <summarizedField>iContactforSF__iContact_Sent_Message__c.iContactforSF__Click_Rate__c</summarizedField>
+    <summaryFilterItems>
+        <field>iContactforSF__iContact_Sent_Message__c.iContactforSF__Status__c</field>
+        <operation>equals</operation>
+        <value>Released</value>
+    </summaryFilterItems>
+    <summaryForeignKey>iContactforSF__iContact_Sent_Message__c.iContactforSF__Campaign__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

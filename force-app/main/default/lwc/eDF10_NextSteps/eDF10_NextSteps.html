@@ -1,0 +1,38 @@
+<template>
+    <template if:true={hasNextStep}>
+        <div class="next-steps-status-wrap dashboard-section-wrap">
+            <h2>{label.FellowPortalHomepage_HeadingLabel_NextSteps}</h2>
+            <div class="row next-steps-status-card-wrap">
+                <template if:true={nextStepTiles}>
+                    <template for:each={nextStepTiles} for:item="item">
+                            <div key={item.id} class="col-12 col-md-4 col-lg-3 col-xl-3 next-steps-status-card">
+                                <div class="next-steps-status-card-inn">
+                                    <div class="next-steps-status-card-top">
+                                        <div class="next-steps-status-card-icon-title">
+                                            <figure class="next-steps-status-card-icon">
+                                                <img src={item.image} alt="" title="" />
+                                            </figure>
+                                            <h5>{item.title}</h5>
+                                        </div>
+                                        <div class="next-steps-status-card-sub-title">
+                                            <h6>{item.subTitle}</h6>
+                                            <a href={item.subTitleLink} title="" class="next-steps-status-link">{item.subTitleLinkLabel}</a>
+                                        </div>
+                                        <div class="next-steps-status-card-content">
+                                        <p>{item.description}</p>
+                                        </div>
+                                    </div>
+                                    <template if:true={item.footer}>
+                                        <div class="next-steps-status-card-footer">
+                                            <p>{item.footer}</p>
+                                        </div>
+                                    </template>
+
+                                </div>
+                            </div>
+                    </template>
+                </template>
+            </div>
+        </div>
+    </template>
+</template>

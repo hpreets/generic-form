@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>China_Deliverables</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>NamespacePrefix</columns>
+    <columns>Fellowship__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Fellowship__c</field>
+        <operation>equals</operation>
+        <value>China Fellowship</value>
+    </filters>
+    <label>China Deliverables</label>
+    <language>en_US</language>
+</ListView>

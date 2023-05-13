@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Capacity__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Capacity indicates how much a constituent might be able to donate.
+•AAAA - $100M +, • AAA - $50M - $99.9M, •AA - $25M - $49.9M
+•A - $10M - $24.9M, •B - $5M - $9.9M, •C - $1M - $4.9M
+•D - $500K - $999.9K, •E - $100K - $499.9K, •F  - $25K – 99.9K
+Capacity is synced across the account and all of its related contacts. Please make all edits to Capacity on the Primary Contact&apos;s record.</inlineHelpText>
+    <label>Capacity</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Capacity</valueSetName>
+    </valueSet>
+</CustomField>

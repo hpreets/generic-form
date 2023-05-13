@@ -1,0 +1,151 @@
+<template>
+
+    <template if:true={showTips}>
+        <section  class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModalAction}>
+                       <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+                    </button>
+                    <h5 class="modal-title">Engagement Search Tips</h5>
+                 </header>
+
+                 <div class="slds-modal__content slds-p-around_medium">
+
+                    <div>
+                        <ul class="engagements-search-tips-list">
+                            <li class="slds-text-body_small"><b style="font-size: xx-large;">.</b>You may view the full text of a project description two
+                                ways: Hovering over the description itself or clicking
+                                on the
+                                “Tell us why” button under the “Why Consider Me” column.
+                            </li>
+                            <li class="slds-text-body_small"><b style="font-size: xx-large;">.</b>Remember, this is your opportunity to tell us why you’re
+                                the best choice for this engagement! The more detailed
+                                information you provide, the easier it will be for our
+                                matching team to place you with the engagement that best
+                                aligns
+                                with your interests and skillset.</li>
+                            <li class="slds-text-body_small"><b style="font-size: xx-large;">.</b>Write your “Why Consider Me” statements in a Word
+                                document before uploading them into the portal. This
+                                will help you
+                                to avoid grammar and spelling mistakes, as well as
+                                losing unsaved work.
+                            </li>
+                            <li class="slds-text-body_small"><b style="font-size: xx-large;">.</b>Please keep in mind that statements may not be read
+                                consecutively. You may want to repeat information that
+                                is applicable
+                                to multiple selections.</li>
+                            <li class="slds-text-body_small"><b style="font-size: xx-large;">.</b>Fellowship location preference indicates whether the
+                                organization is planning for the project to be
+                                in-person, remote, or a
+                                hybrid of the two. "Flexible" means that that are open
+                                to fully remote work but can also host on-site,
+                                depending on the
+                                preference of their matched fellow.</li>
+                        </ul>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+    <!-- div class="bg-welcome">
+        <div class="registration-application-section">
+            <div class="registration-application-section-inner fluid-container">
+                <div class="registration-application-section-sub">
+                    <h3>{headingEngagementPage}</h3>
+                    <div class="registration-application-form-wrap" -->
+                        <div class="engagements-instructions-wrap">
+                            <div class="engagements-instructions-top">
+                                <h5><img src={instructionsImageURL} alt="" title="" /> Instructions</h5>
+                                <!-- Search Tips Start -->
+                                <div class="search-tips-wrap clearfix" data-toggle="modal"
+                                    data-target=".engagements-search-tips-modal" onclick={openTipsModel}>
+                                    <img src={infoImageURL} alt="" title=""
+                                        class="search-tips-info-icon" />
+                                    <p>Search Tips</p>
+                                    <!-- Engagements Search Tips Modal Start -->
+                                    <!--
+                                    <template if:true={showTips}>
+                                        <section  class="slds-modal slds-fade-in-open">
+                                            <div class="slds-modal__container">
+                                                <header class="slds-modal__header">
+                                                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModalAction}>
+                                                       <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+                                                    </button>
+                                                    <h5 class="modal-title">Engagement Search Tips</h5>
+                                                 </header>
+
+                                                 <div class="slds-modal__content slds-p-around_medium">
+
+                                                    <div>
+                                                        <p class="slds-text-body_small"><b style="font-size: xx-large;">.</b>You may view the full text of a project description two
+                                                            ways: Hovering over the description itself or clicking
+                                                            on the
+                                                            “Tell us why” button under the “Why Consider Me” column.
+                                                        </p>
+                                                        <p class="slds-text-body_small"><b style="font-size: xx-large;">.</b>Remember, this is your opportunity to tell us why you’re
+                                                            the best choice for this engagement! The more detailed
+                                                            information you provide, the easier it will be for our
+                                                            matching team to place you with the engagement that best
+                                                            aligns
+                                                            with your interests and skillset.</p>
+                                                        <p class="slds-text-body_small"><b style="font-size: xx-large;">.</b>Write your “Why Consider Me” statements in a Word
+                                                            document before uploading them into the portal. This
+                                                            will help you
+                                                            to avoid grammar and spelling mistakes, as well as
+                                                            losing unsaved work.
+                                                        </p>
+                                                        <p class="slds-text-body_small"><b style="font-size: xx-large;">.</b>Please keep in mind that statements may not be read
+                                                            consecutively. You may want to repeat information that
+                                                            is applicable
+                                                            to multiple selections.</p>
+                                                        <p class="slds-text-body_small"><b style="font-size: xx-large;">.</b>Fellowship location preference indicates whether the
+                                                            organization is planning for the project to be
+                                                            in-person, remote, or a
+                                                            hybrid of the two. "Flexible" means that that are open
+                                                            to fully remote work but can also host on-site,
+                                                            depending on the
+                                                            preference of their matched fellow.</p>
+                                                        </div>
+                                                </div>
+
+                                            </div>
+                                        </section>
+                                        <div class="slds-backdrop slds-backdrop_open"></div>
+                                    </template> -->
+                                    <!-- Engagements Search Tips Modal End -->
+                                </div>
+                                <!-- Search Tips End -->
+                            </div>
+                            <div class="engagements-instructions-content-wrap">
+                                <p>
+                                    <span>Please select the top 5 host organizations from the search results for
+                                        which you
+                                        would like to be considered.</span>
+                                    To do so, first select your preferred organization(s) by clicking the box under
+                                    the “Consider Me” column. Then, under the “Why Consider Me?” column, rank your
+                                    preferences (1-5) and write a brief statement (approximately 5 sentences)
+                                    stating your case for those particular placements.
+                                </p>
+                                <p>
+                                    Be sure to reference prior work experiences and academic training that are
+                                    relevant to each organization’s industry and/or project description.
+                                    Many projects will indicate required or additional skillset that are pertinent
+                                    to the fellow’s role; please consider these as you make your selections.
+                                    Any host organization marked with a gold star indicates that a high number of
+                                    candidates have chosen it as a preference and it is a competitive placement.</p>
+
+                                <p><em>EDF does not guarantee placement with any one organization. If you do not
+                                        enter any host preferences, your application will be removed from
+                                        consideration.</em> </p>
+
+                            </div>
+                        </div>
+                    <!-- /div>
+                </div>
+            </div>
+        </div>
+    </div -->
+</template>

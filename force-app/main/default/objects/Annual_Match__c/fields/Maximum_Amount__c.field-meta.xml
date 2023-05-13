@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Maximum_Amount__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (ISPICKVAL(Challenge_Match__r.Match_Type__c , &quot;Up to max&quot;), Threshold_Amount__c ,null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If the Match Type equals &quot;Up to max&quot;, this field will hold the value of the Threshold Amount. Otherwise, it will be blank.</inlineHelpText>
+    <label>Maximum Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

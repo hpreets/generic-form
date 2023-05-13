@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Degree_Earned_2__c</fullName>
+    <externalId>false</externalId>
+    <label>UG Degree(s)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Associate of Applied Science (AAS)</fullName>
+                <default>false</default>
+                <label>Associate of Applied Science (AAS)</label>
+            </value>
+            <value>
+                <fullName>Associate of Arts (AA)</fullName>
+                <default>false</default>
+                <label>Associate of Arts (AA)</label>
+            </value>
+            <value>
+                <fullName>Associate of Science (AS)</fullName>
+                <default>false</default>
+                <label>Associate of Science (AS)</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Arts (BA)</fullName>
+                <default>false</default>
+                <label>Bachelor of Arts (BA)</label>
+            </value>
+            <value>
+                <fullName>Bachelor of Science (BS)</fullName>
+                <default>false</default>
+                <label>Bachelor of Science (BS)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

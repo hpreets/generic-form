@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budget_Needs__c</fullName>
+    <description>Include specific budgetary instructions the donor has requested be included in the report – ie. template usage, budget timeline, no budget needed, etc.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Include specific budgetary instructions the donor has requested be included in the report – ie. template usage, budget timeline, no budget needed, etc.</inlineHelpText>
+    <label>Budget Needs</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

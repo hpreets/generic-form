@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subscription_Name__c</fullName>
+    <externalId>false</externalId>
+    <label>Subscription Name</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Annual Report</fullName>
+                <default>false</default>
+                <label>Annual Report</label>
+            </value>
+            <value>
+                <fullName>Osprey Watch</fullName>
+                <default>false</default>
+                <label>Osprey Watch</label>
+            </value>
+            <value>
+                <fullName>Solutions</fullName>
+                <default>false</default>
+                <label>Solutions</label>
+            </value>
+            <value>
+                <fullName>Strategic Plan</fullName>
+                <default>false</default>
+                <label>Strategic Plan</label>
+            </value>
+            <value>
+                <fullName>Oceans - Gulf Newsletter</fullName>
+                <default>false</default>
+                <label>Oceans - Gulf Newsletter</label>
+            </value>
+            <value>
+                <fullName>Oceans - Pacific Newsletter</fullName>
+                <default>false</default>
+                <label>Oceans - Pacific Newsletter</label>
+            </value>
+            <value>
+                <fullName>Oceans - Northeast Newsletter</fullName>
+                <default>false</default>
+                <label>Oceans - Northeast Newsletter</label>
+            </value>
+            <value>
+                <fullName>Oceans - FSC Newsletter</fullName>
+                <default>false</default>
+                <label>Oceans - FSC Newsletter</label>
+            </value>
+            <value>
+                <fullName>Membership - Special Reports</fullName>
+                <default>false</default>
+                <label>Membership - Special Reports</label>
+            </value>
+            <value>
+                <fullName>Membership - Results</fullName>
+                <default>false</default>
+                <label>Membership - Results</label>
+            </value>
+            <value>
+                <fullName>EDF Advocacy Network Grasstop List</fullName>
+                <default>false</default>
+                <label>EDF Advocacy Network Grasstop List</label>
+            </value>
+            <value>
+                <fullName>EDFBIZ - Tom Murray Subscription</fullName>
+                <default>false</default>
+                <label>EDFBIZ - Tom Murray Subscription</label>
+            </value>
+            <value>
+                <fullName>EDFBIZ - SCSC Webinar Invitations</fullName>
+                <default>false</default>
+                <label>EDFBIZ - SCSC Webinar Invitations</label>
+            </value>
+            <value>
+                <fullName>Summer of Action Contacts – Past Recipients</fullName>
+                <default>false</default>
+                <label>Summer of Action Contacts – Past Recipients</label>
+            </value>
+            <value>
+                <fullName>Summer of Action Contacts – Current Year</fullName>
+                <default>false</default>
+                <label>Summer of Action Contacts – Current Year</label>
+            </value>
+            <value>
+                <fullName>Summer of Action Advocates Network</fullName>
+                <default>false</default>
+                <label>Summer of Action Advocates Network</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

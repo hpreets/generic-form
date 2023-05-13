@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Planned_Gift_Soft_Credit_Total__c</fullName>
+    <defaultValue>0.0</defaultValue>
+    <description>This field is created to get the soft credit roll up for Estate Account</description>
+    <externalId>false</externalId>
+    <label>Planned Gift Soft Credit Total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

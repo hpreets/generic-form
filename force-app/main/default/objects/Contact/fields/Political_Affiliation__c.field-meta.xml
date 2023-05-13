@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Political_Affiliation__c</fullName>
+    <externalId>false</externalId>
+    <label>Political Affiliation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Democrat</fullName>
+                <default>false</default>
+                <label>Democrat</label>
+            </value>
+            <value>
+                <fullName>Green Party</fullName>
+                <default>false</default>
+                <label>Green Party</label>
+            </value>
+            <value>
+                <fullName>Independent</fullName>
+                <default>false</default>
+                <label>Independent</label>
+            </value>
+            <value>
+                <fullName>Libertarian</fullName>
+                <default>false</default>
+                <label>Libertarian</label>
+            </value>
+            <value>
+                <fullName>Republican</fullName>
+                <default>false</default>
+                <label>Republican</label>
+            </value>
+            <value>
+                <fullName>Working Families</fullName>
+                <default>false</default>
+                <label>Working Families</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

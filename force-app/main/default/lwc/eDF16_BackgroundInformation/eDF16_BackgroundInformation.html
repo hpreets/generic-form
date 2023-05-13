@@ -1,0 +1,380 @@
+<!--
+  @description       :
+  @author            : Sai Teja
+  @last modified on  : 04-20-2022
+  @last modified by  : Sai Teja
+-->
+<template>
+    <template if:false={isChild}>
+        <c-e-d-f13_-header></c-e-d-f13_-header>
+        <c-e-d-f28_-dashboard-menu></c-e-d-f28_-dashboard-menu>
+    </template>
+    <!-- body tag div -->
+    <div class={backgroundImageClass}>
+        <div class="bg-welcome">
+            <div class="registration-application-section">
+                <div class="registration-application-section-inner">
+                    <div class="registration-application-section-sub">
+                        <h3>Background Information</h3>
+                        <div class="registration-application-form-wrap">
+                            <form action="" method="post">
+                                <template if:true={isUSFellowShip}>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <template if:true={authorizedWorkUSPickList.data}>
+                                        <lightning-combobox
+                                        name="legalAuthroizeUS"
+                                        label="Are you legally authorized to work in the U.S.?"
+                                        value={authorizedWorkUS}
+                                        placeholder="-- None --"
+                                        options={authorizedWorkUSPickList.data.values}
+                                        onchange={authorizedWorkUSChangeHandler} required={isLegalAuthUS} read-only={readOnly}></lightning-combobox>
+                                    </template>
+                                        <!--<label>Are you legally authorized to work in the U.S.?</label>
+                                        <select class="form-control authorized-work-us" onchange={authorizedWorkUSChangeHandler} required={isLegalAuthUS}>
+                                            <option selected>-- None --</option>
+                                            <template if:true={authorizedWorkUSPickList.data}>
+                                                <template for:each={authorizedWorkUSPickList.data.values} for:item="item">
+                                                    <option key={item.value} value={item.value}>{item.label}</option>
+                                                </template>
+                                            </template>
+                                        </select>-->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <template if:true={requireAuthorizationPickList.data}>
+                                            <lightning-combobox
+                                            name="workauth"
+                                            label="Will you now or in the future require work authorization"
+                                            value={requireAuthorization}
+                                            placeholder="-- None --"
+                                            options={requireAuthorizationPickList.data.values}
+                                            onchange={requireAuthorizationChangeHandler} required={isFutureWork} read-only={readOnly}></lightning-combobox>
+                                        </template>
+                                        <!--<label>Will you now or in the future require work authorization</label>
+                                        <select class="form-control require-authorization" onchange={requireAuthorizationChangeHandler} required={isFutureWork}>
+                                            <option selected>-- None --</option>
+                                            <template if:true={requireAuthorizationPickList.data}>
+                                                <template for:each={requireAuthorizationPickList.data.values} for:item="item">
+                                                    <option key={item.value} value={item.value}>{item.label}</option>
+                                                </template>
+                                            </template>
+                                        </select>-->
+                                    </div>
+                                </div>
+                                </template>
+                                <template if:true={isIndiaorChinaFellowShip}>
+
+                                    <div class="row custom-file-browse-uploaded-wrap custom-reuploaded-button-wrap">
+                                        <div class="col-12 form-group custom-file-browse-uploaded-outer">
+                                            <label class="custom-file-browse-uploaded-title">Uploaded Identification </label>
+                                            <template if:true={showUploaded}>
+                                                <span class="custom-file-browse-uploaded-item">
+                                                    <span class="uploaded-item-dot">&nbsp;</span>
+                                                    Uploaded
+                                                </span>
+                                                <span class="custom-file-browse-uploaded-item">
+                                                    <span class="uploaded-item-dot">&nbsp;</span>
+                                                    {photoIdentification}
+                                                </span>
+                                            </template>
+                                        </div>
+                                        <div class="col-12 form-group custom-file-browse-button-outer">
+                                            <label class="custom-file-browse-uploaded-note">Please upload a copy of your Chinese Identification Card or India ID</label>
+                                            <!-- <button type="button" class="btn btn-primary button-custom button-white-button">Reupload</button> -->
+                                            <lightning-file-upload
+                                                    name="Reupload"
+                                                    accept={acceptedFormats}
+                                                    record-id={fellowApplicationId}
+                                                    onuploadfinished={handleUploadFinished} disabled={readOnly}>
+                                            </lightning-file-upload>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="row form-group custom-file-browse-wrap">
+                                        <lightning-file-upload
+                                            label="Please upload a copy of your Chinese Identification Card or India ID"
+                                            name="fileUploader"
+                                            accept={acceptedFormats}
+                                            record-id={fellowApplicationId}
+                                            onuploadfinished={handleUploadFinished}
+                                            required ={isIdCard}
+                                            multiple
+                                        ></lightning-file-upload>
+                                        <div class="col-12 col-md-3 col-lg-3 col-xl-3 custom-file-browse-label no-padding-left">
+                                            <label for="fileUpload">Please upload a copy of your Chinese Identification Card or India ID</label></div>
+                                        <div class="col-12 col-md-9 col-lg-9 col-xl-9 custom-file-browse-outer">
+                                            <input type="file" id="fileUpload" required ={isIdCard} >
+                                        </div>
+                                    </div> -->
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <template if:true={nativeEnglishSpeakerPickList.data}>
+                                                <lightning-combobox
+                                                name="engproficiency"
+                                                label="English proficiency is required for this position. Are you fluent or proficient in English?"
+                                                value={nativeEnglishSpeaker}
+                                                placeholder="-- None --"
+                                                options={nativeEnglishSpeakerPickList.data.values}
+                                                onchange={nativeEnglishSpeakerChangeHandler} required={isEngProficient} read-only={readOnly}></lightning-combobox>
+                                            </template>
+                                            <!--<label>English proficiency is required for this position. Are you fluent or proficient in English? </label>
+                                            <select class="form-control native-Eenglish-speaker" onchange={nativeEnglishSpeakerChangeHandler} required ={isEngProficient}>
+                                                <option selected>-- None --</option>
+                                                <template if:true={nativeEnglishSpeakerPickList.data}>
+                                                    <template for:each={nativeEnglishSpeakerPickList.data.values} for:item="item">
+                                                        <option key={item.value} value={item.value}>{item.label}</option>
+                                                    </template>
+                                                </template>
+                                            </select>-->
+                                        </div>
+                                    </div>
+                                </template>
+
+                                <template if:true={isChinaFellowship}>
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <template if:true={residencyInChinaPickList.data}>
+                                                <lightning-combobox
+                                                name="chinaresidency"
+                                                label="Please select your residency in China."
+                                                value={residencyInChina}
+                                                placeholder="-- None --"
+                                                options={residencyInChinaPickList.data.values}
+                                                onchange={residencyInChinaChangeHandler} required={isChinaResi} read-only={readOnly}></lightning-combobox>
+                                            </template>
+                                            <!--<label>Please select your residency in China.</label>
+                                            <select class="form-control residency-in-china" onchange={residencyInChinaChangeHandler} required={isChinaResi}>
+                                                <option selected>-- None --</option>
+                                                <template if:true={residencyInChinaPickList.data}>
+                                                    <template for:each={residencyInChinaPickList.data.values} for:item="item">
+                                                        <option key={item.value} value={item.value}>{item.label}</option>
+                                                    </template>
+                                                </template>
+                                            </select>-->
+                                        </div>
+                                    </div>
+                                    <template if:false={isChinaFellowship}>
+                                        <div class="row">
+                                            <div class="col-12 form-group">
+                                                    <!-- <label class="custom-control-label form-check-label" for="india">Please check the box if you have a passport</label> -->
+                                                    <lightning-input type="checkbox" label="Please check the box if you have a passport"  checked={passportCheckboxVal} onchange={passportCheckboxChangeHandler} read-only={readOnly}> </lightning-input>
+                                                    <!-- <input type="checkbox" class="custom-control-input" id="passport" checked={passportCheckboxVal} onchange={passportCheckboxChangeHandler}>  -->
+                                            </div>
+                                        </div>
+                                    </template>
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <template if:true={ChinaFellowshipTestsPickList.data}>
+                                                <lightning-combobox
+                                                name="chinatests"
+                                                label="Please choose one of the following tests and input your score in the text box below."
+                                                value={ChinaFellowshipTests}
+                                                placeholder="-- None --"
+                                                options={ChinaFellowshipTestsPickList.data.values}
+                                                onchange={ChinaFellowshipTestsChangeHandler} required={testScore} read-only={readOnly}></lightning-combobox>
+                                            </template>
+                                            <!--<label>Please choose one of the following tests and input your score in the text box below.</label>
+                                            <select class="form-control China-fellowship-tests" onchange={ChinaFellowshipTestsChangeHandler}>
+                                                <option selected>-- None --</option>
+                                                <template if:true={ChinaFellowshipTestsPickList.data}>
+                                                    <template for:each={ChinaFellowshipTestsPickList.data.values} for:item="item">
+                                                        <option key={item.value} value={item.value}>{item.label}</option>
+                                                    </template>
+                                                </template>
+                                            </select>-->
+                                            <input type="text" class="form-control" placeholder="" value={ChinaFellowshipTestScore} onchange={ChinaFellowshipTestScoreChangeHandler} readonly={readOnly}>
+                                        </div>
+                                    </div>
+
+                                </template>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <template if:true={yearsOfExperiencePickList.data}>
+                                            <lightning-combobox
+                                            name="workExp"
+                                            label="How many years of professional work experience do you have?"
+                                            value={yearsOfExperience}
+                                            placeholder="-- None --"
+                                            options={yearsOfExperiencePickList.data.values}
+                                            onchange={yearsOfExperienceChangeHandler} required={isworkExpRequired} read-only={readOnly}></lightning-combobox>
+                                        </template>
+                                        <!--<label>How many years of professional work experience do you have? </label>
+                                        <select class="form-control years-of-experience" onchange={yearsOfExperienceChangeHandler} required={isworkExpRequired}>
+                                            <option selected>-- None --</option>
+                                            <template if:true={yearsOfExperiencePickList.data}>
+                                                <template for:each={yearsOfExperiencePickList.data.values} for:item="item">
+                                                    <option key={item.value} value={item.value}>{item.label}</option>
+                                                </template>
+                                            </template>
+                                        </select>-->
+                                    </div>
+                                </div>
+
+                                <div class="row note-info-wrap">
+                                    <div class="col-12 form-group note-info">
+                                        <div class="note-info-inner clearfix"><span class="note-info-icon"></span> <span
+                                                class="note-info-content">Please indicate your level of experience (None,
+                                                Basic, Moderate, and Advanced) with the following project types.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <template if:true={financialAnalysisPickList.data}>
+                                            <lightning-combobox
+                                            name="finanalysis"
+                                            label="Financial Analysis"
+                                            value={financialAnalysis}
+                                            placeholder="-- None --"
+                                            options={financialAnalysisPickList.data.values}
+                                            onchange={financialAnalysisChangeHandler} required={isfinanAnalysis} read-only={readOnly}></lightning-combobox>
+                                        </template>
+                                       <!--<label>Financial Analysis</label>
+                                        <select class="form-control financial-analysis" onchange={financialAnalysisChangeHandler} required={isfinanAnalysis}>
+                                            <template if:true={financialAnalysisPickList.data}>
+                                                <template for:each={financialAnalysisPickList.data.values} for:item="item">
+                                                    <option key={item.value} value={item.value}>{item.label}</option>
+                                                </template>
+                                            </template>
+                                        </select>-->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group ">
+                                        <template if:true={greenhouseGasAccountingPickList.data}>
+                                            <lightning-combobox
+                                            name="greengas"
+                                            label="Greenhouse Gas Accounting"
+                                            value={greenhouseGasAccounting}
+                                            placeholder="-- None --"
+                                            options={greenhouseGasAccountingPickList.data.values}
+                                            onchange={greenhouseGasAccountingChangeHandler} required={isGreenGas} read-only={readOnly}></lightning-combobox>
+                                        </template>
+                                        <!--<label>Greenhouse Gas Accounting </label>
+                                        <select class="form-control greenhouse-gas-accounting" onchange={greenhouseGasAccountingChangeHandler} required={isGreenGas}>
+                                            <template if:true={greenhouseGasAccountingPickList.data}>
+                                                <template for:each={greenhouseGasAccountingPickList.data.values} for:item="item">
+                                                    <option key={item.value} value={item.value}>{item.label}</option>
+                                                </template>
+                                            </template>
+                                        </select>-->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group ">
+                                        <template if:true={dataAnalysisPickList.data}>
+                                            <lightning-combobox
+                                            name="dataanalysis"
+                                            label="Data Analysis"
+                                            value={dataAnalysis}
+                                            placeholder="-- None --"
+                                            options={dataAnalysisPickList.data.values}
+                                            onchange={dataAnalysisChangeHandler} required={isdataAnalysis} read-only={readOnly}></lightning-combobox>
+                                        </template>
+                                        <!--<label>Data Analysis (Excel or other software) </label>
+                                        <select class="form-control data-analysis" onchange={dataAnalysisChangeHandler} required={isdataAnalysis}>
+                                            <template if:true={dataAnalysisPickList.data}>
+                                                <template for:each={dataAnalysisPickList.data.values} for:item="item">
+                                                    <option key={item.value} value={item.value}>{item.label}</option>
+                                                </template>
+                                            </template>
+                                        </select>-->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group ">
+                                        <template if:true={supplyChainPickList.data}>
+                                            <lightning-combobox
+                                            name="supplychain"
+                                            label="Supply Chain"
+                                            value={supplyChain}
+                                            placeholder="-- None --"
+                                            options={supplyChainPickList.data.values}
+                                            onchange={supplyChainChangeHandler} required={isSupplyChain} read-only={readOnly}></lightning-combobox>
+                                        </template>
+                                        <!--<label>Supply Chain</label>
+                                        <select class="form-control supply-chain" onchange={supplyChainChangeHandler} required={isSupplyChain}>
+                                            <template if:true={supplyChainPickList.data}>
+                                                <template for:each={supplyChainPickList.data.values} for:item="item">
+                                                    <option key={item.value} value={item.value}>{item.label}</option>
+                                                </template>
+                                            </template>
+                                        </select>-->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group ">
+                                        <template if:true={energyEfficiencyRenewablesPickList.data}>
+                                            <lightning-combobox
+                                            name="energyefficiency"
+                                            label="Energy Efficiency and/or Renewables"
+                                            value={energyEfficiencyRenewables}
+                                            placeholder="-- None --"
+                                            options={energyEfficiencyRenewablesPickList.data.values}
+                                            onchange={energyEfficiencyRenewablesChangeHandler} required={isEnergyEffi} read-only={readOnly}></lightning-combobox>
+                                        </template>
+                                        <!--<label>Energy Efficiency and/or Renewables</label>
+                                        <select class="form-control energy-efficiency-renewables" onchange={energyEfficiencyRenewablesChangeHandler} required={isEnergyEffi}>
+                                            <template if:true={energyEfficiencyRenewablesPickList.data}>
+                                                <template for:each={energyEfficiencyRenewablesPickList.data.values} for:item="item">
+                                                    <option key={item.value} value={item.value}>{item.label}</option>
+                                                </template>
+                                            </template>
+                                        </select>-->
+                                    </div>
+                                </div>
+
+                                <div class="form-button-wrap no-padding-top">
+                                    <template if:false={isChild}>
+                                        <button type="button" class="btn btn-primary white-button margin-right" onclick={backToPreviousTab}>Back</button>
+                                        <template if:false={isDeadlinePassed}>
+                                            <button type="button" class="btn btn-primary green-button margin-right" onclick={updateBackgroundInformation}>Save and next</button>
+                                        </template>
+                                        <button type="button" class="btn btn-primary white-button" onclick={navigateToDashboard}>Cancel</button> <!--  data-toggle="modal" data-target=".discard-save-modal" -->
+                                    </template>
+                                    <template if:true={isChild}>
+                                        <template if:false={isDeadlinePassed}>
+                                            <template if:true={readOnly}>
+                                                <button type="button" disabled class="btn btn-primary green-button margin-right" onclick={updateBackgroundInformation}>Save</button>
+                                            </template>
+                                            <template if:false={readOnly}>
+                                                <button type="button" class="btn btn-primary green-button margin-right" onclick={updateBackgroundInformation}>Save</button>
+                                            </template>
+                                        </template>
+                                    </template>
+
+                                    <!-- Discard Save Modal -->
+                                    <div class="modal fade discard-save-modal" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h3 class="modal-title" id="exampleModalLongTitle">Are you sure?</h3>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Would you like to save the information you have filled?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary gray-button discard-button">Discard</button>
+                                                    <button type="button" class="btn btn-primary red-button save-button">SAVE</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of body tag div -->
+
+    <template if:false={isChild}>
+        <c-e-d-f22_footer></c-e-d-f22_footer>
+    </template>
+
+</template>

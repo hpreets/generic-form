@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <name>Sync_with_Primary_Contact</name>
+        <label>Sync with Primary Contact</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Organization_Constituency__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.npe01__One2OneContact__r.Constituency__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Organization_sub_constituency__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.npe01__One2OneContact__r.Sub_Constituency__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Capacity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.npe01__One2OneContact__r.Capacity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Portfolio_Manager__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.npe01__One2OneContact__r.Portfolio_Manager__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Account_Primary_Handler__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.npe01__One2OneContact__r.Primary_Handler__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Syncs Sub-Constituency, Constituency, Capacity, RM, PM. On HH_Account.
+v4 - Optimize flow per FB-1490</description>
+    <environments>Default</environments>
+    <interviewLabel>Account (Before Insert/Update) --&gt; Sync Constituency {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account (Before Insert/Update) --&gt; Sync Constituency</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Sync_with_Primary_Contact</targetReference>
+        </connector>
+        <filterFormula>{!$Permission.Flow_Automations_Off} &lt;&gt; TRUE
+&amp;&amp;
+not(isnull({!$Record.npe01__One2OneContact__c}))
+&amp;&amp;
+ischanged({!$Record.npe01__One2OneContact__c})
+&amp;&amp;
+{!$Record.RecordType.DeveloperName} = &quot;HH_Account&quot;</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <triggerOrder>2</triggerOrder>
+</Flow>

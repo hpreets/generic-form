@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Record_ID__c</fullName>
+    <description>We have 2 fields to support continuing the Lead ID number values from LCRM in NPSP (Lead Autonumber Backup and Lead ID). When a record has a blank value in Lead Autonumber Backup and a value in Lead ID, it was a migrated record from LCRM. When a record has a value in both fields and they don&apos;t match, it means the record was created during the Delta. It has a value in the Lead Autonumber Backup field, but it was created in LCRM, so it retains that value. When the field values match, it is an entirely new record.</description>
+    <displayFormat>LID-{00000000}</displayFormat>
+    <externalId>false</externalId>
+    <label>Lead Autonumber Backup</label>
+    <trackHistory>false</trackHistory>
+    <type>AutoNumber</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MRC_HC_Amount_Contact__c</fullName>
+    <description>Most recent contribution amount (hard credit).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Most recent contribution amount (hard credit).</inlineHelpText>
+    <label>MRC HC Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

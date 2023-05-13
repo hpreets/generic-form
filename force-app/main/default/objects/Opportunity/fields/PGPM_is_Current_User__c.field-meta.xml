@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PGPM_is_Current_User__c</fullName>
+    <externalId>false</externalId>
+    <formula>$User.User_Contact_ID__c =  PG_Portfolio_Manager__c</formula>
+    <label>PGPM is Current User</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

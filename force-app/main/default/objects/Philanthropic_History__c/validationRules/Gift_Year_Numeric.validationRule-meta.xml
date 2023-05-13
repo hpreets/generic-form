@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gift_Year_Numeric</fullName>
+    <active>true</active>
+    <description>Ensure that the value entered is between 1900-2999</description>
+    <errorConditionFormula>OR (VALUE(Gift_Year__c) &lt; 1900, VALUE(Gift_Year__c) &gt; 2999)</errorConditionFormula>
+    <errorMessage>Ensure that the value entered is between 1900-2999</errorMessage>
+</ValidationRule>

@@ -1,0 +1,149 @@
+<template>
+  <!-- <c-e-d-f13_-header></c-e-d-f13_-header> -->
+  <!-- <template if:true={navigateFromDashboard}>
+    < ! - - Header Bottom Section Start - - >
+    <div class="header-bottom">
+      <div class="header-bottom-inner">
+        < ! - - Breadcrumb Menu Start - - >
+        <div class="breadcrumb-menu-wrap">
+          <ul class="breadcrumb-menu">
+            <li>
+              <a href="javascript:void(0);" title="" onclick={navigateToDashboard}>Dashboard</a>
+            </li>
+            <li class="current-page">Deliverables Tracker</li>
+
+          </ul>
+        </div>
+        < ! - - Breadcrumb Menu End - - >
+      </div>
+    </div>
+    < ! - - Header Bottom Section End - - >
+  </template> -->
+  <template if:false={contentLoaded}>
+    <lightning-spinner size="large"></lightning-spinner>
+  </template>
+  <template if:true={contentLoaded}>
+  <div class="body-wrapper">
+    <div class="container-fluid">
+      <div class="dashboard-wrap">
+        <div if:true={contact}>
+        <h1 class="dashboard-title">{label.DeliverablesTracker_Heading_FellowGreetings} {contact.firstName} {contact.lastName}!</h1>
+      </div>
+        <div style="min-height: 20rem">
+          <lightning-card>
+            <div class="slds-grid slds-gutters">
+              <div class="slds-col slds-size_2-of-12" style="margin-left: 2.5rem" if:true={clickedIcon}>
+                <lightning-icon icon-name={accordIcon} size="small" onclick={changeIcon}> </lightning-icon
+                ><a style="color: black; font-weight: 600; font-size: medium; margin-left: 5%" onclick={changeIcon}>{label.DeliverablesTracker_Heading_Text}</a> <!-- Submission -->
+              </div>
+              <div class="slds-col slds-size_7-of-12"></div>
+              <div class="slds-col slds-size_2-of-12" style="margin-top: -1.5rem" if:true={isSubmissionOpen}>
+                <lightning-combobox name="progress" placeholder="Select filter" options={options} onchange={handleFilterChange}></lightning-combobox>
+              </div>
+              <div class="slds-col slds-size_1-of-12" if:true={isSubmissionOpen}>
+                <a>
+                  <lightning-icon icon-name="utility:close" size="small" onclick={changeIcon}> </lightning-icon>
+                </a>
+              </div>
+            </div>
+            <div if:true={isSubmissionOpen}></div>
+          </lightning-card>
+          <template if:true={showSections}>
+            <lightning-card>
+              <div style="max-width: 100%; padding-left: 1%; background-color: #c2e3e4; margin: 1.5rem">
+                <lightning-accordion allow-multiple-sections-open active-section-name={activeSections}>
+                  <template for:each={mapData} for:item="sectionData">
+                    <div key={sectionData.key}>
+                      <lightning-accordion-section name={sectionData.key} class="accSectionFont" label={sectionData.key}>
+                        <div class="slds-grid slds-gutters slds-wrap">
+                          <template for:each={sectionData.value} for:item="sectionItem">
+                            <div if:true={sectionItem.showSaveSpinner} key={sectionItem.Id} class={sectionItem.Id}>
+                              <lightning-spinner size="small"></lightning-spinner>
+                            </div>
+                            <div key={sectionItem.Id}>
+                              <div class="slds-col dueWeekColSize">
+                                <div class="slds-box boxheight">
+                                  <h3 slot="title">
+                                    <div class="slds-grid slds-gutters">
+                                      <div class="slds-col slds-size_2-of-12">
+                                        <lightning-icon icon-name={sectionItem.Header_Icon__c} size="small"> </lightning-icon>
+                                      </div>
+                                      <div class="slds-col slds-size_10-of-12">
+                                        <div dir="rtl">
+                                          <div class="slds-form-element">
+                                            <label class="slds-checkbox_toggle slds-grid">
+                                              <input
+                                                type="checkbox"
+                                                name={sectionItem.Id}
+                                                data-name={sectionItem.Tile_Body__c}
+                                                data-sectionname={sectionData.key}
+                                                data-recordid={sectionItem.Id}
+                                                data-iscontact={sectionItem.IsContactField__c}
+                                                data-mappingfield={sectionItem.Mapping_Field__c}
+                                                value={sectionItem.checkBoxStatus}
+                                                aria-describedby="checkbox-toggle-16"
+                                                onchange={handleToggleCheckbox}
+                                                checked={sectionItem.checkBoxStatus}
+                                              />
+
+                                              <span class="slds-checkbox_faux_container toggleSwitch" aria-live="assertive">
+                                                <span class="slds-checkbox_faux"></span>
+                                                <span class="slds-checkbox_on toggleActive">{label.DeliverablesTracker_Label_Done}</span> <!-- Done -->
+                                                <span class="slds-checkbox_off toggleInActive">{label.DeliverablesTracker_Label_NotDone}</span> <!-- Not done -->
+                                              </span>
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </h3>
+                                  <br />
+                                  <div class="tileBody">
+                                    <p><b>{sectionItem.Tile_Body__c}</b></p>
+                                  </div>
+                                  <p>
+                                    <template if:false={sectionItem.Hide_Due_Date__c}>
+                                      <template if:true={sectionItem.Due_Date_Label__c}>
+                                        <span class="duedatestyle">{sectionItem.Due_Date_Label__c}</span> {sectionItem.dueDate} <!-- Due Date: -->
+                                      </template>
+                                      <template if:false={sectionItem.Due_Date_Label__c}>
+                                        <span class="duedatestyle">{label.DeliverablesTracker_Label_DueDate}</span> {sectionItem.dueDate} <!-- Due Date: -->
+                                      </template>
+                                    </template>
+                                    &nbsp;
+                                  </p>
+                                  <br />
+                                  <button
+                                    class="slds-button slds-button_success sucessbtn"
+                                    data-name={sectionItem.Id}
+                                    name={sectionItem.Id}
+                                    onclick={onClickSubmitButton}
+                                    disabled={sectionItem.checkBoxStatus}
+                                  >
+                                    {sectionItem.Button_Label__c}
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </template>
+                        </div>
+                      </lightning-accordion-section>
+                    </div>
+                  </template>
+                </lightning-accordion>
+              </div>
+            </lightning-card>
+          </template>
+          <!-- Start ## new Code for Handling List of Section Items-->
+        </div>
+       <!-- <c-e-d-f11_-shortcuts></c-e-d-f11_-shortcuts> -->
+      </div>
+    </div>
+  </div>
+</template>
+<template if:true={savingToSf}>
+  <lightning-spinner size="small"></lightning-spinner>
+</template>
+  <!-- End ## new Code for Handling List of Section Items-->
+  <!-- <c-e-d-f22_footer></c-e-d-f22_footer> -->
+</template>

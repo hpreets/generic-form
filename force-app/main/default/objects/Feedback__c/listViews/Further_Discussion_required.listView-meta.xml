@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Further_Discussion_required</fullName>
+    <columns>NAME</columns>
+    <columns>Description__c</columns>
+    <columns>Assigned_To__c</columns>
+    <columns>Priority__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>User_Story__c</columns>
+    <columns>Feedback_Source__c</columns>
+    <columns>Feedback_Type__c</columns>
+    <columns>Feedback_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Feedback_Status__c</field>
+        <operation>equals</operation>
+        <value>Further Discussion Required</value>
+    </filters>
+    <filters>
+        <field>Assigned_To__c</field>
+        <operation>notContain</operation>
+        <value>Kristen,Hanako,Annabelle,Patrick,Abel,Alyssa</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Feedback__c.Implementation</value>
+    </filters>
+    <label>Further Discussion required</label>
+</ListView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Challenge_Donation__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Donation that is contigent upon a specific crtieria being met.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Donation that is contigent upon a specific crtieria being met.</inlineHelpText>
+    <label>Challenge Donation</label>
+    <referenceTo>Opportunity</referenceTo>
+    <relationshipLabel>Annual Challenge Matches</relationshipLabel>
+    <relationshipName>Annual_Challenge_Matches</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

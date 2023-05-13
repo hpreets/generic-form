@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MRC_Date_Account__c</fullName>
+    <description>EDF Most recent donation date. Includes donations and pledges. Also includes soft credits.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Close Date of the most recent received Opportunity where the Account has a hard or soft credit (Planned Gifts not included).</inlineHelpText>
+    <label>MRC Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

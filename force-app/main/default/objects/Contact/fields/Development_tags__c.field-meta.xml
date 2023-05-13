@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Development_tags__c</fullName>
+    <externalId>false</externalId>
+    <label>Development tags</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EDF Action Influentials</fullName>
+                <default>false</default>
+                <label>EDF Action Influentials</label>
+            </value>
+            <value>
+                <fullName>Influential</fullName>
+                <default>false</default>
+                <label>Influential</label>
+            </value>
+            <value>
+                <fullName>Potential Board Candidate</fullName>
+                <default>false</default>
+                <label>Potential Board Candidate</label>
+            </value>
+            <value>
+                <fullName>Potential China Board Candidate</fullName>
+                <default>false</default>
+                <label>Potential China Board Candidate</label>
+            </value>
+            <value>
+                <fullName>Potential Development Invites</fullName>
+                <default>false</default>
+                <label>Potential Development Invites</label>
+            </value>
+            <value>
+                <fullName>Potential Domestic Traveler</fullName>
+                <default>false</default>
+                <label>Potential Domestic Traveler</label>
+            </value>
+            <value>
+                <fullName>Potential EDF Action Board Candidate</fullName>
+                <default>false</default>
+                <label>Potential EDF Action Board Candidate</label>
+            </value>
+            <value>
+                <fullName>Potential Europe Board Candidate</fullName>
+                <default>false</default>
+                <label>Potential Europe Board Candidate</label>
+            </value>
+            <value>
+                <fullName>Potential Event Host</fullName>
+                <default>false</default>
+                <label>Potential Event Host</label>
+            </value>
+            <value>
+                <fullName>Potential International Traveler</fullName>
+                <default>false</default>
+                <label>Potential International Traveler</label>
+            </value>
+            <value>
+                <fullName>Top 25</fullName>
+                <default>false</default>
+                <label>Top 25</label>
+            </value>
+            <value>
+                <fullName>Top 50</fullName>
+                <default>false</default>
+                <label>Top 50</label>
+            </value>
+            <value>
+                <fullName>Up-and-Comer</fullName>
+                <default>false</default>
+                <label>Up-and-Comer</label>
+            </value>
+            <value>
+                <fullName>Environmental Leaders Initiative</fullName>
+                <default>false</default>
+                <label>Environmental Leaders Initiative</label>
+            </value>
+            <value>
+                <fullName>Research Recommends – Need Intro</fullName>
+                <default>false</default>
+                <label>Research Recommends – Need Intro</label>
+            </value>
+            <value>
+                <fullName>CC Tailored Handling</fullName>
+                <default>false</default>
+                <label>CC Tailored Handling</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Screener__c</fullName>
+    <externalId>false</externalId>
+    <label>Screener</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Aaron Saliman</fullName>
+                <default>false</default>
+                <label>Aaron Saliman</label>
+            </value>
+            <value>
+                <fullName>Arlie Weigley</fullName>
+                <default>false</default>
+                <label>Arlie Weigley</label>
+            </value>
+            <value>
+                <fullName>Ashley Medlar</fullName>
+                <default>false</default>
+                <label>Ashley Medlar</label>
+            </value>
+            <value>
+                <fullName>Brianna Duran</fullName>
+                <default>false</default>
+                <label>Brianna Duran</label>
+            </value>
+            <value>
+                <fullName>Eileen Ashton</fullName>
+                <default>false</default>
+                <label>Eileen Ashton</label>
+            </value>
+            <value>
+                <fullName>Elizabeth Ignacio</fullName>
+                <default>false</default>
+                <label>Elizabeth Ignacio</label>
+            </value>
+            <value>
+                <fullName>Hayley Leonard</fullName>
+                <default>false</default>
+                <label>Hayley Leonard</label>
+            </value>
+            <value>
+                <fullName>Josh Salzberg</fullName>
+                <default>false</default>
+                <label>Josh Salzberg</label>
+            </value>
+            <value>
+                <fullName>Lauren Apollaro</fullName>
+                <default>false</default>
+                <label>Lauren Apollaro</label>
+            </value>
+            <value>
+                <fullName>Sarrynna Sou</fullName>
+                <default>false</default>
+                <label>Sarrynna Sou</label>
+            </value>
+            <value>
+                <fullName>Shimul Bijoor</fullName>
+                <default>false</default>
+                <label>Shimul Bijoor</label>
+            </value>
+            <value>
+                <fullName>Tamara Evans</fullName>
+                <default>false</default>
+                <label>Tamara Evans</label>
+            </value>
+            <value>
+                <fullName>Tanya Mahadwar</fullName>
+                <default>false</default>
+                <label>Tanya Mahadwar</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

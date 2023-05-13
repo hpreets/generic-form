@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Completed_Met</fullName>
+    <columns>NAME</columns>
+    <columns>Challenge_Match_Name__c</columns>
+    <columns>Challenge_Start_Date__c</columns>
+    <columns>Challenge_End_Date__c</columns>
+    <columns>Donor_txt__c</columns>
+    <columns>Match_Type__c</columns>
+    <columns>Match_Ratio__c</columns>
+    <columns>Status__c</columns>
+    <columns>Threshold_Amount_Summary__c</columns>
+    <columns>Total_Raised_by_Challenge_Match__c</columns>
+    <columns>Relationship_Manager__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Completed - Met</value>
+    </filters>
+    <label>Status_Completed Met</label>
+</ListView>

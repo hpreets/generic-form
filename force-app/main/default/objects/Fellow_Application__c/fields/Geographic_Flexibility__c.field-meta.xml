@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Geographic_Flexibility__c</fullName>
+    <externalId>false</externalId>
+    <label>Geographic Flexibility</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I will go anywhere</fullName>
+                <default>false</default>
+                <label>I will go anywhere</label>
+            </value>
+            <value>
+                <fullName>I can relocate to a couple of regional areas</fullName>
+                <default>false</default>
+                <label>I can relocate to a couple of regional areas</label>
+            </value>
+            <value>
+                <fullName>I can only relocate within a specific regional area</fullName>
+                <default>false</default>
+                <label>I can only relocate within a specific regional area</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

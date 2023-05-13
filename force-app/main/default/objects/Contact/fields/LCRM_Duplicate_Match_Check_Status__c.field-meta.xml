@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LCRM_Duplicate_Match_Check_Status__c</fullName>
+    <description>Field created for Heller migration 2021.</description>
+    <externalId>false</externalId>
+    <label>LCRM Duplicate Match Check Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Needs Check</fullName>
+                <default>false</default>
+                <label>Needs Check</label>
+            </value>
+            <value>
+                <fullName>Does Not Need Check</fullName>
+                <default>false</default>
+                <label>Does Not Need Check</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

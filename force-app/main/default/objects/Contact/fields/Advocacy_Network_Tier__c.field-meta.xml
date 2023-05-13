@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Advocacy_Network_Tier__c</fullName>
+    <externalId>false</externalId>
+    <label>Advocacy Network Tier</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Top-Tier Engager</fullName>
+                <default>false</default>
+                <label>Top-Tier Engager</label>
+            </value>
+            <value>
+                <fullName>Mid-Tier Engager</fullName>
+                <default>false</default>
+                <label>Mid-Tier Engager</label>
+            </value>
+            <value>
+                <fullName>Bottom Tier-Engager</fullName>
+                <default>false</default>
+                <label>Bottom Tier-Engager</label>
+            </value>
+            <value>
+                <fullName>No Engagement</fullName>
+                <default>false</default>
+                <label>No Engagement</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

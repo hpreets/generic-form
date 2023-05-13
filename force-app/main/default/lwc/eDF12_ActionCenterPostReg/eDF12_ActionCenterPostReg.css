@@ -1,0 +1,127 @@
+/* Dashboard Page Section Start */
+.body-wrapper{
+    padding: 39px 0 0 0;
+}
+
+.dashboard-wrap h1.dashboard-title{ 
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #2D637F;
+    background-color: inherit;
+    margin: 0 0 0 0;
+    padding: 0 0 12px 0;
+}
+.dashboard-wrap h4.dashboard-welcome-title{ 
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #2D637F;
+    background-color: inherit;
+    margin: 0 0 0 0;
+    padding: 0 0 37px 0;
+}
+
+.dashboard-wrap .action-center-wrap{
+    color: inherit;
+    background-color: #C2E3E4;
+    padding: 26px 20px 4px 20px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.dashboard-wrap .action-center-wrap h2{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #58595B;
+    background-color: inherit;
+    margin: 0 0 0 0;
+    padding: 0 0 18px 0;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card{
+    margin-bottom: 30px;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #58595B;
+    background-color: #fff;
+    padding: 20px 20px 20px 20px;
+    min-height: 218px;
+    box-shadow: 0px 9px 16px rgba(159, 162, 191, 0.18), 0px 2px 2px rgba(159, 162, 191, 0.32);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    position: relative;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn figure{
+    width: 28px;
+    height: 24px;
+    margin-bottom: 23px;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn figure img{
+    max-width: 100%;
+    display: block;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn h5{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #58595B;
+    background-color: inherit;
+    margin: 0 0 0 0;
+    padding: 0 0 5px 0;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn p{
+    font-size: 14px;
+    line-height: 16px;
+    color: #58595B;
+    background-color: inherit;
+    margin: 0 0 0 0;
+    padding: 0 0 5px 0;
+}
+
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn .action-card-footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    width: 100%;
+    padding: 0 20px 0 20px;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn .action-card-footer button{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #00A34B;
+    margin: 0 0 0 0;
+    padding: 10px 17px 11px 17px;
+    border: none;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn .action-card-footer button:focus{
+    box-shadow: none;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn .action-card-footer button:focus{
+    box-shadow: none;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn .action-card-footer button:hover{
+    background-color: rgb(0 163 75 / 80%);
+}
+/* Dashboard Page Section End */

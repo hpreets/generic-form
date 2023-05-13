@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remaining_Deliverables_Submitted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>checkbox is checked when the Remaining_Deliverables are submitted</description>
+    <externalId>false</externalId>
+    <inlineHelpText>checkbox is checked when the Remaining_Deliverables are submitted</inlineHelpText>
+    <label>Remaining Deliverables Submitted</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

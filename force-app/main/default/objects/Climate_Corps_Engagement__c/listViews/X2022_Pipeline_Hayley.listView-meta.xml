@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2022_Pipeline_Hayley</fullName>
+    <columns>NAME</columns>
+    <columns>Contact__c</columns>
+    <columns>Stage__c</columns>
+    <columns>EDF_Project_Manager__c</columns>
+    <columns>Primary_State__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CC_Year__c</field>
+        <operation>equals</operation>
+        <value>2022</value>
+    </filters>
+    <filters>
+        <field>EDF_Project_Manager__c</field>
+        <operation>equals</operation>
+        <value>Hayley Leonard</value>
+    </filters>
+    <label>2022 Pipeline - Hayley</label>
+</ListView>

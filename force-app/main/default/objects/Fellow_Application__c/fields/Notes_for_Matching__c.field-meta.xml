@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notes_for_Matching__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Selecting candidate base on:
+	List top strengths
+	Hard/soft skills
+	Experience
+Notes for defending match (if needed)</inlineHelpText>
+    <label>Notes on Presenting Match</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Email_Check__c</fullName>
+    <externalId>false</externalId>
+    <formula>if ( ispickval(npe01__Preferred_Email__c, &quot;Personal&quot;) &amp;&amp;  Email = npe01__HomeEmail__c, TRUE,
+
+if ( ispickval(npe01__Preferred_Email__c, &quot;Work&quot;) &amp;&amp;  Email = npe01__WorkEmail__c, TRUE,
+
+if ( ispickval(npe01__Preferred_Email__c, &quot;Alternate&quot;) &amp;&amp;  Email = npe01__AlternateEmail__c, TRUE,
+
+FALSE)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Preferred Email Check</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

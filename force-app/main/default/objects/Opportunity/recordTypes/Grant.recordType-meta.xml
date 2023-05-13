@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grant</fullName>
+    <active>true</active>
+    <businessProcess>Grant</businessProcess>
+    <compactLayoutAssignment>NPSP_Grant_and_Major_Gift_Compact_Layout</compactLayoutAssignment>
+    <label>Grant</label>
+    <picklistValues>
+        <picklist>Contact_Channel__c</picklist>
+        <values>
+            <fullName>Ad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cost_Share_Met__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Currency_Type__c</picklist>
+        <values>
+            <fullName>EUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GBP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MXN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USD</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Donation_adjustment_code__c</picklist>
+        <values>
+            <fullName>Carry-over</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Designation Adjustment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donation Revision - Amount Decrease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donation Revision - Amount Increase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donation revision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entity Adjustment - correct bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entity Adjustment - wrong bank but correct entry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entity Adjustment - wrong entry and bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entry Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No adjusting entry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partial chargeback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partial refund</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reclass - Admin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Write off %E2%80%93 Allowance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Write off %E2%80%93 Bad Debt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Write off %E2%80%93 Deferred Government Revenue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Write off %E2%80%93 Revenue</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EDF_Role__c</picklist>
+        <values>
+            <fullName>Prime</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sub-Awardee</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Entity__c</picklist>
+        <values>
+            <fullName>C3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Methane SAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NC PAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SatMgmt%2C LLC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas PAC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fund_Restriction_Code__c</picklist>
+        <values>
+            <fullName>100 - Unrestricted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>102 - Unrestricted - EDF Allocated %28Current Year Use%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>110 - PAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>115 - NC PAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>150 - CGA %2C DGA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>150 - PAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>151 - Deceased CRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>155 - Deceased PIF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>200 - MG - Time Program Restricted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>202 - MG - Time restricted%2C EDF Allocated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300 - FDN - Time and%2For Program Restricted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>302 - FDN - Time restricted%2C EDF Allocated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>400 - MEMB - Program Restricted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>500 - CORP - Time and%2For Program Restricted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>502 - CORP - Time restricted%2C EDF Allocated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>550 - In-Kind%3B 700 - Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>800 - PG - Time and%2For Program Restricted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>851 - CRT%3B 855 - PIF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>961 - General Endowed Funds PRNA%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fund_Restriction__c</picklist>
+        <values>
+            <fullName>100 - Unrestricted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>102 - Unrestricted - EDF Allocated %28Current Year Use%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>110 - PAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>115 - NC PAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>150 - CGA%2C DGA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>151 - Deceased CRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>155 - Deceased PIF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>190 - Unrestricted - EDF Allocated %28Future Years Use%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>200 - MG - Time and%2For Program Restricted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>202 - MG - Time restricted%2C EDF Allocated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>270 - EDF DAF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300 - FDN - Time and%2For Program Restricted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>302 - FDN - Time restricted%2C EDF Allocated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>400 - MEMB - Program Restricted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>500 - CORP - Time and%2For Program Restricted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>502 - CORP - Time restricted%2C EDF Allocated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>550 - In Kind</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>700 - Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>800 - PG - Time and%2For Program Restricted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>851 - CRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>855 - PIF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>961 - General Endowed Funds PRNA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Gift_Time_Frame__c</picklist>
+        <values>
+            <fullName>1_year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2_years</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3_years</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4_years</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5_years</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6_years</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7_years</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Government_Grant_Status__c</picklist>
+        <values>
+            <fullName>Officially Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Closeout</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Grant_Process__c</picklist>
+        <values>
+            <fullName>Award with no application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full proposal only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOI then proposal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Grant_Reporting_Frequency__c</picklist>
+        <values>
+            <fullName>Ad-hoc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Semi-Annual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Grant_Term__c</picklist>
+        <values>
+            <fullName>Multi-Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single Year</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jigsaw</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Location__c</picklist>
+        <values>
+            <fullName>85 - Europe</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Membership_Request__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NetSuite_Bank_Account__c</picklist>
+        <values>
+            <fullName>BANORTE 6969--5492</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CGA CA 10203--6002</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CGA NY 10202--6001</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CITI 0424--5485</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CITI 0458--2674</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CITI 0503--2678</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CITI 0539--5484</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CITI 3034--2690</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CITI 6415--4878</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CITI 6615--2687</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CITI 6623--2689</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CITI 6644--6009</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CITI 6806--4879</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CITI 6814--4880</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CITI 7863--5482</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CITI 9567--5488</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INBURSA 5521--5491</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UBS C3 10200--5999</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UBS C4 10201--6000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WF 2086--4077</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WF 2088--3466</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WF 6814--6003</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WF 6911--2658</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Netsuite_Record__c</picklist>
+        <values>
+            <fullName>AR Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conditional Pledge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pledge Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unconditional Pledge</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pledge_Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Balance Written Off</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rescinded</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pledge_Transaction_Type__c</picklist>
+        <values>
+            <fullName>Pledge - Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pledge - Foundation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pledge - Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pledge - MG Donation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pledge - Other Institutional Giving</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pledge_Type__c</picklist>
+        <values>
+            <fullName>Individual Gift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organization Gift</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Premium_Code_1__c</picklist>
+        <values>
+            <fullName>002 - black tote - T10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>006 - standing polar bear plush - ED07BEAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>012 - grocery tote - T14</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>013 - backpack - T15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>016 - butterfly garden flag - T35</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>017 - water bottle - M07</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>018 - 3 in 1 tote - T18</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>021 - Stainless Steel Bottle - M08</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>026 - four-color animals tote - T23</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>027 - USA-made bear canvas tote - T24</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>039 - Insulated PB Bag - T39</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>040 - Monarch Water Bottle - T40</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>041 - Monarch Tote Bag - T41</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>042 - Monarch Umbrella - T42</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>043 - Polar Bear Totebag - T43</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>044 - Polar Bear Plush - T44</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Processed_By__c</picklist>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donor Records</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronic Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Merkle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telemarketer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Processed_through__c</picklist>
+        <values>
+            <fullName>ActBlue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Classy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Common Ground</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convio online marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Donate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Receipted_Status__c</picklist>
+        <values>
+            <fullName>Do not receipt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Receipted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receipted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Response_Channel__c</picklist>
+        <values>
+            <fullName>Canvassing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tag_Expenses_with_Proposal__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transaction_Type__c</picklist>
+        <values>
+            <fullName>Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foundation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Kind</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Individual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Institutional Giving</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Individual Gift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organization Gift</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>UK_Gift_Aid_Eligible__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Unidentified_Gifts_Review_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed-Unidentified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npe01__Member_Level__c</picklist>
+        <values>
+            <fullName>Bronze</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Silver</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npe01__Membership_Origin__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reacquire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npo02__systemHouseholdContactRoleProcessor__c</picklist>
+        <values>
+            <fullName>All Opportunities</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>No Opportunities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npsp__Acknowledgment_Status__c</picklist>
+        <values>
+            <fullName>Acknowledged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Do Not Acknowledge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Acknowledged</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npsp__Gift_Strategy__c</picklist>
+        <values>
+            <fullName>New Donor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upgrade</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npsp__Tribute_Notification_Status__c</picklist>
+        <values>
+            <fullName>Notified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To Be Notified</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npsp__Tribute_Type__c</picklist>
+        <values>
+            <fullName>Honor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Memorial</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fund_Restriction_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>Fund Restriction Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>100 - Unrestricted</fullName>
+                <default>false</default>
+                <label>100 - Unrestricted</label>
+            </value>
+            <value>
+                <fullName>102 - Unrestricted - EDF Allocated (Current Year Use)</fullName>
+                <default>false</default>
+                <label>102 - Unrestricted - EDF Allocated (Current Year Use)</label>
+            </value>
+            <value>
+                <fullName>110 - PAC</fullName>
+                <default>false</default>
+                <label>110 - PAC</label>
+            </value>
+            <value>
+                <fullName>115 - NC PAC</fullName>
+                <default>false</default>
+                <label>115 - NC PAC</label>
+            </value>
+            <value>
+                <fullName>150 - PAC</fullName>
+                <default>false</default>
+                <label>150 - PAC</label>
+            </value>
+            <value>
+                <fullName>150 - CGA , DGA</fullName>
+                <default>false</default>
+                <label>150 - CGA , DGA</label>
+            </value>
+            <value>
+                <fullName>151 - Deceased CRT</fullName>
+                <default>false</default>
+                <label>151 - Deceased CRT</label>
+            </value>
+            <value>
+                <fullName>155 - Deceased PIF</fullName>
+                <default>false</default>
+                <label>155 - Deceased PIF</label>
+            </value>
+            <value>
+                <fullName>200 - MG - Time Program Restricted</fullName>
+                <default>false</default>
+                <label>200 - MG - Time Program Restricted</label>
+            </value>
+            <value>
+                <fullName>202 - MG - Time restricted, EDF Allocated</fullName>
+                <default>false</default>
+                <label>202 - MG - Time restricted, EDF Allocated</label>
+            </value>
+            <value>
+                <fullName>300 - FDN - Time and/or Program Restricted</fullName>
+                <default>false</default>
+                <label>300 - FDN - Time and/or Program Restricted</label>
+            </value>
+            <value>
+                <fullName>302 - FDN - Time restricted, EDF Allocated</fullName>
+                <default>false</default>
+                <label>302 - FDN - Time restricted, EDF Allocated</label>
+            </value>
+            <value>
+                <fullName>400 - MEMB - Program Restricted</fullName>
+                <default>false</default>
+                <label>400 - MEMB - Program Restricted</label>
+            </value>
+            <value>
+                <fullName>500 - CORP - Time and/or Program Restricted</fullName>
+                <default>false</default>
+                <label>500 - CORP - Time and/or Program Restricted</label>
+            </value>
+            <value>
+                <fullName>502 - CORP - Time restricted, EDF Allocated</fullName>
+                <default>false</default>
+                <label>502 - CORP - Time restricted, EDF Allocated</label>
+            </value>
+            <value>
+                <fullName>550 - In-Kind; 700 - Government</fullName>
+                <default>false</default>
+                <label>550 - In-Kind; 700 - Government</label>
+            </value>
+            <value>
+                <fullName>800 - PG - Time and/or Program Restricted</fullName>
+                <default>false</default>
+                <label>800 - PG - Time and/or Program Restricted</label>
+            </value>
+            <value>
+                <fullName>851 - CRT; 855 - PIF</fullName>
+                <default>false</default>
+                <label>851 - CRT; 855 - PIF</label>
+            </value>
+            <value>
+                <fullName>961 - General Endowed Funds PRNA)</fullName>
+                <default>false</default>
+                <label>961 - General Endowed Funds PRNA)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

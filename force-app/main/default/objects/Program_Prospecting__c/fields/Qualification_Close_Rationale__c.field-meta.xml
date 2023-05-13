@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qualification_Close_Rationale__c</fullName>
+    <description>If the qualification is resolved, include your reasoning here. Resolution occurs when the donor has given to the program (Gift Officer Qualified) or their interest has been disqualified (Gift Officer or Research Disqualified)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If the qualification is resolved, include your reasoning here. Resolution occurs when the donor has given to the program (Gift Officer Qualified) or their interest has been disqualified (Gift Officer or Research Disqualified)</inlineHelpText>
+    <label>Qualification Close Rationale</label>
+    <length>1500</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

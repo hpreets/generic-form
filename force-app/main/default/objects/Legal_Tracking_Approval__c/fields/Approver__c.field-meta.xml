@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approver__c</fullName>
+    <externalId>false</externalId>
+    <label>Approver</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alice Hill</fullName>
+                <default>false</default>
+                <label>Alice Hill</label>
+            </value>
+            <value>
+                <fullName>Art Cooley</fullName>
+                <default>false</default>
+                <label>Art Cooley</label>
+            </value>
+            <value>
+                <fullName>Brenda Mallory</fullName>
+                <default>false</default>
+                <label>Brenda Mallory</label>
+            </value>
+            <value>
+                <fullName>Charles Hamilton</fullName>
+                <default>false</default>
+                <label>Charles Hamilton</label>
+            </value>
+            <value>
+                <fullName>Lynn Goldman</fullName>
+                <default>false</default>
+                <label>Lynn Goldman</label>
+            </value>
+            <value>
+                <fullName>Richard Lazarus</fullName>
+                <default>false</default>
+                <label>Richard Lazarus</label>
+            </value>
+            <value>
+                <fullName>Richard Stewart</fullName>
+                <default>false</default>
+                <label>Richard Stewart</label>
+            </value>
+            <value>
+                <fullName>Seema Kakade</fullName>
+                <default>false</default>
+                <label>Seema Kakade</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

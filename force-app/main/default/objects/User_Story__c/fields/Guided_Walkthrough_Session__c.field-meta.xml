@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Guided_Walkthrough_Session__c</fullName>
+    <externalId>false</externalId>
+    <label>Guided Walkthrough Session</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Communities</fullName>
+                <default>false</default>
+                <label>Communities</label>
+            </value>
+            <value>
+                <fullName>Conditional Grants and Challenge Grants</fullName>
+                <default>false</default>
+                <label>Conditional Grants and Challenge Grants</label>
+            </value>
+            <value>
+                <fullName>Constituent Management</fullName>
+                <default>false</default>
+                <label>Constituent Management</label>
+            </value>
+            <value>
+                <fullName>Gift Processing</fullName>
+                <default>false</default>
+                <label>Gift Processing</label>
+            </value>
+            <value>
+                <fullName>Government Partnerships</fullName>
+                <default>false</default>
+                <label>Government Partnerships</label>
+            </value>
+            <value>
+                <fullName>Institutional Giving</fullName>
+                <default>false</default>
+                <label>Institutional Giving</label>
+            </value>
+            <value>
+                <fullName>Major Gifts and Prospect Management</fullName>
+                <default>false</default>
+                <label>Major Gifts and Prospect Management</label>
+            </value>
+            <value>
+                <fullName>Matching Gifts and Payroll</fullName>
+                <default>false</default>
+                <label>Matching Gifts and Payroll</label>
+            </value>
+            <value>
+                <fullName>Membership</fullName>
+                <default>false</default>
+                <label>Membership</label>
+            </value>
+            <value>
+                <fullName>Planned Giving</fullName>
+                <default>false</default>
+                <label>Planned Giving</label>
+            </value>
+            <value>
+                <fullName>Reports and Dashboards</fullName>
+                <default>false</default>
+                <label>Reports and Dashboards</label>
+            </value>
+            <value>
+                <fullName>Tasks and Activities Management</fullName>
+                <default>false</default>
+                <label>Tasks and Activities Management</label>
+            </value>
+            <value>
+                <fullName>Write-Offs, Refunds, and Adjustments</fullName>
+                <default>false</default>
+                <label>Write-Offs, Refunds, and Adjustments</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

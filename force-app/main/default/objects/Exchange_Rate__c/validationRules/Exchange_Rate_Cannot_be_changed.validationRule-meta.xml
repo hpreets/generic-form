@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exchange_Rate_Cannot_be_changed</fullName>
+    <active>true</active>
+    <description>FB-0627 - once records are created, the Exchange Rate field cannot be updated, so if the Integration User (on the Integrations Profile) tries to update an existing record, it can&apos;t change the Exchange Rate that was set for that day.</description>
+    <errorConditionFormula>ISCHANGED(Exchange_Rate__c)</errorConditionFormula>
+    <errorDisplayField>Exchange_Rate__c</errorDisplayField>
+    <errorMessage>Exchange Rate cannot be changed</errorMessage>
+</ValidationRule>

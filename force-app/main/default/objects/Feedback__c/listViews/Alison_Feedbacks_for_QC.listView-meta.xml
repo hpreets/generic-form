@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alison_Feedbacks_for_QC</fullName>
+    <columns>NAME</columns>
+    <columns>Feedback_Status__c</columns>
+    <columns>Feedback_Title__c</columns>
+    <columns>Feedback_Type__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Deployment_Status__c</columns>
+    <columns>Approval_Status__c</columns>
+    <columns>Assigned_To__c</columns>
+    <columns>QC_Assigned_To__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Assigned_To__c</field>
+        <operation>contains</operation>
+        <value>Alison</value>
+    </filters>
+    <filters>
+        <field>Feedback_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Not An Issue,Known Salesforce Limitation,QC Passed</value>
+    </filters>
+    <label>Alison Feedbacks</label>
+</ListView>

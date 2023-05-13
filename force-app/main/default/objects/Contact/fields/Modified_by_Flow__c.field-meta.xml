@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modified_by_Flow__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates if Contact record was modified by Phone/Email record flow for additional flow usage.</description>
+    <externalId>false</externalId>
+    <label>Modified by Flow?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

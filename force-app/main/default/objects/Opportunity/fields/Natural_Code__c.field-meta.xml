@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Natural_Code__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(
+CASE ( Transaction_Type__c ,
+
+&quot;Government Contract&quot;,49011,
+&quot;Government&quot;,43000,
+&quot;Corporate&quot;,42500,
+&quot;Foundation&quot;,42000,
+&quot;Other Institutional Giving&quot;,42200,
+&quot;In-Kind&quot;,49007,
+&quot;Individual&quot;,41000,
+&quot;Individual - Catalyst Circle&quot;,40500,
+&quot;Individual - Membership&quot;,40300,
+&quot;Matching Gift&quot;,40300,
+&quot;Workplace - Catalyst Circle&quot;,40500,
+&quot;Workplace - Membership&quot;,40300,
+&quot;Bequest&quot;,43500,
+&quot;CGA, DGA&quot;,43800,
+&quot;CGA, DGA Distribution&quot;,43600,
+&quot;CLT&quot;,43800,
+&quot;CLT Distribution&quot;,43600,
+&quot;CRT&quot;,43800,
+&quot;Distribution&quot;,43600,
+&quot;CRT Distribution&quot;,43600,
+&quot;PIF Distribution&quot;,43600,null))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Natural Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loyalty_Insights__c</fullName>
+    <description>Target&apos;s loyalty insights rating</description>
+    <externalId>false</externalId>
+    <label>Loyalty Insights</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BOB</fullName>
+                <default>false</default>
+                <label>BOB</label>
+            </value>
+            <value>
+                <fullName>CON</fullName>
+                <default>false</default>
+                <label>CON</label>
+            </value>
+            <value>
+                <fullName>HBG</fullName>
+                <default>false</default>
+                <label>HBG</label>
+            </value>
+            <value>
+                <fullName>LOW</fullName>
+                <default>false</default>
+                <label>LOW</label>
+            </value>
+            <value>
+                <fullName>NEW</fullName>
+                <default>false</default>
+                <label>NEW</label>
+            </value>
+            <value>
+                <fullName>NOT</fullName>
+                <default>false</default>
+                <label>NOT</label>
+            </value>
+            <value>
+                <fullName>TIP</fullName>
+                <default>false</default>
+                <label>TIP</label>
+            </value>
+            <value>
+                <fullName>TRULY CONNECTED</fullName>
+                <default>false</default>
+                <label>TRULY CONNECTED</label>
+            </value>
+            <value>
+                <fullName>HABITUALLY GENEROUS</fullName>
+                <default>false</default>
+                <label>HABITUALLY GENEROUS</label>
+            </value>
+            <value>
+                <fullName>CONSTANT LOW DOLLAR</fullName>
+                <default>false</default>
+                <label>CONSTANT LOW DOLLAR</label>
+            </value>
+            <value>
+                <fullName>BEST OF THE BEST</fullName>
+                <default>false</default>
+                <label>BEST OF THE BEST</label>
+            </value>
+            <value>
+                <fullName>NOT THAT INTO YOU</fullName>
+                <default>false</default>
+                <label>NOT THAT INTO YOU</label>
+            </value>
+            <value>
+                <fullName>NEW AND NOTEWORTHY</fullName>
+                <default>false</default>
+                <label>NEW AND NOTEWORTHY</label>
+            </value>
+            <value>
+                <fullName>TIPPERS</fullName>
+                <default>false</default>
+                <label>TIPPERS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

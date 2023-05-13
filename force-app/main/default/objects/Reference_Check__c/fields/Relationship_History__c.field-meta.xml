@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relationship_History__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>How long have you known the applicant and in what context do you know their work?</inlineHelpText>
+    <label>Relationship History</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

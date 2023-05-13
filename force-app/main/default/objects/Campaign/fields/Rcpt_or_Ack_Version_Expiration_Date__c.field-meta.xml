@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rcpt_or_Ack_Version_Expiration_Date__c</fullName>
+    <description>Membership stops using the values in the three &quot;Receipt and Acknowledgement Version Name&quot; fields on this date, so receipt/acknowledgement copy isn&apos;t used past the point in which it would be dated (such as not keeping up with current news events). Membership Communications staff, who write the copy for the various receipt/acknowledgement versions, set this date.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Last date these versions will be used.</inlineHelpText>
+    <label>Rcpt or Ack Version Expiration Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

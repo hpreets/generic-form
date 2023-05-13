@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Object_field_is_required</fullName>
+    <active>true</active>
+    <description>Object field – required if Feedback type = Migrated Data OR ‘requires update to data map’ – TRUE</description>
+    <errorConditionFormula>AND
+(
+	OR
+	(
+		ISPICKVAL(Feedback_Type__c, &apos;Migrated Data&apos;),
+		Requires_update_to_Datamap__c
+	),
+	ISBLANK( Object__c) 
+)</errorConditionFormula>
+    <errorMessage>Object field is required if Feedback type = Migrated Data OR Requires update to data map is TRUE</errorMessage>
+</ValidationRule>

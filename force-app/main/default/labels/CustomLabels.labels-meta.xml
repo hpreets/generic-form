@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Contact_Information_Disclaimer</fullName>
+        <categories>Fellow Application Page</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact Information Disclaimer</shortDescription>
+        <value>Climate Corps is committed to creating a diverse environment and is proud to be an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, gender, gender identity or expression, sexual orientation, national origin, genetics, disability, age, or veteran status. Please note that this section of the application is voluntary and your responses will be fully confidential.
+Providing us information about your identity will allow us to track the effectiveness of our recruiting and DEI efforts and ensure that the needs of all fellows are taken into consideration.</value>
+    </labels>
+    <labels>
+        <fullName>EDF_CoverLetter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EDF_CoverLetter</shortDescription>
+        <value>You may address your cover letter to the Climate Corps Team. Please describe any specific courses, qualifications, skills and experience (academic, professional, or personal) that have prepared you for the Climate Corps fellowship. Finally, please describe how a Climate Corps fellowship will impact your career.</value>
+    </labels>
+    <labels>
+        <fullName>EDF_DashBoard_ThankYouFillOutInformation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EDF_DashBoard_ThankYouFillOutInformation</shortDescription>
+        <value>Thank you for your interest in applying to Climate Corps. Please fill out the information below.</value>
+    </labels>
+    <labels>
+        <fullName>EDF_Engagement_Confirmed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EDF_Engagement_Confirmed</shortDescription>
+        <value>Engagement Confirmed</value>
+    </labels>
+    <labels>
+        <fullName>EDF_GenarateFellowApplicationPDF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EDF_GenarateFellowApplicationPDF</shortDescription>
+        <value>https://edfcommunity.force.com/EDFCCFellowPortal/FellowApplicationPDF</value>
+    </labels>
+    <labels>
+        <fullName>EDF_Hello</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EDF_Hello</shortDescription>
+        <value>Hello</value>
+    </labels>
+    <labels>
+        <fullName>EDF_Prospective_Applicant</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EDF_Prospective_Applicant</shortDescription>
+        <value>Prospective Applicant</value>
+    </labels>
+    <labels>
+        <fullName>EDF_RegistrationTemporaryPassword</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EDF_RegistrationTemporaryPassword</shortDescription>
+        <value>It looks like this email is already tied to an active account, please reset your password instead.</value>
+    </labels>
+    <labels>
+        <fullName>EDF_Sharepoint_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EDF_Sharepoint_URL</shortDescription>
+        <value>https://edforg.sharepoint.com/sites/ClimateCorpsResourceLIbrary/Shared%20Documents/Forms/Prework%20View.aspx</value>
+    </labels>
+    <labels>
+        <fullName>EDF_SystemAdministrator_User_ID</fullName>
+        <categories>Flow</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EDF SystemAdministrator User ID</shortDescription>
+        <value>0058W000009eyJCQAY</value>
+    </labels>
+    <labels>
+        <fullName>EngList_Instruction1</fullName>
+        <categories>Engagement List</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EngList_Instruction1</shortDescription>
+        <value>&lt;p&gt;
+&lt;span&gt;Please select the top 5 host organizations from the search results for which you would like to be considered.&lt;/span&gt;
+To do so, first select your preferred organization(s) by clicking the box under the “Consider Me” column. Then, under the “Why Consider Me?” column, rank your preferences (1-5) and write a brief statement (approximately 5 sentences) stating your case for those particular placements.
+&lt;/p&gt; &amp;nbsp;</value>
+    </labels>
+    <labels>
+        <fullName>EngList_Instruction2</fullName>
+        <categories>Engagement List</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EngList_Instruction2</shortDescription>
+        <value>&lt;p&gt;Be sure to reference prior work experiences and academic training that are relevant to each organization’s industry and/or project description. Many projects will indicate required or additional skillset that are pertinent to the fellow’s role; please consider these as you make your selections. Any host organization marked with a gold star indicates that a high number of candidates have chosen it as a preference and it is a competitive placement.&lt;/p&gt; &amp;nbsp;</value>
+    </labels>
+    <labels>
+        <fullName>EngList_Instruction3</fullName>
+        <categories>Engagement List</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EngList_Instruction3</shortDescription>
+        <value>&lt;p&gt;&lt;em&gt;EDF does not guarantee placement with any one organization. If you do not enter any host preferences, your application will be removed from consideration.&lt;/em&gt; &lt;/p&gt; &amp;nbsp;</value>
+    </labels>
+    <labels>
+        <fullName>EngList_Instruction4</fullName>
+        <categories>Engagement List</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EngList_Instruction4</shortDescription>
+        <value>&amp;nbsp;</value>
+    </labels>
+    <labels>
+        <fullName>EngList_SearchTips_Tip1</fullName>
+        <categories>Engagement List</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EngList_SearchTips_Tip1</shortDescription>
+        <value>&lt;li class=&quot;slds-text-body_small&quot;&gt;&lt;b style=&quot;font-size: xx-large;&quot;&gt;.&lt;/b&gt;You may view the full text of a project description two ways: Hovering over the description itself or clicking on the “Tell us why” button under the “Why Consider Me” column.&lt;/li&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EngList_SearchTips_Tip2</fullName>
+        <categories>Engagement List</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EngList_SearchTips_Tip2</shortDescription>
+        <value>&lt;li class=&quot;slds-text-body_small&quot;&gt;&lt;b style=&quot;font-size: xx-large;&quot;&gt;.&lt;/b&gt;Remember, this is your opportunity to tell us why you’re the best choice for this engagement! The more detailed information you provide, the easier it will be for our matching team to place you with the engagement that best aligns with your interests and skillset.&lt;/li&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EngList_SearchTips_Tip3</fullName>
+        <categories>Engagement List</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EngList_SearchTips_Tip3</shortDescription>
+        <value>&lt;li class=&quot;slds-text-body_small&quot;&gt;&lt;b style=&quot;font-size: xx-large;&quot;&gt;.&lt;/b&gt;Write your “Why Consider Me” statements in a Word document before uploading them into the portal. This will help you to avoid grammar and spelling mistakes, as well as losing unsaved work.&lt;/li&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EngList_SearchTips_Tip4</fullName>
+        <categories>Engagement List</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EngList_SearchTips_Tip4</shortDescription>
+        <value>&lt;li class=&quot;slds-text-body_small&quot;&gt;&lt;b style=&quot;font-size: xx-large;&quot;&gt;.&lt;/b&gt;Please keep in mind that statements may not be read consecutively. You may want to repeat information that is applicable to multiple selections.&lt;/li&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EngList_SearchTips_Tip5</fullName>
+        <categories>Engagement List</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EngList_SearchTips_Tip5</shortDescription>
+        <value>&lt;li class=&quot;slds-text-body_small&quot;&gt;&lt;b style=&quot;font-size: xx-large;&quot;&gt;.&lt;/b&gt;Fellowship location preference indicates whether the organization is planning for the project to be in-person, remote, or a hybrid of the two. &quot;Flexible&quot; means that that are open to fully remote work but can also host on-site, depending on the preference of their matched fellow.&lt;/li&gt;</value>
+    </labels>
+    <labels>
+        <fullName>FELLOWAPP_Apply_for_China_Fellowship</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FELLOWAPP Apply for China Fellowship</shortDescription>
+        <value>Would you like your application to be considered for China Fellowship program as well?</value>
+    </labels>
+    <labels>
+        <fullName>FELLOWAPP_Apply_for_India_Fellowship</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FELLOWAPP_Apply_for_India_Fellowship</shortDescription>
+        <value>Would you like your application to be considered for the India Fellowship program as well?</value>
+    </labels>
+    <labels>
+        <fullName>FELLOWAPP_CoverLetter_Header1</fullName>
+        <categories>Fellow Application Page</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FELLOWAPP_CoverLetter_Header1</shortDescription>
+        <value>You may address your cover letter to the Climate Corps Team. Please describe any specific courses, qualifications, skills and experience (academic, professional, and/or personal) that have prepared you for the Climate Corps Fellowship. Finally, please describe how a Climate Corps fellowship will impact your career.</value>
+    </labels>
+    <labels>
+        <fullName>FELLOWAPP_CoverLetter_Header3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FELLOWAPP CoverLetter Header3</shortDescription>
+        <value>Please provide the contact information for three references, at least 2 of which are professional and 1 of which is a supervisor. References will be contacted via email during the interview phase. You will receive notice prior to your references being contacted.</value>
+    </labels>
+    <labels>
+        <fullName>FELLOWAPP_CoverLetter_Header4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FELLOWAPP_CoverLetter_Header4</shortDescription>
+        <value>Please add any additional information that is not already reflected in your application, cover letter, or resume that you would like the review team to know.</value>
+    </labels>
+    <labels>
+        <fullName>HellerFull_Org_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HellerFull Org ID</shortDescription>
+        <value>00D7i0000003hZT</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_Approved_Project_Summary</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS FOR EDF Help Text Approved Project Summary</shortDescription>
+        <value>As per the instructions, submit your Public Summary (including onsite photos) to your host organization by your last day. Note approval status here.</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_Comments_on_your_final_deliverables</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS_FOR_EDF_Help_Text_Comments_on_your_final_deliverables</shortDescription>
+        <value>Comments on your final deliverables</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_Complete_Training_PreWork</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS FOR EDF Help Text Complete Training PreWork</shortDescription>
+        <value>Please download, read, electronically sign and upload the photo release form here.</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_Final_Deliverables_Instructions_and_Template</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS_FOR_EDF_Help_Text_Final Deliverables Instructions and Template</shortDescription>
+        <value>Download Final Deliverables Instructions</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_For_how_many_building_did_you_analyze_data</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS_FOR_EDF_Help_Text_For_how_many_building_</shortDescription>
+        <value>If you analyzed energy data, for how many buildings did you analyze data?</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_Have_you_submitted_to_Host</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS_FOR_EDF_Help_Text_Have_you_submitted_to_Host</shortDescription>
+        <value>What should EDF know about the approval process for your public summary? What is the current status?</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_Headding_Part1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS_FOR_EDF_Help_Text_Headding_Part1</shortDescription>
+        <value>Part 1: Public Deliverables (once approved by your host, we will publish to our website)</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_If_you_worked_on_a_supply_chain</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS_FOR_EDF_Help_Text_If you worked_on_a_supply_chain</shortDescription>
+        <value>If you worked on a supply chain project, how many of your host company’s suppliers will your recommendations influence?</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_LinkedIn</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS_FOR_EDF_Help_Text_LinkedIn</shortDescription>
+        <value>Paste in a link to your LinkedIn profile to be included on your Climate Corps webpage.</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_Onsite_Photo</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS FOR EDF Help Text Onsite Photo</shortDescription>
+        <value>Please upload your best 3 on-site photos from the summer. High resolution jpeg, jpg, png or gif file. If you have more photos, please email your Engagement Manager. Please be sure these were included with your public summary for host approval.</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_Personal_email_address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS_FOR_EDF_Help_Text_Personal_email_address</shortDescription>
+        <value>Personal (non-school) email address for post-fellowship Climate Corps network communications</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_Photo</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS FOR EDF Help Text Photo</shortDescription>
+        <value>Please upload a professional and well-lit photograph of yourself. The photo must have high resolution (max size of 5MB), be 90x118 pixels in size, and be in jpeg, jpg, png, or gif format.</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_Prior_Goal_Setting_Projects</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS_FOR_EDF_Help_Text_Prior_Goal_Setting_Projects</shortDescription>
+        <value>If you worked on a goal setting project, what type of GHG/energy reduction/renewable energy goals or targets did you help develop or advance?</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_Public_Summary_Approval_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Public Summary Approval Status</shortDescription>
+        <value>Public Summary Approval Status</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_Twitter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS FOR EDF Help Text Twitter</shortDescription>
+        <value>If you have a twitter handle, write it here so that @EDFbiz can follow you.</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_What_Areas_in_your_fellowship</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS_FOR_EDF_Help_Text_What_Areas_in_your_fellowship</shortDescription>
+        <value>What areas did you work on in your fellowship (select as many as apply)?</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Help_Text_Workplan_Template</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS_FOR_EDF_Help_Text_Workplan_Template</shortDescription>
+        <value>Please submit your final workplan using the template provided here. You will need to work with your host supervisor and EM to develop your summer workplan. After your workplan is submitted, please email your EM to set up a kick-off call with your host supervisor.</value>
+    </labels>
+    <labels>
+        <fullName>ITEMS_FOR_EDF_Submitted_Final_Deliverables</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEMS FOR EDF Submitted Final Deliverables</shortDescription>
+        <value>I certify that I have submitted all of my final deliverables to EDF (initial)</value>
+    </labels>
+    <labels>
+        <fullName>ITEM_FOR_EDF_HELP_dates_and_workplan_here</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ITEM_FOR_EDF_HELP_dates_and_workplan_here</shortDescription>
+        <value>Submit start and end dates and workplan here:</value>
+    </labels>
+    <labels>
+        <fullName>ItemsForEDF_Download_Training_Pre_work</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ItemsForEDF_Download Training Pre-work</shortDescription>
+        <value>Photo Release Form.pdf</value>
+    </labels>
+    <labels>
+        <fullName>Post_Training_Recordings</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Post Training Recordings</shortDescription>
+        <value>https://docs.google.com/document/d/1ElR3hCXeJ90H9eRelzvQLRaUndiVlzcXwrObwN9k2Rs/edit?usp=sharing</value>
+    </labels>
+    <labels>
+        <fullName>Post_Training_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Post Training Survey</shortDescription>
+        <value>https://www.surveymonkey.com/r/2022USTraining</value>
+    </labels>
+    <labels>
+        <fullName>Reword_certifications_question</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reword certifications question</shortDescription>
+        <value>Please list any relevant coursework, training, or certifications you have completed.</value>
+    </labels>
+    <labels>
+        <fullName>SiteName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SiteName</shortDescription>
+        <value>EDFCCFellowPortal</value>
+    </labels>
+    <labels>
+        <fullName>ZeroEmissionVehicleProjectLabel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ZeroEmissionVehicleProjectLabel</shortDescription>
+        <value>If you worked on a zero emission vehicles project, how many vehicles did you recommend for electrification?</value>
+    </labels>
+    <labels>
+        <fullName>emailname</fullName>
+        <categories>Contact labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>emailname</shortDescription>
+        <value>Email</value>
+    </labels>
+    <labels>
+        <fullName>streetname1</fullName>
+        <categories>Contact labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>streetname1</shortDescription>
+        <value>Permanent Street Address Line 1</value>
+    </labels>
+    <labels>
+        <fullName>streetname2</fullName>
+        <categories>Contact labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>streetname2</shortDescription>
+        <value>Permanent Street Address Line 2</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>abacus__Donor_Id__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The Id of the Donor: Primary Contact if present, otherwise Account</description>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(npsp__Primary_Contact__c),AccountId,npsp__Primary_Contact__c)</formula>
+    <inlineHelpText>The Id of the Donor: Primary Contact if present, otherwise Account</inlineHelpText>
+    <label>Donor Id</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Diverse_Serving_Organization__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This is an organization that works with, represents, and/or indirectly benefits impacted communities and diverse groups.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>An organization that works with, represents, and/or indirectly benefits communities of color, low-income/low-wealth and/or marginalized communities/disproportionately affected populations impacted by pollution, climate change or other environmental hazards.</inlineHelpText>
+    <label>Social and EJ Organization</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

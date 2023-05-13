@@ -1,0 +1,305 @@
+<!--
+  @description       :
+  @author            : Sai Teja
+  @last modified on  : 06-21-2022
+  @last modified by  : Sai Teja
+-->
+<template>
+    <template if:false={isChild}>
+        <c-e-d-f13_-header></c-e-d-f13_-header>
+        <c-e-d-f28_-dashboard-menu></c-e-d-f28_-dashboard-menu>
+    </template>
+    <!-- body tag div -->
+    <div>
+        <div class="bg-welcome">
+            <div class="registration-application-section">
+                <div class="registration-application-section-inner">
+                    <div class="registration-application-section-sub">
+                        <h3>Cover Letter & Resume</h3>
+                        <div class="registration-application-form-wrap">
+                            <form action="" method="post">
+                                <div class="row note-info-wrap">
+                                    <div class="col-12 form-group note-info">
+                                        <!--div class="note-info-inner clearfix"><span class="note-info-icon"></span> <span class="note-info-content">You may address your cover letter to the Climate Corps Team. Please describe any specific courses, qualifications, skills and experience (academic and professional) that have prepared you for the Climate Corps Fellowship. Finally, please describe how a
+                                            Climate Corps fellowship will impact your career.</span></div-->
+                                        <div class="note-info-inner clearfix"><span class="note-info-icon"></span> <span class="note-info-content"><lightning-formatted-rich-text value={label.edfCoverLetter}></lightning-formatted-rich-text></span></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 form-group phone-field">
+                                        <!--<label>Cover Letter</label>
+                                        <span class="registration-application-field-note phone-field-note">500 words max</span>
+                                        <textarea class="form-control" rows="4" onchange={coverLetterChangeHandler}>{coverLetter}</textarea>-->
+                                        <span class="registration-application-field-note phone-field-note">500 Words max</span>
+                                        <lightning-textarea max-length="4000" name="cover" value={coverLetter} label="Cover Letter" onchange={coverLetterChangeHandler} required read-only={readOnly}></lightning-textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row note-info-wrap">
+                                    <div class="col-12 form-group note-info">
+                                        <div class="note-info-inner clearfix"><span class="note-info-icon"></span> <span class="note-info-content">Upload your resume as a PDF document. To the extent possible, please customize your resume to be relevant to Climate Corps. PDFs
+                                            should not exceed 1 MB in size. If you don't have a PDF converter, download a free one like <a href="javascript:void(0);" title="">CutePDF Writer</a>. Please note that you must fill
+                                            out the Contact Information tab completely before uploading a resume for upload. If you don't, you'll be asked to upload your resume here
+                                            before saving your application.</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="row custom-file-browse-uploaded-wrap custom-reuploaded-button-wrap">
+                                    <div class="col-12 form-group custom-file-browse-uploaded-outer">
+                                        <label class="custom-file-browse-uploaded-title">
+                                         <abbr class="slds-required" title="required">* </abbr>Upload Resume</label>
+                                        <template if:true={showUploaded}>
+                                            <span class="custom-file-browse-uploaded-item">
+                                                <span class="uploaded-item-dot">&nbsp;</span>
+                                                Uploaded
+                                            </span>
+                                            <span class="custom-file-browse-uploaded-item">
+                                                <span class="uploaded-item-dot">&nbsp;</span>
+                                                {resume}
+                                            </span>
+                                        </template>
+                                    </div>
+                                    <div class="uploadValidation">
+                                        <template if:true={showWarning}>
+                                            Please upload the resume.
+                                        </template>
+                                    </div>
+                                    <div class="col-12 form-group custom-file-browse-button-outer">
+                                        <label class="custom-file-browse-uploaded-note">Update your resume (Upto 1 MB)</label>
+                                        <!-- <button type="button" class="btn btn-primary button-custom button-white-button">Reupload</button> -->
+                                        <lightning-file-upload
+                                                name="Reupload"
+                                                accept={acceptedFormats}
+                                                record-id={fellowApplicationId}
+                                                onuploadfinished={handleUploadFinished} disabled={readOnly}>
+                                        </lightning-file-upload>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="row note-info-wrap">
+                                    <div class="col-12 form-group note-info">
+                                        <div class="note-info-inner clearfix"><span class="note-info-icon"></span> <span class="note-info-content">Please add any additional information that is not already reflected in your application, cover letter, or resume that you would like the review team to know.</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 form-group phone-field">
+                                        <!--<label>Any Additional Information</label>
+                                        <span class="registration-application-field-note phone-field-note">250 words max</span>
+                                        <textarea class="form-control" rows="2" onchange={additinalInforationChangeHandler} readonly={readOnly}>{additionalInformation}</textarea>-->
+                                        <span class="registration-application-field-note phone-field-note">250 words max</span>
+                                        <lightning-textarea max-length="1800" name="additional" value={additionalInformation} label="Any Additional Information" onchange={additinalInforationChangeHandler} read-only={readOnly}></lightning-textarea>
+                                    </div>
+                                </div>
+                                <template if:true={isChinaFellowShip}>
+                                    <div class="row note-info-wrap">
+                                        <div class="col-12 form-group note-info">
+                                            <div class="note-info-inner clearfix"><span class="note-info-icon"></span> <span class="note-info-content">Please provide the contact information of your tutor/advisor. They will be contacted via email or phone call during the interview phase. You will receive notice prior to your tutor/advisor being contacted.</span></div>
+                                        </div>
+                                    </div>
+                                    <div style="background-color:#FFFFFF;">
+                                        <lightning-accordion allow-multiple-sections-open="true" active-section-name={activeTutorSections}>
+                                            <lightning-accordion-section name="AddReference1" label="Your Tutor / Advisor Contact Information">
+                                                <div class="row">
+                                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                        <!--<label>Name</label>
+                                                        <input type="text" class="form-control" value={referenceName1} onchange={referenceName1ChangeHandler}>-->
+                                                        <lightning-input class="form-control" type="text" label="Name" value={referenceName1} onchange={referenceName1ChangeHandler} required read-only={readOnly}></lightning-input>
+                                                    </div>
+                                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                        <!--<label>Title</label>
+                                                        <input type="text" class="form-control" value={referenceTitle1} onchange={referenceTitle1ChangeHandler}>-->
+                                                        <lightning-input class="form-control" type="text" label="Title" value={referenceTitle1} onchange={referenceTitle1ChangeHandler} required read-only={readOnly}></lightning-input>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                        <!--<label>Email</label>
+                                                        <input type="text" class="form-control" value={referenceEmail1} onchange={referenceEmail1ChangeHandler}>-->
+                                                        <lightning-input class="form-control" type="email" label="Email" value={referenceEmail1} onchange={referenceEmail1ChangeHandler} required read-only={readOnly}></lightning-input>
+                                                    </div>
+                                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                        <label>Phone</label>
+                                                        <input type="text" class="form-control" value={referencePhone1} onchange={referencePhone1ChangeHandler} readonly={readOnly}>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 form-group">
+                                                        <!-- label>List your relationship to this reference and any additional information you'd like to share with EDF</label>
+                                                        <textarea class="form-control" rows="4" onchange={referenceSpecialInstructions1ChangeHandler} readonly={readOnly}>{referenceSpecialInstructions1}</textarea -->
+                                                        <span class="registration-application-field-note phone-field-note">255 characters max</span>
+                                                        <lightning-textarea max-length="255" name="referenceSpecialInstructions1"
+                                                            value={referenceSpecialInstructions1}
+                                                            label="List your relationship to this reference and any additional information you'd like to share with EDF"
+                                                            onchange={referenceSpecialInstructions1ChangeHandler} read-only={readOnly}>
+                                                        </lightning-textarea>
+                                                        </div>
+                                                </div>
+                                            </lightning-accordion-section>
+                                        </lightning-accordion>
+                                    </div>
+
+                                </template>
+                                <template if:false={isChinaFellowShip}>
+                                <div class="row note-info-wrap">
+                                    <div class="col-12 form-group note-info">
+                                        <div class="note-info-inner clearfix"><span class="note-info-icon"></span> <span class="note-info-content">Please provide the contact information for three references, at least 2 of which are professional and 1 of which is a supervisor. References will be contacted via email during the interview phase. You will receive notice prior to your references being contacted.</span></div>
+                                    </div>
+                                </div>
+                                <div style="background-color:#FFFFFF;">
+                                    <lightning-accordion allow-multiple-sections-open="true" active-section-name={activeReferenceSections}>
+                                        <lightning-accordion-section name="AddReference1" label="Add Reference 1">
+                                            <div class="row">
+                                                <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                    <!--<label>Name</label>
+                                                    <input type="text" class="form-control" value={referenceName1} onchange={referenceName1ChangeHandler}>-->
+                                                    <lightning-input class="form-control" type="text" label="Name" value={referenceName1} onchange={referenceName1ChangeHandler} required read-only={readOnly}></lightning-input>
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                    <!--<label>Title</label>
+                                                    <input type="text" class="form-control" value={referenceTitle1} onchange={referenceTitle1ChangeHandler}>-->
+                                                    <lightning-input class="form-control" type="text" label="Title" value={referenceTitle1} onchange={referenceTitle1ChangeHandler} required read-only={readOnly}></lightning-input>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                    <!--<label>Email</label>
+                                                    <input type="text" class="form-control" value={referenceEmail1} onchange={referenceEmail1ChangeHandler}>-->
+                                                    <lightning-input class="form-control" type="email" label="Email" value={referenceEmail1} onchange={referenceEmail1ChangeHandler} required read-only={readOnly}></lightning-input>
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                    <label>Phone</label>
+                                                    <input type="text" class="form-control" value={referencePhone1} onchange={referencePhone1ChangeHandler} readonly={readOnly}>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 form-group">
+                                                    <!-- label>List your relationship to this reference and any additional information you'd like to share with EDF</label>
+                                                    <textarea class="form-control" rows="4" onchange=[referenceSpecialInstructions1ChangeHandler] readonly=[readOnly]>[referenceSpecialInstructions1]</textarea -->
+                                                    <span class="registration-application-field-note phone-field-note">255 characters max</span>
+                                                    <lightning-textarea max-length="255" name="referenceSpecialInstructions1"
+                                                        value={referenceSpecialInstructions1}
+                                                        label="List your relationship to this reference and any additional information you'd like to share with EDF"
+                                                        onchange={referenceSpecialInstructions1ChangeHandler} read-only={readOnly}>
+                                                    </lightning-textarea>
+                                                </div>
+                                            </div>
+                                        </lightning-accordion-section>
+                                        <lightning-accordion-section name="AddReference2" label="Add Reference 2">
+                                            <div class="row">
+                                                <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                    <!--<label>Name</label>
+                                                    <input type="text" class="form-control" value={referenceName2} onchange={referenceName2ChangeHandler}>-->
+                                                    <lightning-input class="form-control" type="text" label="Name" value={referenceName2} onchange={referenceName2ChangeHandler} required read-only={readOnly}></lightning-input>
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                    <!--<label>Title</label>
+                                                    <input type="text" class="form-control" value={referenceTitle2} onchange={referenceTitle2ChangeHandler}>-->
+                                                    <lightning-input class="form-control" type="text" label="Title" value={referenceTitle2} onchange={referenceTitle2ChangeHandler} required read-only={readOnly}></lightning-input>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                    <!--<label>Email</label>
+                                                    <input type="text" class="form-control" value={referenceEmail2} onchange={referenceEmail2ChangeHandler}>-->
+                                                    <lightning-input class="form-control" type="email" label="Email" value={referenceEmail2} onchange={referenceEmail2ChangeHandler} required read-only={readOnly}></lightning-input>
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                    <label>Phone</label>
+                                                    <input type="text" class="form-control" value={referencePhone2} onchange={referencePhone2ChangeHandler} readonly={readOnly}>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 form-group">
+                                                    <!-- label>List your relationship to this reference and any additional information you'd like to share with EDF</label>
+                                                    <textarea class="form-control" rows="4" onchange=[referenceSpecialInstructions2ChangeHandler] readonly=[readOnly]>[referenceSpecialInstructions2]</textarea -->
+                                                    <span class="registration-application-field-note phone-field-note">255 characters max</span>
+                                                    <lightning-textarea max-length="255" name="referenceSpecialInstructions2"
+                                                        value={referenceSpecialInstructions2}
+                                                        label="List your relationship to this reference and any additional information you'd like to share with EDF"
+                                                        onchange={referenceSpecialInstructions2ChangeHandler} read-only={readOnly}>
+                                                    </lightning-textarea>
+                                                </div>
+                                            </div>
+                                        </lightning-accordion-section>
+                                        <lightning-accordion-section name="AddReference3" label="Add Reference 3">
+                                            <div class="row">
+                                                <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                    <!--<label>Name</label>
+                                                    <input type="text" class="form-control" value={referenceName3} onchange={referenceName3ChangeHandler}>-->
+                                                    <lightning-input class="form-control" type="text" label="Name" value={referenceName3} onchange={referenceName3ChangeHandler} required read-only={readOnly}></lightning-input>
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                    <!--<label>Title</label>
+                                                    <input type="text" class="form-control" value={referenceTitle3} onchange={referenceTitle3ChangeHandler}>-->
+                                                    <lightning-input class="form-control" type="text" label="Title" value={referenceTitle3} onchange={referenceTitle3ChangeHandler} required read-only={readOnly}></lightning-input>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                    <!--<label>Email</label>
+                                                    <input type="text" class="form-control" value={referenceEmail3} onchange={referenceEmail3ChangeHandler}>-->
+                                                    <lightning-input class="form-control" type="email" label="Email" value={referenceEmail3} onchange={referenceEmail3ChangeHandler} required read-only={readOnly}></lightning-input>
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                    <label>Phone</label>
+                                                    <input type="text" class="form-control" value={referencePhone3} onchange={referencePhone3ChangeHandler} readonly={readOnly}>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 form-group">
+                                                    <!-- label>List your relationship to this reference and any additional information you'd like to share with EDF</label -->
+                                                    <!-- textarea class="form-control" maxlength="255" rows="4" onchange=[referenceSpecialInstructions3ChangeHandler] readonly=[readOnly]>[referenceSpecialInstructions3]</textarea -->
+                                                    <span class="registration-application-field-note phone-field-note">255 characters max</span>
+                                                    <lightning-textarea max-length="255" name="referenceSpecialInstructions3"
+                                                        value={referenceSpecialInstructions3}
+                                                        label="List your relationship to this reference and any additional information you'd like to share with EDF"
+                                                        onchange={referenceSpecialInstructions3ChangeHandler} read-only={readOnly}>
+                                                    </lightning-textarea>
+                                                </div>
+                                            </div>
+                                        </lightning-accordion-section>
+                                    </lightning-accordion>
+                                </div>
+                            </template>
+
+                                <div class="form-button-wrap no-padding-top">
+                                    <template if:false={isChild}>
+                                        <button type="button" class="btn btn-primary white-button margin-right" onclick={backToPreviousTab}>Back</button>
+                                        <template if:false={isDeadlinePassed}>
+                                            <button type="button" class="btn btn-primary green-button margin-right" onclick={updateCoverLetter}>Save</button>
+                                            <!-- <button type="button" class="btn btn-primary green-button margin-right" onclick={validateAllTabs}>Validate All Tabs</button> -->
+                                            <button type="button" disabled={disableReviewSubmit} class="btn btn-primary green-button margin-right" onclick={reviewSubmit}>Review & Submit</button>
+                                        </template>
+                                        <!--template if:false={grayedOut}>
+                                            <button type="button" class="btn btn-primary green-button margin-right" onclick={reviewSubmit}>Review & Submit</button>
+                                        </template-->
+                                        <button type="button" class="btn btn-primary white-button" onclick={navigateToDashboard}>Cancel</button>
+                                    </template>
+                                    <template if:true={isChild}>
+                                        <template if:false={isDeadlinePassed}>
+                                            <template if:true={readOnly}>
+                                                <button type="button" disabled class="btn btn-primary green-button margin-right" onclick={updateCoverLetter}>Save</button>
+                                            </template>
+                                            <template if:false={readOnly}>
+                                                <button type="button" class="btn btn-primary green-button margin-right" onclick={updateCoverLetter}>Save</button>
+                                            </template>
+                                        </template>
+                                    </template>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of body tag div -->
+    <template if:false={isChild}>
+        <c-e-d-f22_footer></c-e-d-f22_footer>
+    </template>
+</template>

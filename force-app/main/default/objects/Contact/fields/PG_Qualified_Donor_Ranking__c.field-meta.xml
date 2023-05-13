@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PG_Qualified_Donor_Ranking__c</fullName>
+    <description>This field allows senior Planned Giving staffers to sort previously qualified PG donors.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field allows senior Planned Giving staffers to sort previously qualified PG donors.</inlineHelpText>
+    <label>PG Qualified Donor Ranking</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0 – Dual Constituent</fullName>
+                <default>false</default>
+                <label>0 – Dual Constituent</label>
+            </value>
+            <value>
+                <fullName>1 – Identification</fullName>
+                <default>false</default>
+                <label>1 – Identification</label>
+            </value>
+            <value>
+                <fullName>2 – Qualification</fullName>
+                <default>false</default>
+                <label>2 – Qualification</label>
+            </value>
+            <value>
+                <fullName>3 – Cultivation</fullName>
+                <default>false</default>
+                <label>3 – Cultivation</label>
+            </value>
+            <value>
+                <fullName>4 – Solicitation</fullName>
+                <default>false</default>
+                <label>4 – Solicitation</label>
+            </value>
+            <value>
+                <fullName>5 – Stewardship</fullName>
+                <default>false</default>
+                <label>5 – Stewardship</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

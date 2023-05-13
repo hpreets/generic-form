@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Edit_Membership_Request</fullName>
+    <active>true</active>
+    <description>Prevents anyone other than GPT and Sys Admin from setting Membership Request to a blank value after having a value.</description>
+    <errorConditionFormula>AND(
+ NOT( ISNEW() ),
+ NOT(ISBLANK(TEXT(PRIORVALUE( Membership_Request__c )))),
+ ISBLANK(TEXT(Membership_Request__c)),
+ IF(
+  CASE($Profile.Name,
+   &apos;Gift Processing&apos;,&quot;FALSE&quot;, 
+   &apos;System Administrator&apos;, &quot;FALSE&quot;,
+   &quot;TRUE&quot;)
+   =&apos;TRUE&apos;,
+   True, 
+  False )
+)</errorConditionFormula>
+    <errorMessage>You do not have permission to edit this field. Please contact the Gift Processing Team.</errorMessage>
+</ValidationRule>

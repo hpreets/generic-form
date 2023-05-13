@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Development_Constituent_Source__c</fullName>
+    <externalId>false</externalId>
+    <label>Development Constituent Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>5K+ Upgrade</fullName>
+                <default>false</default>
+                <label>5K+ Upgrade</label>
+            </value>
+            <value>
+                <fullName>5K + New Donor</fullName>
+                <default>false</default>
+                <label>5K + New Donor</label>
+            </value>
+            <value>
+                <fullName>Membership – Screening</fullName>
+                <default>false</default>
+                <label>Membership – Screening</label>
+            </value>
+            <value>
+                <fullName>Membership</fullName>
+                <default>false</default>
+                <label>Membership</label>
+            </value>
+            <value>
+                <fullName>Formerly in portfolio</fullName>
+                <default>false</default>
+                <label>Formerly in portfolio</label>
+            </value>
+            <value>
+                <fullName>Development Staff</fullName>
+                <default>false</default>
+                <label>Development Staff</label>
+            </value>
+            <value>
+                <fullName>Executive Staff</fullName>
+                <default>false</default>
+                <label>Executive Staff</label>
+            </value>
+            <value>
+                <fullName>Program Staff</fullName>
+                <default>false</default>
+                <label>Program Staff</label>
+            </value>
+            <value>
+                <fullName>Research Staff</fullName>
+                <default>false</default>
+                <label>Research Staff</label>
+            </value>
+            <value>
+                <fullName>Trustee</fullName>
+                <default>false</default>
+                <label>Trustee</label>
+            </value>
+            <value>
+                <fullName>Friend/Volunteer</fullName>
+                <default>false</default>
+                <label>Friend/Volunteer</label>
+            </value>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+            <value>
+                <fullName>Program prospecting</fullName>
+                <default>false</default>
+                <label>Program prospecting</label>
+            </value>
+            <value>
+                <fullName>Conference / non-EDF event</fullName>
+                <default>false</default>
+                <label>Conference / non-EDF event</label>
+            </value>
+            <value>
+                <fullName>Strategic Partners</fullName>
+                <default>false</default>
+                <label>Strategic Partners</label>
+            </value>
+            <value>
+                <fullName>Catalyst Circle reassessment</fullName>
+                <default>false</default>
+                <label>Catalyst Circle reassessment</label>
+            </value>
+            <value>
+                <fullName>Catalyst Circle</fullName>
+                <default>false</default>
+                <label>Catalyst Circle</label>
+            </value>
+            <value>
+                <fullName>Foundation Staff</fullName>
+                <default>false</default>
+                <label>Foundation Staff</label>
+            </value>
+            <value>
+                <fullName>Planned Giving</fullName>
+                <default>false</default>
+                <label>Planned Giving</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

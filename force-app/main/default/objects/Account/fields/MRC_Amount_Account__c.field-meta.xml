@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MRC_Amount_Account__c</fullName>
+    <description>EDF Most recent donation amount. Includes donations received as Pledge.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Close Amount of the most recently received Opportunity where the Account has a hard or soft credit (Planned Gifts not included).</inlineHelpText>
+    <label>MRC Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

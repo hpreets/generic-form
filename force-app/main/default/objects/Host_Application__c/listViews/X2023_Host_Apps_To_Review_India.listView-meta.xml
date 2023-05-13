@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2023_Host_Apps_To_Review_India</fullName>
+    <columns>NAME</columns>
+    <columns>Application_Type__c</columns>
+    <columns>Organization_Name__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Respondent_Name__c</columns>
+    <columns>Title_of_Respondent__c</columns>
+    <columns>Respondent_Email__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>9/2/2022 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>Draft,Submitted</value>
+    </filters>
+    <filters>
+        <field>Fellowship_Program__c</field>
+        <operation>equals</operation>
+        <value>India Fellowship</value>
+    </filters>
+    <label>2023 Host Apps - To Review (India)</label>
+    <sharedTo>
+        <group>Climate_Corps</group>
+    </sharedTo>
+</ListView>

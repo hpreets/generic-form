@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Court_Case</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Court_Case</compactLayoutAssignment>
+    <label>Court Case</label>
+    <picklistValues>
+        <picklist>Agency__c</picklist>
+        <values>
+            <fullName>Bureau of Land Mgmt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dept of Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dept of Interior</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intl Civil Aviation Organization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Natl Oceanic %26 Atmospheric Admin</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Co_lead_Attorney__c</picklist>
+        <values>
+            <fullName>Adam Peltz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alice Henderson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amanda Johnson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ben Levitan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Christie Hicks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dan Grossman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dena Adler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elizabeth Stein</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Erica Morehouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Erin Murphy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graham McCahan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holly Pearen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jim Dennison</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jim Tripp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>John Finnigan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Larissa Koehler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lauren Navarro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Martha Roberts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Panfil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monica Goldberg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Naim Jonathan Peress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Natalie Karas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nichole Saunders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pam Kiely</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pamela Campos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peter Zalzal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Priyanka Sundareshan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rachel Fullmer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Richard Denison</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rob Stockman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rosalie Winn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Samantha Liskow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sarah Ladin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shems Jud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ted Kelly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Timothy O%27Connor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tom Neltner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tomas Carbonell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vickie Patton</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Commission__c</picklist>
+        <values>
+            <fullName>CA PUC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FL PSC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IL Commerce Commission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NC Utilities Commission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NJ BPU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NY PSC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OH PUC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA PUC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TX PUC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Court_Forum__c</picklist>
+        <values>
+            <fullName>10th Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11th Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1st Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2nd Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3rd Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4th Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5th Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6th Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7th Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8th Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9th Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D%2EC%2E Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>District of D%2EC%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC Illinois</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC New Jersey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC North Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC Ohio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC Pennsylvania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC Texas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>U%2ES%2E Supreme Court</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Court_Type__c</picklist>
+        <values>
+            <fullName>International Tribunal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>State Appellate Court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>State District Court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>State Supreme Court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US District Court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Supreme Court</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>District_Region__c</picklist>
+        <values>
+            <fullName>Central District</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eastern District</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Middle District</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northern District</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southern District</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Western District</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EDF_Role__c</picklist>
+        <values>
+            <fullName>Amicus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appellant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appellee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complainant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Defendant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Defendant-Intervenor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intervenor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petitioner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petitioner-Intervenor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plaintiff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plaintiff-Intervenor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Respondent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Respondent-Intervenor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Attorney__c</picklist>
+        <values>
+            <fullName>Adam Peltz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alice Henderson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amanda Johnson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ben Levitan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Christie Hicks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dan Grossman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elizabeth Stein</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Erica Morehouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Erin Murphy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graham McCahan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holly Pearen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jim Marston</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jim Tripp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>John Finnigan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Larissa Koehler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lauren Navarro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Martha Roberts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Colvin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Panfil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monica Goldberg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Naim Jonathan Peress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Natalie Karas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nichole Saunders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pam Kiely</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pamela Campos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peter Zalzal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Priyanka Sundareshan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rachel Fullmer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Richard Denison</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rob Stockman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rosalie Winn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Samantha Liskow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shems Jud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ted Kelly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Timothy O%27Connor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tom Neltner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tomas Carbonell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vickie Patton</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Program__c</picklist>
+        <values>
+            <fullName>Climate and Energy - Clean Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Climate and Energy - Global Climate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Climate and Energy - Legal and Regulatory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Climate and Energy - Oil and Gas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecosystems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oceans</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>State__c</picklist>
+        <values>
+            <fullName>Alabama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alaska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arizona</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arkansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colorado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connecticut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delaware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Georgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hawaii</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Idaho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Illinois Indiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iowa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kentucky</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Louisiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maryland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Massachusetts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michigan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minnesota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mississippi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missouri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Montana Nebraska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nevada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Hampshire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Jersey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ohio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oklahoma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oregon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pennsylvania Rhode Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tennessee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utah</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vermont</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washington</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wisconsin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wyoming</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>State_del__c</picklist>
+        <values>
+            <fullName>Alabama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alaska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arizona</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arkansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colorado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connecticut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delaware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Georgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hawaii</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Idaho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Illinois Indiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iowa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kentucky</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Louisiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maryland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Massachusetts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michigan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minnesota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mississippi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missouri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Montana Nebraska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nevada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Hampshire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Jersey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ohio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oklahoma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oregon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pennsylvania Rhode Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tennessee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utah</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vermont</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washington</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wisconsin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wyoming</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appeal Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regulatory Issue</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Venue_or_Agency__c</picklist>
+        <values>
+            <fullName>EPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US District Court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Supreme Court</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Venue_or_State__c</picklist>
+        <values>
+            <fullName>10th Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11th Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1st Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2nd Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3rd Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4th Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5th Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6th Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7th Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8th Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9th Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alabama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alaska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arizona</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arkansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colorado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connecticut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D%2EC%2E Circuit Court of Appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delaware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>District of D%2EC%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Georgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hawaii</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Idaho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Illinois</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iowa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kentucky</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Louisiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maryland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Massachusetts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michigan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minnesota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mississippi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missouri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Montana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nebraska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nevada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Hampshire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Jersey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ohio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oklahoma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oregon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC Illinois</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC New Jersey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC North Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC Ohio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC Pennsylvania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUC Texas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pennsylvania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rhode Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tennessee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>U%2ES%2E Supreme Court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utah</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vermont</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washington</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wisconsin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wyoming</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

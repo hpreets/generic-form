@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bargain Sale</fullName>
+                <default>false</default>
+                <label>Bargain Sale</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Interest Free Loan</fullName>
+                <default>false</default>
+                <label>Interest Free Loan</label>
+            </value>
+            <value>
+                <fullName>Partial Interests</fullName>
+                <default>false</default>
+                <label>Partial Interests</label>
+            </value>
+            <value>
+                <fullName>Real property</fullName>
+                <default>false</default>
+                <label>Real property</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initial_Configuration_Approach__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Completed by the user story assignee during the design stage of the release cycle and is approved by EDF before build begins.</inlineHelpText>
+    <label>Proposed Solution</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

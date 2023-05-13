@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EDF_Impact_Additional_Priority__c</fullName>
+    <externalId>false</externalId>
+    <label>EDF Impact/Additional Priority</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - Executive &amp; Board Level Impact</fullName>
+                <default>false</default>
+                <label>1 - Executive &amp; Board Level Impact</label>
+            </value>
+            <value>
+                <fullName>2 - Issues to review/fix with current process</fullName>
+                <default>false</default>
+                <label>2 - Issues to review/fix with current process</label>
+            </value>
+            <value>
+                <fullName>3 - Current functionality/process enhancements</fullName>
+                <default>false</default>
+                <label>3 - Current functionality/process enhancements</label>
+            </value>
+            <value>
+                <fullName>4 - New functionality/process - does not exist</fullName>
+                <default>false</default>
+                <label>4 - New functionality/process - does not exist</label>
+            </value>
+            <value>
+                <fullName>5 - Current functionality/process - no updates needed for launch</fullName>
+                <default>false</default>
+                <label>5 - Current functionality/process - no updates needed for launch</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

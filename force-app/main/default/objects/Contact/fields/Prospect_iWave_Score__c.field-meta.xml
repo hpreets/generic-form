@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospect_iWave_Score__c</fullName>
+    <description>This field derives a score based on the iWave ProScore and iWave ProScore Capacity</description>
+    <externalId>false</externalId>
+    <formula>IF ( iWave_ProScore__c = 4, 3,
+IF ( AND( iWave_ProScore__c &lt;= 3, iWave_ProScore__c &gt;= 1,iWave_ProScore_Capacity__c &gt; 5000000), 1,0 ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Prospect iWave Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

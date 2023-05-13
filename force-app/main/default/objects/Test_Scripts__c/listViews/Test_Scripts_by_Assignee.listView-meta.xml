@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Scripts_by_Assignee</fullName>
+    <columns>NAME</columns>
+    <columns>User_Story__c</columns>
+    <columns>Testing_Completed_By__c</columns>
+    <columns>Testing_Status__c</columns>
+    <columns>Testing_Team__c</columns>
+    <columns>Steps_to_Test__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Testing_Completed_By__c</field>
+        <operation>contains</operation>
+        <value>alyssa</value>
+    </filters>
+    <label>Test Scripts by Assignee</label>
+</ListView>

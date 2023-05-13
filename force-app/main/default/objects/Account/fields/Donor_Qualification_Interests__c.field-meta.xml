@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Donor_Qualification_Interests__c</fullName>
+    <externalId>false</externalId>
+    <label>Donor Qualification Interests</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>China</fullName>
+                <default>false</default>
+                <label>China</label>
+            </value>
+            <value>
+                <fullName>Clean Energy</fullName>
+                <default>false</default>
+                <label>Clean Energy</label>
+            </value>
+            <value>
+                <fullName>Climate</fullName>
+                <default>false</default>
+                <label>Climate</label>
+            </value>
+            <value>
+                <fullName>Climate Corps</fullName>
+                <default>false</default>
+                <label>Climate Corps</label>
+            </value>
+            <value>
+                <fullName>Conservative Leadership</fullName>
+                <default>false</default>
+                <label>Conservative Leadership</label>
+            </value>
+            <value>
+                <fullName>Defend Our Future</fullName>
+                <default>false</default>
+                <label>Defend Our Future</label>
+            </value>
+            <value>
+                <fullName>Economics</fullName>
+                <default>false</default>
+                <label>Economics</label>
+            </value>
+            <value>
+                <fullName>Ecosystems</fullName>
+                <default>false</default>
+                <label>Ecosystems</label>
+            </value>
+            <value>
+                <fullName>EDFBIZ</fullName>
+                <default>false</default>
+                <label>EDFBIZ</label>
+            </value>
+            <value>
+                <fullName>Energy</fullName>
+                <default>false</default>
+                <label>Energy</label>
+            </value>
+            <value>
+                <fullName>Europe</fullName>
+                <default>false</default>
+                <label>Europe</label>
+            </value>
+            <value>
+                <fullName>Health</fullName>
+                <default>false</default>
+                <label>Health</label>
+            </value>
+            <value>
+                <fullName>India</fullName>
+                <default>false</default>
+                <label>India</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>Latin America</fullName>
+                <default>false</default>
+                <label>Latin America</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>MCAF</fullName>
+                <default>false</default>
+                <label>MCAF</label>
+            </value>
+            <value>
+                <fullName>MethaneSat</fullName>
+                <default>false</default>
+                <label>MethaneSat</label>
+            </value>
+            <value>
+                <fullName>Natural Gas</fullName>
+                <default>false</default>
+                <label>Natural Gas</label>
+            </value>
+            <value>
+                <fullName>Oceans</fullName>
+                <default>false</default>
+                <label>Oceans</label>
+            </value>
+            <value>
+                <fullName>Science</fullName>
+                <default>false</default>
+                <label>Science</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

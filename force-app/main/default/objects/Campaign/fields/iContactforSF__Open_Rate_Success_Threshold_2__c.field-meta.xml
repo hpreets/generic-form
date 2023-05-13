@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>iContactforSF__Open_Rate_Success_Threshold_2__c</fullName>
+    <defaultValue>0.10</defaultValue>
+    <deprecated>false</deprecated>
+    <description>The second success threshold for open rate, where yellow becomes green on the dashboard gauge.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The second success threshold for open rate, where yellow becomes green on the dashboard gauge.</inlineHelpText>
+    <label>Open Rate Success %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

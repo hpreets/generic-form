@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <decisions>
+        <name>Do_Manual_Ledger_Entries_Exist</name>
+        <label>Do Manual Ledger Entries Exist?</label>
+        <locationX>967</locationX>
+        <locationY>457</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Ledger_Entries</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Feedback_Record</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>FeedbackUrl</name>
+        <dataType>String</dataType>
+        <expression>if ({!$Organization.Id} = {!$Label.HellerFull_Org_ID}, 
+&apos;https://environmentaldefensefund--hellerfull.sandbox.lightning.force.com/&apos;&amp;{!$Record.abacus__Opportunity__r.Id}, &apos;https://environmentaldefensefund.lightning.force.com/&apos;&amp;{!$Record.abacus__Opportunity__r.Id}
+)</expression>
+    </formulas>
+    <interviewLabel>Ledger Entry on Create --&gt; Create Feedback Record {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Ledger Entry on Create --&gt; Create Feedback Record</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Feedback_Record</name>
+        <label>Create Feedback Record</label>
+        <locationX>842</locationX>
+        <locationY>576</locationY>
+        <inputAssignments>
+            <field>Assigned_To__c</field>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description__c</field>
+            <value>
+                <elementReference>FeedbackDescription</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Example_URL__c</field>
+            <value>
+                <elementReference>FeedbackUrl</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Feedback_Status__c</field>
+            <value>
+                <stringValue>Open</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Feedback_Title__c</field>
+            <value>
+                <stringValue>Manually adjust most recent Ledger Entries to reflect accurate Region and/or Restriction values</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Feedback_Type__c</field>
+            <value>
+                <stringValue>Data cleanup or project</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Fields__c</field>
+            <value>
+                <stringValue>Region and/or Restriction</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Object__c</field>
+            <value>
+                <stringValue>Ledger Entries</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority__c</field>
+            <value>
+                <stringValue>Critical</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Feedback__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Ledger_Entries</name>
+        <label>Get Ledger Entries</label>
+        <locationX>974</locationX>
+        <locationY>336</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Do_Manual_Ledger_Entries_Exist</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>abacus__Opportunity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.abacus__Opportunity__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>CreatedById</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Label.EDF_SystemAdministrator_User_ID</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>abacus__Ledger_Entry__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>650</locationX>
+        <locationY>48</locationY>
+        <filterFormula>{!$Permission.Flow_Automations_Off} &lt;&gt; TRUE
+&amp;&amp;
+{!$Record.CreatedById} = {!$Label.EDF_SystemAdministrator_User_ID}
+&amp;&amp;
+({!$Record.abacus__Adjustment__c} = TRUE || {!$Record.abacus__Written_Off__c} = TRUE || not(isblank({!$Record.Refund_Type__c})))
+&amp;&amp;
+ispickval({!$Record.abacus__Debit_Credit__c}, &quot;Credit&quot;)</filterFormula>
+        <object>abacus__Ledger_Entry__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Get_Ledger_Entries</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>FeedbackDescription</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Please navigate to the opportunity record referenced in the &quot;Example URL&quot; field and locate the most recent set of Ledger Entries (they will be adjustments, write-offs, or refunds). Open both records and manually update the Region and GAU Allocation Restriction fields as appropriate.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Opportunity: {!FeedbackUrl}&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>

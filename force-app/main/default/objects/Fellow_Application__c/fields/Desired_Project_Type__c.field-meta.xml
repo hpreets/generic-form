@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Desired_Project_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Desired Project Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Commercial Energy Efficiency</fullName>
+                <default>false</default>
+                <label>Commercial Energy Efficiency</label>
+            </value>
+            <value>
+                <fullName>Building Energy Efficiency</fullName>
+                <default>false</default>
+                <label>Building Energy Efficiency</label>
+            </value>
+            <value>
+                <fullName>Engagement and Behavior Change</fullName>
+                <default>false</default>
+                <label>Engagement and Behavior Change</label>
+            </value>
+            <value>
+                <fullName>Sustainability/Energy  Strategy</fullName>
+                <default>false</default>
+                <label>Sustainability/Energy  Strategy</label>
+            </value>
+            <value>
+                <fullName>Clean and Renewable Energy</fullName>
+                <default>false</default>
+                <label>Clean and Renewable Energy</label>
+            </value>
+            <value>
+                <fullName>Data Analysis</fullName>
+                <default>false</default>
+                <label>Data Analysis</label>
+            </value>
+            <value>
+                <fullName>Financial Evaluation and Planning</fullName>
+                <default>false</default>
+                <label>Financial Evaluation and Planning</label>
+            </value>
+            <value>
+                <fullName>Freight and Logistics</fullName>
+                <default>false</default>
+                <label>Freight and Logistics</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

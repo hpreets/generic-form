@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Sends email to reference 2</description>
+        <name>Copy_1_of_Send_Email_to_Ref_2</name>
+        <label>Copy 1 of Send Email to Ref 2</label>
+        <locationX>50</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Reference_2</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Copy_1_of_Send_Email_to_Ref_3</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Sends email to reference 3</description>
+        <name>Copy_1_of_Send_Email_to_Ref_3</name>
+        <label>Copy 1 of Send Email to Ref 3</label>
+        <locationX>50</locationX>
+        <locationY>528</locationY>
+        <actionName>Fellow_Application__c.Reference_3</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Sends email to reference 1</description>
+        <name>Copy_1_of_Send_Email_to_Reference_1</name>
+        <label>Copy 1 of Send Email to Reference 1</label>
+        <locationX>50</locationX>
+        <locationY>288</locationY>
+        <actionName>Fellow_Application__c.Reference_1</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Copy_1_of_Send_Email_to_Ref_2</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Sends email to reference 2</description>
+        <name>Send_Email_to_Ref_2_0</name>
+        <label>Send Email to Ref 2</label>
+        <locationX>314</locationX>
+        <locationY>408</locationY>
+        <actionName>Fellow_Application__c.Reference_2</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Send_Email_to_Ref_3_0</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Sends email to reference 3</description>
+        <name>Send_Email_to_Ref_3_0</name>
+        <label>Send Email to Ref 3</label>
+        <locationX>314</locationX>
+        <locationY>528</locationY>
+        <actionName>Fellow_Application__c.Reference_3</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Sends email to reference 1</description>
+        <name>Send_Email_to_Reference_1_0</name>
+        <label>Send Email to Reference 1</label>
+        <locationX>314</locationX>
+        <locationY>288</locationY>
+        <actionName>Fellow_Application__c.Reference_1</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Send_Email_to_Ref_2_0</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <description>Sends reference check each reference listed on application - US only</description>
+    <environments>Default</environments>
+    <interviewLabel>Fellow Application - Send Reference Check {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Fellow Application - Send Reference Check</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Copy_1_of_Send_Email_to_Reference_1</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>{!$Permission.Flow_Automations_Off} &lt;&gt; TRUE
+&amp;&amp;
+OR(
+ispickval({!$Record.Status__c}, &quot;Send Invite for Interview 1&quot;),
+ispickval({!$Record.Status__c}, &quot;Invite to Interview from Waitlist&quot;)
+)
+&amp;&amp;
+ispickval({!$Record.Fellowship_Applying_for__c}, &quot;U.S. Fellowship&quot;)</filterFormula>
+        <object>Fellow_Application__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <scheduledPaths>
+            <name>Wait_7_Days</name>
+            <connector>
+                <targetReference>Send_Email_to_Reference_1_0</targetReference>
+            </connector>
+            <label>Wait 7 Days</label>
+            <offsetNumber>7</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

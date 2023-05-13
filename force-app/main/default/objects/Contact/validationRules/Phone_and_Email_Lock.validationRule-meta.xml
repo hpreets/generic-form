@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_and_Email_Lock</fullName>
+    <active>false</active>
+    <description>Prevents Phone and Email information from being changed on the record.</description>
+    <errorConditionFormula>IF(OR(ISCHANGED(npe01__Preferred_Email__c),
+		 ISCHANGED(npe01__PreferredPhone__c),
+		 ISCHANGED(npe01__HomeEmail__c),
+		 ISCHANGED(npe01__WorkEmail__c),
+		 ISCHANGED(npe01__AlternateEmail__c),
+					ISCHANGED(HomePhone),
+					ISCHANGED(npe01__WorkPhone__c),
+					ISCHANGED(MobilePhone),
+					ISCHANGED(OtherPhone)
+		) &amp;&amp; Is_Automation_Bypassed__c = FALSE,  
+	true, 
+	false
+)</errorConditionFormula>
+    <errorMessage>Please use related records to update Contact Phone/Email fields.</errorMessage>
+</ValidationRule>

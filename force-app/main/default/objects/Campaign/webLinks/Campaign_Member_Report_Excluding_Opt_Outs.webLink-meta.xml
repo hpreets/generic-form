@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Member_Report_Excluding_Opt_Outs</fullName>
+    <availability>online</availability>
+    <description>Links to dynamic report.</description>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Campaign Member Report Excl.Opt-Outs</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>https://environmentaldefensefund.lightning.force.com/lightning/r/Report/00O8W000006rTj2UAE/view?fv0={!Campaign.Id}</url>
+</WebLink>

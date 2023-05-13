@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Results__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>List out the details of what the result of a completed test should be. For example call out fields that should be updated, automations that should run, or records that should be created.</inlineHelpText>
+    <label>Expected Results</label>
+    <length>10000</length>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Raised_to_Date_for_Match__c</fullName>
+    <description>Total qualifying amount of qualifying donations related to challenge match</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Total qualifying amount of qualifying donations related to challenge match</inlineHelpText>
+    <label>Raised to Date for Match</label>
+    <summarizedField>Qualifying_Donation__c.Qualifying_Amount__c</summarizedField>
+    <summaryForeignKey>Qualifying_Donation__c.Annual_Match__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

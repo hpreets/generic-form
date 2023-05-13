@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Children_living_in_household__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Children under the age of 18 living in the household</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Children under the age of 18 living in the household</inlineHelpText>
+    <label>Children living in household</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

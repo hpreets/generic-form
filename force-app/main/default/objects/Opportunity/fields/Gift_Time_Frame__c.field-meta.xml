@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gift_Time_Frame__c</fullName>
+    <description>Used to indicate single-year or multi-year gift</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to indicate single-year or multi-year gift</inlineHelpText>
+    <label>Gift Timeframe</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1_year</fullName>
+                <default>false</default>
+                <label>1 year</label>
+            </value>
+            <value>
+                <fullName>2_years</fullName>
+                <default>false</default>
+                <label>2 years</label>
+            </value>
+            <value>
+                <fullName>3_years</fullName>
+                <default>false</default>
+                <label>3 years</label>
+            </value>
+            <value>
+                <fullName>4_years</fullName>
+                <default>false</default>
+                <label>4 years</label>
+            </value>
+            <value>
+                <fullName>5_years</fullName>
+                <default>false</default>
+                <label>5 years</label>
+            </value>
+            <value>
+                <fullName>6_years</fullName>
+                <default>false</default>
+                <label>6 years</label>
+            </value>
+            <value>
+                <fullName>7_years</fullName>
+                <default>false</default>
+                <label>7 years</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

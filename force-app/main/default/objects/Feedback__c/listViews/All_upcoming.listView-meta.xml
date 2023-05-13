@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_upcoming</fullName>
+    <columns>NAME</columns>
+    <columns>Feedback_Title__c</columns>
+    <columns>Description__c</columns>
+    <columns>Resolution_Notes__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Feedback_Status__c</columns>
+    <columns>Feedback_Type__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Assigned_To__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>Object__c</columns>
+    <columns>QC_Assigned_To__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Feedback_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed,QC Passed,Duplicate,Not An Issue</value>
+    </filters>
+    <filters>
+        <field>Priority__c</field>
+        <operation>notEqual</operation>
+        <value>Omit</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>5/24/2022 12:00 AM</value>
+    </filters>
+    <label>All open</label>
+</ListView>

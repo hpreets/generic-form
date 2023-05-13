@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X3_Work_Facility__c</fullName>
+    <externalId>false</externalId>
+    <label>3. Work Facility</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Office Buildings</fullName>
+                <default>false</default>
+                <label>Office Buildings</label>
+            </value>
+            <value>
+                <fullName>Data Center</fullName>
+                <default>false</default>
+                <label>Data Center</label>
+            </value>
+            <value>
+                <fullName>Manufacturing/Industrial</fullName>
+                <default>false</default>
+                <label>Manufacturing/Industrial</label>
+            </value>
+            <value>
+                <fullName>Warehouse</fullName>
+                <default>false</default>
+                <label>Warehouse</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+                <label>Hospitality</label>
+            </value>
+            <value>
+                <fullName>Multi-Tenant Housing</fullName>
+                <default>false</default>
+                <label>Multi-Tenant Housing</label>
+            </value>
+            <value>
+                <fullName>Municipal Building</fullName>
+                <default>false</default>
+                <label>Municipal Building</label>
+            </value>
+            <value>
+                <fullName>University/College Campus</fullName>
+                <default>false</default>
+                <label>University/College Campus</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

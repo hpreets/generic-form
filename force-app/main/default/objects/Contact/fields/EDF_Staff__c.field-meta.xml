@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EDF_Staff__c</fullName>
+    <externalId>false</externalId>
+    <formula>INCLUDES( Constituency__c , &quot;EDF Staff&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>EDF Staff</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

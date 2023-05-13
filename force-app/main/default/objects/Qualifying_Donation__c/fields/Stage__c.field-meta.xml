@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Stage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Projected</fullName>
+                <default>false</default>
+                <label>Projected</label>
+            </value>
+            <value>
+                <fullName>Solicited</fullName>
+                <default>false</default>
+                <label>Solicited</label>
+            </value>
+            <value>
+                <fullName>Verbally Committed</fullName>
+                <default>false</default>
+                <label>Verbally Committed</label>
+            </value>
+            <value>
+                <fullName>Cancelled by EDF</fullName>
+                <default>false</default>
+                <label>Cancelled by EDF</label>
+            </value>
+            <value>
+                <fullName>Declined by Donor</fullName>
+                <default>false</default>
+                <label>Declined by Donor</label>
+            </value>
+            <value>
+                <fullName>Pending Installment</fullName>
+                <default>false</default>
+                <label>Pending Installment</label>
+            </value>
+            <value>
+                <fullName>Conditional</fullName>
+                <default>false</default>
+                <label>Conditional</label>
+            </value>
+            <value>
+                <fullName>Intention</fullName>
+                <default>false</default>
+                <label>Intention</label>
+            </value>
+            <value>
+                <fullName>Received</fullName>
+                <default>false</default>
+                <label>Received</label>
+            </value>
+            <value>
+                <fullName>Received as Pledge</fullName>
+                <default>false</default>
+                <label>Received as Pledge</label>
+            </value>
+            <value>
+                <fullName>Refunded</fullName>
+                <default>false</default>
+                <label>Refunded</label>
+            </value>
+            <value>
+                <fullName>Refund - Chargeback</fullName>
+                <default>false</default>
+                <label>Refund - Chargeback</label>
+            </value>
+            <value>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+                <label>Closed Won</label>
+            </value>
+            <value>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+                <label>Closed Lost</label>
+            </value>
+            <value>
+                <fullName>Declined Credit Card</fullName>
+                <default>false</default>
+                <label>Declined Credit Card</label>
+            </value>
+            <value>
+                <fullName>Returned Check</fullName>
+                <default>false</default>
+                <label>Returned Check</label>
+            </value>
+            <value>
+                <fullName>Invalid Donation</fullName>
+                <default>false</default>
+                <label>Invalid Donation</label>
+            </value>
+            <value>
+                <fullName>Agreement in Negotiation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Agreement in Negotiation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Application_Submitted</fullName>
+    <columns>NAME</columns>
+    <columns>Applicant_Full_Name__c</columns>
+    <columns>Status__c</columns>
+    <columns>Application_Created_Time__c</columns>
+    <columns>Applicant_Email__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Application Submitted</value>
+    </filters>
+    <label>Application Submitted</label>
+</ListView>

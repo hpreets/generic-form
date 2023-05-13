@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Origin__c</fullName>
+    <description>Created as a part of Data Migration Heller 2021.</description>
+    <externalId>false</externalId>
+    <label>Origin</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Undefined</fullName>
+                <default>false</default>
+                <label>Undefined</label>
+            </value>
+            <value>
+                <fullName>Self-Registration</fullName>
+                <default>false</default>
+                <label>Self-Registration</label>
+            </value>
+            <value>
+                <fullName>Administrator Registration</fullName>
+                <default>false</default>
+                <label>Administrator Registration</label>
+            </value>
+            <value>
+                <fullName>Prospect List</fullName>
+                <default>false</default>
+                <label>Prospect List</label>
+            </value>
+            <value>
+                <fullName>Data Sync</fullName>
+                <default>false</default>
+                <label>Data Sync</label>
+            </value>
+            <value>
+                <fullName>Quick Registration</fullName>
+                <default>false</default>
+                <label>Quick Registration</label>
+            </value>
+            <value>
+                <fullName>Donation</fullName>
+                <default>false</default>
+                <label>Donation</label>
+            </value>
+            <value>
+                <fullName>Joint Donation</fullName>
+                <default>false</default>
+                <label>Joint Donation</label>
+            </value>
+            <value>
+                <fullName>Tribute</fullName>
+                <default>false</default>
+                <label>Tribute</label>
+            </value>
+            <value>
+                <fullName>Memorial</fullName>
+                <default>false</default>
+                <label>Memorial</label>
+            </value>
+            <value>
+                <fullName>Gift Notification</fullName>
+                <default>false</default>
+                <label>Gift Notification</label>
+            </value>
+            <value>
+                <fullName>Ticket Purchase</fullName>
+                <default>false</default>
+                <label>Ticket Purchase</label>
+            </value>
+            <value>
+                <fullName>Event Guest</fullName>
+                <default>false</default>
+                <label>Event Guest</label>
+            </value>
+            <value>
+                <fullName>Advocacy Response</fullName>
+                <default>false</default>
+                <label>Advocacy Response</label>
+            </value>
+            <value>
+                <fullName>Tell-a-Friend</fullName>
+                <default>false</default>
+                <label>Tell-a-Friend</label>
+            </value>
+            <value>
+                <fullName>TeamRaiser Donor</fullName>
+                <default>false</default>
+                <label>TeamRaiser Donor</label>
+            </value>
+            <value>
+                <fullName>Unknown Registration</fullName>
+                <default>false</default>
+                <label>Unknown Registration</label>
+            </value>
+            <value>
+                <fullName>Unknown Auto-Registration</fullName>
+                <default>false</default>
+                <label>Unknown Auto-Registration</label>
+            </value>
+            <value>
+                <fullName>News Contribution</fullName>
+                <default>false</default>
+                <label>News Contribution</label>
+            </value>
+            <value>
+                <fullName>TeamRaiser Participant</fullName>
+                <default>false</default>
+                <label>TeamRaiser Participant</label>
+            </value>
+            <value>
+                <fullName>TeamRaiser Friend</fullName>
+                <default>false</default>
+                <label>TeamRaiser Friend</label>
+            </value>
+            <value>
+                <fullName>Forwarded Email</fullName>
+                <default>false</default>
+                <label>Forwarded Email</label>
+            </value>
+            <value>
+                <fullName>Survey Participant</fullName>
+                <default>false</default>
+                <label>Survey Participant</label>
+            </value>
+            <value>
+                <fullName>Pre-Registration</fullName>
+                <default>false</default>
+                <label>Pre-Registration</label>
+            </value>
+            <value>
+                <fullName>eCommerce Purchase</fullName>
+                <default>false</default>
+                <label>eCommerce Purchase</label>
+            </value>
+            <value>
+                <fullName>LDAP</fullName>
+                <default>false</default>
+                <label>LDAP</label>
+            </value>
+            <value>
+                <fullName>RSVP</fullName>
+                <default>false</default>
+                <label>RSVP</label>
+            </value>
+            <value>
+                <fullName>Email Upload</fullName>
+                <default>false</default>
+                <label>Email Upload</label>
+            </value>
+            <value>
+                <fullName>Sent eCard</fullName>
+                <default>false</default>
+                <label>Sent eCard</label>
+            </value>
+            <value>
+                <fullName>TeamRaiser Company Contact</fullName>
+                <default>false</default>
+                <label>TeamRaiser Company Contact</label>
+            </value>
+            <value>
+                <fullName>Tributes Champion</fullName>
+                <default>false</default>
+                <label>Tributes Champion</label>
+            </value>
+            <value>
+                <fullName>Tributes Fund</fullName>
+                <default>false</default>
+                <label>Tributes Fund</label>
+            </value>
+            <value>
+                <fullName>Auction Upload</fullName>
+                <default>false</default>
+                <label>Auction Upload</label>
+            </value>
+            <value>
+                <fullName>Widgets</fullName>
+                <default>false</default>
+                <label>Widgets</label>
+            </value>
+            <value>
+                <fullName>TeamRaiser Family Participant</fullName>
+                <default>false</default>
+                <label>TeamRaiser Family Participant</label>
+            </value>
+            <value>
+                <fullName>Constituent API</fullName>
+                <default>false</default>
+                <label>Constituent API</label>
+            </value>
+            <value>
+                <fullName>Personal Events Host</fullName>
+                <default>false</default>
+                <label>Personal Events Host</label>
+            </value>
+            <value>
+                <fullName>Personal Events Attendee</fullName>
+                <default>false</default>
+                <label>Personal Events Attendee</label>
+            </value>
+            <value>
+                <fullName>Personal Events Contact</fullName>
+                <default>false</default>
+                <label>Personal Events Contact</label>
+            </value>
+            <value>
+                <fullName>Volunteer</fullName>
+                <default>false</default>
+                <label>Volunteer</label>
+            </value>
+            <value>
+                <fullName>TeamRaiser Event Administrator</fullName>
+                <default>false</default>
+                <label>TeamRaiser Event Administrator</label>
+            </value>
+            <value>
+                <fullName>TeamRaiser Event Chairperson</fullName>
+                <default>false</default>
+                <label>TeamRaiser Event Chairperson</label>
+            </value>
+            <value>
+                <fullName>Luminate CRM</fullName>
+                <default>false</default>
+                <label>Luminate CRM</label>
+            </value>
+            <value>
+                <fullName>Import</fullName>
+                <default>false</default>
+                <label>Import</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

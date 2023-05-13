@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_Check__c</fullName>
+    <externalId>false</externalId>
+    <formula>if ( MailingStreet &lt;&gt; Account.BillingStreet, TRUE,
+
+if ( MailingCity &lt;&gt; Account.BillingCity, TRUE,
+
+if ( MailingState &lt;&gt; Account.BillingState, TRUE,
+
+if ( MailingPostalCode &lt;&gt; Account.BillingPostalCode, TRUE,
+
+if ( MailingCountry &lt;&gt; Account.BillingCountry, TRUE,
+
+FALSE)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Address Check</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

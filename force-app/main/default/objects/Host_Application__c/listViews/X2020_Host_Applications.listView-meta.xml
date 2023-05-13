@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2020_Host_Applications</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Host_Strategic_Value__c</columns>
+    <columns>Project_Category__c</columns>
+    <columns>Date_Application_Submitted__c</columns>
+    <columns>Proposed_Fellowship_Dates__c</columns>
+    <columns>Supervisor__c</columns>
+    <columns>High_Level_Sponsor__c</columns>
+    <columns>HR_Contact__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date_Application_Submitted__c</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2020</value>
+    </filters>
+    <label>2020 Host Applications</label>
+</ListView>

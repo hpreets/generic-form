@@ -1,0 +1,153 @@
+<template>
+    <!-- <lightning-card> -->
+      <c-e-d-f13_-header></c-e-d-f13_-header>
+      
+       <template if:true={navigateFromDashboard}>
+            <!-- Header Bottom Section Start -->
+            <div class="header-bottom">
+                <div class="header-bottom-inner">
+                    <!-- Breadcrumb Menu Start -->
+                    <div class="breadcrumb-menu-wrap">
+                        <ul class="breadcrumb-menu">
+                            <li>
+                                <a href="javascript:void(0);" title="" onclick={navigateToDashboard}>Dashboard</a>
+                            </li>
+                            <li class="current-page">
+                                Edit Contact Information
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- Breadcrumb Menu End -->
+                </div>
+            </div>
+            <!-- Header Bottom Section End -->
+       </template>
+        
+
+       <!-- body tag div -->
+       <div class="body-bg-image-registration">
+           
+        <div class="bg-welcome">
+            <div class="registration-application-section">
+                <div class="registration-application-section-inner">
+                    <div class="registration-application-section-sub">
+                        <h3>Edit Contact Information</h3>
+                        <div class="registration-application-form-wrap">
+                            <form action="" method="post">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+                                        <label>First Name </label>
+                                        <input type="text" class="form-control" placeholder="" value={firstName} onchange={firstNameChangeHandler} required>  
+                                        <span class="error-field-note" hidden>First name is necessary</span> 
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+                                        <label>Last Name </label>
+                                        <input type="text" class="form-control" placeholder="" value={lastName} onchange={lastNameChangeHandler} required>
+                                        <span class="error-field-note" hidden>Last name is necessary</span> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+                                        <label>Email address</label>
+                                        <input type="email" class="form-control" style="opacity: 0.7;" placeholder="" value={email} onchange={emailChangeHandler} required readonly disabled>
+                                        <span class="error-field-note" hidden>Email is necessary</span> 
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap phone-field">
+                                        <label>Phone</label>
+                                        <span class="registration-application-field-note phone-field-note">Include country code if outside U.S</span>
+                                        <input type="text" class="form-control" placeholder="" value={phone} onchange={phoneChangeHandler}>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+                                        <label>Country</label>
+                                        <select class="form-control country" onchange={countryChangeHandler}>
+                                            <option>-None-</option>
+                                            <template for:each={countryPickListValues} for:item="item">
+                                                <option key={item} value={item}>{item}</option>
+                                             </template>
+                                        </select>  
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+                                        <label>Permanent Street Address Line 1</label>
+                                        <input type="text" class="form-control" placeholder="" value={permanentStreetAddressLine1} onchange={permanentStreetAddressLine1ChangeHandler}>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+                                        <label>Permanent Street Address Line 2</label>
+                                        <input type="text" class="form-control" placeholder="" value={permanentStreetAddressLine2} onchange={permanentStreetAddressLine2ChangeHandler}>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+                                        <label>State</label>
+                                        <select class="form-control state" onchange={stateChangeHandler}>
+                                            <option>-None-</option>
+                                            <template for:each={statePickListValues} for:item="item">
+                                                <!-- <option key={item.value} value={item.value}>{item.value}</option> -->
+                                                <option key={item} value={item}>{item}</option>
+                                             </template>
+                                        </select>  
+                                    </div>
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+                                        <label>City</label>
+                                        <input type="text" class="form-control" placeholder="" value={city} onchange={cityChangeHandler}>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+                                        <label>Postal Code</label>
+                                        <input type="text" class="form-control" placeholder="" value={postalCode} onchange={postalCodeChangeHandler}>
+                                    </div>
+                                </div>
+
+                                <div class="row custom-file-browse-uploaded-wrap custom-reuploaded-button-wrap">
+                                    <div class="col-12 form-group custom-file-browse-uploaded-outer">
+                                        <label class="custom-file-browse-uploaded-title">Upload Resume</label>
+                                        <template if:true={showUploaded}>
+                                            <span class="custom-file-browse-uploaded-item">
+                                                <span class="uploaded-item-dot">&nbsp;</span> 
+                                                Uploaded
+                                            </span>
+                                            <span class="custom-file-browse-uploaded-item">
+                                                <span class="uploaded-item-dot">&nbsp;</span> 
+                                                {resume}
+                                            </span>
+                                        </template>
+                                    </div>
+                                    <div class="col-12 form-group custom-file-browse-button-outer">
+                                        <label class="custom-file-browse-uploaded-note">Update your resume (Upto 1 MB)</label>
+                                        <!-- <button type="button" class="btn btn-primary button-custom button-white-button">Reupload</button> -->
+                                        <lightning-file-upload
+                                                name="Reupload"
+                                                accept={acceptedFormats}
+                                                record-id={fellowApplicationId}
+                                                onuploadfinished={handleUploadFinished}>
+                                        </lightning-file-upload>
+                                    </div>
+                                </div>
+
+                                <div class="form-button-wrap no-padding-top d-flex justify-content-end">
+                                    <button type="button" class="btn btn-primary white-button margin-right" onclick={navigateToDashboard}>Cancel</button>
+                                    <button type="button" class="btn btn-primary green-button" onclick={saveContact}>Save</button>
+                                </div>
+
+                                
+                                <!-- <div class="form-button-wrap no-padding-top">
+                                    <button type="button" class="btn btn-primary white-button">Cancel</button>
+                                    <button type="button" class="btn btn-primary green-button margin-right" onclick={saveContact}>Save</button>
+                                </div> -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+         <!-- End of body tag div -->
+        <c-e-d-f22_footer></c-e-d-f22_footer>
+
+    <!-- </lightning-card> -->
+</template>

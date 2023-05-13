@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project__c</fullName>
+    <description>For which projects is this constituent recommended as a prospective donor?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For which projects is this constituent recommended as a prospective donor? Pick all that apply.</inlineHelpText>
+    <label>Project</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Activism</fullName>
+                <default>false</default>
+                <label>Activism</label>
+            </value>
+            <value>
+                <fullName>Advocacy</fullName>
+                <default>false</default>
+                <label>Advocacy</label>
+            </value>
+            <value>
+                <fullName>Air Quality</fullName>
+                <default>false</default>
+                <label>Air Quality</label>
+            </value>
+            <value>
+                <fullName>Climate &amp; Air</fullName>
+                <default>false</default>
+                <label>Climate &amp; Air</label>
+            </value>
+            <value>
+                <fullName>Climate Corps</fullName>
+                <default>false</default>
+                <label>Climate Corps</label>
+            </value>
+            <value>
+                <fullName>Climate Policy</fullName>
+                <default>false</default>
+                <label>Climate Policy</label>
+            </value>
+            <value>
+                <fullName>Lead</fullName>
+                <default>false</default>
+                <label>Lead</label>
+            </value>
+            <value>
+                <fullName>Legislation</fullName>
+                <default>false</default>
+                <label>Legislation</label>
+            </value>
+            <value>
+                <fullName>Legislative Affairs - State</fullName>
+                <default>false</default>
+                <label>Legislative Affairs - State</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

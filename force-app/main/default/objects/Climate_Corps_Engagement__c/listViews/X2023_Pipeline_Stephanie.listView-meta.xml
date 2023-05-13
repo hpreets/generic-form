@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2023_Pipeline_Stephanie</fullName>
+    <columns>NAME</columns>
+    <columns>Engagement_Account_Name__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Not_Interested_Reason__c</columns>
+    <columns>Not_Interested_Reason_other__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Contact__c</columns>
+    <columns>Contact_Email__c</columns>
+    <columns>Additional_Contact__c</columns>
+    <columns>Additional_Contact_1_Email__c</columns>
+    <columns>Secondary_Contact__c</columns>
+    <columns>Additional_Contact_2_Email__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>EDF_Project_Manager__c</field>
+        <operation>equals</operation>
+        <value>Stephanie Neupert</value>
+    </filters>
+    <filters>
+        <field>CC_Year__c</field>
+        <operation>equals</operation>
+        <value>2023</value>
+    </filters>
+    <filters>
+        <field>Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Disqualified</value>
+    </filters>
+    <label>2023 Pipeline - Stephanie</label>
+</ListView>

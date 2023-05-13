@@ -1,0 +1,207 @@
+<!--
+  @description       :
+  @author            : Harpreet Singh
+  @last modified on  : 08-Dec-2022
+  @last modified by  : Harpreet Singh
+-->
+<template>
+
+    <!-- START: Engagement Instruction, Search, Filters and List -->
+    <div class="">
+        <div class="registration-application-section">
+            <div class="registration-application-section-inner">
+                <div class="registration-application-section-sub">
+                    <div class="registration-application-form-wrap">
+
+                        <!-- START: Engagement Instruction -->
+                        <!-- END: Engagement Instruction -->
+
+                        <!-- START: Engagement Search and Filters -->
+                        <!-- Search Engagements Start -->
+                        <div class="search-engagements-wrap">
+                            <div class="row">
+                                <div class="col form-group search-engagements-field">
+
+                                    <lightning-input
+                                    name="globalSearch"
+                                    placeholder={placeholderSearchEngagementText}
+                                    value={globalSearch}
+                                    data-gname="globalSearch"
+                                    onchange={handleFilterChange}
+                                    >
+                                    </lightning-input>
+
+                                    <!-- Commenting Filter button FB-2151 -->
+                                    <!-- button type="button" class="btn search-settings-icon"><img
+                                            src={carbonsettingsImageURL} alt="" title="" /></button -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Search Engagements End -->
+
+                        <!-- Filter Engagements Start -->
+                        <div class="search-engagements-form-wrap">
+                            <div class="row">
+                                <!-- Filter: Fellowship City Start -->
+                                <template if:true={showFellowshipCityFilter}>
+                                    <div class="col form-group">
+                                        <lightning-combobox
+                                        name="fellowshipcity"
+                                        data-cname="filterCombo"
+                                        label={labelFellowshipCityFilter}
+                                        options={fellowShipCityOptions}
+                                        onchange={handleFilterChange}
+                                        value={fellowshipcity}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                </template>
+                                <!-- Filter: Fellowship City END -->
+
+                                <!-- Filter: Fellowship State Start -->
+                                <template if:true={showFellowshipStateFilter}>
+                                    <div class="col form-group">
+
+                                        <lightning-combobox
+                                        name="fellowshipstate"
+                                        data-cname="filterCombo"
+                                        label={labelFellowshipStateFilter}
+                                        options={fellowShipStateOptions}
+                                        onchange={handleFilterChange}
+                                        value={fellowshipstate}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                </template>
+                                <!-- Filter: Fellowship State END -->
+
+                                <!-- Filter: Accessible to Public Transport Start -->
+                                <template if:true={showAccessibleToPublicTransportFilter}>
+                                    <div class="col form-group">
+
+                                        <lightning-combobox
+                                        name="publicTransport"
+                                        data-cname="filterCombo"
+                                        label={labelAccessibleToPublicTransportFilter}
+                                        options={publicTransportOptions}
+                                        onchange={handleFilterChange}
+                                        value={publicTransport}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                </template>
+                                <!-- Filter: Accessible to Public Transport END -->
+
+                                <!-- Filter: Industry Start -->
+                                <template if:true={showIndustryFilter}>
+                                    <div class="col form-group">
+
+                                        <lightning-combobox
+                                        name="industry"
+                                        data-cname="filterCombo"
+                                        label={labelIndustryFilter}
+                                        options={industryOptions}
+                                        onchange={handleFilterChange}
+                                        value={industry}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                </template>
+                                <!-- Filter: Industry END -->
+
+                                <!-- Filter: Available / Not Available Start -->
+                                <template if:true={showAvailableNotAvailableFilter}>
+                                    <div class="col form-group">
+
+                                        <lightning-combobox
+                                        name="availableNotAvailable"
+                                        data-cname="filterCombo"
+                                        label={labelAvailableNotAvailableFilter}
+                                        options={availAndNotAvailableOptions}
+                                        onchange={handleFilterChange}
+                                        value={availableNotAvailable}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                </template>
+                                <!-- Filter: Available / Not Available END -->
+
+                                <!-- Filter: Project Type Start -->
+                                <template if:true={showProjectTypeFilter}>
+                                    <div class="col form-group">
+
+                                        <lightning-combobox
+                                        name="projectType"
+                                        data-cname="filterCombo"
+                                        label={labelProjectTypeFilter}
+                                        options={projectTypeOptions}
+                                        onchange={handleFilterChange}
+                                        value={projectType}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                </template>
+                                <!-- Filter: Project Type END -->
+
+                                <!-- Filter: Fellowship Location Preference Start -->
+                                <template if:true={showFellowshipLocationPreferenceFilter}>
+                                    <div class="col form-group">
+
+                                        <lightning-combobox
+                                        name="locationPreferance"
+                                        data-cname="filterCombo"
+                                        label={labelFellowshipLocationPreferenceFilter}
+                                        options={locationPreferanceOptions}
+                                        onchange={handleFilterChange}
+                                        value={locationPreferance}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                </template>
+                                <!-- Filter: Fellowship Location Preference END -->
+
+                                <!-- Commented by HSingh FB-2139 -->
+                                <!-- div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+
+                                    <lightning- combobox
+                                    name="engagementProgram"
+                                    data-cname="filterCombo"
+                                    label="Fellowship Program"
+                                    options="{engagementProgramsOptions}"
+                                    onchange="{handleFilterChange}"
+                                    value="{engagementProgram}"
+                                    >
+                                    </lightning- combobox>
+                                </div -->
+
+                            </div>
+
+                            <!-- Search Buttons Start -->
+                            <div class="form-button-wrap no-padding-top d-flex justify-content-end">
+                                <button type="button" onclick={handleResetCriteria} class="btn btn-primary gray-button margin-right">{labelResetCriteriaBtn}</button>
+                                <button type="button" onclick={handlesearch} class="btn btn-primary green-button ">{labelSearchBtn}</button>
+                            </div>
+                            <!-- Search Buttons END -->
+                        </div>
+                        <!-- Filter Engagements End -->
+                        <!-- END: Engagement Search and Filters -->
+
+                        <!-- START: Engagements Table Section -->
+
+                        <!-- No Engagements Section Start -->
+                        <!-- No Engagements Section End -->
+
+                        <!-- END: Engagements Table Section -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Engagement Instruction, Search, Filters and List -->
+
+    <template if:true={isSearchCriteria}>
+        <lightning-spinner size="large" variant="brand"></lightning-spinner>
+    </template>
+
+</template>

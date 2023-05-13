@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>iContactforSF__Message_Statistic_Count__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Total number of messages in &quot;Released&quot; status, which are used for the rate averages for the campaign.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Total number of messages in &quot;Released&quot; status, which are used for the rate averages for the campaign.</inlineHelpText>
+    <label>Message Statistic Count</label>
+    <summaryFilterItems>
+        <field>iContactforSF__iContact_Sent_Message__c.iContactforSF__Status__c</field>
+        <operation>equals</operation>
+        <value>Released</value>
+    </summaryFilterItems>
+    <summaryForeignKey>iContactforSF__iContact_Sent_Message__c.iContactforSF__Campaign__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

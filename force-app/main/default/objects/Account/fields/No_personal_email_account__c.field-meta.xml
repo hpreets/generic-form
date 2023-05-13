@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_personal_email_account__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Do not sent personal email to this constituent</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Do not sent personal email to this constituent</inlineHelpText>
+    <label>No personal email</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

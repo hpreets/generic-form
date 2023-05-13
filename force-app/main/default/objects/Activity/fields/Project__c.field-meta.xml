@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project__c</fullName>
+    <description>This activity supports this cross-cutting EDF project</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This activity supports this cross-cutting EDF project</inlineHelpText>
+    <label>Project</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Clean Air</fullName>
+                <default>false</default>
+                <label>Clean Air</label>
+            </value>
+            <value>
+                <fullName>Earth Fund</fullName>
+                <default>false</default>
+                <label>Earth Fund</label>
+            </value>
+            <value>
+                <fullName>Puerto Rico</fullName>
+                <default>false</default>
+                <label>Puerto Rico</label>
+            </value>
+            <value>
+                <fullName>Activism General</fullName>
+                <default>false</default>
+                <label>Activism General</label>
+            </value>
+            <value>
+                <fullName>Advocacy</fullName>
+                <default>false</default>
+                <label>Advocacy</label>
+            </value>
+            <value>
+                <fullName>Affiliate Advocacy</fullName>
+                <default>false</default>
+                <label>Affiliate Advocacy</label>
+            </value>
+            <value>
+                <fullName>Agriculture Finance</fullName>
+                <default>false</default>
+                <label>Agriculture Finance</label>
+            </value>
+            <value>
+                <fullName>Air Quality</fullName>
+                <default>false</default>
+                <label>Air Quality</label>
+            </value>
+            <value>
+                <fullName>Air Quality - Power Plants</fullName>
+                <default>false</default>
+                <label>Air Quality - Power Plants</label>
+            </value>
+            <value>
+                <fullName>Ambassadors</fullName>
+                <default>false</default>
+                <label>Ambassadors</label>
+            </value>
+            <value>
+                <fullName>Behavioral/Social Science</fullName>
+                <default>false</default>
+                <label>Behavioral/Social Science</label>
+            </value>
+            <value>
+                <fullName>Big Energy Data</fullName>
+                <default>false</default>
+                <label>Big Energy Data</label>
+            </value>
+            <value>
+                <fullName>Building Electrification</fullName>
+                <default>false</default>
+                <label>Building Electrification</label>
+            </value>
+            <value>
+                <fullName>Carbon Markets - Agriculture</fullName>
+                <default>false</default>
+                <label>Carbon Markets - Agriculture</label>
+            </value>
+            <value>
+                <fullName>Carbon Markets - Aviation</fullName>
+                <default>false</default>
+                <label>Carbon Markets - Aviation</label>
+            </value>
+            <value>
+                <fullName>Carbon Markets - Club</fullName>
+                <default>false</default>
+                <label>Carbon Markets - Club</label>
+            </value>
+            <value>
+                <fullName>Carbon Markets - Design and Capacity Building</fullName>
+                <default>false</default>
+                <label>Carbon Markets - Design and Capacity Building</label>
+            </value>
+            <value>
+                <fullName>Carbon Markets - General</fullName>
+                <default>false</default>
+                <label>Carbon Markets - General</label>
+            </value>
+            <value>
+                <fullName>Carbon Markets - UNFCCC</fullName>
+                <default>false</default>
+                <label>Carbon Markets - UNFCCC</label>
+            </value>
+            <value>
+                <fullName>Clean Air - Power Plant Standards</fullName>
+                <default>false</default>
+                <label>Clean Air - Power Plant Standards</label>
+            </value>
+            <value>
+                <fullName>Clean Air - Utilities (PA)</fullName>
+                <default>false</default>
+                <label>Clean Air - Utilities (PA)</label>
+            </value>
+            <value>
+                <fullName>Clean Energy General</fullName>
+                <default>false</default>
+                <label>Clean Energy General</label>
+            </value>
+            <value>
+                <fullName>Clean Energy Jobs</fullName>
+                <default>false</default>
+                <label>Clean Energy Jobs</label>
+            </value>
+            <value>
+                <fullName>Clean Power</fullName>
+                <default>false</default>
+                <label>Clean Power</label>
+            </value>
+            <value>
+                <fullName>Clean Power (PA)</fullName>
+                <default>false</default>
+                <label>Clean Power (PA)</label>
+            </value>
+            <value>
+                <fullName>Clean Power Plan - Litigation</fullName>
+                <default>false</default>
+                <label>Clean Power Plan - Litigation</label>
+            </value>
+            <value>
+                <fullName>Clean Shipping</fullName>
+                <default>false</default>
+                <label>Clean Shipping</label>
+            </value>
+            <value>
+                <fullName>Climate &amp; Air - General</fullName>
+                <default>false</default>
+                <label>Climate &amp; Air - General</label>
+            </value>
+            <value>
+                <fullName>Climate &amp; Air - Port &amp; Hot Spot</fullName>
+                <default>false</default>
+                <label>Climate &amp; Air - Port &amp; Hot Spot</label>
+            </value>
+            <value>
+                <fullName>Climate &amp; Air - Ports and Hot Spots</fullName>
+                <default>false</default>
+                <label>Climate &amp; Air - Ports and Hot Spots</label>
+            </value>
+            <value>
+                <fullName>Climate &amp; Air - State Municipal Defense</fullName>
+                <default>false</default>
+                <label>Climate &amp; Air - State Municipal Defense</label>
+            </value>
+            <value>
+                <fullName>Climate &amp; Air - Transportation</fullName>
+                <default>false</default>
+                <label>Climate &amp; Air - Transportation</label>
+            </value>
+            <value>
+                <fullName>Climate Campaign</fullName>
+                <default>false</default>
+                <label>Climate Campaign</label>
+            </value>
+            <value>
+                <fullName>Climate Corp</fullName>
+                <default>false</default>
+                <label>Climate Corp</label>
+            </value>
+            <value>
+                <fullName>Climate Law Innovation</fullName>
+                <default>false</default>
+                <label>Climate Law Innovation</label>
+            </value>
+            <value>
+                <fullName>Climate Offense</fullName>
+                <default>false</default>
+                <label>Climate Offense</label>
+            </value>
+            <value>
+                <fullName>Climate Policy</fullName>
+                <default>false</default>
+                <label>Climate Policy</label>
+            </value>
+            <value>
+                <fullName>Climate Policy Subnational</fullName>
+                <default>false</default>
+                <label>Climate Policy Subnational</label>
+            </value>
+            <value>
+                <fullName>Climate Science</fullName>
+                <default>false</default>
+                <label>Climate Science</label>
+            </value>
+            <value>
+                <fullName>Coastal Protection</fullName>
+                <default>false</default>
+                <label>Coastal Protection</label>
+            </value>
+            <value>
+                <fullName>Colorado River</fullName>
+                <default>false</default>
+                <label>Colorado River</label>
+            </value>
+            <value>
+                <fullName>Communities</fullName>
+                <default>false</default>
+                <label>Communities</label>
+            </value>
+            <value>
+                <fullName>Constituency Outreach</fullName>
+                <default>false</default>
+                <label>Constituency Outreach</label>
+            </value>
+            <value>
+                <fullName>Corporate Climate Leadership</fullName>
+                <default>false</default>
+                <label>Corporate Climate Leadership</label>
+            </value>
+            <value>
+                <fullName>Corporate Climate Leadership (PA,EDF+bus)</fullName>
+                <default>false</default>
+                <label>Corporate Climate Leadership (PA,EDF+bus)</label>
+            </value>
+            <value>
+                <fullName>Custom Usage Data Analysis</fullName>
+                <default>false</default>
+                <label>Custom Usage Data Analysis</label>
+            </value>
+            <value>
+                <fullName>Data &amp; Science - Sustainable Agriculture</fullName>
+                <default>false</default>
+                <label>Data &amp; Science - Sustainable Agriculture</label>
+            </value>
+            <value>
+                <fullName>Digital Projects</fullName>
+                <default>false</default>
+                <label>Digital Projects</label>
+            </value>
+            <value>
+                <fullName>Energy Efficiency &amp; Renewables</fullName>
+                <default>false</default>
+                <label>Energy Efficiency &amp; Renewables</label>
+            </value>
+            <value>
+                <fullName>Energy Efficiency and Renewables</fullName>
+                <default>false</default>
+                <label>Energy Efficiency and Renewables</label>
+            </value>
+            <value>
+                <fullName>Energy Markets &amp; Utility Regulation</fullName>
+                <default>false</default>
+                <label>Energy Markets &amp; Utility Regulation</label>
+            </value>
+            <value>
+                <fullName>Energy - Modeling Forums</fullName>
+                <default>false</default>
+                <label>Energy - Modeling Forums</label>
+            </value>
+            <value>
+                <fullName>Energy Transition General</fullName>
+                <default>false</default>
+                <label>Energy Transition General</label>
+            </value>
+            <value>
+                <fullName>Environmental Enforcement and Accountability</fullName>
+                <default>false</default>
+                <label>Environmental Enforcement and Accountability</label>
+            </value>
+            <value>
+                <fullName>Exchanges - Central Valley</fullName>
+                <default>false</default>
+                <label>Exchanges - Central Valley</label>
+            </value>
+            <value>
+                <fullName>Exchanges - Monarch Butterfly</fullName>
+                <default>false</default>
+                <label>Exchanges - Monarch Butterfly</label>
+            </value>
+            <value>
+                <fullName>Exchanges - Sagegrouse</fullName>
+                <default>false</default>
+                <label>Exchanges - Sagegrouse</label>
+            </value>
+            <value>
+                <fullName>FERC and Wholesale Markets</fullName>
+                <default>false</default>
+                <label>FERC and Wholesale Markets</label>
+            </value>
+            <value>
+                <fullName>Financial Tools</fullName>
+                <default>false</default>
+                <label>Financial Tools</label>
+            </value>
+            <value>
+                <fullName>Financial Tools (ICP, etc)</fullName>
+                <default>false</default>
+                <label>Financial Tools (ICP, etc)</label>
+            </value>
+            <value>
+                <fullName>Fisheries Reform</fullName>
+                <default>false</default>
+                <label>Fisheries Reform</label>
+            </value>
+            <value>
+                <fullName>Fisheries Solution Center</fullName>
+                <default>false</default>
+                <label>Fisheries Solution Center</label>
+            </value>
+            <value>
+                <fullName>FSC - Diagnostics and Design</fullName>
+                <default>false</default>
+                <label>FSC - Diagnostics and Design</label>
+            </value>
+            <value>
+                <fullName>FSC - Opp 7 Outcome</fullName>
+                <default>false</default>
+                <label>FSC - Opp 7 Outcome</label>
+            </value>
+            <value>
+                <fullName>FSC - Opportunities &amp; Outcomes</fullName>
+                <default>false</default>
+                <label>FSC - Opportunities &amp; Outcomes</label>
+            </value>
+            <value>
+                <fullName>FSC - R&amp;D</fullName>
+                <default>false</default>
+                <label>FSC - R&amp;D</label>
+            </value>
+            <value>
+                <fullName>FSC - Training and Capacity</fullName>
+                <default>false</default>
+                <label>FSC - Training and Capacity</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>General Counsel</fullName>
+                <default>false</default>
+                <label>General Counsel</label>
+            </value>
+            <value>
+                <fullName>Geoengineering</fullName>
+                <default>false</default>
+                <label>Geoengineering</label>
+            </value>
+            <value>
+                <fullName>Global Energy Finance</fullName>
+                <default>false</default>
+                <label>Global Energy Finance</label>
+            </value>
+            <value>
+                <fullName>Grand Bargain</fullName>
+                <default>false</default>
+                <label>Grand Bargain</label>
+            </value>
+            <value>
+                <fullName>Grasstop Field</fullName>
+                <default>false</default>
+                <label>Grasstop Field</label>
+            </value>
+            <value>
+                <fullName>Grid - Modernization</fullName>
+                <default>false</default>
+                <label>Grid - Modernization</label>
+            </value>
+            <value>
+                <fullName>House Donor Fundraising</fullName>
+                <default>false</default>
+                <label>House Donor Fundraising</label>
+            </value>
+            <value>
+                <fullName>House File Activism</fullName>
+                <default>false</default>
+                <label>House File Activism</label>
+            </value>
+            <value>
+                <fullName>Interactive Mapping</fullName>
+                <default>false</default>
+                <label>Interactive Mapping</label>
+            </value>
+            <value>
+                <fullName>Lead</fullName>
+                <default>false</default>
+                <label>Lead</label>
+            </value>
+            <value>
+                <fullName>Legislation</fullName>
+                <default>false</default>
+                <label>Legislation</label>
+            </value>
+            <value>
+                <fullName>Legislation - Climate Accountability</fullName>
+                <default>false</default>
+                <label>Legislation - Climate Accountability</label>
+            </value>
+            <value>
+                <fullName>Legislative Affairs - State</fullName>
+                <default>false</default>
+                <label>Legislative Affairs - State</label>
+            </value>
+            <value>
+                <fullName>Low Carbon Development</fullName>
+                <default>false</default>
+                <label>Low Carbon Development</label>
+            </value>
+            <value>
+                <fullName>Maximize Renewables</fullName>
+                <default>false</default>
+                <label>Maximize Renewables</label>
+            </value>
+            <value>
+                <fullName>Methane</fullName>
+                <default>false</default>
+                <label>Methane</label>
+            </value>
+            <value>
+                <fullName>Methane - Gas to Clean</fullName>
+                <default>false</default>
+                <label>Methane - Gas to Clean</label>
+            </value>
+            <value>
+                <fullName>Methane - Global</fullName>
+                <default>false</default>
+                <label>Methane - Global</label>
+            </value>
+            <value>
+                <fullName>Methane - Regulation &amp; Advocacy</fullName>
+                <default>false</default>
+                <label>Methane - Regulation &amp; Advocacy</label>
+            </value>
+            <value>
+                <fullName>Methane - Regulation and Advocacy</fullName>
+                <default>false</default>
+                <label>Methane - Regulation and Advocacy</label>
+            </value>
+            <value>
+                <fullName>Methane Science and Analytics</fullName>
+                <default>false</default>
+                <label>Methane Science and Analytics</label>
+            </value>
+            <value>
+                <fullName>Methane Science - end use</fullName>
+                <default>false</default>
+                <label>Methane Science - end use</label>
+            </value>
+            <value>
+                <fullName>Methane Science - Satellite</fullName>
+                <default>false</default>
+                <label>Methane Science - Satellite</label>
+            </value>
+            <value>
+                <fullName>Microgrids</fullName>
+                <default>false</default>
+                <label>Microgrids</label>
+            </value>
+            <value>
+                <fullName>Mississippi River Delta</fullName>
+                <default>false</default>
+                <label>Mississippi River Delta</label>
+            </value>
+            <value>
+                <fullName>MSAT Data Platform</fullName>
+                <default>false</default>
+                <label>MSAT Data Platform</label>
+            </value>
+            <value>
+                <fullName>MSAT Launch &amp; Insurance</fullName>
+                <default>false</default>
+                <label>MSAT Launch &amp; Insurance</label>
+            </value>
+            <value>
+                <fullName>MSAT Management</fullName>
+                <default>false</default>
+                <label>MSAT Management</label>
+            </value>
+            <value>
+                <fullName>MSAT Methane Air</fullName>
+                <default>false</default>
+                <label>MSAT Methane Air</label>
+            </value>
+            <value>
+                <fullName>MSAT Observatory</fullName>
+                <default>false</default>
+                <label>MSAT Observatory</label>
+            </value>
+            <value>
+                <fullName>MSAT Science</fullName>
+                <default>false</default>
+                <label>MSAT Science</label>
+            </value>
+            <value>
+                <fullName>Natural Gas</fullName>
+                <default>false</default>
+                <label>Natural Gas</label>
+            </value>
+            <value>
+                <fullName>New Donor Fundraising</fullName>
+                <default>false</default>
+                <label>New Donor Fundraising</label>
+            </value>
+            <value>
+                <fullName>New Name Activism</fullName>
+                <default>false</default>
+                <label>New Name Activism</label>
+            </value>
+            <value>
+                <fullName>One Breathe Partnership</fullName>
+                <default>false</default>
+                <label>One Breathe Partnership</label>
+            </value>
+            <value>
+                <fullName>Open ET Project</fullName>
+                <default>false</default>
+                <label>Open ET Project</label>
+            </value>
+            <value>
+                <fullName>Perry Study</fullName>
+                <default>false</default>
+                <label>Perry Study</label>
+            </value>
+            <value>
+                <fullName>Political Activities</fullName>
+                <default>false</default>
+                <label>Political Activities</label>
+            </value>
+            <value>
+                <fullName>Power Sector Analysis</fullName>
+                <default>false</default>
+                <label>Power Sector Analysis</label>
+            </value>
+            <value>
+                <fullName>Private Angler</fullName>
+                <default>false</default>
+                <label>Private Angler</label>
+            </value>
+            <value>
+                <fullName>Reducing Deforestation - General</fullName>
+                <default>false</default>
+                <label>Reducing Deforestation - General</label>
+            </value>
+            <value>
+                <fullName>Reducing Deforestation - Global Consensus</fullName>
+                <default>false</default>
+                <label>Reducing Deforestation - Global Consensus</label>
+            </value>
+            <value>
+                <fullName>Reducing Deforestation - Indigenous People</fullName>
+                <default>false</default>
+                <label>Reducing Deforestation - Indigenous People</label>
+            </value>
+            <value>
+                <fullName>Reducing Deforestation - REDD Finance</fullName>
+                <default>false</default>
+                <label>Reducing Deforestation - REDD Finance</label>
+            </value>
+            <value>
+                <fullName>Reducing Deforestation - Supply Chain</fullName>
+                <default>false</default>
+                <label>Reducing Deforestation - Supply Chain</label>
+            </value>
+            <value>
+                <fullName>Regulatory Defense</fullName>
+                <default>false</default>
+                <label>Regulatory Defense</label>
+            </value>
+            <value>
+                <fullName>Regulatory Reform</fullName>
+                <default>false</default>
+                <label>Regulatory Reform</label>
+            </value>
+            <value>
+                <fullName>Sensors (Health, OCS, EDF+Bus)</fullName>
+                <default>false</default>
+                <label>Sensors (Health, OCS, EDF+Bus)</label>
+            </value>
+            <value>
+                <fullName>Sensors - Air Quality</fullName>
+                <default>false</default>
+                <label>Sensors - Air Quality</label>
+            </value>
+            <value>
+                <fullName>Sensors - Methane</fullName>
+                <default>false</default>
+                <label>Sensors - Methane</label>
+            </value>
+            <value>
+                <fullName>Smart Boat</fullName>
+                <default>false</default>
+                <label>Smart Boat</label>
+            </value>
+            <value>
+                <fullName>South East Regional Work</fullName>
+                <default>false</default>
+                <label>South East Regional Work</label>
+            </value>
+            <value>
+                <fullName>Subsurface Operations</fullName>
+                <default>false</default>
+                <label>Subsurface Operations</label>
+            </value>
+            <value>
+                <fullName>Supply Chain - Climate</fullName>
+                <default>false</default>
+                <label>Supply Chain - Climate</label>
+            </value>
+            <value>
+                <fullName>Supply Chain - Health</fullName>
+                <default>false</default>
+                <label>Supply Chain - Health</label>
+            </value>
+            <value>
+                <fullName>Supply Chain - O,E,C&amp;E, Heal, EDF</fullName>
+                <default>false</default>
+                <label>Supply Chain - O,E,C&amp;E, Heal, EDF</label>
+            </value>
+            <value>
+                <fullName>Supply Chain - Sustainable Agriculture</fullName>
+                <default>false</default>
+                <label>Supply Chain - Sustainable Agriculture</label>
+            </value>
+            <value>
+                <fullName>Sustainable Finance</fullName>
+                <default>false</default>
+                <label>Sustainable Finance</label>
+            </value>
+            <value>
+                <fullName>Sustainable Finance -O,EDF+bus,CE,Ec</fullName>
+                <default>false</default>
+                <label>Sustainable Finance -O,EDF+bus,CE,Ec</label>
+            </value>
+            <value>
+                <fullName>Toxics</fullName>
+                <default>false</default>
+                <label>Toxics</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <label>Transportation</label>
+            </value>
+            <value>
+                <fullName>University Partnerships</fullName>
+                <default>false</default>
+                <label>University Partnerships</label>
+            </value>
+            <value>
+                <fullName>Upside Model</fullName>
+                <default>false</default>
+                <label>Upside Model</label>
+            </value>
+            <value>
+                <fullName>Utility Business Model</fullName>
+                <default>false</default>
+                <label>Utility Business Model</label>
+            </value>
+            <value>
+                <fullName>Western Water</fullName>
+                <default>false</default>
+                <label>Western Water</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

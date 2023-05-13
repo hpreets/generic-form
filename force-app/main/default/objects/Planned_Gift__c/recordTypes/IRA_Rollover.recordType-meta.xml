@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IRA_Rollover</fullName>
+    <active>true</active>
+    <description>Use for IRA Rollover planned gifts</description>
+    <label>IRA Rollover</label>
+    <picklistValues>
+        <picklist>Gift_Annuity_Type__c</picklist>
+        <values>
+            <fullName>CGA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DGA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Gift_Vehicle__c</picklist>
+        <values>
+            <fullName>Insurance Policy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QRP - 401K</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QRP - IRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QRP - Keough</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QRP - Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trust - CRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trust - Living</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Will - Contingent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Will - Residual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Will - Specific</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Will - Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PG_Probability__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Frequency__c</picklist>
+        <values>
+            <fullName>Annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Semi-Annual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>CDNO - Contingency did not occur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CLSD - Donor deceased%2C money received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INFO - requested more information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IRA - IRA Rollover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IREV - Irrevocable%2C legally binding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MATR - Donor deceased%2C waiting for distribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLDG - Pledged not legally binding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROP - proposed%2C gift not received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RNCE - Gift in%2C donor renounced income</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RVK - Donor revoked legacy plan pledge</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Trust_Period__c</picklist>
+        <values>
+            <fullName>Lifetime</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Term of years</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Trust_Sub_Type__c</picklist>
+        <values>
+            <fullName>Annuity Trust</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unitrust</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Bargain Sale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest Free Loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partial Interests</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real property</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

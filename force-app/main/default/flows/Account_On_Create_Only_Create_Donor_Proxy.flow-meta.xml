@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <description>Creates a Donor Proxy for Estates per FB-1572
+v10 - Optimize flow per FB-1490</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>LastName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Name} &amp; &quot; Donor Proxy&quot;</expression>
+    </formulas>
+    <interviewLabel>Account On Create Only --&gt; Create Donor Prozy {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account On Create Only --&gt; Create Donor Proxy</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>CreateProxyContact</name>
+        <label>CreateProxyContact</label>
+        <locationX>176</locationX>
+        <locationY>455</locationY>
+        <assignRecordIdToReference>ContactProxyId</assignRecordIdToReference>
+        <connector>
+            <targetReference>Get_Donor_Proxy_Affiliation</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Constituency__c</field>
+            <value>
+                <elementReference>$Record.Organization_Constituency__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <elementReference>LastName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>RecordTypeID.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Sub_Constituency__c</field>
+            <value>
+                <elementReference>$Record.Organization_sub_constituency__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordCreates>
+    <recordDeletes>
+        <name>Delete_Donor_Proxy_Affiliation</name>
+        <label>Delete Donor Proxy Affiliation</label>
+        <locationX>176</locationX>
+        <locationY>695</locationY>
+        <inputReference>Get_Donor_Proxy_Affiliation</inputReference>
+    </recordDeletes>
+    <recordLookups>
+        <name>Get_Donor_Proxy_Affiliation</name>
+        <label>Get Donor Proxy Affiliation</label>
+        <locationX>176</locationX>
+        <locationY>575</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Delete_Donor_Proxy_Affiliation</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>npe5__Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ContactProxyId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>npe5__Organization__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>npe5__Affiliation__c</object>
+        <sortField>Id</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get Donor Proxy Record Type</description>
+        <name>RecordTypeID</name>
+        <label>RecordTypeID</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>CreateProxyContact</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Contact</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Donor_Proxy</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>RecordTypeID</targetReference>
+        </connector>
+        <filterFormula>{!$Permission.Flow_Automations_Off} &lt;&gt; TRUE
+&amp;&amp;
+{!$Record.Name} &lt;&gt; &quot;Individual&quot;
+&amp;&amp;
+({!$Record.RecordType.DeveloperName} = &quot;Organization&quot; || {!$Record.RecordType.DeveloperName} = &quot;Estate&quot;)</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <triggerOrder>2</triggerOrder>
+    <variables>
+        <name>ContactProxyId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

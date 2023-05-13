@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Category__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Shows on ConsiderMe</inlineHelpText>
+    <label>Project Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Climate Commitments</fullName>
+                <default>false</default>
+                <label>Climate Commitments</label>
+            </value>
+            <value>
+                <fullName>Environmental Climate Justice</fullName>
+                <default>false</default>
+                <label>Environmental Climate Justice</label>
+            </value>
+            <value>
+                <fullName>Food Waste &amp; Animal Agriculture</fullName>
+                <default>false</default>
+                <label>Food Waste &amp; Animal Agriculture</label>
+            </value>
+            <value>
+                <fullName>GHG Accounting, Reporting, and Goal Setting</fullName>
+                <default>false</default>
+                <label>GHG Accounting, Reporting, and Goal Setting</label>
+            </value>
+            <value>
+                <fullName>Renewables &amp; Energy Efficiency</fullName>
+                <default>false</default>
+                <label>Renewables &amp; Energy Efficiency</label>
+            </value>
+            <value>
+                <fullName>Supply Chain Sustainability</fullName>
+                <default>false</default>
+                <label>Supply Chain Sustainability</label>
+            </value>
+            <value>
+                <fullName>Zero-Emission Vehicles/Fleet Transition</fullName>
+                <default>false</default>
+                <label>Zero-Emission Vehicles/Fleet Transition</label>
+            </value>
+            <value>
+                <fullName>Climate Smart Agriculture</fullName>
+                <default>false</default>
+                <label>Climate Smart Agriculture</label>
+            </value>
+            <value>
+                <fullName>Energy &amp; Waste Management</fullName>
+                <default>false</default>
+                <label>Energy &amp; Waste Management</label>
+            </value>
+            <value>
+                <fullName>Sustainable Construction</fullName>
+                <default>false</default>
+                <label>Sustainable Construction</label>
+            </value>
+            <value>
+                <fullName>Supply Chain and Freight Sustainability</fullName>
+                <default>false</default>
+                <label>Supply Chain and Freight Sustainability</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

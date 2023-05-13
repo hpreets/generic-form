@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Veteran_Status__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Classification of Protected Veteran - 
+Disabled veteran
+Recently separated veteran
+Active duty wartime or campaign badge veteran
+Armed forces service medal veteran</inlineHelpText>
+    <label>Veteran Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I identify as one or more of the classifications of protected veteran</fullName>
+                <default>false</default>
+                <label>I identify as one or more of the classifications of protected veteran</label>
+            </value>
+            <value>
+                <fullName>I am not a protected veteran</fullName>
+                <default>false</default>
+                <label>I am not a protected veteran</label>
+            </value>
+            <value>
+                <fullName>I decline to self-identify</fullName>
+                <default>false</default>
+                <label>I decline to self-identify</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

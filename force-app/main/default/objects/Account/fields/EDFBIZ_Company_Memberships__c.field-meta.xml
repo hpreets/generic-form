@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EDFBIZ_Company_Memberships__c</fullName>
+    <description>These are coalitions or initiatives by companies to encourage industry-wide adoption of activities that reduce carbon footprints.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>These are coalitions or initiatives by companies to encourage industry-wide adoption of activities that reduce carbon footprints.</inlineHelpText>
+    <label>EDFBIZ Company Memberships</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>WASI</fullName>
+                <default>false</default>
+                <label>WASI</label>
+            </value>
+            <value>
+                <fullName>RE Buyers</fullName>
+                <default>false</default>
+                <label>RE Buyers</label>
+            </value>
+            <value>
+                <fullName>EV100</fullName>
+                <default>false</default>
+                <label>EV100</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

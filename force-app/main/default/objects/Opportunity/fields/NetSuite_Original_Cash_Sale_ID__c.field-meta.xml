@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NetSuite_Original_Cash_Sale_ID__c</fullName>
+    <description>This field will store the ID of the initial cash sale, and when an adjusting cash sale is added later on, give us the ability to trace the relationships to the different records on the NetSuite side. In most instances the Original Cash Sale ID and the Cash Sale ID will be the same.</description>
+    <externalId>true</externalId>
+    <label>NetSuite - Original Cash Sale ID</label>
+    <length>20</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

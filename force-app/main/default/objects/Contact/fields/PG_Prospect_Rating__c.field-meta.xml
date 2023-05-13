@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PG_Prospect_Rating__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  npsp__Deceased__c = False, PG_Age_Score__c + PG_Donor_Year_Score__c + PG_Capacity_Score__c + PG_5_Year_Donation_Score__c , 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>higher scores indicate stronger PG prospects, based on real time CG data (max score: 13)</inlineHelpText>
+    <label>PG Prospect Rating</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

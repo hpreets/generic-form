@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reporting_Analytics_Impacted__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Does this request and its solution require any updates to existing reports/dashboards and/or creation of new reports/dashboards? What&apos;s the nature of those updates? What&apos;s the logic and output for new reports/dashboards? Who is responsible for those updates?</inlineHelpText>
+    <label>Reporting/Analytics Impacted</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

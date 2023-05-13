@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solicitor_is_Current_User__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(Solicitor_1__c) = $User.FirstName + &quot; &quot; +  $User.LastName  || 
+TEXT(Solicitor_2__c) = $User.FirstName + &quot; &quot; +  $User.LastName  || 
+TEXT(Solicitor_3__c) = $User.FirstName + &quot; &quot; +  $User.LastName  || 
+TEXT(Solicitor_4__c) = $User.FirstName + &quot; &quot; +  $User.LastName  || 
+TEXT(Solicitor_5__c) = $User.FirstName + &quot; &quot; +  $User.LastName</formula>
+    <label>Solicitor is Current User</label>
+    <type>Checkbox</type>
+</CustomField>

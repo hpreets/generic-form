@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>List_Source_Description_Required</fullName>
+    <active>true</active>
+    <description>Require a List Source description if the Lead Source=Purchased List.</description>
+    <errorConditionFormula>AND ( ISPICKVAL( LeadSource , &quot;Purchased List&quot;) , ISBLANK( List_Source_Description__c ))</errorConditionFormula>
+    <errorMessage>Require a List Source description if the Lead Source=Purchased List.</errorMessage>
+</ValidationRule>

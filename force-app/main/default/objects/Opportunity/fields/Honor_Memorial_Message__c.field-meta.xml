@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Honor_Memorial_Message__c</fullName>
+    <description>Created as per Heller Migration 2021.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Long Text Field for the Honor Memorial Message</inlineHelpText>
+    <label>Honor/Memorial Message</label>
+    <length>3000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role__c</fullName>
+    <externalId>false</externalId>
+    <label>Role</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EDF attorney</fullName>
+                <default>false</default>
+                <label>EDF attorney</label>
+            </value>
+            <value>
+                <fullName>EDF non-attorney staff</fullName>
+                <default>false</default>
+                <label>EDF non-attorney staff</label>
+            </value>
+            <value>
+                <fullName>Law firm for adverse party</fullName>
+                <default>false</default>
+                <label>Law firm for adverse party</label>
+            </value>
+            <value>
+                <fullName>Outside counsel for EDF</fullName>
+                <default>false</default>
+                <label>Outside counsel for EDF</label>
+            </value>
+            <value>
+                <fullName>Outside expert for EDF</fullName>
+                <default>false</default>
+                <label>Outside expert for EDF</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

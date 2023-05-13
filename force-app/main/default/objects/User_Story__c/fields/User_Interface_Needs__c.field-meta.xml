@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Interface_Needs__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Do we need to consider any UI implications with this request and its solution? Do we need to add/hide fields to certain layouts? Do we need to modify any lightning pages or apps and their assignments?</inlineHelpText>
+    <label>User Interface Needs</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

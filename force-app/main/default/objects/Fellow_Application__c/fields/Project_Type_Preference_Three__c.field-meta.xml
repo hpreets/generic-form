@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Type_Preference_Three__c</fullName>
+    <externalId>false</externalId>
+    <label>Project Type Preference Three</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Animal Agriculture</fullName>
+                <default>false</default>
+                <label>Animal Agriculture</label>
+            </value>
+            <value>
+                <fullName>Climate Commitments (goal setting/reporting/GHG accounting)</fullName>
+                <default>false</default>
+                <label>Climate Commitments (goal setting/reporting/GHG accounting)</label>
+            </value>
+            <value>
+                <fullName>Environmental and Climate Justice</fullName>
+                <default>false</default>
+                <label>Environmental and Climate Justice</label>
+            </value>
+            <value>
+                <fullName>Food Waste</fullName>
+                <default>false</default>
+                <label>Food Waste</label>
+            </value>
+            <value>
+                <fullName>Renewables and Energy Efficiency</fullName>
+                <default>false</default>
+                <label>Renewables and Energy Efficiency</label>
+            </value>
+            <value>
+                <fullName>Supply Chain/Scope 3</fullName>
+                <default>false</default>
+                <label>Supply Chain/Scope 3</label>
+            </value>
+            <value>
+                <fullName>Sustainable Finance</fullName>
+                <default>false</default>
+                <label>Sustainable Finance</label>
+            </value>
+            <value>
+                <fullName>Zero Emission Vehicles</fullName>
+                <default>false</default>
+                <label>Zero Emission Vehicles</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

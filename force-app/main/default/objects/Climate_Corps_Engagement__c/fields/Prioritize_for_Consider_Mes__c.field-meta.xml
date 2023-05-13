@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prioritize_for_Consider_Mes__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checking this box triggers the blue star on Engagement List for low interest fellowships.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checking this box triggers the blue star on Engagement List for low interest fellowships.</inlineHelpText>
+    <label>Prioritize for Consider Mes</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PG_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>PG Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Estate</fullName>
+                <default>false</default>
+                <label>Estate</label>
+            </value>
+            <value>
+                <fullName>Closed Estate</fullName>
+                <default>false</default>
+                <label>Closed Estate</label>
+            </value>
+            <value>
+                <fullName>Osprey - Legacy</fullName>
+                <default>false</default>
+                <label>Osprey - Legacy</label>
+            </value>
+            <value>
+                <fullName>Osprey - PG</fullName>
+                <default>false</default>
+                <label>Osprey - PG</label>
+            </value>
+            <value>
+                <fullName>PG Proposal</fullName>
+                <default>false</default>
+                <label>PG Proposal</label>
+            </value>
+            <value>
+                <fullName>Osprey - Honorary</fullName>
+                <default>false</default>
+                <label>Osprey - Honorary</label>
+            </value>
+            <value>
+                <fullName>Philanthropic Advisor</fullName>
+                <default>false</default>
+                <label>Philanthropic Advisor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

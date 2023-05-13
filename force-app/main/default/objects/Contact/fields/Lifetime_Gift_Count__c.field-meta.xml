@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lifetime_Gift_Count__c</fullName>
+    <description>Formula based on ‘Total Number of Gifts’ (Customizable Rollup) and Number of Soft Credits’ (Customizable Rollup). Soft credit is defined by OCR = Funder - Soft Credit, DAF, Workplace Giving, Sponsor, Agency. Qualifying stages = Received, Received as Unconditional Pledge, Received as Conditional Pledge. All Opp Record Types except PG. Only the master field should be accessible to users.</description>
+    <externalId>false</externalId>
+    <formula>npsp__Number_of_Soft_Credits__c +  npo02__NumberOfClosedOpps__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The total count of all received Opportunities where the Contact has a hard or soft credit. (Planned Gifts not included).</inlineHelpText>
+    <label>Lifetime Gift Count</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

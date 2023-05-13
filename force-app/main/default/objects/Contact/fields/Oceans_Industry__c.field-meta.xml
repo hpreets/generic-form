@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oceans_Industry__c</fullName>
+    <externalId>false</externalId>
+    <label>Oceans Industry</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aquarium</fullName>
+                <default>false</default>
+                <label>Aquarium</label>
+            </value>
+            <value>
+                <fullName>Chefs &amp; Restauranteurs</fullName>
+                <default>false</default>
+                <label>Chefs &amp; Restauranteurs</label>
+            </value>
+            <value>
+                <fullName>Fishermen</fullName>
+                <default>false</default>
+                <label>Fishermen</label>
+            </value>
+            <value>
+                <fullName>Media</fullName>
+                <default>false</default>
+                <label>Media</label>
+            </value>
+            <value>
+                <fullName>Seafood &amp; Marine</fullName>
+                <default>false</default>
+                <label>Seafood &amp; Marine</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

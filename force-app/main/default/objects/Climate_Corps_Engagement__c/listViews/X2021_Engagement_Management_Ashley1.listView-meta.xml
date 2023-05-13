@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2021_Engagement_Management_Ashley1</fullName>
+    <columns>NAME</columns>
+    <columns>Supervisor_HA__c</columns>
+    <columns>Direct_Supervisor_Email2__c</columns>
+    <columns>Fellow_Name__c</columns>
+    <columns>Fellow_School__c</columns>
+    <columns>Summer_Email__c</columns>
+    <columns>Summer_Phone__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>End_date__c</columns>
+    <columns>Fellowship_City__c</columns>
+    <columns>Workplan_Approval__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>EDF_Engagement_Manager__c</field>
+        <operation>equals</operation>
+        <value>Ashley Medlar</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>2021</value>
+    </filters>
+    <filters>
+        <field>Stage__c</field>
+        <operation>contains</operation>
+        <value>Confirmed Participation,Offer Sent,Offer Accepted,Enga</value>
+    </filters>
+    <label>2021 Engagement Management – Ashley</label>
+</ListView>

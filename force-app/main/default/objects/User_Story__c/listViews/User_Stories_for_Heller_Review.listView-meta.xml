@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Stories_for_Heller_Review</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5</booleanFilter>
+    <columns>Level_of_Effort__c</columns>
+    <columns>Iteration__c</columns>
+    <columns>NAME</columns>
+    <columns>Release__c</columns>
+    <columns>Epic__c</columns>
+    <columns>Status__c</columns>
+    <columns>Build_Assigned_To__c</columns>
+    <columns>User_Story_Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed,Cancelled</value>
+    </filters>
+    <filters>
+        <field>Epic__c</field>
+        <operation>notEqual</operation>
+        <value>CDQ,Downstream Systems &amp; Integrations,Community,Computer Telephony Integration</value>
+    </filters>
+    <filters>
+        <field>Epic__c</field>
+        <operation>notContain</operation>
+        <value>Event On-site Logistics,Event Venue Management,Event Session Management,Event Speaker Management,Event Registration,Event Budget and Expense management,Event Communications,Event Attendee Management,Event Reporting,Virtual Event Management</value>
+    </filters>
+    <filters>
+        <field>Release__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Build_Assigned_To__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>User Stories for Assignment</label>
+</ListView>

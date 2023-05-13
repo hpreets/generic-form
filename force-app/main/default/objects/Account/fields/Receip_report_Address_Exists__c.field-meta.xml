@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Receip_report_Address_Exists__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Populated by flow when related Address receipt/report checkbox values change.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Populated by flow when related Address receipt/report checkbox values change.</inlineHelpText>
+    <label>Receipt/Report Address Exists</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

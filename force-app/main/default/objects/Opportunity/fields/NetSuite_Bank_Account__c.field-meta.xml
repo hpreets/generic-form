@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NetSuite_Bank_Account__c</fullName>
+    <externalId>false</externalId>
+    <label>NetSuite Bank Account</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CITI 0424--5485</fullName>
+                <default>false</default>
+                <label>CITI 0424</label>
+            </value>
+            <value>
+                <fullName>CITI 0458--2674</fullName>
+                <default>false</default>
+                <label>CITI 0458</label>
+            </value>
+            <value>
+                <fullName>CITI 0503--2678</fullName>
+                <default>false</default>
+                <label>CITI 0503</label>
+            </value>
+            <value>
+                <fullName>CITI 0539--5484</fullName>
+                <default>false</default>
+                <label>CITI 0539</label>
+            </value>
+            <value>
+                <fullName>CITI 3034--2690</fullName>
+                <default>false</default>
+                <label>CITI 3034</label>
+            </value>
+            <value>
+                <fullName>CITI 6415--4878</fullName>
+                <default>false</default>
+                <label>CITI 6415</label>
+            </value>
+            <value>
+                <fullName>CITI 6615--2687</fullName>
+                <default>false</default>
+                <label>CITI 6615</label>
+            </value>
+            <value>
+                <fullName>CITI 6623--2689</fullName>
+                <default>false</default>
+                <label>CITI 6623</label>
+            </value>
+            <value>
+                <fullName>CITI 6644--6009</fullName>
+                <default>false</default>
+                <label>CITI 6644</label>
+            </value>
+            <value>
+                <fullName>CITI 6806--4879</fullName>
+                <default>false</default>
+                <label>CITI 6806</label>
+            </value>
+            <value>
+                <fullName>CITI 6814--4880</fullName>
+                <default>false</default>
+                <label>CITI 6814</label>
+            </value>
+            <value>
+                <fullName>CITI 7863--5482</fullName>
+                <default>false</default>
+                <label>CITI 7863</label>
+            </value>
+            <value>
+                <fullName>CITI 9567--5488</fullName>
+                <default>false</default>
+                <label>CITI 9567</label>
+            </value>
+            <value>
+                <fullName>WF 2086--4077</fullName>
+                <default>false</default>
+                <label>WF 2086</label>
+            </value>
+            <value>
+                <fullName>WF 2088--3466</fullName>
+                <default>false</default>
+                <label>WF 2088</label>
+            </value>
+            <value>
+                <fullName>WF 6814--6003</fullName>
+                <default>false</default>
+                <label>WF 6814</label>
+            </value>
+            <value>
+                <fullName>WF 6911--2658</fullName>
+                <default>false</default>
+                <label>WF 6911</label>
+            </value>
+            <value>
+                <fullName>UBS C3 10200--5999</fullName>
+                <default>false</default>
+                <label>UBS C3 10200</label>
+            </value>
+            <value>
+                <fullName>UBS C4 10201--6000</fullName>
+                <default>false</default>
+                <label>UBS C4 10201</label>
+            </value>
+            <value>
+                <fullName>CGA NY 10202--6001</fullName>
+                <default>false</default>
+                <label>CGA NY 10202</label>
+            </value>
+            <value>
+                <fullName>CGA CA 10203--6002</fullName>
+                <default>false</default>
+                <label>CGA CA 10203</label>
+            </value>
+            <value>
+                <fullName>INBURSA 5521--5491</fullName>
+                <default>false</default>
+                <label>INBURSA 5521</label>
+            </value>
+            <value>
+                <fullName>BANORTE 6969--5492</fullName>
+                <default>false</default>
+                <label>BANORTE 6969</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

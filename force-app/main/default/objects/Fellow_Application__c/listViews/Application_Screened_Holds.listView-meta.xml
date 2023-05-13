@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Application_Screened_Holds</fullName>
+    <columns>NAME</columns>
+    <columns>Applicant_First_Name__c</columns>
+    <columns>Applicant_Last_Name__c</columns>
+    <columns>Fellowship_Applying_for__c</columns>
+    <columns>Screener_Notes__c</columns>
+    <columns>Should_we_interview__c</columns>
+    <columns>Change_Agent_Score_old__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CC_Year__c</field>
+        <operation>equals</operation>
+        <value>2016</value>
+    </filters>
+    <filters>
+        <field>Fellowship_Applying_for__c</field>
+        <operation>equals</operation>
+        <value>U.S. Fellowship</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Application Screened</value>
+    </filters>
+    <filters>
+        <field>Application_Submitted_Date__c</field>
+        <operation>lessOrEqual</operation>
+        <value>12/9/2015 12:00 AM</value>
+    </filters>
+    <label>Application Screened - Holds</label>
+</ListView>

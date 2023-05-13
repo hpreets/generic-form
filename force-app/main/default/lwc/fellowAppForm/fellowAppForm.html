@@ -1,0 +1,112 @@
+<template>
+
+    <div class="">
+        <div class="bg-welcome">
+            <div class="registration-application-section">
+                <div class="registration-application-section-inner">
+                    <div class="registration-application-section-sub">
+
+                        <template for:each={fieldsDetail} for:item="field">
+                        <template lwc:if={field.isHeading}>
+                        <h3 key={field.Id}>{field.Field_Label__c}</h3>
+                        </template>
+
+                        <template lwc:elseif={field.isTextField}>
+                        <div key={field.Id} class="row">
+                            <div class="col-12 col-md-12 col-lg-12 col-xl-12 form-group error-field-wrap">
+                                <lightning-input type="text"
+                                    label={field.Field_Label__c}
+                                    class={field.Field_API_Name__c}
+                                    placeholder=""
+                                    value={field.fieldValue}
+                                    onchange={textFieldChangeHandler}
+                                    required={field.isMandatory}
+                                    read-only={readOnly}></lightning-input>
+                                <span class="error-field-note" hidden>{textFieldLabel} is necessary</span>
+                            </div>
+                        </div>
+                        </template>
+
+                        <template lwc:elseif={field.isNameField}>
+                            <div key={field.Id} class="row">
+                                <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+                                    <lightning-input type="text"
+                                        label={field.firstName.Field_Label__c}
+                                        class={field.firstName.Field_API_Name__c}
+                                        placeholder=""
+                                        value={field.firstName.fieldValue}
+                                        onchange={textFieldChangeHandler}
+                                        required={field.firstName.isMandatory}
+                                        read-only={readOnly}></lightning-input>
+                                    <span class="error-field-note" hidden>{field.firstName.Field_Label__c} is necessary</span>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group">
+                                    <lightning-input type="text"
+                                        label={field.lastName.Field_Label__c}
+                                        class={field.lastName.Field_API_Name__c}
+                                        placeholder=""
+                                        value={field.lastName.fieldValue}
+                                        onchange={textFieldChangeHandler}
+                                        required={field.lastName.isMandatory}
+                                        read-only={readOnly}></lightning-input>
+                                </div>
+
+                            </div>
+                        </template>
+
+                        <template lwc:elseif={field.isPicklistField}>
+                        <div key={field.Id} class="row">
+                            <div class="col-12 form-group">
+                                <template if:true={showField}>
+                                  <lightning-combobox label={field.Field_Label__c}
+                                    value={field.fieldValue}
+                                    class="picklistFieldId"
+                                    onchange={picklistFieldChangeHandler}
+                                    options={field.picklistOptions}
+                                    required={field.isMandatory}
+                                    read-only={readOnly}></lightning-combobox>
+                                </template>
+                            </div>
+                        </div>
+                        </template>
+
+                        <template lwc:elseif={field.isPicklistWithOtherField}>
+                            <div key={field.Id} class="row">
+                                <div class="col-12 form-group">
+                                    <template if:true={showField}>
+                                      <lightning-combobox label={field.Field_Label__c}
+                                        value={field.fieldValue}
+                                        class="picklistWithOtherFieldId"
+                                        onchange={picklistWithOtherFieldChangeHandler}
+                                        options={field.picklistOptions}
+                                        required={field.isMandatory}
+                                        data-parentfieldid={field.Id}
+                                        data-otherfieldid={field.other.Id}
+                                        read-only={readOnly}></lightning-combobox>
+                                    </template>
+                                </div>
+                            </div>
+                            <template if:true={field.isShowOtherField}>
+                                <div key={field.other.Id} class="row">
+                                    <div class="col-12 form-group">
+                                        <lightning-input type="text"
+                                            id={field.other.Id}
+                                            label={field.other.Field_Label__c}
+                                            class="pronounsselfdescribe"
+                                            placeholder=""
+                                            value={field.other.fieldValue}
+                                            onchange={textOtherFieldChangeHandler}
+                                            read-only={readOnly}></lightning-input>
+                                    </div>
+                                </div>
+                            </template>
+                    </template>
+
+                    </template>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

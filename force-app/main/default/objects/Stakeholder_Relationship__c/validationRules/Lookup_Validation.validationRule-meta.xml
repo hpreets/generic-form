@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lookup_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>(
+IF(ISBLANK( User_Story__c ),1,0)
++ IF(ISBLANK( Test_Script__c ),1,0)
++ IF(ISBLANK( Feedback__c ),1,0)
+) &lt; 2</errorConditionFormula>
+    <errorMessage>This record can only be related to a single User Story, Test Script, or Feedback record.</errorMessage>
+</ValidationRule>

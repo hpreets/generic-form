@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Story_Description__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Detailed need/request of User Story. Include information such as the context for the request, what&apos;s the current process, what&apos;re the current pain points, what are your expectation for the solution, are there any timeline considerations?</inlineHelpText>
+    <label>User Story Description</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

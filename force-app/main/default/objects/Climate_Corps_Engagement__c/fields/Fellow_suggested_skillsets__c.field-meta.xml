@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fellow_suggested_skillsets__c</fullName>
+    <externalId>false</externalId>
+    <label>Fellow suggested skillsets</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Energy Auditing Experience</fullName>
+                <default>false</default>
+                <label>Energy Auditing Experience</label>
+            </value>
+            <value>
+                <fullName>Tech/IT Skills</fullName>
+                <default>false</default>
+                <label>Tech/IT Skills</label>
+            </value>
+            <value>
+                <fullName>Data Center Experience</fullName>
+                <default>false</default>
+                <label>Data Center Experience</label>
+            </value>
+            <value>
+                <fullName>Industrial/Mechanical Engineer</fullName>
+                <default>false</default>
+                <label>Industrial/Mechanical Engineer</label>
+            </value>
+            <value>
+                <fullName>Civil Engineers/Enviro Engineer</fullName>
+                <default>false</default>
+                <label>Civil Engineers/Enviro Engineer</label>
+            </value>
+            <value>
+                <fullName>Electrical Engineer</fullName>
+                <default>false</default>
+                <label>Electrical Engineer</label>
+            </value>
+            <value>
+                <fullName>Advanced Data Analysis</fullName>
+                <default>false</default>
+                <label>Advanced Data Analysis</label>
+            </value>
+            <value>
+                <fullName>Management/Strategy Consulting</fullName>
+                <default>false</default>
+                <label>Management/Strategy Consulting</label>
+            </value>
+            <value>
+                <fullName>LEED, ISO or EStar Experience</fullName>
+                <default>false</default>
+                <label>LEED, ISO or EStar Experience</label>
+            </value>
+            <value>
+                <fullName>Strong leadership/people skills</fullName>
+                <default>false</default>
+                <label>Strong leadership/people skills</label>
+            </value>
+            <value>
+                <fullName>Advanced Communication Skills</fullName>
+                <default>false</default>
+                <label>Advanced Communication Skills</label>
+            </value>
+            <value>
+                <fullName>Advanced Financial Analysis</fullName>
+                <default>false</default>
+                <label>Advanced Financial Analysis</label>
+            </value>
+            <value>
+                <fullName>Supply chain/Product logistics</fullName>
+                <default>false</default>
+                <label>Supply chain/Product logistics</label>
+            </value>
+            <value>
+                <fullName>Power Grid Knowledge</fullName>
+                <default>false</default>
+                <label>Power Grid Knowledge</label>
+            </value>
+            <value>
+                <fullName>Renewables Experience</fullName>
+                <default>false</default>
+                <label>Renewables Experience</label>
+            </value>
+            <value>
+                <fullName>Manufacturing on-site experience</fullName>
+                <default>false</default>
+                <label>Manufacturing on-site experience</label>
+            </value>
+            <value>
+                <fullName>Other Engineer(s)</fullName>
+                <default>false</default>
+                <label>Other Engineer(s)</label>
+            </value>
+            <value>
+                <fullName>Other (See Matching Notes)</fullName>
+                <default>false</default>
+                <label>Other (See Matching Notes)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

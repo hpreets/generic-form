@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validator__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Contacts who agree to spread EDF&apos;s message to their own networks</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contacts who agree to spread EDF&apos;s message to their own networks</inlineHelpText>
+    <label>Validator</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

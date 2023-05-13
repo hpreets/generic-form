@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gap_Scale__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Assess the gap between the current system and the needs/requirements</inlineHelpText>
+    <label>Gap Scale</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Major</fullName>
+                <default>false</default>
+                <label>Major</label>
+            </value>
+            <value>
+                <fullName>Minor</fullName>
+                <default>false</default>
+                <label>Minor</label>
+            </value>
+            <value>
+                <fullName>No Gap</fullName>
+                <default>false</default>
+                <label>No Gap</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

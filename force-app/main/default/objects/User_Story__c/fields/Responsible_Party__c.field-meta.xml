@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Responsible_Party__c</fullName>
+    <externalId>false</externalId>
+    <label>Responsible Party</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Heller</fullName>
+                <default>false</default>
+                <label>Heller</label>
+            </value>
+            <value>
+                <fullName>EDF</fullName>
+                <default>false</default>
+                <label>EDF</label>
+            </value>
+            <value>
+                <fullName>OSI</fullName>
+                <default>false</default>
+                <label>OSI</label>
+            </value>
+            <value>
+                <fullName>Allant</fullName>
+                <default>false</default>
+                <label>Allant</label>
+            </value>
+            <value>
+                <fullName>Intricity</fullName>
+                <default>false</default>
+                <label>Intricity</label>
+            </value>
+            <value>
+                <fullName>Zuri</fullName>
+                <default>false</default>
+                <label>Zuri</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

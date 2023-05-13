@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Benefits__c</fullName>
+    <description>Created as a part of Heller Data Migration 2021.</description>
+    <externalId>false</externalId>
+    <label>Benefits</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Admission</fullName>
+                <default>false</default>
+                <label>Admission</label>
+            </value>
+            <value>
+                <fullName>Dinner for One</fullName>
+                <default>false</default>
+                <label>Dinner for One</label>
+            </value>
+            <value>
+                <fullName>Private Table</fullName>
+                <default>false</default>
+                <label>Private Table</label>
+            </value>
+            <value>
+                <fullName>Greens Fees</fullName>
+                <default>false</default>
+                <label>Greens Fees</label>
+            </value>
+            <value>
+                <fullName>T-Shirt</fullName>
+                <default>false</default>
+                <label>T-Shirt</label>
+            </value>
+            <value>
+                <fullName>Lunch for One</fullName>
+                <default>false</default>
+                <label>Lunch for One</label>
+            </value>
+            <value>
+                <fullName>Lunch for Team</fullName>
+                <default>false</default>
+                <label>Lunch for Team</label>
+            </value>
+            <value>
+                <fullName>Annual Membership</fullName>
+                <default>false</default>
+                <label>Annual Membership</label>
+            </value>
+            <value>
+                <fullName>Pre-Event Gathering</fullName>
+                <default>false</default>
+                <label>Pre-Event Gathering</label>
+            </value>
+            <value>
+                <fullName>Ticket</fullName>
+                <default>false</default>
+                <label>Ticket</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

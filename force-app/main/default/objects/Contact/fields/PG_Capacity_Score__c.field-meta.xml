@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PG_Capacity_Score__c</fullName>
+    <description>Score based on Capacity rating. Factors into PG Prospect Rating</description>
+    <externalId>false</externalId>
+    <formula>CASE( Capacity__c ,
+&apos;$100M+&apos;, 4,
+&apos;$50M+&apos;,4,
+&apos;$25M+&apos;,4,
+&apos;10M+&apos;,4,
+&apos;5M+&apos;,4,
+&apos;1M+&apos;,4,
+&apos;$500K+&apos;,3,
+&apos;$100K+&apos;,2,
+&apos;$25K+&apos;,1,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Score based on Capacity rating (Factors into PG Prospect Rating)
+1M-100M+ = 4
+$500K+ = 3
+$100K+ = 2
+$25K+ = 1
+All others=0</inlineHelpText>
+    <label>PG Capacity Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

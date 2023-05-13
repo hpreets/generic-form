@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Known_Financial_Support__c</fullName>
+    <description>What is the contact&apos;s history of donating to the public figure</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Use this field to share public political donation information. Suggested format “Gave [$amount] to [entity] in [year]”. Anything over 10 years old should be deleted.</inlineHelpText>
+    <label>Known Financial Support</label>
+    <length>32768</length>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

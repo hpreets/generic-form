@@ -1,0 +1,242 @@
+<!--
+  @description       : 
+  @author            : Sai Teja
+  @last modified on  : 05-19-2022
+  @last modified by  : Sai Teja
+-->
+<template>
+    <c-e-d-f13_-header></c-e-d-f13_-header>
+<div class="body-bg-image-registration" >
+    <template if:false={openRegistrationForm}>
+        <div>
+            <div style="min-height: 30rem;">
+                <div class="registration-form-section">
+                    <div class="registration-form-section-inner">
+                        <div class="registration-form-section-sub">
+                            <h3>Climate Corps Registration</h3>
+                            
+                            <div class="slds-p-around_medium lgc-bg">
+                                <!--<lightning-input type="text" label="Email address" placeholder="enter your email address here."></lightning-input>-->
+                                <lightning-input type="email" data-name="registrationemail" label="Email address" placeholder="Enter your email address here"></lightning-input>
+                            </div>
+                        <lightning-button variant="success" label="Submit" title="Successful action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <template if:true={emailExists}>
+        <section  class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModalAction}>
+                       <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+                    </button>
+                    <h2 class="slds-text-heading_medium slds-hyphenate">Email ID already exists</h2>
+                 </header>
+                 <!--<div class="slds-modal__content slds-align_absolute-center">Check your email for your temporary password!</div>-->
+                 <div class="slds-modal__content slds-p-around_medium">
+                    <p><lightning-formatted-rich-text value={label.registrationTempPwd}></lightning-formatted-rich-text></p>
+                 </div>
+                 <footer class="slds-modal__footer">
+                    <lightning-button class="slds-align_absolute-center" variant="success" label="Login" title="login"  onclick={handleLogin}></lightning-button>
+               </footer> 
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    
+     <!-- Email Verified Modal -->
+     <template if:true={emailDoesNotExists}>
+        <section  class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModalAction}>
+                       <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+                    </button>
+                    <h2 class="slds-text-heading_medium slds-hyphenate">Email ID verified</h2>
+                 </header>
+                 <!--<div class="slds-modal__content slds-align_absolute-center">Check your email for your temporary password!</div>-->
+                 <div class="slds-modal__content slds-p-around_medium">
+                    <p>Now you can register with this email ID</p>
+                 </div>
+                 <footer class="slds-modal__footer">
+                    <lightning-button class="slds-align_absolute-center" variant="success" label="Register" title="register"  onclick={hanldeRegisteration}></lightning-button>
+               </footer> 
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</div>
+</template>
+         
+<template if:true={openRegistrationForm}>
+    
+    <div class="registration-form-section slds-p-around_medium">
+        <div class="registration-form-section-inner">
+            <div class="registration-form-section-sub">
+                <h3 class="slds-p-bottom_small">Climate Corps Registration</h3>
+                <div class="row slds-p-top_large slds-p-left_large" if:true={blockRegister} style="color: #325b6f;">
+                    <b><span>Thank you for registering. Please check your email for your login credentials. You can go back to the login page by clicking   
+                        <span>
+                            <a href="#" onclick={navigateToHome}> here.</a>
+                        </span> 
+                    </span></b>
+                </div>
+
+                    
+                        <div class="row">
+                            <div class="col-12 form-group form-group-icon-wrap">
+                                <!--<label for="emailAddress">Email address (User ID) </label>-->
+                                <div class="filed-icon-wrap green-tick-wrap">
+                                    
+                                            <lightning-input class="slds-p-top_large" type="email" label="Email address (User ID)" value={emailAddressValue} disabled>
+                                                <span class="green-tick"><img
+                                                    src={greenTicker}
+                                                    alt="" title="" /> </span>
+                                            </lightning-input>
+                                    <!--<input type="email" class="form-control" id="emailAddress1"
+                                        value={emailAddressValue} disabled>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+                                <lightning-input type="text" label="First Name" name="fName" value={fNameVal} onchange={handleChange} message-when-value-missing="First name is necessary" required></lightning-input>
+                                <!--<label for="firstName">First Name </label>
+                                <input type="text" class="form-control error-field" name="firstName"
+                                    id="firstName" value={First_Name} onchange={requiredValidation}
+                                    required>-->
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+                                <lightning-input type="text" label="Last Name" name="lName" value={lNameVal} onchange={handleChange} message-when-value-missing="Last name is necessary" required></lightning-input>
+                                <!--<label for="lastName">Last Name </label>
+                                <input type="text" class="form-control error-field" id="lastName"
+                                    value={Last_Name} onchange={requiredValidation} required>
+                                <span class="error-field-note" hidden>Last name is necessary</span>-->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 form-group phone-field error-field-wrap">
+                                <span class="registration-application-field-note phone-field-note">Include country
+                                    code if outside U.S</span>
+                                <lightning-input type="text" label="Phone" class="phone" name="phone" value={phoneVal} onchange={handleChange} required message-when-value-missing="Phone number is required" maxlength="15"></lightning-input>
+                                <!--<label for="phone">Phone</label>
+                                <span
+                                    class="registration-application-field-note phone-field-note">Include
+                                    country code if outside U.S</span>
+                                <input type="text" class="form-control  error-field" id="phone"
+                                    value={Phone} onchange={requiredValidation} required>
+                                <span class="error-field-note" hidden>Phone number is required</span>-->
+                            </div>
+                        </div>
+                       
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+                                 <lightning-combobox
+                                    name="country"
+                                    label="Country"
+                                    value={selectedCountry}
+                                    placeholder="Select"
+                                    options={countryOptions}
+                                    onchange={handleChange}
+                                    required
+                                    ></lightning-combobox>
+                               
+                                <!--<label for="country">Country </label>
+                                <select id="country" class="form-control  error-field">
+                                    <option selected>--None--</option>
+                                    <option>...</option>
+                                </select>
+                                <span class="error-field-note" hidden>Phone number is required</span>-->
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+                                <lightning-input type="text" label="Postal Code" name= "postalCode" value={postalCodeVal} required onchange={handleChange} message-when-value-missing="Postal code is required"></lightning-input>
+                                <!--<label for="postalCode">Postal Code </label>
+                                <input type="text" class="form-control  error-field" id="postalCode"
+                                    value={MailingPostalCode} onchange={requiredValidation} required>
+                                <span class="error-field-note" hidden>Postal code is required</span>-->
+                            </div>
+                        </div>
+								
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+																<template if:true = {isDropDownField}>
+                                <lightning-combobox
+                                name="state"
+                                label="State"
+                                value={selectedState}
+                                placeholder="Select"
+                                options={stateOptions}
+                                onchange={handleChange}
+                                required
+                                ></lightning-combobox>
+																		</template>
+																<template if:false = {isDropDownField}>
+																		<lightning-input type="text" value={selectedState} label="State" onchange={handleChange} required></lightning-input>
+																</template>
+                                <!--<label for="state">State </label>
+                                <select id="state" class="form-control error-field">
+                                    <option selected>--None--</option>
+                                    <option>...</option>
+                                </select>
+                                <span class="error-field-note" hidden>Phone number is required</span>-->
+                            </div>
+														
+                            <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group error-field-wrap">
+                                <lightning-input type="text" label="City" name= "city" value={cityVal} required onchange={handleChange} message-when-value-missing="City code is required"></lightning-input>
+                                <!--<label for="city">City </label>
+                                <input type="text" class="form-control error-field" id="city"
+                                    value={MailingCity} onchange={requiredValidation} required>
+                                <span class="error-field-note" hidden>City code is required</span>-->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 form-group error-field-wrap">
+                                <lightning-input type="text" label="Permanent Street Address Line 1" name= "addressLine1" value={addressLine1Val} required onchange={handleChange} message-when-value-missing="Permamnent street address line 1
+                                is
+                                required"></lightning-input>
+                                <!--<label for="PermanentAddress1">Permanent Street Address Line 1</label>
+                                <input type="text" class="form-control error-field"
+                                    id="PermanentAddress1" value={MailingStreet}
+                                    onchange={requiredValidation} required>
+                                <span class="error-field-note" hidden>Permamnent street address line 1
+                                    is
+                                    required</span>-->
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 form-group error-field-wrap">
+                                <lightning-input type="text" label="Permanent Street Address Line 2" name= "addressLine2" value={addressLine2Val} onchange={handleChange} message-when-value-missing="Permamnent street address line 2
+                                is
+                                required"></lightning-input>
+                                <!--<label for="PermanentAddress2">Permanent Street Address Line 2</label>
+                                <input type="text" class="form-control error-field"
+                                    id="PermanentAddress2" value={MailingStreet2}
+                                    onchange={requiredValidation} required>
+                                <span class="error-field-note" hidden>Permamnent street address line 2
+                                    is
+                                    required</span>-->
+                            </div>
+                        </div>
+
+                        <div class="form-button-wrap mandatory-red-note-wrap">
+
+                            <!--<button type="button" class="btn btn-primary green-button register-button"
+                                onclick={handleRegisterCreation}>Register</button>-->
+                                <lightning-button class="slds-align_absolute-center" variant="success" disabled={blockRegister} label="Register" title="register"  onclick={handleRegisterCreation}></lightning-button>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+</template>
+        </div>
+        <template if:true={isSaving}>
+            <lightning-spinner size="large"></lightning-spinner>
+        </template>
+    <c-e-d-f22_footer></c-e-d-f22_footer>
+</template>

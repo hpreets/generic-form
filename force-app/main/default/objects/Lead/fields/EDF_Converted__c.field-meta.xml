@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EDF_Converted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This captures when EDF creates a Contact for a Lead. Not using Standard Lead Conversion. This conversion is done through a separate process</description>
+    <externalId>false</externalId>
+    <label>EDF Converted</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

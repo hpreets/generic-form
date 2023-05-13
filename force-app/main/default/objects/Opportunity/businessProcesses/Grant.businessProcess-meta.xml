@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grant</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Agreement in Negotiation</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Application Submitted</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Awarded</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Cancelled by EDF</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Declined</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Declined by Donor</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Invalid Donation</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>LOI Submitted</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Projected</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Prospecting</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Received</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Received as Conditional Pledge</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Received as Unconditional Pledge</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Refunded</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Returned Check</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Solicited</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Verbally Committed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Withdrawn</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

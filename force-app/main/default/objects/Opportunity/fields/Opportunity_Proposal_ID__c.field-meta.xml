@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Proposal_ID__c</fullName>
+    <description>We have 2 fields to support continuing the Proposal ID number values from LCRM in NPSP (Opportunity Proposal Autonumber Backup and Proposal ID). When a record has a blank value in Opportunity Proposal Autonumber Backup and a value in Proposal ID, it was a migrated record from LCRM. When a record has a value in both fields and they don&apos;t match, it means the record was created during the Delta. It has a value in the Proposal ID field, but it was created in LCRM, so it retains that value. When the field values match, it is an entirely new record.</description>
+    <displayFormat>{00000000}</displayFormat>
+    <externalId>false</externalId>
+    <label>Opportunity Proposal Autonumber Backup</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>

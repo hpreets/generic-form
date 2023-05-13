@@ -1,0 +1,353 @@
+<!--
+  @description       :
+  @author            : Sai Teja
+  @last modified on  : 05-13-2022
+  @last modified by  : Sai Teja
+-->
+<template>
+    <template if:false={isChild}>
+        <c-e-d-f13_-header></c-e-d-f13_-header>
+        <c-e-d-f28_-dashboard-menu></c-e-d-f28_-dashboard-menu>
+    </template>
+        <!-- body tag div -->
+        <div class={backgroundImageClass}>
+        <div class="bg-welcome">
+            <div class="registration-application-section">
+                <div class="registration-application-section-inner">
+                    <div class="registration-application-section-sub">
+                        <h3>{label.Page_Heading}</h3>
+                        <div class="registration-application-form-wrap">
+                            <form action="" method="post">
+                                <template if:true={isUSFellowShip}>
+                                    <div class="row form-group form-check-inline-wrap">
+                                        <div class="col-12 col-md-3 col-lg-3 col-xl-3 no-padding-left slds-p-around_medium lgc-bg">{label.InterestForIndiaChina_FieldLabel}
+                                            <lightning-helptext content={label.InterestForIndiaChina_HelpText}></lightning-helptext>
+                                        </div>
+                                        <div class="col-12 col-md-9 col-lg-9 col-xl-9 form-check-outer">
+                                            <div class="form-check-inline">
+                                                <div class=" custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input apply-india" id="india" checked={applyIndia} onchange={applyIndiaChangeHandler} readonly={readOnly}>
+                                                    <label class="custom-control-label form-check-label" for="india">India</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-check-inline">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input apply-china" id="china" checked={applyChina} onchange={applyChinaChangeHandler} readonly={readOnly}>
+                                                    <label class="custom-control-label form-check-label" for="china">China</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                <!--<div class="row form-group form-check-inline-wrap">
+                                    <div class="col-12 col-md-3 col-lg-3 col-xl-3 no-padding-left">I'm interested in also applying for  </div>
+                                    <div class="col-12 col-md-9 col-lg-9 col-xl-9 form-check-outer">
+                                        <div class="form-check-inline">
+                                            <div class=" custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input apply-india" id="india" checked={applyIndia} onchange={applyIndiaChangeHandler}>
+                                                <label class="custom-control-label form-check-label" for="india">India</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input apply-china" id="china" checked={applyChina} onchange={applyChinaChangeHandler}>
+                                                <label class="custom-control-label form-check-label" for="china">China</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                               </div> -->
+                                <div class="row form-check-inline-wrap">
+                                    <div class="col-12 form-group">
+                                        <lightning-dual-listbox name="regionsinus"
+                                                                label={label.USRegionPref_FieldLabel}
+                                                                source-label="Available"
+                                                                selected-label="Chosen"
+                                                                field-level-help={label.USRegionPref_HelpText}
+                                                                options={regionsInUSOptions}
+                                                                value={regionsInUSSelected}
+                                                                onchange={regionsInUSChangeHandler} required={isUsRelocation} disabled={readOnly}  disable-reordering="false"></lightning-dual-listbox>
+                                                                <br/>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group phone-field">
+                                        <!--<label>Enter information about regional preferences,
+                                            including any specifics regarding cities for the matching team</label>
+                                        <textarea class="form-control us-regional-preferences" rows="4" onchange={usRegionalPreferencesChangeHandler} readonly={readOnly}>{usRegionalPreferences}</textarea>-->
+                                        <span class="registration-application-field-note phone-field-note">{label.USRegionPrefText_CharacterLimit} characters max</span>
+                                        <lightning-textarea
+                                        max-length={label.USRegionPrefText_CharacterLimit}
+                                        name="preferences"
+                                        value={usRegionalPreferences}
+                                        label={label.USRegionPrefText_FieldLabel}
+                                        onchange={usRegionalPreferencesChangeHandler}
+                                        read-only={readOnly}></lightning-textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <template if:true={validUSDriversLicensePickList.data}>
+                                            <lightning-combobox
+                                            label={label.USDriverLicense_FieldLabel}
+                                            value={validUSDriversLicense}
+                                            placeholder="-- None --"
+                                            options={validUSDriversLicensePickList.data.values}
+                                            onchange={validUSDriversLicenseChangeHandler} read-only={readOnly}></lightning-combobox>
+                                        </template>
+                                        <!-- <label>Do you have a valid US Driver's License</label>
+                                        <select class="form-control valid-us-drivers-license" onchange={validUSDriversLicenseChangeHandler}>
+                                            <option selected>-- None --</option>
+                                            <template if:true={validUSDriversLicensePickList.data}>
+                                                <template for:each={validUSDriversLicensePickList.data.values} for:item="item">
+                                                    <option key={item.value} value={item.value}>{item.label}</option>
+                                                </template>
+                                            </template>
+                                        </select> -->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+
+                                        <template if:true={accessToVehiclePickList.data}>
+                                            <lightning-combobox
+                                            label={label.AccessToVehicle_FieldLabel}
+                                            value={accessToVehicle}
+                                            placeholder="-- None --"
+                                            options={accessToVehiclePickList.data.values}
+                                            onchange={accessToVehicleChangeHandler} read-only={readOnly}></lightning-combobox>
+                                        </template>
+                                        <!-- <label><span class="break-text">If yes, do you have access to a vehicle this summer or would</span> you be willing to get access to one (e.g. rent)?</label>
+                                        <select class="form-control access-to-vehicle" onchange={accessToVehicleChangeHandler}>
+                                            <option selected>-- None --</option>
+                                            <template if:true={accessToVehiclePickList.data}>
+                                                <template for:each={accessToVehiclePickList.data.values} for:item="item">
+                                                    <option key={item.value} value={item.value}>{item.label}</option>
+                                                </template>
+                                            </template>
+                                        </select> -->
+                                    </div>
+                                </div>
+
+                                <div class="accordion-with-bg-shadow">
+                                    <div class="accordion accordion-with-bg-shadow-inner" id="accordionExample">
+                                    <div class="card-list">
+                                        <div class="card-header" id="headingOne">
+                                            <h5>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                {label.SectorPreference_Heading}
+                                                <span class="accordion-arrow">&nbsp;</span>
+                                            </button>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <h6>{label.SectorPreference3Choices_Heading}</h6>
+                                                <div class="row">
+                                                    <div class="col-12 form-group">
+                                                        <template if:true={sectorFirstChoicePickList.data}>
+                                                        <lightning-combobox
+                                                        name="firstchoice"
+                                                        label={label.SectorFirstChoice_FieldLabel}
+                                                        value={sectorFirstChoice}
+                                                        placeholder="-- None --"
+                                                        options={sectorFirstChoicePickList.data.values}
+                                                        onchange={sectorFirstChoiceChangeHandler} required={isFirstChoice} read-only={readOnly}></lightning-combobox>
+                                                        <!-- lightning-dual-listbox
+                                                            name="firstchoice"
+                                                            label={label.SectorFirstChoice_FieldLabel}
+                                                            source-label="Available"
+                                                            selected-label="Chosen"
+                                                            options={sectorFirstChoicePickList.data.values}
+                                                            value=""
+                                                            onchange={sectorFirstChoiceChangeHandler}
+                                                            disabled={readOnly}>
+                                                        </lightning-dual-listbox -->
+
+                                                    </template>
+                                                        <!--<label>Sector First Choice</label>
+                                                        <select class="form-control sector-first-choice" onchange={sectorFirstChoiceChangeHandler} required={isFirstChoice}>
+                                                            <option selected>-- None --</option>
+                                                            <template if:true={sectorFirstChoicePickList.data}>
+                                                                <template for:each={sectorFirstChoicePickList.data.values} for:item="item">
+                                                                    <option key={item.value} value={item.value}>{item.label}</option>
+                                                                </template>
+                                                            </template>
+                                                        </select>-->
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 form-group">
+                                                        <template if:true={sectorSecondChoicePickList.data}>
+                                                            <lightning-combobox
+                                                            name="secondchoice"
+                                                            label={label.SectorSecondChoice_FieldLabel}
+                                                            value={sectorSecondChoice}
+                                                            placeholder="-- None --"
+                                                            options={sectorSecondChoicePickList.data.values}
+                                                            onchange={sectorSecondChoiceChangeHandler} required={isSecondChoice} read-only={readOnly}></lightning-combobox>
+                                                        </template>
+                                                        <!--<label>Sector Second Choice</label>
+                                                        <select class="form-control sector-second-choice" onchange={sectorSecondChoiceChangeHandler} required={isSecondChoice}>
+                                                            <option selected>-- None --</option>
+                                                            <template if:true={sectorSecondChoicePickList.data}>
+                                                                <template for:each={sectorSecondChoicePickList.data.values} for:item="item">
+                                                                    <option key={item.value} value={item.value}>{item.label}</option>
+                                                                </template>
+                                                            </template>
+                                                        </select>-->
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 form-group">
+                                                        <template if:true={sectorThirdChoicePickList.data}>
+                                                            <lightning-combobox
+                                                            name="thirdchoice"
+                                                            label={label.SectorThirdChoice_FieldLabel}
+                                                            value={sectorThirdChoice}
+                                                            placeholder="-- None --"
+                                                            options={sectorThirdChoicePickList.data.values}
+                                                            onchange={sectorThirdChoiceChangeHandler} required={isThirdChoice} read-only={readOnly}></lightning-combobox>
+                                                        </template>
+                                                        <!--<label>Sector Third Choice</label>
+                                                        <select class="form-control sector-third-choice" onchange={sectorThirdChoiceChangeHandler} required={isThirdChoice}>
+                                                            <option selected>-- None --</option>
+                                                            <template if:true={sectorThirdChoicePickList.data}>
+                                                                <template for:each={sectorThirdChoicePickList.data.values} for:item="item">
+                                                                    <option key={item.value} value={item.value}>{item.label}</option>
+                                                                </template>
+                                                            </template>
+                                                        </select>-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <template if:true={isUSFellowShip}>
+                                    <div class="accordion-with-bg-shadow">
+                                        <div class="accordion accordion-with-bg-shadow-inner" id="accordionProjectTypePref">
+                                            <div class="card-list">
+                                                <div class="card-header">
+                                                    <h5>
+                                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                        {label.ProjectTypePreference_Heading}
+                                                        <span class="accordion-arrow">&nbsp;</span>
+                                                    </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionProjectTypePref">
+                                                    <div class="card-body">
+                                                        <h6>{label.ProjectTypePreference3Choices_Heading}</h6>
+                                                        <div class="row">
+                                                            <div class="col-12 form-group">
+                                                                <template if:true={projectTypePreferenceOnePickList.data}>
+                                                                    <lightning-combobox
+                                                                    name="projTypePrefOne"
+                                                                    label={label.ProjectTypeFirstChoice_FieldLabel}
+                                                                    value={projectTypePreferenceOne}
+                                                                    placeholder="-- None --"
+                                                                    options={projectTypePreferenceOnePickList.data.values}
+                                                                    onchange={projectTypePreferenceOneChangeHandler} required={isFirstChoice} read-only={readOnly}></lightning-combobox>
+                                                                </template>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12 form-group">
+                                                                <template if:true={projectTypePreferenceTwoPickList.data}>
+                                                                    <lightning-combobox
+                                                                    name="projTypePrefTwo"
+                                                                    label={label.ProjectTypeSecondChoice_FieldLabel}
+                                                                    value={projectTypePreferenceTwo}
+                                                                    placeholder="-- None --"
+                                                                    options={projectTypePreferenceTwoPickList.data.values}
+                                                                    onchange={projectTypePreferenceTwoChangeHandler} read-only={readOnly}></lightning-combobox>
+                                                                </template>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12 form-group">
+                                                                <template if:true={projectTypePreferenceThreePickList.data}>
+                                                                    <lightning-combobox
+                                                                    name="projTypePrefThree"
+                                                                    label={label.ProjectTypeThirdChoice_FieldLabel}
+                                                                    value={projectTypePreferenceThree}
+                                                                    placeholder="-- None --"
+                                                                    options={projectTypePreferenceThreePickList.data.values}
+                                                                    onchange={projectTypePreferenceThreeChangeHandler} read-only={readOnly}></lightning-combobox>
+                                                                </template>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </template>
+                            </template>
+                                <template if:true={isIndiaFellowShip}>
+                                    <div class="row form-group form-check-inline-wrap">
+                                        <div>
+                                            <lightning-dual-listbox name="regionsinindia"
+                                                                    label={label.IndiaRegionPref_FieldLabel}
+                                                                    source-label="Available"
+                                                                    selected-label="Chosen"
+                                                                    field-level-help={label.IndiaRegionPref_HelpText}
+                                                                    options={regionsInIndiaOptions}
+                                                                    value={regionsInIndiaSelected}
+                                                                    onchange={regionsInIndiaChangeHandler} required={isIndiaRelocation} disabled={readOnly}></lightning-dual-listbox>
+                                                                    <br/>
+
+                                        </div>
+                                    </div>
+                                </template>
+                                <template if:true={isChinaFellowship}>
+                                    <div class="row form-group form-check-inline-wrap">
+                                        <div>
+                                            <lightning-dual-listbox name="regionsinchina"
+                                                                    label={label.ChinaRegionPref_FieldLabel}
+                                                                    source-label="Available"
+                                                                    selected-label="Chosen"
+                                                                    field-level-help={label.ChinaRegionPref_HelpText}
+                                                                    options={regionsInChinaOptions}
+                                                                    value={regionsInChinaSelected}
+                                                                    onchange={regionsInChinaChangeHandler} required={isChinaRelocation} disabled={readOnly}></lightning-dual-listbox>
+                                                                    <br/>
+
+                                        </div>
+                                    </div>
+                                </template>
+
+                                <div class="form-button-wrap no-padding-top">
+                                    <template if:false={isChild}>
+                                        <button type="button" class="btn btn-primary white-button margin-right" onclick={backToPreviousTab}>{label.Back_ButtonLabel}</button>
+                                        <template if:false={isDeadlinePassed}>
+                                            <button type="button" class="btn btn-primary green-button margin-right" onclick={updateMatchPreferences}>{label.SaveNext_ButtonLabel}</button>
+                                        </template>
+                                        <button type="button" class="btn btn-primary white-button" onclick={navigateToDashboard}>{label.Cancel_ButtonLabel}</button>
+                                    </template>
+                                    <template if:true={isChild}>
+                                        <template if:false={isDeadlinePassed}>
+                                            <template if:true={readOnly}>
+                                                <button type="button" disabled class="btn btn-primary green-button margin-right" onclick={updateMatchPreferences}>{label.Save_ButtonLabel}</button>
+                                            </template>
+                                            <template if:false={readOnly}>
+                                                <button type="button" class="btn btn-primary green-button margin-right" onclick={updateMatchPreferences}>{label.Save_ButtonLabel}</button>
+                                            </template>
+                                        </template>
+                                    </template>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of body tag div -->
+    <template if:false={isChild}>
+        <c-e-d-f22_footer></c-e-d-f22_footer>
+    </template>
+</template>

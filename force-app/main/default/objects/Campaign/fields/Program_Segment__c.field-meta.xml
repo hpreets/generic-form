@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Segment__c</fullName>
+    <description>Field created for Heller migration 2021</description>
+    <externalId>false</externalId>
+    <label>Program Segment</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Acknowledgements</fullName>
+                <default>false</default>
+                <label>Acknowledgements</label>
+            </value>
+            <value>
+                <fullName>Acquisition</fullName>
+                <default>false</default>
+                <label>Acquisition</label>
+            </value>
+            <value>
+                <fullName>Appeals</fullName>
+                <default>false</default>
+                <label>Appeals</label>
+            </value>
+            <value>
+                <fullName>Catalyst Circle</fullName>
+                <default>false</default>
+                <label>Catalyst Circle</label>
+            </value>
+            <value>
+                <fullName>Corporate Matching Gifts</fullName>
+                <default>false</default>
+                <label>Corporate Matching Gifts</label>
+            </value>
+            <value>
+                <fullName>Cultivation</fullName>
+                <default>false</default>
+                <label>Cultivation</label>
+            </value>
+            <value>
+                <fullName>EarthShare</fullName>
+                <default>false</default>
+                <label>EarthShare</label>
+            </value>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+            <value>
+                <fullName>Newsletter</fullName>
+                <default>false</default>
+                <label>Newsletter</label>
+            </value>
+            <value>
+                <fullName>Other Workplace Giving</fullName>
+                <default>false</default>
+                <label>Other Workplace Giving</label>
+            </value>
+            <value>
+                <fullName>Personal Touch</fullName>
+                <default>false</default>
+                <label>Personal Touch</label>
+            </value>
+            <value>
+                <fullName>Reinstatement</fullName>
+                <default>false</default>
+                <label>Reinstatement</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+            <value>
+                <fullName>Sustainer Invite</fullName>
+                <default>false</default>
+                <label>Sustainer Invite</label>
+            </value>
+            <value>
+                <fullName>Sustainer Payments Processed Offline</fullName>
+                <default>false</default>
+                <label>Sustainer Payments Processed Offline</label>
+            </value>
+            <value>
+                <fullName>Tell-a-Friend</fullName>
+                <default>false</default>
+                <label>Tell-a-Friend</label>
+            </value>
+            <value>
+                <fullName>Whitemail</fullName>
+                <default>false</default>
+                <label>Whitemail</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

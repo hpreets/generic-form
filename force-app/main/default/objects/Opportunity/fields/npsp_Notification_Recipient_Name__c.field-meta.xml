@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>npsp_Notification_Recipient_Name__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Text field for the person who should receive the Notification if not the Honoree and they don&apos;t have a Contact record</inlineHelpText>
+    <label>Honor/Memorial Person to Notify</label>
+    <length>75</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,543 @@
+/* Dashboard Page Section Start */
+.body-wrapper{
+    padding: 39px 0 0 0;
+}
+.main-tile{
+  background-color: white;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-right: 5%;
+  width: 100%;
+}
+ .card-title{
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+.notification-body{
+  font-size: 15px;
+
+}
+.notification-description{
+  font-size: 20px;
+  color: #007355;
+}
+.alert-description{
+  font-size: 15px;
+}
+.footer-content{
+  padding: 8px 20px 10px 20px;
+    border-top: 1px solid rgb(0 0 0 / 20%);
+    color: #F04E23;
+}
+/* .footer-text{
+  font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    
+    background-color: inherit;
+    margin: 0 0 0 0px;
+    padding: 0 0 0 0;
+} */
+.dashboard-wrap h1.dashboard-title{ 
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #2D637F;
+    background-color: inherit;
+    margin: 0 0 0 0;
+    padding: 0 0 12px 0;
+}
+.dashboard-wrap h4.dashboard-welcome-title{ 
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #2D637F;
+    background-color: inherit;
+    margin: 0 0 0 0;
+    padding: 0 0 37px 0;
+}
+
+.dashboard-wrap .action-center-wrap{
+    color: inherit;
+    background-color: #C2E3E4;
+    padding: 26px 20px 4px 20px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.dashboard-wrap .action-center-wrap h2{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #58595B;
+    background-color: inherit;
+    margin: 0 0 0 0;
+    padding: 0 0 18px 0;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card{
+    margin-bottom: 30px;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #58595B;
+    background-color: #fff;
+    padding: 20px 20px 20px 20px;
+    min-height: 218px;
+    box-shadow: 0px 9px 16px rgba(159, 162, 191, 0.18), 0px 2px 2px rgba(159, 162, 191, 0.32);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    position: relative;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn figure{
+    width: 28px;
+    height: 24px;
+    margin-bottom: 23px;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn figure img{
+    max-width: 100%;
+    display: block;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn h5{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #58595B;
+    background-color: inherit;
+    margin: 0 0 0 0;
+    padding: 0 0 5px 0;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn p{
+    font-size: 14px;
+    line-height: 16px;
+    color: #58595B;
+    background-color: inherit;
+    margin: 0 0 0 0;
+    padding: 0 0 5px 0;
+}
+
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn .action-card-footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    width: 100%;
+    padding: 0 20px 0 20px;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn .action-card-footer button{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #00A34B;
+    margin: 0 0 0 0;
+    padding: 10px 17px 11px 17px;
+    border: none;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn .action-card-footer button:focus{
+    box-shadow: none;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn .action-card-footer button:focus{
+    box-shadow: none;
+}
+.dashboard-wrap .action-center-wrap .action-center-card-wrap .action-center-card .action-center-card-inn .action-card-footer button:hover{
+    background-color: rgb(0 163 75 / 80%);
+}
+/* Dashboard Page Section End */
+
+/* Application Pdf Format Start */
+.registration-application-section
+  .registration-application-section-sub
+  .application-title-pdf-icon{
+    margin: 0 0 21px 0;
+  }
+.registration-application-section
+  .registration-application-section-sub
+  .application-title-pdf-icon h3{
+    float: left;
+    margin: 8px 0 0 0;
+  }
+.registration-application-section
+  .registration-application-section-sub
+  .application-pdf-format-wrap {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #325b6f;
+  background-color: #fff;
+  border: 1px solid #e2e9f3;
+  padding: 10px 10px 12px 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px 19px 8px 13px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  float: right;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .application-pdf-format-wrap .application-pdf-format-icon{
+    margin: 0 0 0 0;
+  }
+  .registration-application-section
+  .registration-application-section-sub
+  .application-pdf-format-wrap a{
+    color: #325b6f;
+    background-color: inherit;   
+    display: block;
+  }
+  .registration-application-section
+  .registration-application-section-sub
+  .application-pdf-format-wrap a:hover{
+      color: rgb(50 91 111 / 80%);
+    text-decoration: none;
+  }
+.registration-application-section
+  .registration-application-section-sub
+  .application-pdf-format-wrap .application-pdf-format-text{
+    margin: 0 0 0 13px;
+    display: block;
+  }
+  .registration-application-section
+  .registration-application-section-sub
+  .application-pdf-format-wrap .application-pdf-format-text span{
+    display: block;
+  }
+/* Application Pdf Format End */
+
+/* Post Registration Application Accordion Start */
+.registration-application-section
+  .post-registration-section-sub
+  .post-registration-application-form-wrap
+  .accordion-post-registration-form
+  .accordion-post-registration-form-inner
+  .review-card-list {
+  margin: 0 0 27px 0;
+}
+.registration-application-section
+  .post-registration-section-sub
+  .post-registration-application-form-wrap
+  .accordion-post-registration-form
+  .accordion-post-registration-form-inner
+  .review-card-list
+  .review-card-header {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: inherit;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.registration-application-section
+  .post-registration-section-sub
+  .post-registration-application-form-wrap
+  .accordion-post-registration-form
+  .accordion-post-registration-form-inner
+  .review-card-list
+  .review-card-header
+  h4 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #58595B;
+  background-color: inherit;
+  padding: 0 0 0 0px;
+  margin: 0 0 0px 0;
+}
+.registration-application-section
+  .post-registration-section-sub
+  .post-registration-application-form-wrap
+  .accordion-post-registration-form
+  .accordion-post-registration-form-inner
+  .review-card-list
+  .review-card-header
+  h4
+  .btn-link {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #58595B;
+  background-color: inherit;
+  padding: 0 0 0 0px;
+  margin: 0 0 0px 0;
+  display: block;
+  width: 100%;
+  text-align: left;
+  position: relative;
+
+  padding: 20px 33px 19px 16px;
+  box-shadow: 0px 0px 3px rgba(63, 61, 60, 0.15), 0px 0px 0px rgba(63, 61, 60, 0.05);
+  -webkit-border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
+  border: 1px solid #D7D7D7;
+  border-bottom: none;
+  background-color: #fff;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.registration-application-section
+  .post-registration-section-sub
+  .post-registration-application-form-wrap
+  .accordion-post-registration-form
+  .accordion-post-registration-form-inner
+  .review-card-list
+  .review-card-header
+  h4
+  .btn-link .post-registration-accordion-icon{
+    margin: 0 0 0 0;
+  }
+  .registration-application-section
+  .post-registration-section-sub
+  .post-registration-application-form-wrap
+  .accordion-post-registration-form
+  .accordion-post-registration-form-inner
+  .review-card-list
+  .review-card-header
+  h4
+  .btn-link .post-registration-accordion-icon img{
+    display: block;
+  }
+  .registration-application-section
+  .post-registration-section-sub
+  .post-registration-application-form-wrap
+  .accordion-post-registration-form
+  .accordion-post-registration-form-inner
+  .review-card-list
+  .review-card-header
+  h4
+  .btn-link .post-registration-accordion-title{
+    margin: 0 0 0 14px;
+    /* word-break: break-word;
+    white-space: break-spaces; */
+  }
+.registration-application-section
+  .post-registration-section-sub
+  .post-registration-application-form-wrap
+  .accordion-post-registration-form
+  .accordion-post-registration-form-inner
+  .review-card-list
+  .review-card-header
+  h4
+  .btn-link.collapsed {
+  box-shadow: 0px 1px 3px rgba(63, 61, 60, 0.15), 0px 0px 0px rgba(63, 61, 60, 0.05);
+  -webkit-border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
+  border: 1px solid #D7D7D7;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.registration-application-section
+  .post-registration-section-sub
+  .post-registration-application-form-wrap
+  .accordion-post-registration-form
+  .accordion-post-registration-form-inner
+  .review-card-list
+  .review-card-header
+  h4
+  .btn-link:hover {
+  text-decoration: none;
+}
+.registration-application-section
+  .post-registration-section-sub
+  .post-registration-application-form-wrap
+  .accordion-post-registration-form
+  .accordion-post-registration-form-inner
+  .review-card-list
+  .review-card-header
+  h4
+  .btn-link:focus {
+  text-decoration: none;
+}
+.registration-application-section
+  .post-registration-section-sub
+  .post-registration-application-form-wrap
+  .accordion-post-registration-form
+  .accordion-post-registration-form-inner
+  .review-card-list
+  .review-card-header
+  h4
+  .btn-link
+  .accordion-arrow {
+  position: absolute;
+  right: 18px;
+  top: 20px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/accordion-arrow-up.svg);
+  background-repeat: no-repeat;
+  background-position: center 5px;
+  background-size: 14px 8.64px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.registration-application-section
+  .post-registration-section-sub
+  .post-registration-application-form-wrap
+  .accordion-post-registration-form
+  .accordion-post-registration-form-inner
+  .review-card-list
+  .review-card-header
+  h4
+  .btn-link.collapsed
+  .accordion-arrow {
+  background-image: url(../img/accordion-arrow-down.svg);
+}
+.registration-application-section
+  .post-registration-section-sub
+  .post-registration-application-form-wrap
+  .accordion-post-registration-form
+  .accordion-post-registration-form-inner
+  .review-card-list
+  .review-card-body {
+  padding: 21px 34px 17px 47px;
+
+  box-shadow: 0px -1px 3px rgba(63, 61, 60, 0.15), 0px 0px 0px rgba(63, 61, 60, 0.05);
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  border: 1px solid #D7D7D7;
+  border-top-color: rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+/* Post Registration Application Accordion End */
+body {
+    background-color: #7accc8;
+  }
+  
+  /* Background Image Welcome Start */
+  .bg-welcome {
+    background: url(../img/bg-welcome-img.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+  }
+  /* Background Image Welcome End */
+  
+  .no-padding-top {
+    padding-top: 0 !important;
+  }
+  .no-padding-left {
+    padding-left: 0 !important;
+  }
+  .no-padding-right {
+    padding-right: 0 !important;
+  }
+  .no-padding-bottom {
+    padding-bottom: 0 !important;
+  }
+  
+  .no-margin-top {
+    margin-top: 0 !important;
+  }
+  .no-margin-left {
+    margin-left: 0 !important;
+  }
+  .no-margin-right {
+    margin-right: 0 !important;
+  }
+  .no-margin-bottom {
+    margin-bottom: 0 !important;
+  }
+  .margin-right {
+    margin-right: 14px !important;
+  }
+  
+  .position-relative {
+    position: relative;
+  }
+  .position-absolute {
+    position: absolute;
+  }
+  .position-right {
+    right: 0;
+  }
+  .position-left {
+    left: 0;
+  }
+  .position-top {
+    top: 0;
+  }
+  .position-bottom {
+    bottom: 0;
+  }
+  
+  /* Display Flex Start */
+  .display-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  .justify-conten-space-between {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  /* Display Flex End */
+  
+  /* Tooltip Custom Style Start */
+  .tooltip-inner {
+    max-width: 430px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #686868;
+    background-color: #f8f7fa;
+    border: 1px solid #c9c9c9;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    padding: 26px 15px;
+    text-align: left;
+  }
+  .bs-tooltip-auto[x-placement^="right"] .arrow::before,
+  .bs-tooltip-right .arrow::before {
+    border-right-color: #c9c9c9;
+  }
+  /* Tooltip Custom Style End */

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Challenging_Match__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please indicate why this may be a difficult placement or why it&apos;s considered a priority host.</inlineHelpText>
+    <label>Reason for Priority or Challenging Match</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Limited fellow criteria from host</fullName>
+                <default>false</default>
+                <label>Limited fellow criteria from host</label>
+            </value>
+            <value>
+                <fullName>Location</fullName>
+                <default>false</default>
+                <label>Location</label>
+            </value>
+            <value>
+                <fullName>Important Host Relationship</fullName>
+                <default>false</default>
+                <label>Important Host Relationship</label>
+            </value>
+            <value>
+                <fullName>Politically Sensitive Relationship</fullName>
+                <default>false</default>
+                <label>Politically Sensitive Relationship</label>
+            </value>
+            <value>
+                <fullName>Specific Value to other EDF programs</fullName>
+                <default>false</default>
+                <label>Specific Value to other EDF programs</label>
+            </value>
+            <value>
+                <fullName>Sensitive to Caliber of Fellow</fullName>
+                <default>false</default>
+                <label>Sensitive to Caliber of Fellow</label>
+            </value>
+            <value>
+                <fullName>Technical project scope</fullName>
+                <default>false</default>
+                <label>Technical project scope</label>
+            </value>
+            <value>
+                <fullName>Unique Project or Skillset Required</fullName>
+                <default>false</default>
+                <label>Unique Project or Skillset Required</label>
+            </value>
+            <value>
+                <fullName>Vague workplan</fullName>
+                <default>false</default>
+                <label>Vague workplan</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

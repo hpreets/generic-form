@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>of_Donations_Last_5_Years__c</fullName>
+    <description>Total number of donations (HC + SC) in past 5 calendar years made to C3/C4 excluding In-Kind and Planned Gift for all Contacts in HH.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Count of donations in past 5 years (C3/C4, excl. In-Kind and Planned Gifts) for all Contacts in HH.</inlineHelpText>
+    <label># of Donations Last 5 Years</label>
+    <precision>6</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

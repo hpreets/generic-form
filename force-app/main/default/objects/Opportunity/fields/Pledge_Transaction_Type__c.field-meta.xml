@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pledge_Transaction_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Pledge Transaction Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pledge - Corporate</fullName>
+                <default>false</default>
+                <label>Pledge - Corporate</label>
+            </value>
+            <value>
+                <fullName>Pledge - Foundation</fullName>
+                <default>false</default>
+                <label>Pledge - Foundation</label>
+            </value>
+            <value>
+                <fullName>Pledge - Government</fullName>
+                <default>false</default>
+                <label>Pledge - Government</label>
+            </value>
+            <value>
+                <fullName>Pledge - MG Donation</fullName>
+                <default>false</default>
+                <label>Pledge - MG Donation</label>
+            </value>
+            <value>
+                <fullName>Pledge - Other Institutional Giving</fullName>
+                <default>false</default>
+                <label>Pledge - Other Institutional Giving</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

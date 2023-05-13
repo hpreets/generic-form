@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Netsuite_Record__c</fullName>
+    <externalId>false</externalId>
+    <label>Netsuite Record</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unconditional Pledge</fullName>
+                <default>false</default>
+                <label>Unconditional Pledge</label>
+            </value>
+            <value>
+                <fullName>AR Invoice</fullName>
+                <default>false</default>
+                <label>AR Invoice</label>
+            </value>
+            <value>
+                <fullName>Conditional Pledge</fullName>
+                <default>false</default>
+                <label>Conditional Pledge</label>
+            </value>
+            <value>
+                <fullName>Pledge Order</fullName>
+                <default>false</default>
+                <label>Pledge Order</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

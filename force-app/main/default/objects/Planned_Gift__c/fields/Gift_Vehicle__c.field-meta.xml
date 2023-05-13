@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gift_Vehicle__c</fullName>
+    <externalId>false</externalId>
+    <label>Gift Vehicle</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Insurance Policy</fullName>
+                <default>false</default>
+                <label>Insurance Policy</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>QRP - 401K</fullName>
+                <default>false</default>
+                <label>QRP - 401K</label>
+            </value>
+            <value>
+                <fullName>QRP - IRA</fullName>
+                <default>false</default>
+                <label>QRP - IRA</label>
+            </value>
+            <value>
+                <fullName>QRP - Keough</fullName>
+                <default>false</default>
+                <label>QRP - Keough</label>
+            </value>
+            <value>
+                <fullName>QRP - Other</fullName>
+                <default>false</default>
+                <label>QRP - Other</label>
+            </value>
+            <value>
+                <fullName>Security Account</fullName>
+                <default>false</default>
+                <label>Security Account</label>
+            </value>
+            <value>
+                <fullName>Trust - CRT</fullName>
+                <default>false</default>
+                <label>Trust - CRT</label>
+            </value>
+            <value>
+                <fullName>Trust - Living</fullName>
+                <default>false</default>
+                <label>Trust - Living</label>
+            </value>
+            <value>
+                <fullName>Will - Contingent</fullName>
+                <default>false</default>
+                <label>Will - Contingent</label>
+            </value>
+            <value>
+                <fullName>Will - Residual</fullName>
+                <default>false</default>
+                <label>Will - Residual</label>
+            </value>
+            <value>
+                <fullName>Will - Specific</fullName>
+                <default>false</default>
+                <label>Will - Specific</label>
+            </value>
+            <value>
+                <fullName>Will - Unknown</fullName>
+                <default>false</default>
+                <label>Will - Unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

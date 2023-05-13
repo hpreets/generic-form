@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Gifts_this_FY_Account__c</fullName>
+    <description>For all HH Members: Total C3/C4 gifts (Rec&apos;d, Rec&apos;d as Uncond. Pledge) this FY - hard and soft credit, excl. In-Kind and Planned Gift.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For all HH Members: Total C3/C4 gifts (Rec&apos;d, Rec&apos;d as Uncond. Pledge) this FY - hard/soft credit, excl. In-Kind and Planned Gift.</inlineHelpText>
+    <label>Total Gifts this FY</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

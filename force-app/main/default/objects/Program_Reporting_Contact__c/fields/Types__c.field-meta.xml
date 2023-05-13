@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Types__c</fullName>
+    <description>Heller created 2021</description>
+    <externalId>false</externalId>
+    <label>Types</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Program Liaison for Development</fullName>
+                <default>false</default>
+                <label>Program Liaison for Development</label>
+            </value>
+            <value>
+                <fullName>Project Lead</fullName>
+                <default>false</default>
+                <label>Project Lead</label>
+            </value>
+            <value>
+                <fullName>Budget Contact</fullName>
+                <default>false</default>
+                <label>Budget Contact</label>
+            </value>
+            <value>
+                <fullName>Budget Approver</fullName>
+                <default>false</default>
+                <label>Budget Approver</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

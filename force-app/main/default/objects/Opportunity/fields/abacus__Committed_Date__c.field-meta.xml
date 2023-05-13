@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>abacus__Committed_Date__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The date when the Opportunity becomes Committed, or Finalized and Won. It is set automatically if left blank. Changing this date after accounting data is generated doesn&apos;t affect existing data. Populates the Transaction Date on some Allocation Ledger Entries if it&apos;s not a future date.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The date when the Opportunity becomes Committed, or Finalized and Won. It is set automatically if left blank.</inlineHelpText>
+    <label>Committed Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

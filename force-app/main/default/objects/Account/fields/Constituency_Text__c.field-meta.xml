@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Constituency_Text__c</fullName>
+    <description>Returns Account Constituency as text for Compact Layouts.</description>
+    <externalId>false</externalId>
+    <formula>IF ( INCLUDES ( Organization_Constituency__c , &quot;CFF&quot; ), &quot;CFF; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Climate&quot; ), &quot;Climate; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Corporate Services&quot; ), &quot;Corporate Services; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Development&quot; ), &quot;Development; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Diversity&quot; ), &quot;Diversity; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Ecosystems&quot; ), &quot;Ecosystems; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;EDAF&quot; ), &quot;EDAF; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;EDF Alumni&quot; ), &quot;EDF Alumni; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;EDFBIZ&quot; ), &quot;EDFBIZ; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;EDF Europe&quot; ), &quot;EDF Europe; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;EDF Staff&quot; ), &quot;EDF Staff; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Elected Official&quot; ), &quot;Elected Official; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Energy&quot; ), &quot;Energy; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Executive Office&quot; ), &quot;Executive Office; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Finance&quot; ), &quot;Finance; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Global Climate&quot; ), &quot;Global Climate; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Global Operations&quot; ), &quot;Global Operations; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Global Strategy&quot; ), &quot;Global Strategy; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Health&quot; ), &quot;Health; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;HR&quot; ), &quot;HR; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Internal Audit&quot; ), &quot;Internal Audit; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;IT&quot; ), &quot;IT; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Legal and Compliance&quot; ), &quot;Legal and Compliance; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;MarComm&quot; ), &quot;MarComm; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Membership&quot; ), &quot;Membership; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;MethaneSAT&quot; ), &quot;MethaneSAT; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Oceans&quot; ), &quot;Oceans; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;OEPA&quot; ), &quot;OEPA; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Office of the Chief Economist&quot; ), &quot;Office of the Chief Economist; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Office of the Chief Scientist&quot; ), &quot;Office of the Chief Scientist; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;Political Affairs&quot; ), &quot;Political Affairs; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;TRED&quot; ), &quot;TRED; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;US Climate &amp; Energy&quot; ), &quot;US Climate &amp; Energy; &quot;,null ) &amp;
+IF ( INCLUDES ( Organization_Constituency__c , &quot;US Climate Legal and Regulatory&quot; ), &quot;US Climate Legal and Regulatory; &quot;,null )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Returns Account Constituency as text for Compact Layouts.</inlineHelpText>
+    <label>Constituency Text</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

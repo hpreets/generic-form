@@ -1,0 +1,202 @@
+.header{
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.registration-application-section {
+    margin: 0 40px 0 40px;
+    padding: 20px 0 20px 0;
+  }
+  .registration-application-section .registration-application-section-inner {
+    background-color: #fff;
+    margin: 0 auto;
+  }
+
+.poralstriped-border {
+    border: 1px solid #000;
+    width: 12%;
+    margin: inherit;
+    /* margin-top: 5%; */
+    margin-bottom: 1%;
+}
+
+.uploadbtn{
+    --sds-c-button-radius-border:1rem;
+    --sds-c-button-outline-brand-color-border: black;
+    --sds-c-button-text-color: black;
+    font-weight: 500;
+}
+
+.savebtn{
+    --sds-c-button-radius-border:1rem;
+    --sds-c-button-success-text-color: white;
+    --sds-c-button-success-color-background:#58af99;
+}
+
+.saveBtnDiv {
+    text-align: right;
+}
+
+.innerSectionbox{
+    max-width: 25rem;
+    border-radius: 1rem;
+    background-color: rgb(245 251 251);
+}
+
+.innerSectionBigbox{
+    max-width: 45rem;
+    border-radius: 1rem;
+    background-color: rgb(245 251 251)
+}
+
+.slds-form-element__control {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+}
+
+.approvedDate {
+    color: LIMEGREEN;
+    background: #06ff0033;
+    margin-left: 2rem;
+    border-radius: 1rem;
+    font-size: 90%;
+}
+.notApprovedDate {
+    color: Red;
+    background: #ff000026;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    font-size: 90%;
+}
+
+.textInputWithoutLabel {
+    max-width: 400px;
+    margin-top: -0.7em;
+    min-width: 150px;
+}
+
+.dateInputWithoutLabel {
+    max-width: 400px;
+    margin-top: -1em;
+    min-width: 150px;
+}
+
+.sectionContent {
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.slds-form-element__icon {
+    padding-top: 0em;
+}
+
+:host {
+    --lwc-spacingXxSmall: 0em;
+    --lwc-formLabelFontSize:1rem;
+    --lwc-colorTextDefault:#333;
+    --slds-g-color-neutral-base-30: #333
+    /* --lwc-formLabelFontSize: 1rem;
+    --lwc-colorTextDefault:#333; */
+    /* Other CSS custom properties here */
+}
+
+.tooltipContent {
+    --lwc-spacingXxSmall: 0em;
+}
+
+.fileUploadInput {
+    --lwc-formLabelFontSize:1rem;
+    --lwc-colorTextDefault:#333;
+    --slds-g-color-neutral-base-30: #333
+}
+
+.pills {
+    position:relative;
+    left: 140px;
+    top: 2px;
+}
+
+.spanHelpText {
+    position: relative;
+    top: 25px;
+}
+
+.labelForInputField {
+    position: relative;
+    top: 10px;
+    font-weight: bold;
+}
+
+.labelForTextAreaInputField {
+    position: relative;
+    top: 5px;
+    font-weight: bold;
+}
+
+.labelForFileUploadField {
+    position: relative;
+    top: 20px;
+    font-weight: bold;
+}
+
+.labelForCheckboxField {
+    position: relative;
+    font-weight: bold;
+}
+
+.labelForLabelField {
+    position: relative;
+    top: 3px;
+    font-weight: bold;
+}
+
+.labelForDateField {
+    position: relative;
+    font-weight: bold;
+}
+
+.labelForBoxField {
+    position: relative;
+    font-weight: bold;
+    top: -0.2em;
+}
+
+.urlLinkWithinBox {
+    color: #00008B;
+    font-weight: 600
+}
+
+.headingOneWithinBox {
+    font-size: medium;
+    color: #00008B;
+    font-weight: 600;
+}
+
+.headingTwoWithinBox {
+    font-size: medium;
+    color: #00008B;
+}
+
+.finalDeliverableSubHeading {
+    font-size: medium;
+    color: cadetblue;
+    font-weight: bold;
+}
+
+.sectionHeadingLeftIcon {
+    width: 2rem;
+}
+
+.sectionHeadingText {
+    font-size: medium;
+    font-weight: 500;
+}
+
+.pageHeadingText {
+    font-weight: 500;
+    font-size: large;
+}
+
+.whitespaceNoWrap {
+    white-space: nowrap;
+}

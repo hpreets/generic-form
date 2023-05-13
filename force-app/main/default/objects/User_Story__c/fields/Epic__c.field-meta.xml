@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Epic__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>A way to group related user stories together</inlineHelpText>
+    <label>Epic</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Acknowledgements</fullName>
+                <default>false</default>
+                <label>Acknowledgements</label>
+            </value>
+            <value>
+                <fullName>Activity Data Points</fullName>
+                <default>false</default>
+                <label>Activity Data Points</label>
+            </value>
+            <value>
+                <fullName>Activity Defaults &amp; Automation</fullName>
+                <default>false</default>
+                <label>Activity Defaults &amp; Automation</label>
+            </value>
+            <value>
+                <fullName>Activity Field Enhancements</fullName>
+                <default>false</default>
+                <label>Activity Field Enhancements</label>
+            </value>
+            <value>
+                <fullName>CDQ</fullName>
+                <default>false</default>
+                <label>CDQ</label>
+            </value>
+            <value>
+                <fullName>Classy</fullName>
+                <default>false</default>
+                <label>Classy</label>
+            </value>
+            <value>
+                <fullName>Community</fullName>
+                <default>false</default>
+                <label>Climate Corps</label>
+            </value>
+            <value>
+                <fullName>Constituent Management</fullName>
+                <default>false</default>
+                <label>Constituencies</label>
+            </value>
+            <value>
+                <fullName>Contact Information</fullName>
+                <default>false</default>
+                <label>Contact Information</label>
+            </value>
+            <value>
+                <fullName>Development Opportunities</fullName>
+                <default>false</default>
+                <label>Development Opportunities</label>
+            </value>
+            <value>
+                <fullName>System Administration</fullName>
+                <default>false</default>
+                <label>Documentation</label>
+            </value>
+            <value>
+                <fullName>Downstream Systems &amp; Integrations</fullName>
+                <default>false</default>
+                <label>Downstream Systems &amp; Integrations</label>
+            </value>
+            <value>
+                <fullName>Duplicate Management</fullName>
+                <default>false</default>
+                <label>Duplicate Management</label>
+            </value>
+            <value>
+                <fullName>Event Attendee Management</fullName>
+                <default>false</default>
+                <label>Event Attendee Management</label>
+            </value>
+            <value>
+                <fullName>Budget and Expense management</fullName>
+                <default>false</default>
+                <label>Event Budget and Expense management</label>
+            </value>
+            <value>
+                <fullName>Event Communications</fullName>
+                <default>false</default>
+                <label>Event Communications</label>
+            </value>
+            <value>
+                <fullName>List Management</fullName>
+                <default>false</default>
+                <label>Event List Management</label>
+            </value>
+            <value>
+                <fullName>Event On-site Logistics</fullName>
+                <default>false</default>
+                <label>Event On-site Logistics</label>
+            </value>
+            <value>
+                <fullName>Event Registration</fullName>
+                <default>false</default>
+                <label>Event Registration</label>
+            </value>
+            <value>
+                <fullName>CRM Functionality</fullName>
+                <default>false</default>
+                <label>Event-related CRM Functionality</label>
+            </value>
+            <value>
+                <fullName>Event Reporting</fullName>
+                <default>false</default>
+                <label>Event Reporting</label>
+            </value>
+            <value>
+                <fullName>Salesforce Integration</fullName>
+                <default>false</default>
+                <label>Event Salesforce Integration</label>
+            </value>
+            <value>
+                <fullName>Events Calendar</fullName>
+                <default>false</default>
+                <label>Events Calendar</label>
+            </value>
+            <value>
+                <fullName>Event Session Management</fullName>
+                <default>false</default>
+                <label>Event Session Management</label>
+            </value>
+            <value>
+                <fullName>Event Setup</fullName>
+                <default>false</default>
+                <label>Event Setup</label>
+            </value>
+            <value>
+                <fullName>Events Support and Training</fullName>
+                <default>false</default>
+                <label>Events Support and Training</label>
+            </value>
+            <value>
+                <fullName>Event Venue Management</fullName>
+                <default>false</default>
+                <label>Event Venue Management</label>
+            </value>
+            <value>
+                <fullName>Event Speaker Management</fullName>
+                <default>false</default>
+                <label>Event Volunteer Management</label>
+            </value>
+            <value>
+                <fullName>Email Tools &amp; Communication Preferences</fullName>
+                <default>false</default>
+                <label>External Communication Tools</label>
+            </value>
+            <value>
+                <fullName>Document Management</fullName>
+                <default>false</default>
+                <label>File Management</label>
+            </value>
+            <value>
+                <fullName>Gift Entry Management</fullName>
+                <default>false</default>
+                <label>Gift Entry Management</label>
+            </value>
+            <value>
+                <fullName>Grant Management</fullName>
+                <default>false</default>
+                <label>Grant Management</label>
+            </value>
+            <value>
+                <fullName>Interest Tracking</fullName>
+                <default>false</default>
+                <label>Interest Tracking</label>
+            </value>
+            <value>
+                <fullName>Member Portal</fullName>
+                <default>false</default>
+                <label>Member Portal</label>
+            </value>
+            <value>
+                <fullName>Member Services</fullName>
+                <default>false</default>
+                <label>Member Services</label>
+            </value>
+            <value>
+                <fullName>Member Services Analytics</fullName>
+                <default>false</default>
+                <label>Member Services Analytics</label>
+            </value>
+            <value>
+                <fullName>Member Services Cases</fullName>
+                <default>false</default>
+                <label>Member Services Cases</label>
+            </value>
+            <value>
+                <fullName>Computer Telephony Integration</fullName>
+                <default>false</default>
+                <label>Member Services Phone</label>
+            </value>
+            <value>
+                <fullName>Membership/Direct Response</fullName>
+                <default>false</default>
+                <label>Membership/Direct Response</label>
+            </value>
+            <value>
+                <fullName>Membership Opportunities</fullName>
+                <default>false</default>
+                <label>Membership Opportunities</label>
+            </value>
+            <value>
+                <fullName>Donation Management</fullName>
+                <default>false</default>
+                <label>Miscellaneous Opportunity Fields</label>
+            </value>
+            <value>
+                <fullName>Outlook Integration</fullName>
+                <default>false</default>
+                <label>Outlook Integration</label>
+            </value>
+            <value>
+                <fullName>Planned Giving</fullName>
+                <default>false</default>
+                <label>Planned Giving</label>
+            </value>
+            <value>
+                <fullName>Prospect Research</fullName>
+                <default>false</default>
+                <label>Prospect Research</label>
+            </value>
+            <value>
+                <fullName>Analytics</fullName>
+                <default>false</default>
+                <label>Reporting &amp; Analytics</label>
+            </value>
+            <value>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+                <label>Request Management</label>
+            </value>
+            <value>
+                <fullName>RM/PM Assignments</fullName>
+                <default>false</default>
+                <label>RM/PM Assignments</label>
+            </value>
+            <value>
+                <fullName>RM/PM Strategies</fullName>
+                <default>false</default>
+                <label>RM/PM Strategies</label>
+            </value>
+            <value>
+                <fullName>Security and Access</fullName>
+                <default>false</default>
+                <label>Security and Access</label>
+            </value>
+            <value>
+                <fullName>Sourcing System</fullName>
+                <default>false</default>
+                <label>Sourcing System</label>
+            </value>
+            <value>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+                <label>Stewardship</label>
+            </value>
+            <value>
+                <fullName>System Performance &amp; Best Practices</fullName>
+                <default>false</default>
+                <label>System Performance &amp; Best Practices</label>
+            </value>
+            <value>
+                <fullName>Treatments &amp; Consent</fullName>
+                <default>false</default>
+                <label>Treatments</label>
+            </value>
+            <value>
+                <fullName>User Interface</fullName>
+                <default>false</default>
+                <label>User Interface</label>
+            </value>
+            <value>
+                <fullName>Virtual Event Management</fullName>
+                <default>false</default>
+                <label>Virtual Event Management</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

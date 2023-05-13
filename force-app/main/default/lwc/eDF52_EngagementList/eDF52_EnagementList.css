@@ -1,0 +1,32 @@
+.header{
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+notsubmittedicon {
+  color: inherit;
+  background-color: #e35223;
+}
+
+.notsubmittedicon {
+  color: inherit;
+  background-color: #e35223;
+}
+span.notsubmittedicon {
+  color: inherit;
+  background-color: #e35223;
+}
+
+.submitted-icon {
+  color: inherit;
+  background-color: #62ab6c;
+}
+
+.bookmarked-icon {
+  color: inherit;
+  background-color: #a0ab62;
+}
+
+:host {
+  background-color: red;
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Migrated_Data_Update_Status__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>indicates if we will update the migrated data in the Full Sandbox prior to Launch and if so, the status of that work</inlineHelpText>
+    <label>Migrated Data Update Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Deferred to Launch</fullName>
+                <default>true</default>
+                <label>Deferred to Launch</label>
+            </value>
+            <value>
+                <fullName>Remigration Needed</fullName>
+                <default>false</default>
+                <label>Remigration Needed</label>
+            </value>
+            <value>
+                <fullName>Remigration Completed</fullName>
+                <default>false</default>
+                <label>Remigration Completed</label>
+            </value>
+            <value>
+                <fullName>Remigration Needed - Prod and HellerFul</fullName>
+                <default>false</default>
+                <label>Remigration Needed - Prod and HellerFul</label>
+            </value>
+            <value>
+                <fullName>Remigration Needed - Production Only</fullName>
+                <default>false</default>
+                <label>Remigration Needed - Production Only</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

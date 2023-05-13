@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry_Classification__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Shows on ConsiderMe</inlineHelpText>
+    <label>Industry Classification</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Arts, Media, Entertainment</fullName>
+                <default>false</default>
+                <label>Arts, Media, Entertainment</label>
+            </value>
+            <value>
+                <fullName>Automotive</fullName>
+                <default>false</default>
+                <label>Automotive</label>
+            </value>
+            <value>
+                <fullName>College or University</fullName>
+                <default>false</default>
+                <label>College or University</label>
+            </value>
+            <value>
+                <fullName>Consumer Package Goods</fullName>
+                <default>false</default>
+                <label>Consumer Package Goods</label>
+            </value>
+            <value>
+                <fullName>Energy or Utility</fullName>
+                <default>false</default>
+                <label>Energy or Utility</label>
+            </value>
+            <value>
+                <fullName>Financial Services and Insurance</fullName>
+                <default>false</default>
+                <label>Financial Services and Insurance</label>
+            </value>
+            <value>
+                <fullName>Food Services</fullName>
+                <default>false</default>
+                <label>Food Services</label>
+            </value>
+            <value>
+                <fullName>Government/Public Administration</fullName>
+                <default>false</default>
+                <label>Government/Public Administration</label>
+            </value>
+            <value>
+                <fullName>Health Care</fullName>
+                <default>false</default>
+                <label>Health Care</label>
+            </value>
+            <value>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+                <label>Hospitality</label>
+            </value>
+            <value>
+                <fullName>Industrial Goods and Manufacturing</fullName>
+                <default>false</default>
+                <label>Industrial Goods and Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Internet, Software, and Technology Services</fullName>
+                <default>false</default>
+                <label>Internet, Software, and Technology Services</label>
+            </value>
+            <value>
+                <fullName>Military</fullName>
+                <default>false</default>
+                <label>Military</label>
+            </value>
+            <value>
+                <fullName>Nonprofit</fullName>
+                <default>false</default>
+                <label>Nonprofit</label>
+            </value>
+            <value>
+                <fullName>Professional and Technical Services</fullName>
+                <default>false</default>
+                <label>Professional and Technical Services</label>
+            </value>
+            <value>
+                <fullName>Public Housing Authority</fullName>
+                <default>false</default>
+                <label>Public Housing Authority</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Religious Organization</fullName>
+                <default>false</default>
+                <label>Religious Organization</label>
+            </value>
+            <value>
+                <fullName>Retail and Apparel</fullName>
+                <default>false</default>
+                <label>Retail and Apparel</label>
+            </value>
+            <value>
+                <fullName>School or School District</fullName>
+                <default>false</default>
+                <label>School or School District</label>
+            </value>
+            <value>
+                <fullName>Telecommunications</fullName>
+                <default>false</default>
+                <label>Telecommunications</label>
+            </value>
+            <value>
+                <fullName>Transportation and Warehousing</fullName>
+                <default>false</default>
+                <label>Transportation and Warehousing</label>
+            </value>
+            <value>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+                <label>Wholesale</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

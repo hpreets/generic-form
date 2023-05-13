@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Gift_Amount_EDFaccount__c</fullName>
+    <description>DLRS returning amount of first gift from any Contact in Account.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Close Amount of the first received Opportunity on this Account (Planned Gifts not included)</inlineHelpText>
+    <label>First Gift Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

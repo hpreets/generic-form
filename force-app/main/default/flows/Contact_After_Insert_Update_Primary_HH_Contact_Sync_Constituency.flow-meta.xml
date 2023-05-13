@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <description>Syncs Sub-Constituency, Constituency, Capacity, RM, PM. On HH_Account and related HH contacts. When Primary Contact changes.
+Updated per FB-1566
+v8 Set run order</description>
+    <environments>Default</environments>
+    <interviewLabel>Contact (After Insert/Update) ---&gt; Primary HH Contact Sync Consti {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Contact (After Insert/Update) --&gt; Sync Constituency</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Account</name>
+        <label>Update Account</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type_Name_c__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>HH_Account</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Account_Primary_Handler__c</field>
+            <value>
+                <elementReference>$Record.Primary_Handler__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Capacity__c</field>
+            <value>
+                <elementReference>$Record.Capacity__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Organization_Constituency__c</field>
+            <value>
+                <elementReference>$Record.Constituency__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Organization_sub_constituency__c</field>
+            <value>
+                <elementReference>$Record.Sub_Constituency__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Portfolio_Manager__c</field>
+            <value>
+                <elementReference>$Record.Portfolio_Manager__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Account</targetReference>
+        </connector>
+        <filterFormula>{!$Permission.Flow_Automations_Off} &lt;&gt; TRUE
+&amp;&amp;
+{!$Record.X18_Digit_Contact_ID__c} = {!$Record.Account.npe01__One2OneContact__r.X18_Digit_Contact_ID__c}
+&amp;&amp;
+(
+(isnew() &amp;&amp; ( not(isblank({!$Record.Constituency__c})) || not(isblank({!$Record.Sub_Constituency__c})) || not(isblank(text(({!$Record.Capacity__c}))) || not(isblank({!$Record.Portfolio_Manager__c})) || not(isblank({!$Record.Primary_Handler__c}))))
+||
+(ischanged({!$Record.Constituency__c}) &amp;&amp; ({!$Record.Constituency_Text__c} &lt;&gt; {!$Record.Account.Constituency_Text__c}))
+||
+(ischanged({!$Record.Sub_Constituency__c}) &amp;&amp; ({!$Record.Sub_Constituency_Text__c} &lt;&gt; {!$Record.Account.Sub_Constituency_Text__c}))
+||
+(ischanged({!$Record.Capacity__c}) &amp;&amp; (text({!$Record.Capacity__c}) &lt;&gt; text({!$Record.Account.Capacity__c})))
+||
+(ischanged({!$Record.Portfolio_Manager__c}) &amp;&amp; ({!$Record.Portfolio_Manager__c} &lt;&gt; {!$Record.Account.Portfolio_Manager__c}))
+||
+(ischanged({!$Record.Primary_Handler__c}) &amp;&amp; ({!$Record.Primary_Handler__c} &lt;&gt; {!$Record.Account.Account_Primary_Handler__c})))
+)</filterFormula>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <triggerOrder>5</triggerOrder>
+</Flow>

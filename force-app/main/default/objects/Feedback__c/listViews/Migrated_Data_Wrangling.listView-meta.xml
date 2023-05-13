@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Migrated_Data_Wrangling</fullName>
+    <columns>NAME</columns>
+    <columns>Feedback_Title__c</columns>
+    <columns>Feedback_Status__c</columns>
+    <columns>Assigned_To__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Priority__c</columns>
+    <columns>Feedback_Type__c</columns>
+    <columns>Script_Status__c</columns>
+    <columns>Requires_update_to_Datamap__c</columns>
+    <columns>Resolution_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Feedback__c.Implementation</value>
+    </filters>
+    <filters>
+        <field>Script_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed,N/A</value>
+    </filters>
+    <filters>
+        <field>Feedback_Status__c</field>
+        <operation>notEqual</operation>
+        <value>To Be Resolved Post-Launch,Completed,QC Passed,Not An Issue,Duplicate</value>
+    </filters>
+    <filters>
+        <field>Feedback_Type__c</field>
+        <operation>equals</operation>
+        <value>Data cleanup or project,Migrated Data</value>
+    </filters>
+    <filters>
+        <field>Assigned_To__c</field>
+        <operation>contains</operation>
+        <value>Bre,heller</value>
+    </filters>
+    <label>Migrated Data Wrangling</label>
+</ListView>

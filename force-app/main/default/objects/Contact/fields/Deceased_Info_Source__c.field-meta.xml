@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deceased_Info_Source__c</fullName>
+    <externalId>false</externalId>
+    <label>Deceased Info Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anecdotal</fullName>
+                <default>false</default>
+                <label>Anecdotal</label>
+            </value>
+            <value>
+                <fullName>Estate</fullName>
+                <default>false</default>
+                <label>Estate</label>
+            </value>
+            <value>
+                <fullName>Family Member</fullName>
+                <default>false</default>
+                <label>Family Member</label>
+            </value>
+            <value>
+                <fullName>News source</fullName>
+                <default>false</default>
+                <label>News source</label>
+            </value>
+            <value>
+                <fullName>Postal Service</fullName>
+                <default>false</default>
+                <label>Postal Service</label>
+            </value>
+            <value>
+                <fullName>Screening</fullName>
+                <default>false</default>
+                <label>Screening</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

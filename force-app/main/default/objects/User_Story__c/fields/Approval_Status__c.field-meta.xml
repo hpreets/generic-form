@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Status__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>TBD how this field will be used, likely for design approvals</inlineHelpText>
+    <label>Approval Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pending EDF Stakeholder Review</fullName>
+                <default>false</default>
+                <label>Pending EDF Stakeholder Review</label>
+            </value>
+            <value>
+                <fullName>Ready for IT Review</fullName>
+                <default>false</default>
+                <label>Ready for IT Review</label>
+            </value>
+            <value>
+                <fullName>EDF Discussion Needed</fullName>
+                <default>false</default>
+                <label>EDF Discussion Needed</label>
+            </value>
+            <value>
+                <fullName>Ready for Heller Review</fullName>
+                <default>false</default>
+                <label>Ready for Heller Review</label>
+            </value>
+            <value>
+                <fullName>Ready for EDF Approval</fullName>
+                <default>false</default>
+                <label>Ready for EDF Approval</label>
+            </value>
+            <value>
+                <fullName>Department Approved</fullName>
+                <default>false</default>
+                <label>Department Approved</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

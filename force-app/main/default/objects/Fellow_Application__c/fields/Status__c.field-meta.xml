@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Stage</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Prospective Applicant</fullName>
+                <default>false</default>
+                <label>Prospective Applicant</label>
+            </value>
+            <value>
+                <fullName>Application Submitted</fullName>
+                <default>false</default>
+                <label>Application Submitted</label>
+            </value>
+            <value>
+                <fullName>Not Qualified and Notified</fullName>
+                <default>false</default>
+                <label>Not Qualified and Notified</label>
+            </value>
+            <value>
+                <fullName>Application Screened</fullName>
+                <default>false</default>
+                <label>Application Screened</label>
+            </value>
+            <value>
+                <fullName>Interview 1 Scheduled</fullName>
+                <default>false</default>
+                <label>Interview 1 Scheduled</label>
+            </value>
+            <value>
+                <fullName>Interview 1 Complete- Not Moving On</fullName>
+                <default>false</default>
+                <label>Interview 1 Complete- Not Moving On</label>
+            </value>
+            <value>
+                <fullName>Interview 2 Scheduled</fullName>
+                <default>false</default>
+                <label>Interview 2 Scheduled</label>
+            </value>
+            <value>
+                <fullName>Interview 2 Complete- Not Moving On</fullName>
+                <default>false</default>
+                <label>Interview 2 Complete- Not Moving On</label>
+            </value>
+            <value>
+                <fullName>Conditional Offer Accepted</fullName>
+                <default>false</default>
+                <label>Conditional Offer Accepted</label>
+            </value>
+            <value>
+                <fullName>Conditional Offer Declined</fullName>
+                <default>false</default>
+                <label>Conditional Offer Declined</label>
+            </value>
+            <value>
+                <fullName>Onboarding Conversation Not Approved</fullName>
+                <default>false</default>
+                <label>Onboarding Conversation Not Approved</label>
+            </value>
+            <value>
+                <fullName>Engagement Confirmed</fullName>
+                <default>false</default>
+                <label>Engagement Confirmed</label>
+            </value>
+            <value>
+                <fullName>Dropped out after confirmation and removed from network</fullName>
+                <default>false</default>
+                <label>Dropped out after confirmation and removed from network</label>
+            </value>
+            <value>
+                <fullName>Declined from Matching Pool</fullName>
+                <default>false</default>
+                <label>Declined from Matching Pool</label>
+            </value>
+            <value>
+                <fullName>Offer Sent</fullName>
+                <default>false</default>
+                <label>Offer Sent</label>
+            </value>
+            <value>
+                <fullName>Host Dropped after Confirmation</fullName>
+                <default>false</default>
+                <label>Host Dropped after Confirmation</label>
+            </value>
+            <value>
+                <fullName>Waitlist- Interview 1</fullName>
+                <default>false</default>
+                <label>Waitlist- Interview 1</label>
+            </value>
+            <value>
+                <fullName>Send Invite for Interview 1</fullName>
+                <default>false</default>
+                <label>Send Invite for Interview 1</label>
+            </value>
+            <value>
+                <fullName>Declined During Interview Process</fullName>
+                <default>false</default>
+                <label>Declined During Interview Process</label>
+            </value>
+            <value>
+                <fullName>Invite to Interview from Waitlist</fullName>
+                <default>false</default>
+                <label>Invite to Interview from Waitlist</label>
+            </value>
+            <value>
+                <fullName>Hold on Interview 2</fullName>
+                <default>false</default>
+                <label>Hold on Interview 2</label>
+            </value>
+            <value>
+                <fullName>Not Moving Forward from Waitlist</fullName>
+                <default>false</default>
+                <label>Not Moving Forward from Waitlist</label>
+            </value>
+            <value>
+                <fullName>Send Invite for Interview 2</fullName>
+                <default>false</default>
+                <label>Send invite for Interview 2</label>
+            </value>
+            <value>
+                <fullName>Hold on Matching</fullName>
+                <default>false</default>
+                <label>Hold on Matching</label>
+            </value>
+            <value>
+                <fullName>Send to Matching Pool</fullName>
+                <default>false</default>
+                <label>Send to Matching Pool</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

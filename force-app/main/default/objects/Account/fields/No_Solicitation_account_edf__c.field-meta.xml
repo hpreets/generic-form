@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Solicitation_account_edf__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check if the donor does not want to receive solicitations</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check if the donor does not want to receive solicitations</inlineHelpText>
+    <label>No Solicitation</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

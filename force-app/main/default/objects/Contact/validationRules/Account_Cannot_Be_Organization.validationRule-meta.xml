@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Cannot_Be_Organization</fullName>
+    <active>false</active>
+    <errorConditionFormula>RecordType.Name = &quot;Contact&quot;
+
+&amp;&amp;
+
+Account.RecordType.Name = &quot;Organization&quot;
+
+&amp;&amp;
+
+isblank( Lead_ID__c )</errorConditionFormula>
+    <errorMessage>On Contact records, the Account Name field should not be linked to a Organization Account. The Account Name field only needs to be filled in if you are adding a new contact to an existing household.</errorMessage>
+</ValidationRule>

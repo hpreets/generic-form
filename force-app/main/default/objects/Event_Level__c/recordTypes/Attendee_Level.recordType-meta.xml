@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attendee_Level</fullName>
+    <active>true</active>
+    <description>Costs and benefits of event attendance for an individual constituent</description>
+    <label>Attendee Level</label>
+    <picklistValues>
+        <picklist>Benefits__c</picklist>
+        <values>
+            <fullName>Admission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Annual Membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dinner for One</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greens Fees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lunch for One</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lunch for Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Event Gathering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Table</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T-Shirt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ticket</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

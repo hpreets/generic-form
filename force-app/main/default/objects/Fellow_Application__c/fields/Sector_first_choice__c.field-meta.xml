@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sector_first_choice__c</fullName>
+    <externalId>false</externalId>
+    <label>Sector first choice</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Colleges and universities</fullName>
+                <default>false</default>
+                <label>Colleges and universities</label>
+            </value>
+            <value>
+                <fullName>Consumer packaged goods</fullName>
+                <default>false</default>
+                <label>Consumer packaged goods</label>
+            </value>
+            <value>
+                <fullName>Financial services and insurance</fullName>
+                <default>false</default>
+                <label>Financial services and insurance</label>
+            </value>
+            <value>
+                <fullName>Food services</fullName>
+                <default>false</default>
+                <label>Food services</label>
+            </value>
+            <value>
+                <fullName>Government and public administration</fullName>
+                <default>false</default>
+                <label>Government and public administration</label>
+            </value>
+            <value>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+                <label>Healthcare</label>
+            </value>
+            <value>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+                <label>Hospitality</label>
+            </value>
+            <value>
+                <fullName>Industrial goods and manufacturing</fullName>
+                <default>false</default>
+                <label>Industrial goods and manufacturing</label>
+            </value>
+            <value>
+                <fullName>Information technology services</fullName>
+                <default>false</default>
+                <label>Information technology services</label>
+            </value>
+            <value>
+                <fullName>Non-profit</fullName>
+                <default>false</default>
+                <label>Non-profit</label>
+            </value>
+            <value>
+                <fullName>Professional and technical services</fullName>
+                <default>false</default>
+                <label>Professional and technical services</label>
+            </value>
+            <value>
+                <fullName>Real estate</fullName>
+                <default>false</default>
+                <label>Real estate</label>
+            </value>
+            <value>
+                <fullName>Religious organizations</fullName>
+                <default>false</default>
+                <label>Religious organizations</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>School and school districts</fullName>
+                <default>false</default>
+                <label>School and school districts</label>
+            </value>
+            <value>
+                <fullName>Telecommunications</fullName>
+                <default>false</default>
+                <label>Telecommunications</label>
+            </value>
+            <value>
+                <fullName>Transportation and warehousing</fullName>
+                <default>false</default>
+                <label>Transportation and warehousing</label>
+            </value>
+            <value>
+                <fullName>Utilities and energy companies</fullName>
+                <default>false</default>
+                <label>Utilities and energy companies</label>
+            </value>
+            <value>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+                <label>Wholesale</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

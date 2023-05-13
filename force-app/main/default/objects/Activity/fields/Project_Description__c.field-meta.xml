@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Description__c</fullName>
+    <description>Description of the work being funded by the donor – were their funds directed to a particular aspect or with a specific outcome in mind?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Include a description of the work being funded by the donor – were their funds directed to a particular aspect or with a specific outcome in mind?</inlineHelpText>
+    <label>Project Description</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

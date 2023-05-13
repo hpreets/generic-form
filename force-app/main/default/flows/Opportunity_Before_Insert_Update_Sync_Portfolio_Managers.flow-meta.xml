@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <name>Set_Portfolio_Managers</name>
+        <label>Set Portfolio Managers</label>
+        <locationX>249</locationX>
+        <locationY>527</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PG_Portfolio_Manager__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>PG_PortfolioManager</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Portfolio_Manager__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>PortfolioManager</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Flow_Automations_Off</name>
+        <label>Flow Automations Off</label>
+        <locationX>239</locationX>
+        <locationY>315</locationY>
+        <defaultConnector>
+            <targetReference>Set_Portfolio_Managers</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>User_Has_Flows_Off_Permission_Set</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Permission.Flow_Automations_Off</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>User Has Flows Off Permission Set</label>
+        </rules>
+    </decisions>
+    <description>Syncs Opportunity Portfolio Manager lookups with Account, or Primary Contact values.</description>
+    <formulas>
+        <name>PG_PortfolioManager</name>
+        <dataType>String</dataType>
+        <expression>BlankValue({!$Record.Account.PG_Portfolio_Manager__c},BlankValue({!$Record.npsp__Primary_Contact__r.PG_Portfolio_Manager__c},&apos;&apos;))</expression>
+    </formulas>
+    <formulas>
+        <name>PortfolioManager</name>
+        <dataType>String</dataType>
+        <expression>BlankValue({!$Record.Account.Portfolio_Manager__c},BlankValue({!$Record.npsp__Primary_Contact__r.Portfolio_Manager__c},&apos;&apos;))</expression>
+    </formulas>
+    <interviewLabel>Opportunity (Before Insert/Update) --&gt; Sync Portfolio Managers {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity (Before Insert/Update) --&gt; Sync Portfolio Managers</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>121</locationX>
+        <locationY>36</locationY>
+        <connector>
+            <targetReference>Flow_Automations_Off</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>IsClosed</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

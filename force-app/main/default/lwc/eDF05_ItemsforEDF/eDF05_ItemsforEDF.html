@@ -1,0 +1,642 @@
+<template>
+  <c-e-d-f13_-header></c-e-d-f13_-header>
+        <div class="body-wrapper">
+            <div class="container-fluid">
+                <div class="dashboard-wrap">
+                    <h1 class="dashboard-title">Hello, Suresh Tavva!</h1>
+                    <h4 class="dashboard-welcome-title">Welcome to Climate Corps applicant portal </h4>
+                    <div style="background-color: #07c7c3;">
+                        <lightning-card>
+                            <div class="slds-grid slds-gutters">
+                                <div class="slds-col slds-size_2-of-12" style="margin-left: 2.5rem;" if:true={clickedIcon}>
+                                    <lightning-icon icon-name={accordIcon} size="small" onclick={changeIcon}>
+                                    </lightning-icon><a style="color: black;font-weight: 600;font-size: medium;margin-left: 5%;"
+                                        onclick={changeIcon}>Submission</a>
+                                </div>
+                                <div class="slds-col slds-size_7-of-12">
+                
+                                </div>
+                                <div class="slds-col slds-size_2-of-12" style="margin-top: -1.5rem;" if:true={isSubmissionOpen}>
+                                    <lightning-combobox name="progress" placeholder="Select filter" options={options}
+                                        onchange={handleFilterChange}></lightning-combobox>
+                                </div>
+                                <div class="slds-col slds-size_1-of-12" if:true={isSubmissionOpen}>
+                                    <a>
+                                        <lightning-icon icon-name="utility:close" size="small" onclick={changeIcon}>
+                                        </lightning-icon>
+                                    </a>
+                                </div>
+                            </div>
+                            <div if:true={isSubmissionOpen}>
+                                
+                                
+                            </div>
+                        </lightning-card>
+                
+                        <lightning-card>
+                            <div style=" max-width: 100%;padding-left: 1%;background-color: #C2E3E4;margin:1.5rem;">
+                                <lightning-accordion>
+                                    <lightning-accordion-section name="A" label="Submission">
+                                        <lightning-accordion>
+                                            <lightning-accordion-section name="B" class="accSectionFont"
+                                                label="Due Week of Placement Confirmation">
+                
+                                                <div class="slds-grid slds-gutters">
+                                                    <div class="slds-col dueWeekColSize">
+                                                        
+                                                        <div class="slds-box boxheight">
+                                                            <h3 slot="title">
+                                                                <div class="slds-grid slds-gutters">
+                                                                    <div class="slds-col slds-size_2-of-12">
+                                                                        <lightning-icon icon-name="utility:play" size="small">
+                                                                        </lightning-icon>
+                                                                    </div>
+                                                                    <div class="slds-col slds-size_10-of-12">
+                                                                        <div dir="rtl">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-checkbox_toggle slds-grid">
+                                                                                    <input type="checkbox" name="checkbox-toggle-16"
+                                                                                        value="checkbox-toggle-16"
+                                                                                        aria-describedby="checkbox-toggle-16" />
+                
+                                                                                    <span id="checkbox-toggle-16"
+                                                                                        class="slds-checkbox_faux_container toggleSwitch"
+                                                                                        aria-live="assertive">
+                                                                                        <span class="slds-checkbox_faux"></span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_on toggleActive">Done</span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_off toggleInActive">Not
+                                                                                            done</span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </h3>
+                                                            <br />
+                                                            <div>
+                                                                <p><b>Watch the orientation webinar</b></p>
+                                                            </div>
+                                                            <p><span class="duedatestyle">{dueDate}:</span> April 6</p>
+                                                            <br />
+                                                            <button class="slds-button slds-button_success sucessbtn"
+                                                                onclick={onClickWatchOrientation}>Watch</button>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="slds-col dueWeekColSize">
+                                                      
+                                                        <div class="slds-box boxheight">
+                                                            <h3 slot="title">
+                                                                <div class="slds-grid slds-gutters">
+                                                                    <div class="slds-col">
+                                                                        <lightning-icon icon-name="utility:note" size="small">
+                                                                        </lightning-icon>
+                                                                    </div>
+                                                                    <div class="slds-col">
+                                                                        <div dir="rtl">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-checkbox_toggle slds-grid">
+                                                                                    <input type="checkbox" name="checkbox-toggle-17"
+                                                                                        value="checkbox-toggle-17"
+                                                                                        aria-describedby="checkbox-toggle-17"
+                                                                                        checked="" />
+                
+                                                                                    <span id="checkbox-toggle-17"
+                                                                                        class="slds-checkbox_faux_container toggleSwitch"
+                                                                                        aria-live="assertive">
+                                                                                        <span class="slds-checkbox_faux"></span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_on toggleActive">Done</span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_off toggleInActive">Not
+                                                                                            done</span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </h3>
+                                                            <br />
+                                                            <div>
+                                                                <p><b>Signup for the KiloWatt</b></p>
+                                                            </div><br />
+                                                            <p><span class="duedatestyle">{dueDate}:</span> April 6</p>
+                                                            <br />
+                                                            <button class="slds-button slds-button_success sucessbtn"
+                                                                onclick={onClickSignupKilWatt}>Signup</button>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="slds-col dueWeekColSize">
+                                                      
+                                                        <div class="slds-box boxheight">
+                                                            <h3 slot="title">
+                                                                <div class="slds-grid slds-gutters">
+                                                                    <div class="slds-col">
+                                                                        <lightning-icon icon-name="utility:world" size="small">
+                                                                        </lightning-icon>
+                                                                    </div>
+                                                                    <div class="slds-col">
+                                                                        <div dir="rtl">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-checkbox_toggle slds-grid">
+                                                                                    <input type="checkbox" name="checkbox-toggle-18"
+                                                                                        value="checkbox-toggle-18"
+                                                                                        aria-describedby="checkbox-toggle-18"
+                                                                                        checked="" />
+                
+                                                                                    <span id="checkbox-toggle-18"
+                                                                                        class="slds-checkbox_faux_container toggleSwitch"
+                                                                                        aria-live="assertive">
+                                                                                        <span class="slds-checkbox_faux"></span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_on toggleActive">Done</span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_off toggleInActive">Not
+                                                                                            done</span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </h3>
+                                                            <br />
+                                                            <div>
+                                                                <p><b>International Students Read Work Authorization Policy</b></p>
+                                                            </div>
+                                                            <p><span class="duedatestyle">{dueDate}:</span> April 6</p>
+                                                            <br />
+                                                            <button class="slds-button slds-button_success sucessbtn"
+                                                                onclick={onClickStudentPolicy}>Check</button>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="slds-col dueWeekColSize">
+                                                      
+                                                        <div class="slds-box boxheight">
+                                                            <h3 slot="title">
+                                                                <div class="slds-grid slds-gutters">
+                                                                    <div class="slds-col">
+                                                                        <lightning-icon icon-name="utility:play" size="small">
+                                                                        </lightning-icon>
+                                                                    </div>
+                                                                    <div class="slds-col">
+                                                                        <div dir="rtl">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-checkbox_toggle slds-grid">
+                                                                                    <input type="checkbox" name="checkbox-toggle-19"
+                                                                                        value="checkbox-toggle-19"
+                                                                                        aria-describedby="checkbox-toggle-19"
+                                                                                        checked="" />
+                                                                                    <span id="checkbox-toggle-19"
+                                                                                        class="slds-checkbox_faux_container toggleSwitch"
+                                                                                        aria-live="assertive">
+                                                                                        <span class="slds-checkbox_faux"></span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_on toggleActive">Done</span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_off toggleInActive">Not
+                                                                                            done</span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </h3>
+                                                            <br />
+                                                            <div>
+                                                                <p><b>EDF Paid Fellows which HR Webinar</b></p>
+                                                            </div>
+                                                            <p><span class="duedatestyle">{dueDate}:</span> April 6</p>
+                                                            <br />
+                                                            <button class="slds-button slds-button_success sucessbtn"
+                                                                onclick={onClickHRWebinar}>Watch</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </lightning-accordion-section>
+                
+                                            <lightning-accordion-section name="C" class="accSectionFont" label="Due April 19">
+                                                <div class="slds-grid slds-gutters">
+                                                    <div class="slds-col dueWeekColSize">
+                                                     
+                                                        <div class="slds-box boxheight">
+                                                            <h3 slot="title">
+                                                                <div class="slds-grid slds-gutters">
+                                                                    <div class="slds-col slds-size_2-of-12">
+                                                                        <lightning-icon icon-name="utility:date_input" size="small">
+                                                                        </lightning-icon>
+                                                                    </div>
+                                                                    <div class="slds-col slds-size_10-of-12">
+                                                                        <div dir="rtl">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-checkbox_toggle slds-grid">
+                                                                                    <input type="checkbox" name="checkbox-toggle-20"
+                                                                                        value="checkbox-toggle-20"
+                                                                                        aria-describedby="checkbox-toggle-20" />
+                
+                                                                                    <span id="checkbox-toggle-20"
+                                                                                        class="slds-checkbox_faux_container toggleSwitch"
+                                                                                        aria-live="assertive">
+                                                                                        <span class="slds-checkbox_faux"></span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_on toggleActive">Done</span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_off toggleInActive">Not
+                                                                                            done</span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </h3>
+                                                            <br />
+                                                            <div>
+                                                                <p><b>Submit Start and End dates</b></p>
+                                                            </div>
+                                                            <p><span class="duedatestyle">{dueDate}:</span> April 6</p>
+                                                            <br /><br />
+                                                            <button class="slds-button slds-button_success sucessbtn"
+                                                                onclick={onClickSubmitDates}>Submit</button>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="slds-col dueWeekColSize">
+                                                   
+                                                        <div class="slds-box boxheight">
+                                                            <h3 slot="title">
+                                                                <div class="slds-grid slds-gutters">
+                                                                    <div class="slds-col">
+                                                                        <lightning-icon icon-name="utility:date_input" size="small">
+                                                                        </lightning-icon>
+                                                                    </div>
+                                                                    <div class="slds-col">
+                                                                        <div dir="rtl">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-checkbox_toggle slds-grid">
+                                                                                    <input type="checkbox" name="checkbox-toggle-21"
+                                                                                        value="checkbox-toggle-21"
+                                                                                        aria-describedby="checkbox-toggle-21" />
+                
+                                                                                    <span id="checkbox-toggle-21"
+                                                                                        class="slds-checkbox_faux_container toggleSwitch"
+                                                                                        aria-live="assertive">
+                                                                                        <span class="slds-checkbox_faux"></span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_on toggleActive">Done</span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_off toggleInActive">Not
+                                                                                            done</span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </h3>
+                                                            <br />
+                                                            <div>
+                                                                <p><b>Submit Workplan</b></p>
+                                                            </div>
+                                                            <p><span class="duedatestyle">{dueDate}:</span> April 6</p>
+                                                            <br /><br />
+                                                            <button class="slds-button slds-button_success sucessbtn"
+                                                                onclick={onClickSubmitWorkPlan}>Submit</button>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="slds-col dueWeekColSize">
+                                                      
+                                                        <div class="slds-box boxheight">
+                                                            <h3 slot="title">
+                                                                <div class="slds-grid slds-gutters">
+                                                                    <div class="slds-col">
+                                                                        <lightning-icon icon-name="utility:image" size="small">
+                                                                        </lightning-icon>
+                                                                    </div>
+                                                                    <div class="slds-col">
+                                                                        <div dir="rtl">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-checkbox_toggle slds-grid">
+                                                                                    <input type="checkbox" name="checkbox-toggle-22"
+                                                                                        value="checkbox-toggle-20"
+                                                                                        aria-describedby="checkbox-toggle-22"
+                                                                                        checked="" />
+                
+                                                                                    <span id="checkbox-toggle-22"
+                                                                                        class="slds-checkbox_faux_container toggleSwitch"
+                                                                                        aria-live="assertive">
+                                                                                        <span class="slds-checkbox_faux"></span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_on toggleActive">Done</span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_off toggleInActive">Not
+                                                                                            done</span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </h3>
+                                                            <br />
+                                                            <div>
+                                                                <p><b>Media Profile</b></p>
+                                                            </div>
+                                                            <p><span class="duedatestyle">{dueDate}:</span> April 6</p>
+                                                            <br /><br />
+                                                            <button class="slds-button slds-button_success sucessbtn"
+                                                                onclick={onClickMediaProfile}>Submit</button>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="slds-col dueWeekColSize">
+                                                     
+                                                        <div class="slds-box boxheight">
+                                                            <h3 slot="title">
+                                                                <div class="slds-grid slds-gutters">
+                                                                    <div class="slds-col">
+                                                                        <lightning-icon icon-name="utility:info" size="small">
+                                                                        </lightning-icon>
+                                                                    </div>
+                                                                    <div class="slds-col">
+                                                                        <div dir="rtl">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-checkbox_toggle slds-grid">
+                                                                                    <input type="checkbox" name="checkbox-toggle-23"
+                                                                                        value="checkbox-toggle-23"
+                                                                                        aria-describedby="checkbox-toggle-23" />
+                
+                                                                                    <span id="checkbox-toggle-23"
+                                                                                        class="slds-checkbox_faux_container toggleSwitch"
+                                                                                        aria-live="assertive">
+                                                                                        <span class="slds-checkbox_faux"></span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_on toggleActive">Done</span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_off toggleInActive">Not
+                                                                                            done</span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </h3>
+                                                            <br />
+                                                            <div>
+                                                                <p><b>Training info and Training Survey</b></p>
+                                                            </div>
+                                                            <p><span class="duedatestyle">{dueDate}:</span> April 6</p>
+                                                            <br />
+                                                            <button class="slds-button slds-button_success sucessbtn"
+                                                                onclick={onClickTrainingInfoCheck}>Check</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </lightning-accordion-section>
+                                            <lightning-accordion-section name="C" class="accSectionFont" label="Due May 09">
+                                                <div class="slds-grid slds-gutters">
+                                                    <div class="slds-col dueWeekColSize">
+                                                      
+                                                        <div class="slds-box boxheight">
+                                                            <h3 slot="title">
+                                                                <div class="slds-grid slds-gutters">
+                                                                    <div class="slds-col slds-size_2-of-12">
+                                                                        <lightning-icon icon-name="utility:date_input" size="small">
+                                                                        </lightning-icon>
+                                                                    </div>
+                                                                    <div class="slds-col slds-size_10-of-12">
+                                                                        <div dir="rtl">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-checkbox_toggle slds-grid">
+                                                                                    <input type="checkbox" name="checkbox-toggle-31"
+                                                                                        value="checkbox-toggle-31"
+                                                                                        aria-describedby="checkbox-toggle-31" />
+                
+                                                                                    <span id="checkbox-toggle-31"
+                                                                                        class="slds-checkbox_faux_container toggleSwitch"
+                                                                                        aria-live="assertive">
+                                                                                        <span class="slds-checkbox_faux"></span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_on toggleActive">Done</span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_off toggleInActive">Not
+                                                                                            done</span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </h3>
+                                                            <br />
+                                                            <div>
+                                                                <p><b>Register for training</b></p>
+                                                            </div><br />
+                                                            <p><span class="duedatestyle">{dueDate}:</span> May 09</p>
+                                                            <br />
+                                                            <button class="slds-button slds-button_success sucessbtn"
+                                                                onclick={onClickSubmitDates}>Submit</button>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="slds-col dueWeekColSize">
+                                                       
+                                                        <div class="slds-box boxheight">
+                                                            <h3 slot="title">
+                                                                <div class="slds-grid slds-gutters">
+                                                                    <div class="slds-col">
+                                                                        <lightning-icon icon-name="utility:date_input" size="small">
+                                                                        </lightning-icon>
+                                                                    </div>
+                                                                    <div class="slds-col">
+                                                                        <div dir="rtl">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-checkbox_toggle slds-grid">
+                                                                                    <input type="checkbox" name="checkbox-toggle-32"
+                                                                                        value="checkbox-toggle-32"
+                                                                                        aria-describedby="checkbox-toggle-32" />
+                
+                                                                                    <span id="checkbox-toggle-32"
+                                                                                        class="slds-checkbox_faux_container toggleSwitch"
+                                                                                        aria-live="assertive">
+                                                                                        <span class="slds-checkbox_faux"></span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_on toggleActive">Done</span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_off toggleInActive">Not
+                                                                                            done</span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </h3>
+                                                            <br />
+                                                            <div>
+                                                                <p><b>Signup for climate Corps connect</b></p>
+                                                            </div>
+                                                            <p><span class="duedatestyle">{dueDate}:</span> May 24</p>
+                                                            <br />
+                                                            <button class="slds-button slds-button_success sucessbtn"
+                                                                onclick={onClickSubmitWorkPlan}>Signup</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </lightning-accordion-section>
+                                            <lightning-accordion-section name="D" class="accSectionFont" label="Due May 24">
+                                                <div class="slds-grid slds-gutters">
+                                                    <div class="slds-col dueWeekColSize">
+                                                      
+                                                        <div class="slds-box boxheight">
+                                                            <h3 slot="title">
+                                                                <div class="slds-grid slds-gutters">
+                                                                    <div class="slds-col slds-size_2-of-12">
+                                                                        <lightning-icon icon-name="utility:date_input" size="small">
+                                                                        </lightning-icon>
+                                                                    </div>
+                                                                    <div class="slds-col slds-size_10-of-12">
+                                                                        <div dir="rtl">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-checkbox_toggle slds-grid">
+                                                                                    <input type="checkbox" name="checkbox-toggle-31"
+                                                                                        value="checkbox-toggle-33"
+                                                                                        aria-describedby="checkbox-toggle-31" />
+                
+                                                                                    <span id="checkbox-toggle-33"
+                                                                                        class="slds-checkbox_faux_container toggleSwitch"
+                                                                                        aria-live="assertive">
+                                                                                        <span class="slds-checkbox_faux"></span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_on toggleActive">Done</span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_off toggleInActive">Not
+                                                                                            done</span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </h3>
+                                                            <br />
+                                                            <div>
+                                                                <p><b>Complete Training Pre-Work</b></p>
+                                                            </div><br />
+                                                            <p><span class="duedatestyle">{dueDate}:</span> May 24</p>
+                                                            <br />
+                                                            <button class="slds-button slds-button_success sucessbtn"
+                                                                onclick={onClickSubmitDates}>Access</button>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="slds-col dueWeekColSize">
+                                                       
+                                                        <div class="slds-box boxheight">
+                                                            <h3 slot="title">
+                                                                <div class="slds-grid slds-gutters">
+                                                                    <div class="slds-col">
+                                                                        <lightning-icon icon-name="utility:date_input" size="small">
+                                                                        </lightning-icon>
+                                                                    </div>
+                                                                    <div class="slds-col">
+                                                                        <div dir="rtl">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-checkbox_toggle slds-grid">
+                                                                                    <input type="checkbox" name="checkbox-toggle-32"
+                                                                                        value="checkbox-toggle-34"
+                                                                                        aria-describedby="checkbox-toggle-32" />
+                
+                                                                                    <span id="checkbox-toggle-34"
+                                                                                        class="slds-checkbox_faux_container toggleSwitch"
+                                                                                        aria-live="assertive">
+                                                                                        <span class="slds-checkbox_faux"></span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_on toggleActive">Done</span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_off toggleInActive">Not
+                                                                                            done</span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </h3>
+                                                            <br />
+                                                            <div>
+                                                                <p><b>Signup for Linkedin Alumni Group</b></p>
+                                                            </div>
+                                                            <p><span class="duedatestyle">{dueDate}:</span> May 24</p>
+                                                            <br />
+                                                            <button class="slds-button slds-button_success sucessbtn"
+                                                                onclick={onClickSubmitWorkPlan}>Signup</button>
+                                                        </div>
+                                                    </div>
+													      <div class="slds-col dueWeekColSize">
+                                                       
+                                                        <div class="slds-box boxheight">
+                                                            <h3 slot="title">
+                                                                <div class="slds-grid slds-gutters">
+                                                                    <div class="slds-col">
+                                                                        <lightning-icon icon-name="utility:date_input" size="small">
+                                                                        </lightning-icon>
+                                                                    </div>
+                                                                    <div class="slds-col">
+                                                                        <div dir="rtl">
+                                                                            <div class="slds-form-element">
+                                                                                <label class="slds-checkbox_toggle slds-grid">
+                                                                                    <input type="checkbox" name="checkbox-toggle-32"
+                                                                                        value="checkbox-toggle-35"
+                                                                                        aria-describedby="checkbox-toggle-32" />
+                
+                                                                                    <span id="checkbox-toggle-35"
+                                                                                        class="slds-checkbox_faux_container toggleSwitch"
+                                                                                        aria-live="assertive">
+                                                                                        <span class="slds-checkbox_faux"></span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_on toggleActive">Done</span>
+                                                                                        <span
+                                                                                            class="slds-checkbox_off toggleInActive">Not
+                                                                                            done</span>
+                                                                                    </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </h3>
+                                                            <br />
+                                                            <div>
+                                                                <p><b>Signup for Mentor</b></p>
+                                                            </div>
+                                                            <p><span class="duedatestyle">{dueDate}:</span> May 24</p>
+                                                            <br />
+                                                            <button class="slds-button slds-button_success sucessbtn"
+                                                                onclick={onClickSubmitWorkPlan}>Signup</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </lightning-accordion-section>
+                                        </lightning-accordion>
+                                    </lightning-accordion-section>
+                                </lightning-accordion>
+                            </div>
+                        </lightning-card>
+                    </div>
+                
+                    <c-e-d-f11_-shortcuts></c-e-d-f11_-shortcuts> 
+                  
+                </div>
+            </div>
+        </div>
+</template>

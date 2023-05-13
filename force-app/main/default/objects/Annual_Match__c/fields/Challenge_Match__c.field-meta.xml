@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Challenge_Match__c</fullName>
+    <description>Challenge Match related to annual match record.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Challenge Match related to annual match record.</inlineHelpText>
+    <label>Challenge Match</label>
+    <referenceTo>Challenge_Match__c</referenceTo>
+    <relationshipLabel>Annual Matches</relationshipLabel>
+    <relationshipName>Annual_Matches</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

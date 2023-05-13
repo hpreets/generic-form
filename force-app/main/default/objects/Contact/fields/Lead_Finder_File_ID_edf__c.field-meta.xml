@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Finder_File_ID_edf__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Unique external ID assigned to lead record. Used to match back to a prospect mailing.</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Unique external ID assigned to lead record. Used to match back to a prospect mailing.</inlineHelpText>
+    <label>Lead Finder File ID</label>
+    <length>25</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

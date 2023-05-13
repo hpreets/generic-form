@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TGA_Projected_Current_FY_Contact__c</fullName>
+    <description>EDF Total gift amount projected for current FY - only includes donations with a stage of projected, solicited or verbally committed</description>
+    <externalId>false</externalId>
+    <inlineHelpText>EDF Total gift amount projected for current FY - only includes donations with a stage of projected, solicited or verbally committed</inlineHelpText>
+    <label>Total Gift Projected Current FY</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

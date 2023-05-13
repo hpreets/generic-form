@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Public_Figure__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Name of person who holds/held public office or other public figure</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Name of person who holds/held public office or other public figure.</inlineHelpText>
+    <label>Public Figure</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Political Relationships (Public Figure)</relationshipLabel>
+    <relationshipName>Political_Relationships</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

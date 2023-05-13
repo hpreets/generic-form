@@ -1,0 +1,31 @@
+<!--
+  @description       : 
+  @author            : Sai Teja
+  @last modified on  : 05-23-2022
+  @last modified by  : Sai Teja
+-->
+<template>
+    <!-- <lightning-card> -->
+        <c-e-d-f13_-header></c-e-d-f13_-header>
+        <div class="body-wrapper">
+            <div class="container-fluid">
+                <div class="dashboard-wrap">
+                
+                    <div if:true={contact}>
+                    <h1 class="dashboard-title"><lightning-formatted-rich-text value={label.hello}></lightning-formatted-rich-text>, {contact.firstName} {contact.lastName}!</h1>
+                    </div>
+                    <c-e-d-f09_-action-center></c-e-d-f09_-action-center>
+                    <br/>  
+                    <!-- <c-e-d-f10_-next-steps></c-e-d-f10_-next-steps>
+                    <c-e-d-f11_-shortcuts></c-e-d-f11_-shortcuts>  -->
+                    <template if:true={NextSteps}>
+                    <c-e-d-f10_-next-steps></c-e-d-f10_-next-steps>
+                    </template>
+                    <template if:true={ShortCuts}>
+                    <c-e-d-f11_-shortcuts></c-e-d-f11_-shortcuts> 
+                    </template>
+                </div>
+            </div>
+        </div>
+    <!-- </lightning-card> -->
+</template>

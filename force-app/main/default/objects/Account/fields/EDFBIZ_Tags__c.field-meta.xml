@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EDFBIZ_Tags__c</fullName>
+    <externalId>false</externalId>
+    <label>EDFBIZ Tags</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EDFBIZ Top Company</fullName>
+                <default>false</default>
+                <label>EDFBIZ Top Company</label>
+            </value>
+            <value>
+                <fullName>F100</fullName>
+                <default>false</default>
+                <label>F100</label>
+            </value>
+            <value>
+                <fullName>Consumer Health Target Company</fullName>
+                <default>false</default>
+                <label>Consumer Health Target Company</label>
+            </value>
+            <value>
+                <fullName>Deforestation Company</fullName>
+                <default>false</default>
+                <label>Deforestation Company</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

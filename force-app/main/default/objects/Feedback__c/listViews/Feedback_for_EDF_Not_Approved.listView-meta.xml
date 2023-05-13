@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Feedback_for_EDF_Not_Approved</fullName>
+    <columns>NAME</columns>
+    <columns>Priority__c</columns>
+    <columns>Feedback_Title__c</columns>
+    <columns>Resolution_Notes__c</columns>
+    <columns>Approval_Status__c</columns>
+    <columns>Approval_Date__c</columns>
+    <columns>Feedback_Status__c</columns>
+    <columns>Feedback_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Approval_Status__c</field>
+        <operation>equals</operation>
+        <value>Not Approved</value>
+    </filters>
+    <filters>
+        <field>Feedback_Status__c</field>
+        <operation>equals</operation>
+        <value>In Process,Resolution Documented,Completed,QC Passed</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Feedback__c.Implementation</value>
+    </filters>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>notContain</operation>
+        <value>alyssa b,josh s,ellen s</value>
+    </filters>
+    <label>Feedback for EDF Not Approved</label>
+</ListView>

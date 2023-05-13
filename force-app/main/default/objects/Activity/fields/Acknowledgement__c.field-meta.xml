@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acknowledgement__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Please check for all donation acknowledgement activities. Checkbox should remain unchecked for all other activity entries.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please check for all donation acknowledgement activities. Checkbox should remain unchecked for all other activity entries.</inlineHelpText>
+    <label>Acknowledgement</label>
+    <type>Checkbox</type>
+</CustomField>

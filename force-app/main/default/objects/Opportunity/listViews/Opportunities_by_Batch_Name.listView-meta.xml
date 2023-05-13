@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunities_by_Batch_Name</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>npsp__Primary_Contact__c</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>Close_Amount__c</columns>
+    <columns>Currency_Type__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Entity__c</columns>
+    <columns>Processed_By__c</columns>
+    <columns>npsp__Batch_Number__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>npsp__Batch_Number__c</field>
+        <operation>equals</operation>
+        <value>BATCH-07253,BATCH-07096</value>
+    </filters>
+    <label>Opportunities by Batch Number</label>
+</ListView>

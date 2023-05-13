@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rcpt_or_Ack_Version_New_Donation_Leaders__c</fullName>
+    <description>Membership sends this text value to its receipt/acknowledgement mailshop when a donor gives their first gift to EDF and it&apos;s at Membership&apos;s Leadership Team level. The various text values indicate which receipt/acknowledgement version the mailshop should send, based on the entity, campaign, whether it is a donor-advised-fund grant, and any other relevant criteria. The text values are arranged between Membership Communications and its mailshop, so the mailshop knows by this value which version to send.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For Membership&apos;s data file to receipt/ack mail shop.</inlineHelpText>
+    <label>Rcpt or Ack Version-New Donation Leaders</label>
+    <length>80</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

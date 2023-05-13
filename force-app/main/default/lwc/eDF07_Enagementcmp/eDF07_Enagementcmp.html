@@ -1,0 +1,827 @@
+<!--
+  @description       : 
+  @author            : Sai Teja
+  @last modified on  : 07-07-2022
+  @last modified by  : Sai Teja
+-->
+<template>
+    <c-e-d-f13_-header></c-e-d-f13_-header>
+    <!-- Header Bottom Section Start -->
+    <template if:true={navigateFromDashboard}>
+    <div class="header-bottom">
+        <div class="header-bottom-inner">
+            <!-- Breadcrumb Menu Start -->
+            <div class="breadcrumb-menu-wrap">
+                <ul class="breadcrumb-menu">
+                    <li>
+                        <a href="javascript:void(0);" title="" onclick={navigateToDashboard} >Dashboard</a>
+                    </li>
+                    <li class="current-page">
+                        Engagement List
+                    </li>
+
+                </ul>
+            </div>
+            <!-- Breadcrumb Menu End -->
+        </div>
+    </div>
+</template>
+    <!-- Header Bottom Section End -->
+    <template if:true={showTips}>
+        <section  class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModalAction}>
+                       <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+                    </button>
+                    <h5 class="modal-title">Engagement Search Tips</h5>
+                 </header>
+                 
+                 <div class="slds-modal__content slds-p-around_medium">
+                     
+                    <div>
+                        <ul class="engagements-search-tips-list">
+                            <li class="slds-text-body_small"><b style="font-size: xx-large;">.</b>You may view the full text of a project description two
+                                ways: Hovering over the description itself or clicking
+                                on the
+                                “Tell us why” button under the “Why Consider Me” column.
+                            </li>
+                            <li class="slds-text-body_small"><b style="font-size: xx-large;">.</b>Remember, this is your opportunity to tell us why you’re
+                                the best choice for this engagement! The more detailed
+                                information you provide, the easier it will be for our
+                                matching team to place you with the engagement that best
+                                aligns
+                                with your interests and skillset.</li>
+                            <li class="slds-text-body_small"><b style="font-size: xx-large;">.</b>Write your “Why Consider Me” statements in a Word
+                                document before uploading them into the portal. This
+                                will help you
+                                to avoid grammar and spelling mistakes, as well as
+                                losing unsaved work.
+                            </li>
+                            <li class="slds-text-body_small"><b style="font-size: xx-large;">.</b>Please keep in mind that statements may not be read
+                                consecutively. You may want to repeat information that
+                                is applicable
+                                to multiple selections.</li>
+                            <li class="slds-text-body_small"><b style="font-size: xx-large;">.</b>Fellowship location preference indicates whether the
+                                organization is planning for the project to be
+                                in-person, remote, or a
+                                hybrid of the two. "Flexible" means that that are open
+                                to fully remote work but can also host on-site,
+                                depending on the
+                                preference of their matched fellow.</li>
+                        </ul>
+                        </div>
+                </div>
+                
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+    <div class="bg-welcome">
+        <div class="registration-application-section">
+            <div class="registration-application-section-inner fluid-container">
+                <div class="registration-application-section-sub">
+                    <h3>Enagement List</h3>
+                    <div class="registration-application-form-wrap">
+                        <div class="engagements-instructions-wrap">
+                            <div class="engagements-instructions-top">
+                                <h5><img src={instructionsImageURL} alt="" title="" /> Instructions</h5>
+                                <!-- Search Tips Start -->
+                                <div class="search-tips-wrap clearfix" data-toggle="modal"
+                                    data-target=".engagements-search-tips-modal" onclick={openTipsModel}>
+                                    <img src={infoImageURL} alt="" title=""
+                                        class="search-tips-info-icon" />
+                                    <p>Search Tips</p>
+                                    <!-- Engagements Search Tips Modal Start -->
+                                    <!--
+                                    <template if:true={showTips}>
+                                        <section  class="slds-modal slds-fade-in-open">
+                                            <div class="slds-modal__container">
+                                                <header class="slds-modal__header">
+                                                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModalAction}>
+                                                       <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+                                                    </button>
+                                                    <h5 class="modal-title">Engagement Search Tips</h5>
+                                                 </header>
+                                                 
+                                                 <div class="slds-modal__content slds-p-around_medium">
+                                                     
+                                                    <div>
+                                                        <p class="slds-text-body_small"><b style="font-size: xx-large;">.</b>You may view the full text of a project description two
+                                                            ways: Hovering over the description itself or clicking
+                                                            on the
+                                                            “Tell us why” button under the “Why Consider Me” column.
+                                                        </p>
+                                                        <p class="slds-text-body_small"><b style="font-size: xx-large;">.</b>Remember, this is your opportunity to tell us why you’re
+                                                            the best choice for this engagement! The more detailed
+                                                            information you provide, the easier it will be for our
+                                                            matching team to place you with the engagement that best
+                                                            aligns
+                                                            with your interests and skillset.</p>
+                                                        <p class="slds-text-body_small"><b style="font-size: xx-large;">.</b>Write your “Why Consider Me” statements in a Word
+                                                            document before uploading them into the portal. This
+                                                            will help you
+                                                            to avoid grammar and spelling mistakes, as well as
+                                                            losing unsaved work.
+                                                        </p>
+                                                        <p class="slds-text-body_small"><b style="font-size: xx-large;">.</b>Please keep in mind that statements may not be read
+                                                            consecutively. You may want to repeat information that
+                                                            is applicable
+                                                            to multiple selections.</p>
+                                                        <p class="slds-text-body_small"><b style="font-size: xx-large;">.</b>Fellowship location preference indicates whether the
+                                                            organization is planning for the project to be
+                                                            in-person, remote, or a
+                                                            hybrid of the two. "Flexible" means that that are open
+                                                            to fully remote work but can also host on-site,
+                                                            depending on the
+                                                            preference of their matched fellow.</p>
+                                                        </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </section>
+                                        <div class="slds-backdrop slds-backdrop_open"></div>
+                                    </template> -->
+                                    <!-- Engagements Search Tips Modal End -->
+                                </div>
+                                <!-- Search Tips End -->
+                            </div>
+                            <div class="engagements-instructions-content-wrap">
+                                <p>
+                                    <span>Please select the top 5 host organizations from the search results for
+                                        which you
+                                        would like to be considered.</span>
+                                    To do so, first select your preferred organization(s) by clicking the box under
+                                    the “Consider Me” column. Then, under the “Why Consider Me?” column, rank your
+                                    preferences (1-5) and write a brief statement (approximately 5 sentences)
+                                    stating your case for those particular placements.
+                                </p>
+                                <p>
+                                    Be sure to reference prior work experiences and academic training that are
+                                    relevant to each organization’s industry and/or project description.
+                                    Many projects will indicate required or additional skillset that are pertinent
+                                    to the fellow’s role; please consider these as you make your selections.
+                                    Any host organization marked with a gold star indicates that a high number of
+                                    candidates have chosen it as a preference and it is a competitive placement.</p>
+
+                                <p><em>EDF does not guarantee placement with any one organization. If you do not
+                                        enter any host preferences, your application will be removed from
+                                        consideration.</em> </p>
+
+                            </div>
+                        </div>
+                            <!-- Instructions Section End -->
+
+                            <!-- Search Engagements Start -->
+                            <div class="search-engagements-wrap">
+                                <div class="row">
+                                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group search-engagements-field">
+                                        
+                                        <lightning-input
+                                        name="globalSearch"
+                                        placeholder="Search engagements"
+                                        value={globalSearch}
+                                        data-gname="globalSearch"
+                                        onchange={handleFilterChange}
+                                        >
+                                        </lightning-input>
+                                        <button type="button" class="btn search-settings-icon"><img
+                                                src={carbonsettingsImageURL} alt="" title="" /></button>
+                                    </div>
+                                    <!--<div class="col-12 col-md-3 col-lg-3 col-xl-3 d-flex align-items-center">
+                                        <button type="button"
+                                            class="btn btn-primary button-custom button-green-button" onclick={handlesearch}>Search</button>
+                                    </div>-->
+                                </div>
+                            </div>
+                            <!-- Search Engagements End -->
+
+                            <!-- Search Form Engagements Start -->
+                            <div class="search-engagements-form-wrap">
+                                <div class="row">
+                                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+                                        <lightning-combobox
+                                        name="fellowshipcity"
+                                        data-cname="filterCombo"
+                                        label="Fellowship City"
+                                        options={fellowShipCityOptions}
+                                        onchange={handleFilterChange}
+                                        value={fellowshipcity}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+                                        
+                                        <lightning-combobox
+                                        name="fellowshipstate"
+                                        data-cname="filterCombo"
+                                        label="Fellowship State"
+                                        options={fellowShipStateOptions}
+                                        onchange={handleFilterChange}
+                                        value={fellowshipstate}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+                                        
+                                        <lightning-combobox
+                                        name="publicTransport"
+                                        data-cname="filterCombo"
+                                        label="Accessible to Public Transport"
+                                        options={publicTransportOptions}
+                                        onchange={handleFilterChange}
+                                        value={publicTransport}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+                                        
+                                        <lightning-combobox
+                                        name="industry"
+                                        data-cname="filterCombo"
+                                        label="Industry"
+                                        options={industryOptions}
+                                        onchange={handleFilterChange}
+                                        value={industry}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+                                        
+                                        <lightning-combobox
+                                        name="availableNotAvailable"
+                                        data-cname="filterCombo"
+                                        label="Available / Not Available"
+                                        options={availAndNotAvailableOptions}
+                                        onchange={handleFilterChange}
+                                        value={availableNotAvailable}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+                                        
+                                        <lightning-combobox
+                                        name="projectType"
+                                        data-cname="filterCombo"
+                                        label="Project Type"
+                                        options={projectTypeOptions}
+                                        onchange={handleFilterChange}
+                                        value={projectType}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+                                        
+                                        <lightning-combobox
+                                        name="locationPreferance"
+                                        data-cname="filterCombo"
+                                        label="Fellowship Location Preference"
+                                        options={locationPreferanceOptions}
+                                        onchange={handleFilterChange}
+                                        value={locationPreferance}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+                                        
+                                        <lightning-combobox
+                                        name="engagementProgram"
+                                        data-cname="filterCombo"
+                                        label="Fellowship Program"
+                                        options={engagementProgramsOptions}
+                                        onchange={handleFilterChange}
+                                        value={engagementProgram}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-button-wrap no-padding-top d-flex justify-content-end">
+                                    <button type="button" onclick={handleResetCriteria} class="btn btn-primary gray-button margin-right">Reset
+                                        Criteria</button>
+                                    <button type="button" onclick={handlesearch} class="btn btn-primary green-button ">Search</button>
+                                </div>
+                            </div>
+                            <!-- Search Form Engagements End -->
+
+                            <!-- Engagements Table Section Start -->
+                            <template if:true={isFellowAPpIdExist}>
+                            <div class="engagements-table-section-wrap">
+                                <!-- Engagements Table Title Filter Section Start -->
+                                <div class="engagements-table-title-filter">
+                                    <h3 class="engagements-table-title">Engagements</h3>
+                                    <div class="engagements-table-filter-wrap">
+                                        <!-- <button type="button" class="btn filter-button"><img
+                                                src={filterImageURL} alt="" title="" /> Filter</button> -->
+
+                                        <lightning-combobox name="progress" placeholder="Filter" options={filterOptions} onchange={handleTableFilterChange}></lightning-combobox>
+
+                                        <!-- Table Filter Dropdown Start 
+                                        <div class="table-filter-dropdown-wrap">
+                                            <ul class="table-filter-dropdown-menu">
+                                                <li class="">
+                                                    <a href="javascript:void(0);" title="">Show Ranked</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="javascript:void(0);" title="">Show Ranked & Bookmarked</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="javascript:void(0);" title="">Show All</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        Table Filter Dropdow End 
+                                        -->
+
+                                    </div>
+                                </div>
+                                <!-- Engagements Table Title Filter Section End -->
+                                <!-- Engagements Table Section Start -->
+                                <div class="engagements-table">
+                                    <div class="table-responsive">
+                                        <table class="table engagements-table-data">
+                                            <thead>
+                                                <tr>
+                                                    <th class="slds-text-body_small slds-p-right_none slds-p-left_xx-small">CONSIDER <br/>
+                                                        ME</th>
+                                                    <th class='slds-p-left_xx-small slds-text-body_small'>MORE <br/>
+                                                        DETAILS</th>
+                                                    <th class="slds-text-body_small">HOST <br/>
+                                                        ORGANIZATION</th>
+                                                    <th class="slds-text-body_small">INDUSTRY</th>
+                                                    <th class="slds-text-body_small">ACCESSIBLE TO <br/> PUBLIC<br/> TRANSPORT</th>
+                                                    <th class="slds-text-body_small">FELLOWSHIP<br/>
+                                                        CITY</th>
+                                                    <th class="slds-text-body_small">FELLOWSHIP<br/> STATE</th>
+                                                    <th class="slds-text-body_small">PROJECT<br/> TYPE</th>
+                                                    <th class="slds-text-body_small">FELLOWSHIP<br/> LOCATION<br/> PREFERANCE</th>
+                                                    <th class="slds-text-body_small">FELLOWSHIP<br/> PROGRAM</th>
+                                                    <th class="slds-text-body_small">SUBMISSION<br/>
+                                                        STATUS</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                            <template if:true={engagementRecords}>
+                                                <template for:each={engagementRecords} for:item="engagement">
+                                                    {engagement.Industry_Classification__c}     
+                                                    <!--<p key={engagement.eId.Id}>{engagement.AccountName} inside if true data</p> -->                              
+                                                <tr data-toggle="collapse" data-target=".engagements-table-accordion1"
+                                                    class="accordion-toggle accordion-toggle-outer accordion-green-bg accordion-orange-bg" key={engagement.eId}>
+                                                    <td>
+                                                        <lightning-input
+                                                            type="checkbox"
+                                                            name="considermecheck"
+                                                            data-name="considermecheck"
+                                                            data-id={engagement.eId}
+                                                            onchange={handleConsiderMeCheckBox}
+                                                            checked={engagement.considerMeChecked}
+                                                        >
+                                                        </lightning-input>
+                                                    </td>
+                                                    <td class="table-dropdown-arrow table-rating-star-icon">
+                                                        <button type="button"
+                                                            class="btn table-accordion-arrow table-dropdown-arrow-right-down" data-id={engagement.eId} key={engagement.eId} onclick={handleCollapsebar}></button>
+                                                        <img src={starOrange} alt="" title=""
+                                                            class="star-orange-icon" key={engagement.eId}/>
+                                                    </td>
+                                                    <td><p>{engagement.AccountName}</p></td>
+                                                    <td><p>{engagement.Industry}</p></td>
+                                                    <td><p>{engagement.Accessible_by_public_transportation}</p></td>
+                                                    <td><p>{engagement.Fellowship_City}</p></td>
+                                                    <td><p>{engagement.Fellowship_State}</p></td>
+                                                    <td><p>{engagement.Project_Type}</p></td>
+                                                    <td><p>{engagement.Fellowship_Location_Preference}</p></td>
+                                                    <td><p>{engagement.Engagement_Program}</p></td>
+                                                    <td class="status-icon-wrap">
+                                                        <template if:true={engagement.isSubmitted}><span
+                                                            class="status-icon submitted-icon" key={engagement.eId}></span>Submitted</template> 
+                                                            <template if:true={engagement.isPending}><span
+                                                            class="status-icon pending-icon" key={engagement.eId}></span> Pending</template>
+                                                            <template if:true={engagement.isDraft}><span
+                                                                class="status-icon pending-icon" key={engagement.eId}></span> Draft</template>
+                                                        
+                                                        </td>
+                                                </tr>
+                                                
+                                                <template if:true={engagement.showMoreDetails}>
+                                                <tr key={engagement.eId}>
+                                                    <td colspan="9" class="hiddenRow">
+                                                       
+                                                        <div class="accordian-body engagements-table-accordion-wrap engagements-table-accordion1" key={engagement.eId}>
+                                                            <!-- id="engagements-table-accordion1"> -->
+                                                            <div class="engagements-table-accordion-left">
+                                                                <div
+                                                                    class="engagements-table-accordion-left-action-wrap">
+                                                                    <div class="table-bage-icon-wrap">
+                                                                        <template if:false={engagement.bookmarked}>
+                                                                            <button data-id={engagement.eId} type="button"
+                                                                            class="btn table-bage-icon" onclick={handleBookmark}></button>
+                                                                        </template>
+                                                                        <template if:true={engagement.bookmarked}>
+                                                                             <button type="button" data-id={engagement.eId}
+                                                                            class="btn table-bage-icon table-bage-icon-active" onclick={handleBookmark}></button>
+                                                                        </template>
+                                                                            
+                                                                    </div>
+
+                                                                    <div class="table-flag-section-wrap">
+                                                                        <button type="button"
+                                                                            class="btn table-flag-arrow table-flag-up-arrow" data-bname="uparraow" data-id={engagement.eId} onclick={handleRanking}></button>
+                                                                        <div if:false={engagement.isRankingAvailable} class="table-flag">
+                                                                            <span class="table-flag-text"> 
+                                                                            </span>
+                                                                        </div>
+                                                                        <div if:true={engagement.isRankingAvailable} class="table-flag-active">
+                                                                            <span style="padding-left: 0.4rem; align-content: center; color: white; font-weight: bold;">
+                                                                                {engagement.ranking}
+                                                                            </span>
+                                                                        </div>
+
+                                                                        <button type="button"
+                                                                            class="btn table-flag-arrow table-flag-down-arrow" data-bname="downarraow" data-id={engagement.eId} onclick={handleRanking}></button>
+                                                                    </div>
+                                                                    <!--
+                                                                    <div class="table-close-button-wrap">
+                                                                        <button type="button"
+                                                                            class="btn table-close-button"
+                                                                            data-toggle="modal"
+                                                                            data-target="#table-close-confirm-modal"></button>
+
+                                                                        
+                                                                        <div class="modal fade table-accordion-function-modal table-close-confirm-modal"
+                                                                             tabindex="-1"
+                                                                            role="dialog"
+                                                                            aria-labelledby="table-close-confirm-modalTitle"
+                                                                            aria-hidden="true">
+                                                                            <div class="modal-dialog modal-dialog-centered"
+                                                                                role="document">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h4 class="modal-title"
+                                                                                            >
+                                                                                            Confirm deletion</h4>
+                                                                                        <button type="button"
+                                                                                            class="close"
+                                                                                            data-dismiss="modal"
+                                                                                            aria-label="Close">
+                                                                                            <span
+                                                                                                aria-hidden="true">&times;</span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <p>This entry will be removed
+                                                                                            from your search
+                                                                                            results.<br />
+                                                                                            You can delete more
+                                                                                            engaements, to make it easy
+                                                                                            for you to
+                                                                                            choose your favorite
+                                                                                            oraganization.</p>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button"
+                                                                                            class="btn btn-secondary button-custom button-white-button"
+                                                                                            data-dismiss="modal">Cancel</button>
+                                                                                        <button type="button"
+                                                                                            class="btn btn-primary button-custom button-orange-button">Delete</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                    </div> 
+
+                                                                    <div class="table-question-button-wrap">
+                                                                        <button type="button"
+                                                                            class="btn table-question-button"
+                                                                            data-toggle="modal"
+                                                                            data-target="#table-post-question-modal"></button>
+
+                                                                        
+                                                                        <div class="modal fade table-accordion-function-modal table-post-question-modal"
+                                                                            tabindex="-1"
+                                                                            role="dialog"
+                                                                            aria-labelledby="table-post-question-modalTitle"
+                                                                            aria-hidden="true">
+                                                                            <div class="modal-dialog modal-dialog-centered"
+                                                                                role="document">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h4 class="modal-title"
+                                                                                            >
+                                                                                            Post a question</h4>
+                                                                                        <button type="button"
+                                                                                            class="close"
+                                                                                            data-dismiss="modal"
+                                                                                            aria-label="Close">
+                                                                                            <span
+                                                                                                aria-hidden="true">&times;</span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <p>If you have any questions or
+                                                                                            concerns to clarify with
+                                                                                            the EDF team, please feel
+                                                                                            free to post your question
+                                                                                            here!</p>
+                                                                                        <div class="row">
+                                                                                            <div
+                                                                                                class="col-12 form-group no-margin-bottom">
+                                                                                                <textarea
+                                                                                                    class="form-control"
+                                                                                                    rows="5"></textarea>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button"
+                                                                                            class="btn btn-secondary button-custom button-white-button"
+                                                                                            data-dismiss="modal">Cancel</button>
+                                                                                        <button type="button"
+                                                                                            class="btn btn-primary button-custom button-green-button"
+                                                                                            data-toggle="modal"
+                                                                                            data-target="#table-question-submitted-modal">Submit</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+
+                                                                       
+                                                                        <div class="modal fade table-accordion-function-modal table-question-submitted-modal"
+                                                                            
+                                                                            tabindex="-1" role="dialog"
+                                                                            aria-labelledby="table-question-submitted-modalTitle"
+                                                                            aria-hidden="true">
+                                                                            <div class="modal-dialog modal-dialog-centered"
+                                                                                role="document">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h4
+                                                                                            class="modal-title congrats-title">
+                                                                                            Congrats!</h4>
+                                                                                        <h4 class="modal-title"
+                                                                                           >
+                                                                                            Your question submitted!
+                                                                                        </h4>
+                                                                                        <button type="button"
+                                                                                            class="close"
+                                                                                            data-dismiss="modal"
+                                                                                            aria-label="Close">
+                                                                                            <span
+                                                                                                aria-hidden="true">&times;</span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <p>Your question on Boston
+                                                                                            Scientific has been sent!
+                                                                                            <br />
+                                                                                            You can expect an answer
+                                                                                            within 24 hours.
+                                                                                        </p>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button"
+                                                                                            class="btn btn-primary button-custom button-green-button">Ok</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+
+                                                                    </div>-->
+
+                                                                </div>
+                                                                <div
+                                                                    class="engagements-table-accordion-left-content-wrap">
+                                                                    <div class="overflow-auto" data-spy="scroll">
+                                                                        <div class="slds-text-body_regular" style="white-space: break-spaces;">{engagement.Workplan_from_App}</div>
+                                                                       
+                                                                        <!--<h6>About Boston Scientific</h6>
+                                                                        <p>Boston Scientific (BSC) is seeking their
+                                                                            sixth
+                                                                            fellow to work on a variety of energy
+                                                                            management
+                                                                            and decarbonization projects. The fellow's
+                                                                            top
+                                                                            priority will be to spearhead BSC's annual
+                                                                            Energy Management Maturity Model (EM3)
+                                                                            assessment for all 16 sites in their global
+                                                                            manufacturing network by conducting 1-1
+                                                                            surveys,
+                                                                            analyzing results and providing summary
+                                                                            reports.
+                                                                            The fellow will also assist in review of the
+                                                                            EM3
+                                                                            survey software application, with the
+                                                                            potential
+                                                                            to migrate to an alternative (3rd party)
+                                                                            platform.</p>
+
+                                                                        <h6>About Boston Scientific</h6>
+                                                                        <p>Boston Scientific (BSC) is seeking their
+                                                                            sixth
+                                                                            fellow to work on a variety of energy
+                                                                            management
+                                                                            and decarbonization projects. The fellow's
+                                                                            top
+                                                                            priority will be to spearhead BSC's annual
+                                                                            Energy Management Maturity Model (EM3)
+                                                                            assessment for all 16 sites in their global
+                                                                            manufacturing network by conducting 1-1
+                                                                            surveys,
+                                                                            analyzing results and providing summary
+                                                                            reports.
+                                                                            The fellow will also assist in review of the
+                                                                            EM3
+                                                                            survey software application, with the
+                                                                            potential
+                                                                            to migrate to an alternative (3rd party)
+                                                                            platform. To learn more, please visit:
+                                                                            <a href="http://www.bostonscientific.com/en-US/corporate-citizenship/environment-and-sustainability.html"
+                                                                                title=""
+                                                                                target="_blank">http://www.bostonscientific.com/en-US/corporate-citizenship/environment-and-sustainability.html</a>
+                                                                        </p> -->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="engagements-table-accordion-right">
+                                                                <div class="table-accordion-right-inner">
+                                                                    <h5>Let us know why we should consider you?</h5>
+                                                                    <div class="form-group">
+                                                                        <!-- value need to be updated with ethe salesfore data later -->
+                                                                        <lightning-textarea 
+                                                                            name="considermeTextArea" 
+                                                                            data-id={engagement.eId}
+                                                                            onchange={handleConsiderMeChange}
+                                                                            value={engagement.considerMeComments}
+                                                                        >
+                                                                        </lightning-textarea>
+                                                                    </div>
+                                                                    <div
+                                                                        class="form-button-wrap no-padding-top d-flex justify-content-end">
+                                                                        <button type="button" data-bname="considerMeButton" data-id={engagement.eId}
+                                                                            class="btn btn-primary green-button" onclick={handleConsiderMeSave}>{engagement.considerMeSave}</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </td>
+                                                </tr>
+                                            </template>
+                                                </template>
+                                            </template>
+                                            
+                                            <template if:true={engagementRecordsError}>
+                                                <p>Inside Errors</p>
+                                                {engagementRecordsError} 
+                                            </template>
+<!-- Commented by Sai Teja since we need to iterate the table dynamically.
+                                                <tr
+                                                    class="accordion-toggle accordion-toggle-outer">
+                                                    <td class="table-dropdown-arrow table-rating-star-icon">
+                                                        <button type="button"
+                                                            class="btn table-accordion-arrow table-dropdown-arrow-right-down"></button>
+                                                        <img src="assets/img/star-green-icon.svg" alt="" title=""
+                                                            class="star-orange-icon" />
+                                                    </td>
+                                                    <td>Bright Power, Inc.</td>
+                                                    <td>Energy or Utility</td>
+                                                    <td>Yes</td>
+                                                    <td>Oakland</td>
+                                                    <td>CA</td>
+                                                    <td>Scaling Energy Efficiency</td>
+                                                    <td>Remote</td>
+                                                    <td class="status-icon-wrap"><span
+                                                            class="status-icon pending-icon"></span>  Pending</td>
+                                                </tr>
+
+                                                <tr
+                                                    class="accordion-toggle accordion-toggle-outer ">
+                                                    <td class="table-dropdown-arrow table-rating-star-icon">
+                                                        <button type="button"
+                                                            class="btn table-accordion-arrow table-dropdown-arrow-right-down"></button>
+                                                        <img src="assets/img/star-orange-icon.svg" alt="" title=""
+                                                            class="star-orange-icon" />
+                                                    </td>
+                                                    <td>Catholic Climate 
+                                                        Covenant</td>
+                                                    <td>Religious Organization</td>
+                                                    <td>No</td>
+                                                    <td>Washington</td>
+                                                    <td>DC</td>
+                                                    <td>Renewable Energy</td>
+                                                    <td>Remote</td>
+                                                    <td class="status-icon-wrap"><span
+                                                            class="status-icon pending-icon"></span> <span
+                                                            class="status-icon submitted-icon"></span> Pending</td>
+                                                </tr>
+
+                                                <tr
+                                                    class="accordion-toggle accordion-toggle-outer">
+                                                    <td class="table-dropdown-arrow table-rating-star-icon">
+                                                        <button type="button"
+                                                            class="btn table-accordion-arrow table-dropdown-arrow-right-down"></button>
+                                                        <img src="assets/img/star-green-icon.svg" alt="" title=""
+                                                            class="star-orange-icon" />
+                                                    </td>
+                                                    <td>Bioversity International Dataverse</td>
+                                                    <td>Energy or
+                                                        Utility</td>
+                                                    <td>Yes</td>
+                                                    <td>Atlanta</td>
+                                                    <td>GA</td>
+                                                    <td>Renewable Energy</td>
+                                                    <td>Remote</td>
+                                                    <td class="status-icon-wrap"><span
+                                                            class="status-icon pending-icon"></span> <span
+                                                            class="status-icon submitted-icon"></span> Pending</td>
+                                                </tr>
+
+                                                <tr
+                                                    class="accordion-toggle accordion-toggle-outer ">
+                                                    <td class="table-dropdown-arrow table-rating-star-icon">
+                                                        <button type="button"
+                                                            class="btn table-accordion-arrow table-dropdown-arrow-right-down"></button>
+                                                        <img src="assets/img/star-light-green-icon.svg" alt="" title=""
+                                                            class="star-orange-icon" />
+                                                    </td>
+                                                    <td>Global Footprint Network</td>
+                                                    <td>Religious Organization</td>
+                                                    <td>Yes</td>
+                                                    <td>Dallas</td>
+                                                    <td>TX</td>
+                                                    <td>Renewable Energy</td>
+                                                    <td>Remote</td>
+                                                    <td class="status-icon-wrap"><span
+                                                            class="status-icon pending-icon"></span> <span
+                                                            class="status-icon submitted-icon"></span> Pending</td>
+                                                </tr>
+
+                                                <tr
+                                                    class="accordion-toggle accordion-toggle-outer ">
+                                                    <td class="table-dropdown-arrow table-rating-star-icon">
+                                                        <button type="button"
+                                                            class="btn table-accordion-arrow table-dropdown-arrow-right-down"></button>
+                                                        <img src="assets/img/star-blue-icon.svg" alt="" title=""
+                                                            class="star-orange-icon" />
+                                                    </td>
+                                                    <td>Earth Island 
+                                                        Institute</td>
+                                                    <td>Religious Organization</td>
+                                                    <td>No</td>
+                                                    <td>Cleaveland</td>
+                                                    <td>OH</td>
+                                                    <td>Renewable Energy</td>
+                                                    <td>Remote</td>
+                                                    <td class="status-icon-wrap"><span
+                                                            class="status-icon pending-icon"></span> <span
+                                                            class="status-icon submitted-icon"></span> Pending</td>
+                                                </tr>
+                                                        -->
+                                            <tr>
+                                                <td colspan="10" style="text-align: center;">
+                                                    <lightning-button label="SUBMIT" variant="brand" onclick={submitEngagements}></lightning-button> &nbsp; &nbsp;
+                                                    <lightning-button label="Save All" variant="brand" onclick={saveEngagements}></lightning-button>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div> 
+                                <!-- Engagements Table Section End -->
+                            </div>
+                        </template>
+                        <template if:false={isFellowAPpIdExist}>
+                            <lightning-card>
+                                <h3>No Fellow APPLICATION Record Found</h3>
+                            </lightning-card>
+                        </template>
+                            <!-- Engagements Table Section End -->
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <template if:true={isSearchCriteria}>
+        <lightning-spinner size="large" variant="brand"></lightning-spinner>
+    </template>
+
+    
+        <!-- Footer Bottom Start -->
+        <c-e-d-f22_footer></c-e-d-f22_footer>
+        <!-- Footer Bottom End -->
+    
+</template>

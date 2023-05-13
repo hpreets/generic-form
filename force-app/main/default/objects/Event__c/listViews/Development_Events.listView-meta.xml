@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Development_Events</fullName>
+    <columns>NAME</columns>
+    <columns>Event_Date_Time__c</columns>
+    <columns>Event_Type__c</columns>
+    <columns>Primary_User__c</columns>
+    <columns>Constituency__c</columns>
+    <columns>Sub_Constituency__c</columns>
+    <columns>Entity__c</columns>
+    <columns>Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Development Events</label>
+    <sharedTo>
+        <group>Development</group>
+        <group>Membership</group>
+    </sharedTo>
+</ListView>

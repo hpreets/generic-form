@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Climate_Corps_Test_Scripts</fullName>
+    <columns>NAME</columns>
+    <columns>Testing_Status__c</columns>
+    <columns>Testing_Team__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Testing_Team__c</field>
+        <operation>equals</operation>
+        <value>Climate Corps</value>
+    </filters>
+    <filters>
+        <field>Testing_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Testing in Progress,Tested - Passed,Tested - Failed,Unable to Test - Blocked,Test Resolved,Ready for Documentation,Ready for QC,QC Passed in Prod,N/A - Configuration Deprecated</value>
+    </filters>
+    <label>Climate Corps Test Scripts</label>
+</ListView>

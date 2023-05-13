@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Relationship_Type__c</fullName>
+    <description>Use to describe relationship between Org 1 and Org 2.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose a value that describes relationship between Org 1 and Org 2.</inlineHelpText>
+    <label>First Relationship Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Consortium</fullName>
+                <default>false</default>
+                <label>Consortium</label>
+            </value>
+            <value>
+                <fullName>Member</fullName>
+                <default>false</default>
+                <label>Member</label>
+            </value>
+            <value>
+                <fullName>Lead</fullName>
+                <default>false</default>
+                <label>Lead</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Vendor</fullName>
+                <default>false</default>
+                <label>Vendor</label>
+            </value>
+            <value>
+                <fullName>Client</fullName>
+                <default>false</default>
+                <label>Client</label>
+            </value>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <label>TBD</label>
+            </value>
+            <value>
+                <fullName>Board</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Board</label>
+            </value>
+            <value>
+                <fullName>Business Associate</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business Associate</label>
+            </value>
+            <value>
+                <fullName>Business Partner</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business Partner</label>
+            </value>
+            <value>
+                <fullName>Child</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Child</label>
+            </value>
+            <value>
+                <fullName>Club</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Club</label>
+            </value>
+            <value>
+                <fullName>Consultant</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Consultant</label>
+            </value>
+            <value>
+                <fullName>Employer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Employer</label>
+            </value>
+            <value>
+                <fullName>Funder</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Funder</label>
+            </value>
+            <value>
+                <fullName>Funding Vehicle</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Funding Vehicle</label>
+            </value>
+            <value>
+                <fullName>Investment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Investment</label>
+            </value>
+            <value>
+                <fullName>Investor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Investor</label>
+            </value>
+            <value>
+                <fullName>Knows</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Knows</label>
+            </value>
+            <value>
+                <fullName>Neighbor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Neighbor</label>
+            </value>
+            <value>
+                <fullName>Philanthropic Partner</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Philanthropic Partner</label>
+            </value>
+            <value>
+                <fullName>Representative</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Representative</label>
+            </value>
+            <value>
+                <fullName>Represented institution</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Represented institution</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

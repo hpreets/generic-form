@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_Campus_Presentation__c</fullName>
+    <externalId>false</externalId>
+    <label>How you learnt about Campus Presentation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Eventbrite Invitation</fullName>
+                <default>false</default>
+                <label>Eventbrite Invitation</label>
+            </value>
+            <value>
+                <fullName>Other online event site</fullName>
+                <default>false</default>
+                <label>Other online event site</label>
+            </value>
+            <value>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+                <label>Facebook</label>
+            </value>
+            <value>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+                <label>Twitter</label>
+            </value>
+            <value>
+                <fullName>LinkedIn</fullName>
+                <default>false</default>
+                <label>LinkedIn</label>
+            </value>
+            <value>
+                <fullName>Other social media site</fullName>
+                <default>false</default>
+                <label>Other social media site</label>
+            </value>
+            <value>
+                <fullName>Student group announcement</fullName>
+                <default>false</default>
+                <label>Student group announcement</label>
+            </value>
+            <value>
+                <fullName>Campus career services announcement</fullName>
+                <default>false</default>
+                <label>Campus career services announcement</label>
+            </value>
+            <value>
+                <fullName>School program communication</fullName>
+                <default>false</default>
+                <label>School program communication</label>
+            </value>
+            <value>
+                <fullName>Bulletin board posting</fullName>
+                <default>false</default>
+                <label>Bulletin board posting</label>
+            </value>
+            <value>
+                <fullName>Former fellow communication</fullName>
+                <default>false</default>
+                <label>Former fellow communication</label>
+            </value>
+            <value>
+                <fullName>Former host organization communication</fullName>
+                <default>false</default>
+                <label>Former host organization communication</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

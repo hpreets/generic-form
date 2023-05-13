@@ -1,0 +1,219 @@
+<apex:page renderas="pdf" controller="FellowApplicationPDFController" showHeader="false" standardStylesheets="false">
+
+<apex:stylesheet value="{!$Resource.pdfstyles}" />
+
+   <apex:pageBlock >
+       <apex:pageBlockSection title="Contact Information" columns="1" collapsible="false" >
+            <apex:outputText value="{!fellowAppWrapper.firstName}" label="First Name" />
+            <apex:outputText value="{!fellowAppWrapper.lastName}" label="Last Name" />
+            <apex:outputText value="{!fellowAppWrapper.email}" label="{!$Label.emailname}" />
+            <apex:outputText value="{!fellowAppWrapper.pronouns}" label="Pronouns" />
+            <apex:outputText value="{!fellowAppWrapper.fellowApp.Pronouns_Self_Describe__c}" rendered="{!if(fellowAppWrapper.pronouns ='Prefer to self-describe' , true, false)}" label="Pronouns Self Describe"/>
+            <apex:outputText value="{!fellowAppWrapper['phone']}" label="Phone" />
+            <apex:outputText value="{!fellowAppWrapper.mailingCountry}" label="Country" />
+            <apex:outputText value="{!fellowAppWrapper.permanentStreetAddressLine1}" label="{!$Label.streetname1}" />
+            <apex:outputText value="{!fellowAppWrapper.permanentStreetAddressLine2}" label="{!$Label.streetname2}" />
+            <apex:outputText value="{!fellowAppWrapper.mailingCity}" label="City" />
+            <apex:outputText value="{!fellowAppWrapper.mailingState}" label="State" />
+            <apex:outputText value="{!fellowAppWrapper.mailingPostalCode}" label="Postal Code" />
+            <apex:outputText value="{!fellowAppWrapper.fellowshipApplyingFor}" label="Which Fellowship are you applying to?"  />
+            <apex:outputText value="{!fellowAppWrapper.fellowApp.Skype__c}" label="Skype ID"  rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='China Fellowship', true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.howDidYouFindUs}" label="How did you find out about Climate Corps?" />
+            <!-- <apex:outputText value="{!fellowAppWrapper.How_Campus_Presentation__c}" label="How did you learn about the Campus Presentation?" rendered="{!IF( OR( fellowAppWrapper.How_Did_You_Find_Us__c ='Campus Presentation with EDF staff', fellowAppWrapper.How_Did_You_Find_Us__c ='Campus Presentation with former Fellow'), true,false)}" /> -->
+            <apex:outputText value="{!fellowAppWrapper.howDidYouFindUsIfOther}" label="If other, please describe" rendered="{!IF(fellowAppWrapper.howDidYouFindUs ='Other (please specify)', true,false)}"/>
+            <apex:outputText value="{!fellowAppWrapper.returnerFellow}" label="Have you participated in the Climate Corps program in the past?" />
+
+            <div class="GreenLabel">Identity Information</div>
+            <apex:pageBlockSectionItem rendered="{!if(fellowAppWrapper.fellowshipApplyingFor !='China Fellowship' , true, false)}">
+                <p class="hdngs">Climate Corps is committed to creating a diverse environment and is proud to be an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, gender, gender identity or expression, sexual orientation, national origin, genetics, disability, age, or veteran status. Please note that this section of the application is voluntary and your responses will be fully confidential. Providing us information about your identity will allow us to track the effectiveness of our recruiting and DEI efforts and ensure that the needs of all fellows are taken into consideration. </p><!-- { Label.Contact_Information_Disclaimer -} -->
+            </apex:pageBlockSectionItem>
+
+            <apex:outputText value="{!fellowAppWrapper.gender}" label="Gender Identity" />
+            <apex:outputText value="{!fellowAppWrapper.genderSelfDescribe}" label="Gender, Self Describe" />
+            <apex:outputText value="{!fellowAppWrapper.race}" label="Race/Ethnicity" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='China Fellowship', false, true)}" />
+            <apex:outputText value="{!fellowAppWrapper.latinxOrHispanic}" label="Do you identify as Latinx or Hispanic?" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='China Fellowship', false, true)}" />
+            <apex:outputText value="{!fellowAppWrapper.veteranStatus}" label="Veteran Status" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='China Fellowship', false, true)}" />
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection title="Education Information" columns="1" collapsible="false" ><br/>
+            <apex:outputText value="{!fellowAppWrapper.graduateUniversity}" label="Graduate University" />
+            <apex:outputText value="{!fellowAppWrapper.schoolWithinUniversity}" label="School within University" />
+            <apex:outputText value="{!fellowAppWrapper.schoolUniversityOther}" label="School / University, if not listed above" />
+            <apex:outputText value="{!fellowAppWrapper.fellowApp.GRAD_University_Dual_Degree__r.Name}" label="Dual Degree University" rendered="{!NOT IsNull(fellowAppWrapper.fellowApp.GRAD_University_Dual_Degree__c)}" />
+            <apex:outputText value="{!fellowAppWrapper.fellowApp.GRAD_Dual_Degree_School_in_University__r.Name}" label="School within University" rendered="{!NOT IsNull(fellowAppWrapper.fellowApp.GRAD_University_Dual_Degree__c)}" />
+            <apex:outputText value="{!fellowAppWrapper.fellowApp.Dual_Degree_School_Name__c}" label="School / University, if not listed above" rendered="{!NOT IsNull(fellowAppWrapper.fellowApp.GRAD_University_Dual_Degree__c)}" />
+            <apex:outputText value="{!fellowAppWrapper.graduateDegree}" label="Graduate Degree(s) you are Pursuing" />
+            <apex:outputText value="{!fellowAppWrapper.graduateDegreeOther}" label="Graduate Degree(s), if not listed above" />
+            <apex:outputText value="{!fellowAppWrapper.graduateDegreeConcentration}" label="Graduate Degree Concentration(s)" />
+            <!-- <apex:outputText value="{0,date,MM'/'dd'/'yyyy}" label="Graduate Degree Start Date"><apex:param value="{!fellowAppWrapper.Graduation_Start_Date__c}" /></apex:outputText> -->
+            <apex:outputText value="{!fellowAppWrapper.graduateDegreeStartDate}" label="Graduate Degree Start Date"></apex:outputText>
+            <!-- <apex:outputText value="{0,date,MM'/'dd'/'yyyy}" label="Expected Graduation Date"><apex:param value="{!fellowAppWrapper.Date_Expected_Graduated_1__c}" /></apex:outputText> -->
+            <apex:outputText value="{!fellowAppWrapper.expectedGraduationDate}" label="Expected Graduation Date"></apex:outputText>
+
+            <p />
+
+            <apex:outputText value="{!fellowAppWrapper.undergraduateUniversity}" label="Undergraduate University" />
+            <apex:outputText value="{!fellowAppWrapper.undergraduateUniversityOther}" label="Undergraduate University, if not listed above" />
+            <apex:outputText value="{!fellowAppWrapper.undergraduateDegreeEarned}" label="Undergraduate Degree(s) earned" />
+            <apex:outputText value="{!fellowAppWrapper.undergraduateDegreeEarnedOther}" label="Undergraduate Degree(s) earned, if not listed above" />
+
+            <apex:outputText value="{!fellowAppWrapper.undergradMajor}" label="Undergraduate Major(s)" />
+
+            <apex:outputText value="{!fellowAppWrapper.otherCoursesCertifications}" label="{!$Label.Reword_certifications_question}" />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Background Information" columns="1" collapsible="false" >
+            <apex:outputText value="{!fellowAppWrapper.authorizedWorkUS}" label="Are you legally authorized to work in the U.S.?" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.requireAuthorization}" label="Will you now or in the future require work authorization (e.g., CPT or OPT)?" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}" />
+
+            <apex:outputText value="{!fellowAppWrapper.fellowApp.Native_English_Speaker__c}" label="English proficiency is required for this position. Are you fluent or proficient in English?" rendered="{!if(OR(fellowAppWrapper.fellowshipApplyingFor ='China Fellowship', fellowAppWrapper.fellowshipApplyingFor ='India Fellowship') , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.fellowApp.Residency_in_china__c}" label="Please select your residency in China" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='China Fellowship' , true, false)}" />
+            <apex:outputText value="{!IF(fellowAppWrapper.fellowApp.ChinaPassport__c, 'Yes', 'No')}" label="Do you have a passport?" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='China Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.fellowApp.China_fellowship_tests__c}" label="Test Type" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='China Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.fellowApp.China_fellowship_test_score__c}" label="Test score" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='China Fellowship' , true, false)}" />
+            <!-- <apex:outputText value="{!fellowAppWrapper.Residency_in_china__c}" label="Please select your residency in China." rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='China Fellowship' , true, false)}" /> -->
+
+            <!-- <apex:pageBlockSectionItem rendered="{!NOT IsNull(myIdentiAttachment.savedId)}">
+                    Uploaded Chinese Identification Card or India ID:
+                <apex:outputLink value="/sfc/servlet.shepherd/version/download/{!myIdentiAttachment.savedId}" target="_blank" >
+                    {!myIdentiAttachment.savedName}
+                </apex:outputLink>
+            </apex:pageBlockSectionItem> -->
+
+            <!-- <apex:outputText value="{!IF(fellowAppWrapper.ChinaPassport__c, 'Yes', 'No')}" label="Please check the box if you have a passport" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='China Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.Native_English_Speaker__c}" label="English proficiency is required for this position. Are you fluent or proficient in English?" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='China Fellowship' , true, false)}" />
+
+
+            <apex:outputText value="{!fellowAppWrapper.China_fellowship_tests__c}" label="Test Type" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='China Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.China_fellowship_test_score__c}" label="Test score" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='China Fellowship' , true, false)}" /> -->
+
+            <apex:outputText value="{!fellowAppWrapper.yearsOfExperience}" label="How many years of professional working experience do you have?" />
+
+            <p /><apex:outputLabel >Please indicate your level of experience (None, Basic, Moderate, and Advanced) with the following project types.</apex:outputLabel><p/>
+
+            <apex:outputText value="{!fellowAppWrapper.financialAnalysis}" label="Financial Analysis"/>
+            <apex:outputText value="{!fellowAppWrapper.greenhouseGasAccounting}" label="Greenhouse Gas Accounting"/>
+            <apex:outputText value="{!fellowAppWrapper.dataAnalysis}" label="Data Analysis (Excel or other software)"/>
+
+            <apex:outputText value="{!fellowAppWrapper.supplyChain}" label="Supply Chain"/>
+
+            <apex:outputText value="{!fellowAppWrapper.energyEfficiencyRenewables}" label="Energy Efficiency and/or Renewables"/>
+
+            <p />
+
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="{!$Label.FellowApp_MatchPref_Page_Heading}" columns="1" collapsible="false" >
+
+            <br/>
+            <!-- <div class="GreenLabel">Geographic Preference</div> -->
+
+            <apex:outputText label="{!$Label.FELLOWAPP_Apply_for_China_Fellowship}" value="{!IF(fellowAppWrapper.applyChina, 'Yes', 'No')}" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}"/>
+
+            <apex:outputText label="{!$Label.FELLOWAPP_Apply_for_India_Fellowship}" value="{!if(fellowAppWrapper.applyIndia, 'Yes', 'No')}" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}"/>
+
+            <apex:outputText value="{!fellowAppWrapper.regionsInChina}" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='China Fellowship' , true, false)}" label="{!$Label.FellowApp_MatchPref_ChinaRegionPref_FieldLabel}"/>
+
+            <apex:outputText value="{!fellowAppWrapper.regionsInIndia}" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='India Fellowship' , true, false)}" label="{!$Label.FellowApp_MatchPref_IndiaRegionPref_FieldLabel}"/>
+
+            <apex:outputText value="{!fellowAppWrapper.fellowApp.Geographic_Yes_Region__c}" label="{!$Label.FellowApp_MatchPref_USRegionPref_FieldLabel}" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}" />
+
+            <apex:outputText value="{!fellowAppWrapper.usRegionalPreferences}" label="{!$Label.FellowApp_MatchPref_USRegionPrefText_FieldLabel}" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}" />
+
+
+            <apex:outputText value="{!fellowAppWrapper.validUSDriversLicense}" label="{!$Label.FellowApp_MatchPref_USDriverLicense_FieldLabel}" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.accessToVehicle}" label="{!$Label.FellowApp_MatchPref_AccessToVehicle_FieldLabel}" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}" />
+
+            <p/>
+            <br/>
+            <apex:outputLabel rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}" ><div class="GreenLabel">{!$Label.FellowApp_MatchPref_SectorPreference_Heading}</div></apex:outputLabel>
+
+            <apex:pageBlockSectionItem rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}">
+                <apex:outputLabel >{!$Label.FellowApp_MatchPref_SectorPreference3Choices_Heading}</apex:outputLabel>
+            </apex:pageBlockSectionItem>
+
+            <apex:outputText value="{!fellowAppWrapper.sectorFirstChoice}" label="{!$Label.FellowApp_MatchPref_SectorFirstChoice_FieldLabel}" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.sectorSecondChoice}" label="{!$Label.FellowApp_MatchPref_SectorSecondChoice_FieldLabel}" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.sectorThirdChoice}" label="{!$Label.FellowApp_MatchPref_SectorThirdChoice_FieldLabel}" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}" />
+
+            <p/>
+            <br/>
+            <apex:outputLabel rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}" ><div class="GreenLabel">{!$Label.FellowApp_MatchPref_ProjectTypePreference_Heading}</div></apex:outputLabel>
+            <apex:pageBlockSectionItem rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}">
+                <apex:outputLabel >{!$Label.FellowApp_MatchPref_ProjectTypePreference3Choices_Heading}</apex:outputLabel>
+            </apex:pageBlockSectionItem>
+            <apex:outputText value="{!fellowAppWrapper.fellowApp.Project_Type_Preference_One__c}" label="{!$Label.FellowApp_MatchPref_ProjectTypeFirstChoice_FieldLabel}" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.fellowApp.Project_Type_Preference_Two__c}" label="{!$Label.FellowApp_MatchPref_ProjectTypeSecondChoice_FieldLabel}" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.fellowApp.Project_Type_Preference_Three__c}" label="{!$Label.FellowApp_MatchPref_ProjectTypeThirdChoice_FieldLabel}" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='U.S. Fellowship' , true, false)}" />
+            <p /><p />
+
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection title="Cover Letter" columns="1" collapsible="false" >
+            <p class="hdngs">{!$Label.FELLOWAPP_CoverLetter_Header1}</p>
+            <apex:outputText value="{!fellowAppWrapper.coverLetter}" label="Cover Letter" style="font-weight: normal !important"/>
+
+            <!-- <apex:pageBlockSectionItem rendered="{!NOT IsNull(resumeAttachment.savedId)}">
+                    Uploaded Resume:
+                <apex:outputLink value="/sfc/servlet.shepherd/version/download/{!resumeAttachment.savedId}" target="_blank" >
+                    {!resumeAttachment.savedName}
+                </apex:outputLink>
+            </apex:pageBlockSectionItem> -->
+
+            <p class="hdngs">{!$Label.FELLOWAPP_CoverLetter_Header4} </p>
+
+             <apex:pageBlockSectionItem >
+                <apex:outputLabel escape="false" value="Any Additional Information" />
+                <apex:outputLabel escape="false" value="{!fellowAppWrapper.additionalInformation}" style="font-weight: normal !important"/>
+            </apex:pageBlockSectionItem>
+            <p /><p class="hdngs">{!$Label.FELLOWAPP_CoverLetter_Header3}</p>
+
+            <apex:outputLabel rendered="{!if(fellowAppWrapper.fellowshipApplyingFor ='China Fellowship' , true, false)}" ><div class="GreenLabel">Your Tutor / Advisor Contact Information</div></apex:outputLabel>
+            <apex:outputLabel rendered="{!if(fellowAppWrapper.fellowshipApplyingFor !='China Fellowship' , true, false)}" ><div class="GreenLabel">Add Reference 1</div></apex:outputLabel>
+            <apex:outputText value="{!fellowAppWrapper.referenceName1}" id="refName1" label="Name" />
+            <apex:outputText value="{!fellowAppWrapper.referenceTitle1}" id="refTitle1" label="Title"  />
+            <apex:outputText value="{!fellowAppWrapper.referenceEmail1}" id="refEmail1" label="Email"  />
+            <apex:outputText value="{!fellowAppWrapper.referencePhone1}" id="refPhone1" label="Phone" />
+            <apex:outputText value="{!fellowAppWrapper.referenceSpecialInstructions1}" id="refSpInstr1" style="font-weight: normal !important" label="List your relationship to this reference and any additional information you'd like to share with EDF."/>
+            <p />
+            <apex:outputLabel rendered="{!if(fellowAppWrapper.fellowshipApplyingFor !='China Fellowship' , true, false)}" ><div class="GreenLabel">Add Reference 2</div></apex:outputLabel>
+            <apex:outputText value="{!fellowAppWrapper.referenceName2}" id="refName2" label="Name" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor !='China Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.referenceTitle2}" id="refTitle2" label="Title" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor !='China Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.referenceEmail2}" id="refEmail2" label="Email" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor !='China Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.referencePhone2}" id="refPhone2" label="Phone" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor !='China Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.referenceSpecialInstructions2}" id="refSpInstr2" style="font-weight: normal !important" label="List your relationship to this reference and any additional information you'd like to share with EDF." rendered="{!if(fellowAppWrapper.fellowshipApplyingFor !='China Fellowship' , true, false)}"/>
+            <p />
+            <apex:outputLabel rendered="{!if(fellowAppWrapper.fellowshipApplyingFor !='China Fellowship' , true, false)}" ><div class="GreenLabel">Add Reference 3</div></apex:outputLabel>
+            <apex:outputText value="{!fellowAppWrapper.referenceName3}" id="refName3" label="Name" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor !='China Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.referenceTitle3}" id="refTitle3" label="Title" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor !='China Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.referenceEmail3}" id="refEmail3" label="Email" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor !='China Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.referencePhone3}" id="refPhone3" label="Phone" rendered="{!if(fellowAppWrapper.fellowshipApplyingFor !='China Fellowship' , true, false)}" />
+            <apex:outputText value="{!fellowAppWrapper.referenceSpecialInstructions3}" id="refSpInstr3" style="font-weight: normal !important" label="List your relationship to this reference and any additional information you'd like to share with EDF." rendered="{!if(fellowAppWrapper.fellowshipApplyingFor !='China Fellowship' , true, false)}"/>
+
+
+            <!-- apex:panelGrid columns="5" id="containerSearch" border="0" styleClass="tablewdth">
+                <apex:outputText value="Name"  id="RefHeaderName" style="font-weight:bold"/>
+                <apex:outputText value="Title" id="RefHeaderTitle" style="font-weight:bold"/>
+                <apex:outputText value="Email" id="RefHeaderEmail" style="font-weight:bold"/>
+                <apex:outputText value="Phone" id="RefHeaderPhone" style="font-weight:bold"/>
+                <apex:outputText id="RefHeaderAdditionalInfo"><b> List your relationship to this reference and any <br/>additional information you'd like to share with EDF.</b></apex:outputText>
+                <apex:outputText value="{!fellowAppWrapper.referenceName1}" id="refName1" />
+                <apex:outputText value="{!fellowAppWrapper.referenceTitle1}" id="refTitle1"  />
+                <apex:outputText value="{!fellowAppWrapper.referenceEmail1}" id="refEmail1"  />
+                <apex:outputText value="{!fellowAppWrapper.referencePhone1}" id="refPhone1" />
+                <apex:outputText value="{!fellowAppWrapper.referenceSpecialInstructions1}" id="refSpInstr1" style="font-weight: normal !important"/>
+                <apex:outputText value="{!fellowAppWrapper.referenceName2}" id="refName2" />
+                <apex:outputText value="{!fellowAppWrapper.referenceTitle2}" id="refTitle2"  />
+                <apex:outputText value="{!fellowAppWrapper.referenceEmail2}" id="refEmail2"  />
+                <apex:outputText value="{!fellowAppWrapper.referencePhone2}" id="refPhone2" />
+                <apex:outputText value="{!fellowAppWrapper.referenceSpecialInstructions2}" id="refSpInstr2" style="font-weight: normal !important"/>
+                <apex:outputText value="{!fellowAppWrapper.referenceName3}" id="refName3" />
+                <apex:outputText value="{!fellowAppWrapper.referenceTitle3}" id="refTitle3"  />
+                <apex:outputText value="{!fellowAppWrapper.referenceEmail3}" id="refEmail3"  />
+                <apex:outputText value="{!fellowAppWrapper.referencePhone3}" id="refPhone3" />
+                <apex:outputText value="{!fellowAppWrapper.referenceSpecialInstructions3}" id="refSpInstr3" style="font-weight: normal !important"/>
+            </apex:panelGrid -->
+
+        </apex:pageBlockSection>
+
+    </apex:pageBlock>
+
+</apex:page>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Contact_Soft_Credits__c</fullName>
+    <description>Total number of Soft Credits attributed to Account Contacts.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Total number of Soft Credits attributed to Account Contacts.</inlineHelpText>
+    <label>Total Contact Soft Credits</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Membership_Leader_contact__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>A  membership donor who has given a cumulative amount of $500 or more in the current or previous 3 calendar year.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A  membership donor who has given a cumulative amount of $500 or more in the current or previous 3 calendar year</inlineHelpText>
+    <label>Membership Leader</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

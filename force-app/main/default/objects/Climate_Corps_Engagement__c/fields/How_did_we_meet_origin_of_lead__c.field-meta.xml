@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_did_we_meet_origin_of_lead__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the category that best describes how we were introduced to this organization/how the lead developed. Be sure to fill in any follow-up fields (i.e. conference, etc).</inlineHelpText>
+    <label>How did we meet/origin of lead</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Existing pipeline organization</fullName>
+                <default>false</default>
+                <label>Existing pipeline organization</label>
+            </value>
+            <value>
+                <fullName>EDF Relationship (add note)</fullName>
+                <default>false</default>
+                <label>EDF Relationship (add note)</label>
+            </value>
+            <value>
+                <fullName>Conference (see conference field)</fullName>
+                <default>false</default>
+                <label>Conference (see conference field)</label>
+            </value>
+            <value>
+                <fullName>Consultants (see consultant field)</fullName>
+                <default>false</default>
+                <label>Consultants (see consultant field)</label>
+            </value>
+            <value>
+                <fullName>Pipeline research/cold lead</fullName>
+                <default>false</default>
+                <label>Pipeline research/cold lead</label>
+            </value>
+            <value>
+                <fullName>Unsolicited</fullName>
+                <default>false</default>
+                <label>Unsolicited</label>
+            </value>
+            <value>
+                <fullName>Host Referral (see referral field)</fullName>
+                <default>false</default>
+                <label>Host Referral (see referral field)</label>
+            </value>
+            <value>
+                <fullName>Wholesale/partnership (see partnership field)</fullName>
+                <default>false</default>
+                <label>Wholesale/partnership (see partnership field)</label>
+            </value>
+            <value>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+                <label>Webinar</label>
+            </value>
+            <value>
+                <fullName>Other (add note)</fullName>
+                <default>false</default>
+                <label>Other (add note)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bookmark__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Fellow indicated that they are interested in this fellowship but may or may not have submitted full Consider Me</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Fellow indicated that they are interested in this fellowship but may or may not have submitted full Consider Me</inlineHelpText>
+    <label>Bookmark</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

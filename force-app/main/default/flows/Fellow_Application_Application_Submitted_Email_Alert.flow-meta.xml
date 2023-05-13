@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Send application received email to India applicants</description>
+        <name>Application_Received_India</name>
+        <label>Application Received - India</label>
+        <locationX>314</locationX>
+        <locationY>455</locationY>
+        <actionName>Fellow_Application__c.Fellow_Application_Received_India</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Sends an email to US fellows that their application has been received.</description>
+        <name>Application_Recieved_USandChina</name>
+        <label>Application Received-US</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <actionName>Fellow_Application__c.Fellow_Application_Received_US_and_China</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Sends email to China applicants</description>
+        <name>ChinaApp</name>
+        <label>ChinaApp</label>
+        <locationX>578</locationX>
+        <locationY>455</locationY>
+        <actionName>Fellow_Application__c.Application_Received_China</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <description>Decide which email to send based on the which fellowship the candidate is applying for</description>
+        <name>Fellowship_Applying_For</name>
+        <label>Fellowship Applying For</label>
+        <locationX>446</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>US_or_China_Applicant</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Fellowship_Applying_for__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>U.S. Fellowship</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Application_Recieved_USandChina</targetReference>
+            </connector>
+            <label>US Applicant</label>
+        </rules>
+        <rules>
+            <name>IndiaApplicant</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Fellowship_Applying_for__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>India Fellowship</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Application_Received_India</targetReference>
+            </connector>
+            <label>India Applicant</label>
+        </rules>
+        <rules>
+            <name>China_Applicant</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Fellowship_Applying_for__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>China Fellowship</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ChinaApp</targetReference>
+            </connector>
+            <label>China Applicant</label>
+        </rules>
+    </decisions>
+    <description>v4 Optimize flow per FB-1490 + updated template for China</description>
+    <environments>Default</environments>
+    <interviewLabel>Fellow Application - Application Submitted Email Alert {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Fellow Application - Application Submitted Email Alert</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Fellowship_Applying_For</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>{!$Permission.Flow_Automations_Off} &lt;&gt; TRUE
+&amp;&amp;
+ispickval({!$Record.Status__c}, &quot;Application Submitted&quot;)</filterFormula>
+        <object>Fellow_Application__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

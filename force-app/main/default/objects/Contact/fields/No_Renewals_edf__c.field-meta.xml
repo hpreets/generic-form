@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Renewals_edf__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check if a renewal notice should never be sent.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check if a renewal notice should never be sent.</inlineHelpText>
+    <label>No Renewals</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

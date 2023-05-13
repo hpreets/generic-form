@@ -1,0 +1,53 @@
+<template>
+    <!-- Header Bottom Section Start -->
+    <div class="header-bottom">
+        <div class="header-bottom-inner climate-one-line-wrap">
+            <!--p class="climate-one-line">Climate Corps Fellow Application Thank you for your interest in applying to
+                Climate Corps. Please fill out the information below.</p-->
+            <p class="climate-one-line"><lightning-formatted-rich-text value={label.thankYouFillOutInformation}></lightning-formatted-rich-text></p>    
+            <!-- Form Page Menu Start -->
+            <div class="form-menu">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);" onclick={navigateToDashboard}>
+                            <span class="num">&nbsp;</span> 
+                            <span class="form-menu-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" onclick={navigateToContactInfo}>
+                            <span class="num">1</span> 
+                            <span class="form-menu-text">Contact</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" onclick={navigateToEducationInformation}>
+                            <span class="num">2</span> 
+                            <span class="form-menu-text">Education</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" onclick={navigateToBackgroundInformation}>
+                            <span class="num">3</span> 
+                            <span class="form-menu-text">Background</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" onclick={navigateToPreferences}>
+                            <span class="num">4</span> 
+                            <span class="form-menu-text">Preferences</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" onclick={navigateToCoverLetter}>
+                            <span class="num">5</span> 
+                            <span class="form-menu-text">Cover Letter</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Form Page Menu End -->
+        </div>
+    </div>
+    <!-- Header Bottom Section End -->
+</template>

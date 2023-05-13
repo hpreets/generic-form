@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ian_Assigned_User_Stories</fullName>
+    <columns>NAME</columns>
+    <columns>User_Story_Description__c</columns>
+    <columns>Build_Plan__c</columns>
+    <columns>Status__c</columns>
+    <columns>Guided_Walkthrough_Session__c</columns>
+    <columns>Epic__c</columns>
+    <columns>Level_of_Effort__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Build_Assigned_To__c</field>
+        <operation>contains</operation>
+        <value>Ian</value>
+    </filters>
+    <filters>
+        <field>Iteration__c</field>
+        <operation>equals</operation>
+        <value>Phase 2</value>
+    </filters>
+    <label>Ian Assigned User Stories</label>
+</ListView>

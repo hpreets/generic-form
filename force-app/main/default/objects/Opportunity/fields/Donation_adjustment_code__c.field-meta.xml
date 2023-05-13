@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Donation_adjustment_code__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Code used to indicate reason for donation or pledge adjustment</inlineHelpText>
+    <label>Donation adjustment code</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Carry-over</fullName>
+                <default>false</default>
+                <label>Carry-over</label>
+            </value>
+            <value>
+                <fullName>Designation Adjustment</fullName>
+                <default>false</default>
+                <label>Designation Adjustment</label>
+            </value>
+            <value>
+                <fullName>Donation revision</fullName>
+                <default>false</default>
+                <label>Donation revision</label>
+            </value>
+            <value>
+                <fullName>Donation Revision - Amount Decrease</fullName>
+                <default>false</default>
+                <label>Donation Revision - Amount Decrease</label>
+            </value>
+            <value>
+                <fullName>Donation Revision - Amount Increase</fullName>
+                <default>false</default>
+                <label>Donation Revision - Amount Increase</label>
+            </value>
+            <value>
+                <fullName>Entity Adjustment - correct bank</fullName>
+                <default>false</default>
+                <label>Entity Adjustment - correct bank</label>
+            </value>
+            <value>
+                <fullName>Entity Adjustment - wrong bank but correct entry</fullName>
+                <default>false</default>
+                <label>Entity Adjustment - wrong bank but correct entry</label>
+            </value>
+            <value>
+                <fullName>Entity Adjustment - wrong entry and bank</fullName>
+                <default>false</default>
+                <label>Entity Adjustment - wrong entry and bank</label>
+            </value>
+            <value>
+                <fullName>Entry Error</fullName>
+                <default>false</default>
+                <label>Entry Error</label>
+            </value>
+            <value>
+                <fullName>No adjusting entry</fullName>
+                <default>false</default>
+                <label>No adjusting entry</label>
+            </value>
+            <value>
+                <fullName>Partial chargeback</fullName>
+                <default>false</default>
+                <label>Partial chargeback</label>
+            </value>
+            <value>
+                <fullName>Partial refund</fullName>
+                <default>false</default>
+                <label>Partial refund</label>
+            </value>
+            <value>
+                <fullName>Payment transfer</fullName>
+                <default>false</default>
+                <label>Payment transfer</label>
+            </value>
+            <value>
+                <fullName>Reclass - Admin</fullName>
+                <default>false</default>
+                <label>Reclass - Admin</label>
+            </value>
+            <value>
+                <fullName>Write off – Allowance</fullName>
+                <default>false</default>
+                <label>Write off – Allowance</label>
+            </value>
+            <value>
+                <fullName>Write off – Bad Debt</fullName>
+                <default>false</default>
+                <label>Write off – Bad Debt</label>
+            </value>
+            <value>
+                <fullName>Write off – Deferred Government Revenue</fullName>
+                <default>false</default>
+                <label>Write off – Deferred Government Revenue</label>
+            </value>
+            <value>
+                <fullName>Write off – Revenue</fullName>
+                <default>false</default>
+                <label>Write off – Revenue</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>7</visibleLines>
+</CustomField>

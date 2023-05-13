@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Funding_Source__c</fullName>
+    <description>Enter funding source if the engagement is not self-funded.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If supported by corporate foundation, please enter the account for that organization in &apos;Corporate Foundation Funding&apos;</inlineHelpText>
+    <label>Funding Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Barr Foundation</fullName>
+                <default>false</default>
+                <label>Barr Foundation</label>
+            </value>
+            <value>
+                <fullName>Robertson Foundation</fullName>
+                <default>false</default>
+                <label>Robertson Foundation</label>
+            </value>
+            <value>
+                <fullName>EDF Climate Corps/CPP</fullName>
+                <default>false</default>
+                <label>EDF Climate Corps/CPP</label>
+            </value>
+            <value>
+                <fullName>Other EDF Program</fullName>
+                <default>false</default>
+                <label>Other EDF Program</label>
+            </value>
+            <value>
+                <fullName>Foundation to organization</fullName>
+                <default>false</default>
+                <label>Foundation to organization</label>
+            </value>
+            <value>
+                <fullName>Foundation to EDF</fullName>
+                <default>false</default>
+                <label>Foundation to EDF</label>
+            </value>
+            <value>
+                <fullName>Funding needed</fullName>
+                <default>false</default>
+                <label>Funding needed</label>
+            </value>
+            <value>
+                <fullName>Donor to EDF</fullName>
+                <default>false</default>
+                <label>Donor to EDF</label>
+            </value>
+            <value>
+                <fullName>Boone (TX)</fullName>
+                <default>false</default>
+                <label>Boone (TX)</label>
+            </value>
+            <value>
+                <fullName>Trammel Crow</fullName>
+                <default>false</default>
+                <label>Trammel Crow</label>
+            </value>
+            <value>
+                <fullName>Ayrshire</fullName>
+                <default>false</default>
+                <label>Ayrshire</label>
+            </value>
+            <value>
+                <fullName>Wells Fargo</fullName>
+                <default>false</default>
+                <label>Wells Fargo</label>
+            </value>
+            <value>
+                <fullName>Donor to Organization</fullName>
+                <default>false</default>
+                <label>Donor to Organization</label>
+            </value>
+            <value>
+                <fullName>Company to organization</fullName>
+                <default>false</default>
+                <label>Company to organization</label>
+            </value>
+            <value>
+                <fullName>Reis Foundation</fullName>
+                <default>false</default>
+                <label>Reis Foundation</label>
+            </value>
+            <value>
+                <fullName>McKnight Foundation</fullName>
+                <default>false</default>
+                <label>McKnight Foundation</label>
+            </value>
+            <value>
+                <fullName>EDF Paid</fullName>
+                <default>false</default>
+                <label>EDF Paid</label>
+            </value>
+            <value>
+                <fullName>Host Paid</fullName>
+                <default>false</default>
+                <label>Host Paid</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

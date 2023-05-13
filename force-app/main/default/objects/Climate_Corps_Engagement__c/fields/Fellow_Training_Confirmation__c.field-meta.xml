@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fellow_Training_Confirmation__c</fullName>
+    <description>Fellow&apos;s initials indicate they completed the required amount of fellow training sessions.</description>
+    <externalId>false</externalId>
+    <label>Fellow Training Confirmation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

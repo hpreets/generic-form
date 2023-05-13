@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Steps_You_Took__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>What are the actions you took or click path that led to this observation?</inlineHelpText>
+    <label>Steps You Took</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

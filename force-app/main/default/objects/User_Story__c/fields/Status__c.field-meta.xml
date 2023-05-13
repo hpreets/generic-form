@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>true</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>In Refinement</fullName>
+                <default>false</default>
+                <label>In Refinement</label>
+            </value>
+            <value>
+                <fullName>EDF Discussion Required</fullName>
+                <default>false</default>
+                <label>EDF Discussion Required</label>
+            </value>
+            <value>
+                <fullName>Further Discussion Required</fullName>
+                <default>false</default>
+                <label>Further Discussion Required</label>
+            </value>
+            <value>
+                <fullName>Ready to Schedule</fullName>
+                <default>false</default>
+                <label>Ready to Schedule</label>
+            </value>
+            <value>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+                <label>Scheduled</label>
+            </value>
+            <value>
+                <fullName>Design in Progress</fullName>
+                <default>false</default>
+                <label>Design in Progress</label>
+            </value>
+            <value>
+                <fullName>Ready for Build</fullName>
+                <default>false</default>
+                <label>Ready for Build</label>
+            </value>
+            <value>
+                <fullName>Build in Progress</fullName>
+                <default>false</default>
+                <label>Build in Progress</label>
+            </value>
+            <value>
+                <fullName>Ready for Testing-Dev Sandbox</fullName>
+                <default>false</default>
+                <label>Ready for Testing-Dev Sandbox</label>
+            </value>
+            <value>
+                <fullName>Ready for Testing Full Sandbox</fullName>
+                <default>false</default>
+                <label>Ready for Testing - Full Sandbox</label>
+            </value>
+            <value>
+                <fullName>Ready for Production</fullName>
+                <default>false</default>
+                <label>Ready for Production</label>
+            </value>
+            <value>
+                <fullName>Deployed to Production</fullName>
+                <default>false</default>
+                <label>Deployed to Production</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

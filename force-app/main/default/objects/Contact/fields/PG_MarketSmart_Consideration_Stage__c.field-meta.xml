@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PG_MarketSmart_Consideration_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>PG MarketSmart Consideration Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Considering</fullName>
+                <default>false</default>
+                <label>Considering</label>
+            </value>
+            <value>
+                <fullName>Left a Gift</fullName>
+                <default>false</default>
+                <label>Left a Gift</label>
+            </value>
+            <value>
+                <fullName>Might Consider</fullName>
+                <default>false</default>
+                <label>Might Consider</label>
+            </value>
+            <value>
+                <fullName>Will Not Consider</fullName>
+                <default>false</default>
+                <label>Will Not Consider</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

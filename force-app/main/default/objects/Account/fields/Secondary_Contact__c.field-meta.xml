@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secondary_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This contact will be used when creating the formal and informal salutations.  For example, formulas that reference secondary titles or names will use the information from this contact.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This contact will be used when creating the formal and informal salutations.  For example, formulas that reference secondary titles or names will use the information from this contact.</inlineHelpText>
+    <label>Secondary Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Accounts (Secondary Contact)</relationshipLabel>
+    <relationshipName>AccountsSecondaryContact</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

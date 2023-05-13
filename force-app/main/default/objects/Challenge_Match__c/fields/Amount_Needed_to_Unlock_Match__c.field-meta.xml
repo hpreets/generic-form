@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_Needed_to_Unlock_Match__c</fullName>
+    <description>Amount needed to unlock match if Match type is &quot;All of Nothing&quot;</description>
+    <externalId>false</externalId>
+    <formula>IF (ISPICKVAL( Match_Type__c , &quot;All or nothing&quot;),  Threshold_Amount_Summary__c ,null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Amount needed to unlock match if Match type is &quot;All of Nothing&quot;</inlineHelpText>
+    <label>Amount Needed to Unlock Match</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

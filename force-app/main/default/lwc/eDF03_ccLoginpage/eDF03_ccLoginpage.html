@@ -1,0 +1,145 @@
+<!--
+  @description       :
+  @author            : Sai Teja
+  @last modified on  : 01-21-2022
+  @last modified by  : Sai Teja
+-->
+<template>
+        <!-- <lightning-card> -->
+            <c-e-d-f23_-login-header></c-e-d-f23_-login-header>
+       <!-- body tag div -->
+       <div class="body-bg-image-registration">
+
+
+            <div class="bg-welcome d-flex justify-content-center align-items-center" >
+                <div class="welcome-form-section">
+                    <div class="welcome-form-section-inner">
+                        <div class="welcome-form-section-sub">
+                            <h1><span>Welcome to the</span> Climate Corps Portal</h1>
+                            <p>If you have already created an account with us, please log in below.</p>
+                            <span onkeypress={handleEnterToLogin}>
+                                <div class="welcome-form-wrap">
+                                    <div class="form-group">
+                                        <label for="welcomeUsername">Email</label>
+                                        <input type="text" class="form-control email-for-login" id="welcomeUsername" onchange={handleEmailChange}>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="welcomePassword">Password</label>
+                                        <input type="password" class="form-control password-for-login" id="welcomePassword" onchange={handlePasswordChange}>
+                                    </div>
+                                    <div class="form-button-wrap">
+                                        <button type="button" class="btn btn-primary login-button" onclick={handleLogin}>Login</button>
+                                        <a title="" class="forgot-password-link" data-toggle="modal" data-target="#forgot-password-modal" onclick={showForgotPasswordModal}>Forgot password?</a>
+                                        <!-- <span style={cssStyleInvalidEmailPwd}>{invalidEmailPwdMsg}</span> -->
+                                    </div>
+                                </div>
+                                <template if:false={isDeadlinePassed}>
+                                    <div class="welcome-form-footer">
+                                        Don’t have an account?
+                                        <button type="button" class="btn btn-primary register-now" onclick={navigateToRegister} >Register Now</button>
+                                    </div>
+                                </template>
+                            </span>
+                            <!-- Forgot Password Modal Start -->
+                            <div class={cssClassForgotPasswordModel} style={cssStyleForgotPasswordModel} id="forgot-password-modal" tabindex="-1"
+                                role="dialog" aria-labelledby="forgot-password-modalTitle" aria-hidden={ariahiddenForgotPasswordModel}>
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="exampleModalLongTitle">
+                                                Forgot/Reset Account Password</h3>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close" onclick={closeForgotPasswordModal}>
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-12 form-group no-margin-bottom">
+                                                    <input type="text" class="form-control email" placeholder="Enter your registered email ID">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button"
+                                                class="btn btn-primary button-custom green-button"
+                                                data-toggle="modal"
+                                                data-target="#forgot-password-messages-modal" onclick={forgotPasswordHandler}>Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Forgot Password Modal End -->
+
+                            <!-- Forgot Password Messages Modal Start -->
+                            <div class={cssClassForgotPasswordMessageModel} style={cssStyleForgotPasswordMessageModel}
+                                id="forgot-password-messages-modal" tabindex="-1" role="dialog"
+                                aria-labelledby="forgot-password-messages-modalTitle" aria-hidden={ariahiddenForgotPasswordMessageModel}>
+                                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="exampleModalLongTitle2">
+                                                Forgot/Reset Account Password
+                                            </h3>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close" onclick={closeForgotPasswordMessageModal}>
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- <h4>We have sent you a password reset link to your email</h4>
+                                            <p>Please click on the link and follow the instructions to reset your password!</p> -->
+                                            <template if:true={resetLink}>
+                                                <h4 style={colorGreen}>{forgotPasswordMessage}</h4>
+                                            </template>
+                                            <template if:false={resetLink}>
+                                                <h4 style={colorRed}>{forgotPasswordMessage}</h4>
+                                            </template>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button"
+                                                class="btn btn-primary button-custom green-button" onclick={closeForgotPasswordModals}>Ok</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Forgot Password Messages Modal End -->
+
+                            <!-- Forgot Invalid Email Password Modal Start -->
+                            <div class={cssClassInvalidEmailPasswordModel} style={cssStyleInvalidEmailPasswordModel}
+                                 tabindex="-1" role="dialog"
+                                aria-labelledby="forgot-invalid-email-password-modalTitle" aria-hidden={ariahiddenInvalidEmailPasswordModel}>
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title">
+                                                Invalid Credentials
+                                            </h3>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close" onclick={closeInvalidEmailPasswordModal}>
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h4 style={colorRed}>{invalidEmailPwdMsg}</h4>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button"
+                                                class="btn btn-primary button-custom green-button" onclick={closeInvalidEmailPasswordModal}>Ok</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Forgot Invalid Email Password Modal End -->
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+        </div>
+        <!-- End of body tag div -->
+
+        <c-e-d-f22_footer></c-e-d-f22_footer>
+        <!-- </lightning-card> -->
+</template>

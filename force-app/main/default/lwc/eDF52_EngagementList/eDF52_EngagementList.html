@@ -1,0 +1,482 @@
+<!--
+  @description       :
+  @author            : Harpreet Singh
+  @last modified on  : 08-Dec-2022
+  @last modified by  : Harpreet Singh
+-->
+<template>
+
+    <!-- START: Search Topics Modal Dialog -->
+    <template if:true={showTips}>
+        <section  class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModalAction}>
+                       <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+                    </button>
+                    <h5 class="modal-title">{headingSearchTipsDialog}</h5>
+                 </header>
+
+                 <div class="slds-modal__content slds-p-around_medium">
+
+                    <div>
+                        <ul class="engagements-search-tips-list">
+                            <lightning-formatted-rich-text value={label.searchTip1}></lightning-formatted-rich-text>
+                            <lightning-formatted-rich-text value={label.searchTip2}></lightning-formatted-rich-text>
+                            <lightning-formatted-rich-text value={label.searchTip3}></lightning-formatted-rich-text>
+                            <lightning-formatted-rich-text value={label.searchTip4}></lightning-formatted-rich-text>
+                            <lightning-formatted-rich-text value={label.searchTip5}></lightning-formatted-rich-text>
+                        </ul>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    <!-- END: Search Topics Modal Dialog -->
+
+    <!-- START: Engagement Instruction, Search, Filters and List -->
+    <div class="bg-welcome">
+        <div class="registration-application-section">
+            <div class="registration-application-section-inner fluid-container">
+                <div class="registration-application-section-sub">
+                    <h3>{headingEngagementPage}</h3>
+                    <div class="registration-application-form-wrap">
+
+                        <!-- START: Engagement Instruction -->
+                        <div class="engagements-instructions-wrap">
+                            <div class="engagements-instructions-top">
+                                <h5><img src={instructionsImageURL} alt="" title="" /> {headingInstruction}</h5>
+
+                                <!-- Search Tips Start -->
+                                <div class="search-tips-wrap clearfix" data-toggle="modal"
+                                    data-target=".engagements-search-tips-modal" onclick={openTipsModel}>
+                                    <img src={infoImageURL} alt="" title=""
+                                        class="search-tips-info-icon" />
+                                    <p>{labelSearchTips}</p>
+
+                                </div>
+                                <!-- Search Tips End -->
+
+                            </div>
+
+                            <!-- Individual Instructions Section Start -->
+                            <div class="engagements-instructions-content-wrap">
+                                <lightning-formatted-rich-text value={label.instruction1}></lightning-formatted-rich-text>
+                                <lightning-formatted-rich-text value={label.instruction2}></lightning-formatted-rich-text>
+                                <lightning-formatted-rich-text value={label.instruction3}></lightning-formatted-rich-text>
+                                <lightning-formatted-rich-text value={label.instruction4}></lightning-formatted-rich-text>
+                            </div>
+                            <!-- Individual Instructions Section End -->
+
+                        </div>
+                        <!-- END: Engagement Instruction -->
+
+                        <!-- START: Engagement Search and Filters -->
+                        <!-- Search Engagements Start -->
+                        <div class="search-engagements-wrap">
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group search-engagements-field">
+
+                                    <lightning-input
+                                    name="globalSearch"
+                                    placeholder={placeholderSearchEngagementText}
+                                    value={globalSearch}
+                                    data-gname="globalSearch"
+                                    onchange={handleFilterChange}
+                                    >
+                                    </lightning-input>
+
+                                    <!-- Commenting Filter button FB-2151 -->
+                                    <!-- button type="button" class="btn search-settings-icon"><img
+                                            src={carbonsettingsImageURL} alt="" title="" /></button -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Search Engagements End -->
+
+                        <!-- Filter Engagements Start -->
+                        <div class="search-engagements-form-wrap">
+                            <div class="row">
+                                <!-- Filter: Fellowship City Start -->
+                                <template if:true={showFellowshipCityFilter}>
+                                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+                                        <lightning-combobox
+                                        name="fellowshipcity"
+                                        data-cname="filterCombo"
+                                        label={labelFellowshipCityFilter}
+                                        options={fellowShipCityOptions}
+                                        onchange={handleFilterChange}
+                                        value={fellowshipcity}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                </template>
+                                <!-- Filter: Fellowship City END -->
+
+                                <!-- Filter: Fellowship State Start -->
+                                <template if:true={showFellowshipStateFilter}>
+                                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+
+                                        <lightning-combobox
+                                        name="fellowshipstate"
+                                        data-cname="filterCombo"
+                                        label={labelFellowshipStateFilter}
+                                        options={fellowShipStateOptions}
+                                        onchange={handleFilterChange}
+                                        value={fellowshipstate}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                </template>
+                                <!-- Filter: Fellowship State END -->
+
+                                <!-- Filter: Accessible to Public Transport Start -->
+                                <template if:true={showAccessibleToPublicTransportFilter}>
+                                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+
+                                        <lightning-combobox
+                                        name="publicTransport"
+                                        data-cname="filterCombo"
+                                        label={labelAccessibleToPublicTransportFilter}
+                                        options={publicTransportOptions}
+                                        onchange={handleFilterChange}
+                                        value={publicTransport}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                </template>
+                                <!-- Filter: Accessible to Public Transport END -->
+
+                                <!-- Filter: Industry Start -->
+                                <template if:true={showIndustryFilter}>
+                                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+
+                                        <lightning-combobox
+                                        name="industry"
+                                        data-cname="filterCombo"
+                                        label={labelIndustryFilter}
+                                        options={industryOptions}
+                                        onchange={handleFilterChange}
+                                        value={industry}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                </template>
+                                <!-- Filter: Industry END -->
+
+                                <!-- Filter: Available / Not Available Start -->
+                                <template if:true={showAvailableNotAvailableFilter}>
+                                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+
+                                        <lightning-combobox
+                                        name="availableNotAvailable"
+                                        data-cname="filterCombo"
+                                        label={labelAvailableNotAvailableFilter}
+                                        options={availAndNotAvailableOptions}
+                                        onchange={handleFilterChange}
+                                        value={availableNotAvailable}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                </template>
+                                <!-- Filter: Available / Not Available END -->
+
+                                <!-- Filter: Project Type Start -->
+                                <template if:true={showProjectTypeFilter}>
+                                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+
+                                        <lightning-combobox
+                                        name="projectType"
+                                        data-cname="filterCombo"
+                                        label={labelProjectTypeFilter}
+                                        options={projectTypeOptions}
+                                        onchange={handleFilterChange}
+                                        value={projectType}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                </template>
+                                <!-- Filter: Project Type END -->
+
+                                <!-- Filter: Fellowship Location Preference Start -->
+                                <template if:true={showFellowshipLocationPreferenceFilter}>
+                                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+
+                                        <lightning-combobox
+                                        name="locationPreferance"
+                                        data-cname="filterCombo"
+                                        label={labelFellowshipLocationPreferenceFilter}
+                                        options={locationPreferanceOptions}
+                                        onchange={handleFilterChange}
+                                        value={locationPreferance}
+                                        >
+                                        </lightning-combobox>
+                                    </div>
+                                </template>
+                                <!-- Filter: Fellowship Location Preference END -->
+
+                                <!-- Commented by HSingh FB-2139 -->
+                                <!-- div class="col-12 col-md-4 col-lg-4 col-xl-4 form-group">
+
+                                    <lightning- combobox
+                                    name="engagementProgram"
+                                    data-cname="filterCombo"
+                                    label="Fellowship Program"
+                                    options="{engagementProgramsOptions}"
+                                    onchange="{handleFilterChange}"
+                                    value="{engagementProgram}"
+                                    >
+                                    </lightning- combobox>
+                                </div -->
+
+                            </div>
+
+                            <!-- Search Buttons Start -->
+                            <div class="form-button-wrap no-padding-top d-flex justify-content-end">
+                                <button type="button" onclick={handleResetCriteria} class="btn btn-primary gray-button margin-right">{labelResetCriteriaBtn}</button>
+                                <button type="button" onclick={handlesearch} class="btn btn-primary green-button ">{labelSearchBtn}</button>
+                            </div>
+                            <!-- Search Buttons END -->
+                        </div>
+                        <!-- Filter Engagements End -->
+                        <!-- END: Engagement Search and Filters -->
+
+                        <!-- START: Engagements Table Section -->
+                        <template if:true={isEngagementExist}>
+                            <div class="engagements-table-section-wrap">
+                                <div class="engagements-table-title-filter">
+                                    <h3 class="engagements-table-title">{headingEngagementList}</h3>
+
+                                    <!-- Engagements Table Title Filter Section Start -->
+                                    <div class="engagements-table-filter-wrap">
+                                        <lightning-combobox name="progress" data-cname="tableFilter" placeholder="Filter"
+                                            options={filterOptions} onchange={handleTableFilterChange} value={selTableFilter}>
+                                        </lightning-combobox>
+                                    </div>
+                                    <!-- Engagements Table Title Filter Section End -->
+
+                                </div>
+                                <!-- Engagements Table Section Start -->
+                                <div class="engagements-table">
+                                    <div class="table-responsive">
+                                        <table class="table engagements-table-data">
+                                            <!-- Engagements Table Header Row -->
+                                            <thead>
+                                                <tr>
+                                                    <!--th class="slds-text-body_small slds-p-right_none slds-p-left_xx-small">CONSIDER <br/> ME</th -->
+                                                    <th class='slds-p-left_xx-small slds-text-body_small'>&nbsp; <!-- MORE <br/> DETAILS --></th>
+                                                    <th class="slds-text-body_small" onclick={sortData} data-id="AccountName">{colHeadingHostOrganization}</th>
+                                                    <th class="slds-text-body_small" onclick={sortData} data-id="Industry">{colHeadingIndustry}</th>
+                                                    <th class="slds-text-body_small" onclick={sortData} data-id="Accessible_by_public_transportation">{colHeadingAccToPublicTransport}</th>
+                                                    <th class="slds-text-body_small" onclick={sortData} data-id="Fellowship_City">{colHeadingFellowshipCity}</th>
+                                                    <th class="slds-text-body_small" onclick={sortData} data-id="Fellowship_State">{colHeadingFellowshipState}</th>
+                                                    <th class="slds-text-body_small" onclick={sortData} data-id="Project_Type">{colHeadingProjectType}</th>
+                                                    <th class="slds-text-body_small" onclick={sortData} data-id="Fellowship_Location_Preference">{colHeadingFellowshipLocationPref}</th>
+                                                    <!-- th class="slds-text-body_small">FELLOWSHIP<br/> PROGRAM</th -->
+                                                    <th class="slds-text-body_small">{colHeadingSubmissionStatus}</th>
+                                                </tr>
+                                            </thead>
+                                            <!-- Engagements Table Header Row -->
+
+                                            <tbody>
+                                            <template if:true={engagementRecords}>
+                                                <template for:each={engagementRecords} for:item="engagement">
+                                                    {engagement.Industry_Classification__c}
+                                                    <tr data-toggle="collapse" data-target=".engagements-table-accordion1"
+                                                        class="accordion-toggle accordion-toggle-outer accordion-green-bg accordion-orange-bg" key={engagement.eId}>
+                                                        <!-- td>
+                                                        </td -->
+                                                        <td class="table-dropdown-arrow table-rating-star-icon" nowrap>
+
+                                                            <!-- Since checkbox was not required, we display:none the checbox but still utilizing it in code -->
+                                                            <!-- If checkbox is to be displayed, move the below lightning-input to above commented `TD` tag -->
+                                                            <!-- Checkbox is checked anytime an engagement is ranked, bookmarked, added comments or if it already is saved in SF -->
+                                                            <lightning-input
+                                                                type="checkbox"
+                                                                name="considermecheck"
+                                                                data-name="considermecheck"
+                                                                data-id={engagement.eId}
+                                                                onchange={handleConsiderMeCheckBox}
+                                                                checked={engagement.considerMeChecked}
+                                                                style="display:none"
+                                                            >
+                                                            </lightning-input>
+
+                                                            <!-- Collapse Icon -->
+                                                            <button type="button"
+                                                                class="btn table-accordion-arrow table-dropdown-arrow-right-down" data-id={engagement.eId} key={engagement.eId} onclick={handleCollapsebar}>
+                                                            </button>
+
+                                                            <!-- Gold / Blue star -->
+                                                            <template if:true={engagement.isStarGold}>
+                                                                <img src={starOrange} alt="" title=""
+                                                                    class="star-orange-icon" key={engagement.eId}/>
+                                                            </template>
+                                                            <template if:true={engagement.isStarBlue}>
+                                                                <img src={starBlue} alt="" title=""
+                                                                    class="star-orange-icon" key={engagement.eId}/>
+                                                            </template>
+                                                        </td>
+
+                                                        <!-- Table columns -->
+                                                        <td><p>{engagement.AccountName}</p></td>
+                                                        <td><p>{engagement.Industry}</p></td>
+                                                        <td><p>{engagement.Accessible_by_public_transportation}</p></td>
+                                                        <td><p>{engagement.Fellowship_City}</p></td>
+                                                        <td><p>{engagement.Fellowship_State}</p></td>
+                                                        <td><p>{engagement.Project_Type}</p></td>
+                                                        <td><p>{engagement.Fellowship_Location_Preference}</p></td>
+                                                        <!-- td><p>[engagement_Engagement_Program]</p></td -->
+
+                                                        <!-- Status column along with red, yellow, green icons -->
+                                                        <td class="status-icon-wrap">
+                                                            <!-- // FB-1917 Harpreet -->
+                                                            <template if:true={engagement.considerMeMatch.Status__c}>
+                                                                <span class="status-icon notsubmittedicon" key={engagement.eId} style={engagement.statusBgColor}> </span>
+                                                                {engagement.statusText}
+                                                            </template>
+                                                        </td>
+                                                    </tr>
+
+                                                    <!-- Engagement's More Details Section -->
+                                                    <template if:true={engagement.showMoreDetails}>
+                                                        <tr key={engagement.eId}>
+                                                            <td colspan="9" class="hiddenRow">
+
+                                                                <div class="accordian-body engagements-table-accordion-wrap engagements-table-accordion1" key={engagement.eId}>
+                                                                    <!-- id="engagements-table-accordion1"> -->
+                                                                    <div class="engagements-table-accordion-left">
+                                                                        <div class="engagements-table-accordion-left-action-wrap">
+
+                                                                            <!-- Engagement's Bookmark Start -->
+                                                                            <template if:false={isSubmitted}>
+                                                                                <div class="table-bage-icon-wrap">
+                                                                                    <template if:false={engagement.bookmarked}>
+                                                                                        <button data-id={engagement.eId} type="button"
+                                                                                        class="btn table-bage-icon" onclick={handleBookmark}></button>
+                                                                                    </template>
+                                                                                    <template if:true={engagement.bookmarked}>
+                                                                                        <button type="button" data-id={engagement.eId}
+                                                                                        class="btn table-bage-icon table-bage-icon-active" onclick={handleBookmark}></button>
+                                                                                    </template>
+                                                                                </div>
+                                                                            </template>
+                                                                            <!-- Engagement's Bookmark End -->
+
+
+                                                                            <!-- Engagement's Ranking Start -->
+                                                                            <div class="table-flag-section-wrap">
+                                                                                <template if:false={isSubmitted}>
+                                                                                    <button type="button"
+                                                                                        class="btn table-flag-arrow table-flag-up-arrow" data-bname="uparraow" data-id={engagement.eId} onclick={handleRanking}>
+                                                                                    </button>
+                                                                                </template>
+                                                                                <div if:false={engagement.isRankingAvailable} class="table-flag">
+                                                                                    <span class="table-flag-text">
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div if:true={engagement.isRankingAvailable} class="table-flag table-flag-active"> <!-- added class 'table-flag' -->
+                                                                                    <span style="align-content: center; color: white; font-weight: bold;"> <!-- padding-left: 0.4rem; -->
+                                                                                        {engagement.ranking}
+                                                                                    </span>
+                                                                                </div>
+                                                                                <template if:false={isSubmitted}>
+                                                                                    <button type="button"
+                                                                                        class="btn table-flag-arrow table-flag-down-arrow" data-bname="downarraow" data-id={engagement.eId} onclick={handleRanking}>
+                                                                                    </button>
+                                                                                </template>
+                                                                            </div>
+                                                                            <!-- Engagement's Ranking Start -->
+
+                                                                        </div>
+
+                                                                        <!-- Engagement's Workplan Start -->
+                                                                        <div class="engagements-table-accordion-left-content-wrap">
+                                                                            <div class="overflow-auto" data-spy="scroll">
+                                                                                <div class="slds-text-body_regular" style="white-space: break-spaces;">{engagement.Workplan_from_App}</div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- Engagement's Workplan End -->
+                                                                    </div>
+
+                                                                    <!-- Engagement's Consider Me Input Start -->
+                                                                    <div class="engagements-table-accordion-right">
+                                                                        <div class="table-accordion-right-inner">
+                                                                            <h5>{labelConsiderMeField}</h5> <!-- FB-1970 -->
+                                                                            <div class="form-group">
+                                                                                <!-- value need to be updated with ethe salesfore data later -->
+                                                                                <span class="registration-application-field-note phone-field-note">{labelMaxCharLimitConsiderMe}</span>
+                                                                                <lightning-textarea
+                                                                                    name="considermeTextArea"
+                                                                                    data-id={engagement.eId}
+                                                                                    onchange={handleConsiderMeChange}
+                                                                                    value={engagement.considerMeComments}
+                                                                                    max-length="1500"
+                                                                                    disabled={isSubmitted}
+                                                                                >
+                                                                                </lightning-textarea>
+                                                                            </div>
+                                                                            <!-- FB-2136 -->
+                                                                            <!-- div
+                                                                                class="form-button-wrap no-padding-top d-flex justify-content-end">
+                                                                                <button type="button" data-bname="considerMeButton" data-id={engagement.eId}
+                                                                                    class="btn btn-primary green-button" onclick={handleConsiderMeSave}>{engagement.considerMeSave}</button>
+                                                                            </div -->
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Engagement's Consider Me Input Start -->
+
+                                                                </div>
+
+                                                            </td>
+                                                        </tr>
+                                                    </template>
+                                                </template>
+                                            </template>
+
+                                            <template if:true={engagementRecordsError}>
+                                                <p>Inside Errors</p>
+                                                {engagementRecordsError}
+                                            </template>
+
+                                            <!-- Engagement's Save and Submit Buttons Start -->
+                                            <tr>
+                                                <td colspan="10" style="text-align: center;">
+                                                    <template if:false={isSubmitted}>
+                                                        <lightning-button disabled={isSubmitted} label={labelSubmitBtn} variant="brand" onclick={submitEngagements}></lightning-button> &nbsp; &nbsp;
+                                                        <lightning-button disabled={isSubmitted} label={labelSaveAllBtn} variant="brand" onclick={saveEngagements}></lightning-button>
+                                                    </template> &nbsp;
+                                                </td>
+                                            </tr>
+                                            <!-- Engagement's Save and Submit Buttons END -->
+                                        </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- Engagements Table Section End -->
+                            </div>
+                        </template>
+
+                        <!-- No Engagements Section Start -->
+                        <template if:false={isEngagementExist}>
+                            <lightning-card>
+                                <h3>{msgNoEngagementRecords}</h3>
+                            </lightning-card>
+                        </template>
+                        <!-- No Engagements Section End -->
+
+                        <!-- END: Engagements Table Section -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Engagement Instruction, Search, Filters and List -->
+
+    <template if:true={isSearchCriteria}>
+        <lightning-spinner size="large" variant="brand"></lightning-spinner>
+    </template>
+
+</template>

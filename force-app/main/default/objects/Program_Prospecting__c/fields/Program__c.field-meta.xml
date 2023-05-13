@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program__c</fullName>
+    <description>For which program is this constituent recommended as a prospective donor?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For which program is this constituent recommended as a prospective donor? Pick one.</inlineHelpText>
+    <label>Program</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Program</valueSetName>
+    </valueSet>
+</CustomField>

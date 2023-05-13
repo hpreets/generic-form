@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agency__c</fullName>
+    <externalId>false</externalId>
+    <label>Agency</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bureau of Land Mgmt</fullName>
+                <default>false</default>
+                <label>Bureau of Land Mgmt</label>
+            </value>
+            <value>
+                <fullName>Colorado Air Quality Control Commission</fullName>
+                <default>false</default>
+                <label>Colorado Air Quality Control Commission</label>
+            </value>
+            <value>
+                <fullName>Dept of Energy</fullName>
+                <default>false</default>
+                <label>Dept of Energy</label>
+            </value>
+            <value>
+                <fullName>Dept of Interior</fullName>
+                <default>false</default>
+                <label>Dept of Interior</label>
+            </value>
+            <value>
+                <fullName>EPA</fullName>
+                <default>false</default>
+                <label>EPA</label>
+            </value>
+            <value>
+                <fullName>FDA</fullName>
+                <default>false</default>
+                <label>FDA</label>
+            </value>
+            <value>
+                <fullName>Intl Civil Aviation Organization</fullName>
+                <default>false</default>
+                <label>Intl Civil Aviation Organization</label>
+            </value>
+            <value>
+                <fullName>Natl Oceanic &amp; Atmospheric Admin</fullName>
+                <default>false</default>
+                <label>Natl Oceanic &amp; Atmospheric Admin</label>
+            </value>
+            <value>
+                <fullName>State environmental agency</fullName>
+                <default>false</default>
+                <label>State environmental agency</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_HC_Gift_Amount__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is calculated by NPSP Customizable Roll-Up, Where Stage = Received; Received as Pledge. Record Types except Planned Gifts.</inlineHelpText>
+    <label>First HC Gift Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Extra_External_Name_IDs__c</fullName>
+    <description>Heller created 2021</description>
+    <externalId>false</externalId>
+    <label>Extra External Name IDs</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

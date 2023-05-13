@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>China_fellowship_tests__c</fullName>
+    <externalId>false</externalId>
+    <label>China fellowship tests</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CET Band 4</fullName>
+                <default>false</default>
+                <label>CET Band 4</label>
+            </value>
+            <value>
+                <fullName>CET Band 6</fullName>
+                <default>false</default>
+                <label>CET Band 6</label>
+            </value>
+            <value>
+                <fullName>TOEFL</fullName>
+                <default>false</default>
+                <label>TOEFL</label>
+            </value>
+            <value>
+                <fullName>IELTS</fullName>
+                <default>false</default>
+                <label>IELTS</label>
+            </value>
+            <value>
+                <fullName>GRE/GMAT</fullName>
+                <default>false</default>
+                <label>GRE/GMAT</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

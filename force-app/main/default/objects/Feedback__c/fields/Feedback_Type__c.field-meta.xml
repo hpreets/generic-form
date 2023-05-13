@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Feedback_Type__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the category that best fits your Feedback record. If you aren&apos;t sure, take your best guess.</inlineHelpText>
+    <label>Feedback Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Configuration</fullName>
+                <default>false</default>
+                <label>Configuration</label>
+            </value>
+            <value>
+                <fullName>Data cleanup or project</fullName>
+                <default>false</default>
+                <label>Data cleanup or project</label>
+            </value>
+            <value>
+                <fullName>Integration</fullName>
+                <default>false</default>
+                <label>Integration</label>
+            </value>
+            <value>
+                <fullName>Migrated Data</fullName>
+                <default>false</default>
+                <label>Migrated Data</label>
+            </value>
+            <value>
+                <fullName>New User Request</fullName>
+                <default>false</default>
+                <label>New User Request</label>
+            </value>
+            <value>
+                <fullName>Reports, Dashboards, List Views</fullName>
+                <default>false</default>
+                <label>Reports, Dashboards, List Views</label>
+            </value>
+            <value>
+                <fullName>Security</fullName>
+                <default>false</default>
+                <label>Security</label>
+            </value>
+            <value>
+                <fullName>System Functionality</fullName>
+                <default>false</default>
+                <label>System Functionality</label>
+            </value>
+            <value>
+                <fullName>Training or User Questions</fullName>
+                <default>false</default>
+                <label>Training or User Questions</label>
+            </value>
+            <value>
+                <fullName>User Deactivation</fullName>
+                <default>false</default>
+                <label>User Deactivation</label>
+            </value>
+            <value>
+                <fullName>User Experience</fullName>
+                <default>false</default>
+                <label>User Experience</label>
+            </value>
+            <value>
+                <fullName>User Management</fullName>
+                <default>false</default>
+                <label>User Management</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

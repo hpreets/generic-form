@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Merkle_Upload_Files</fullName>
+    <columns>NAME</columns>
+    <columns>Entity__c</columns>
+    <columns>Deposit_Date__c</columns>
+    <columns>Source__c</columns>
+    <columns>Assigned_to__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Amount__c</columns>
+    <columns>Merkle_Batch__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Source__c</field>
+        <operation>equals</operation>
+        <value>Merkle Upload File</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Committed</value>
+    </filters>
+    <label>Merkle Upload Files</label>
+</ListView>

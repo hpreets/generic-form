@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PG_Qualification_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>PG Qualification Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PG Gift Officer Qualified</fullName>
+                <default>false</default>
+                <label>PG Gift Officer Qualified</label>
+            </value>
+            <value>
+                <fullName>PG Gift Officer Disqualified</fullName>
+                <default>false</default>
+                <label>PG Gift Officer Disqualified</label>
+            </value>
+            <value>
+                <fullName>PG Gift Officer Pending</fullName>
+                <default>false</default>
+                <label>PG Gift Officer Pending</label>
+            </value>
+            <value>
+                <fullName>Research Recommends PG Portfolio</fullName>
+                <default>false</default>
+                <label>Research Recommends PG Portfolio</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

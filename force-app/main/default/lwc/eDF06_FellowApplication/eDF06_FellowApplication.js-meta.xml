@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="textPageHeading" type="String" label="Page Heading" default="Application" />
+            <property name="textGetYourAppPDFLine1" type="String" default="Get your application" label="Label - Line 1 Get Your PDF" />
+            <property name="textGetYourAppPDFLine2" type="String" default="in PDF format" label="Label - Line 2 Get Your PDF" />
+            <property name="textThankYouForSubmitting" type="String" label="Text - Thank You for Submitting" default="Thank you for submitting your Climate Corps fellow application." />
+            <property name="labelSubmitAppBtn" type="String" default="Submit Application" label="Label - Submit Application button" />
+
+            <property name="labelContactInformationSection" type="String" default="Contact Information" label="Label - Contact Info section" />
+            <property name="labelEducationInformationSection" type="String" default="Education Information" label="Label - Education Info section" />
+            <property name="labelBackgroundInformationSection" type="String" default="Background Information" label="Label - Background Info section" />
+            <property name="labelMatchPreferenceSection" type="String" default="Match Preferences" label="Label - Match Preferences section" />
+            <property name="labelCoverLetterResumeSection" type="String" default="Cover Letter &amp; Resume" label="Label - Cover Letter &amp; Resume section" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

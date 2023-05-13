@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Workplan_Focus__c</fullName>
+    <externalId>false</externalId>
+    <label>Workplan Focus</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Traditional EE Projects</fullName>
+                <default>false</default>
+                <label>Traditional EE Projects</label>
+            </value>
+            <value>
+                <fullName>Strategy or Tools</fullName>
+                <default>false</default>
+                <label>Strategy or Tools</label>
+            </value>
+            <value>
+                <fullName>EE Strategy</fullName>
+                <default>false</default>
+                <label>EE Strategy</label>
+            </value>
+            <value>
+                <fullName>Employee Engagement</fullName>
+                <default>false</default>
+                <label>Employee Engagement</label>
+            </value>
+            <value>
+                <fullName>Behavior Change</fullName>
+                <default>false</default>
+                <label>Behavior Change</label>
+            </value>
+            <value>
+                <fullName>Data Centers</fullName>
+                <default>false</default>
+                <label>Data Centers</label>
+            </value>
+            <value>
+                <fullName>Industrial EE</fullName>
+                <default>false</default>
+                <label>Industrial EE</label>
+            </value>
+            <value>
+                <fullName>Decision Support Tools</fullName>
+                <default>false</default>
+                <label>Decision Support Tools</label>
+            </value>
+            <value>
+                <fullName>Funding Mechanisms</fullName>
+                <default>false</default>
+                <label>Funding Mechanisms</label>
+            </value>
+            <value>
+                <fullName>Energy Information Systems</fullName>
+                <default>false</default>
+                <label>Energy Information Systems</label>
+            </value>
+            <value>
+                <fullName>Products or Services</fullName>
+                <default>false</default>
+                <label>Products or Services</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

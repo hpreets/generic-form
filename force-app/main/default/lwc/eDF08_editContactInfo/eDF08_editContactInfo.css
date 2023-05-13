@@ -1,0 +1,1428 @@
+/* Registration Application Section Start */
+.registration-application-section {
+  padding: 30px 0 30px 0;
+}
+.registration-application-section .registration-application-section-inner {
+  max-width: 1000px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+.registration-application-section .registration-application-section-sub {
+  padding: 32px 45px 42px 37px;
+  font-family: "Roboto", sans-serif;
+}
+.registration-application-section .registration-application-section-sub h3 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #58595b;
+  background-color: inherit;
+  padding: 0 0 0 0;
+  margin: 0 0 21px 0;
+  display: inline-block;
+  position: relative;
+}
+.registration-application-section
+  .registration-application-section-sub
+  h3:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 4px;
+  background-color: #c9c9c9;
+}
+
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap {
+  padding: 0 0 0 0;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #58595b;
+  background-color: inherit;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group {
+  margin: 0 0 29px 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  label {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #58595b;
+  background-color: inherit;
+  padding: 0 0 0 0;
+  margin: 0 0 9px 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  label
+  .break-text {
+  display: block;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .label-info-tool-tip-icon {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .label-info-tool-tip-icon
+  .info-tool-tip-icon-wrap {
+  background: url(../img/tool-tip-info.svg) no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  margin: 0 0 0 14px;
+  display: block;
+  cursor: pointer;
+}
+
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .form-control {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #58595b;
+  background-color: #fff;
+  border: 1px solid #939598;
+  padding: 10px 10px 12px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .form-control:focus {
+  box-shadow: none;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .custom-select-section {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #595959;
+  background-color: #fff;
+  border: 1px solid #939598;
+  padding: 10px 10px 12px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .custom-select-section:focus {
+  box-shadow: none;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .custom-select-section:focus
+  option:checked {
+  background-color: transparent;
+  color: inherit;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .custom-select-section
+  option {
+  padding: 0 0 0 10px;
+  min-height: 22px;
+  line-height: 22px;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .custom-select-section
+  option[selected] {
+  padding: 0 0 0 0;
+  margin: 0 0 5px 0;
+  line-height: 16px;
+  color: #58595b;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .custom-select-arrow-wrap
+  .phone-field-note {
+  position: relative;
+  top: -12px;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .custom-select-arrow-wrap
+  .custom-select-arrow-left::after {
+  content: "";
+  width: 9.21px;
+  height: 12.82px;
+  position: absolute;
+  right: -4px;
+  top: 38px;
+  cursor: pointer;
+  z-index: 3;
+  background: url(../img/custom-select-arrow-left.svg) no-repeat 0 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .custom-select-arrow-wrap
+  .custom-select-arrow-right::before {
+  content: "";
+  width: 9.21px;
+  height: 12.82px;
+  position: absolute;
+  left: -4px;
+  bottom: 16px;
+  cursor: pointer;
+  z-index: 3;
+  background: url(../img/custom-select-arrow-right.svg) no-repeat 0 0;
+}
+
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .registration-application-field-note {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #58595b;
+  background-color: inherit;
+  padding: 0 0 0 0;
+  margin: 0 0 0px 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .phone-field-note {
+  float: right;
+  margin-top: 9px;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .bottom-field-note {
+  position: absolute;
+  right: 15px;
+  bottom: -20px;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .bottom-field-note
+  a {
+  color: #0083e2;
+  text-decoration: none;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .bottom-field-note
+  a:hover {
+  color: #0083e2;
+  text-decoration: underline;
+}
+/* Note Section Start */
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .note-info-wrap
+  .note-info-inner {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #58595b;
+  background-color: #f8f7fa;
+  border: 1px solid #c9c9c9;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding: 12px 10px 10px 10px;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .note-info-wrap
+  .note-info-inner
+  .note-info-icon {
+  background-image: url(../img/tool-tip-info.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 16px;
+  height: 16px;
+  margin-right: 9px;
+  float: left;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .note-info-wrap
+  .note-info-inner
+  .note-info-content {
+  margin-left: 25px;
+  display: block;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .note-info-wrap
+  .note-info-inner
+  .note-info-content
+  a {
+  color: #2d637f;
+}
+/* Note Section End */
+
+/* Date Picker Start */
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .date-picker-wrap
+  .form-control {
+  padding-right: 45px;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .date-picker-wrap
+  .date-picker-icon {
+  position: absolute;
+  right: 16px;
+  top: 26px;
+  background-image: url(../img/date-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 22.5px 25px;
+  width: 37px;
+  height: 38px;
+  border-left: 1px solid #939598;
+  cursor: pointer;
+}
+/* Date Picker End */
+
+/* File Upload Section Start */
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .custom-file-browse-wrap
+  .custom-file-browse-label {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .custom-file-browse-wrap
+  .custom-file-browse-label
+  label {
+  margin-bottom: 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .custom-file-browse-wrap
+  .custom-file-browse-outer
+  input[type="file"]::file-selector-button {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #2d637f;
+  border: 1px solid #2d637f;
+  padding: 3px 14px 3px 14px;
+  margin-right: 14px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
+  background-color: #fff;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .custom-file-browse-wrap
+  .custom-file-browse-outer
+  input[type="file"]::file-selector-button:hover {
+  background-color: #e6fff9;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .custom-file-browse-wrap
+  .custom-file-browse-outer
+  input[type="file"]::file-selector-button:focus {
+  background-color: #fff;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .custom-file-browse-wrap
+  .custom-file-browse-outer
+  input[type="file"] {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  color: #242424;
+}
+/* File Upload Section End */
+
+/* File Uploaded Item Section Start */
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .custom-file-browse-uploaded-wrap
+  .custom-file-browse-uploaded-outer {
+  margin-bottom: 18px;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .custom-file-browse-uploaded-wrap
+  .custom-file-browse-uploaded-outer
+  .custom-file-browse-uploaded-title {
+  font-size: 15px;
+  line-height: 18px;
+  color: #242424;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .custom-file-browse-uploaded-wrap
+  .custom-file-browse-button-outer
+  .custom-file-browse-uploaded-note {
+  font-weight: 400;
+  margin-right: 27px;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .custom-file-browse-uploaded-wrap
+  .custom-file-browse-uploaded-outer
+  .custom-file-browse-uploaded-item {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #007f00;
+  background-color: #cdffcd;
+  padding: 2px 13px 3px 5px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: inline-flex;
+
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  margin: 0 0 0 25px;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .custom-file-browse-uploaded-wrap
+  .custom-file-browse-uploaded-outer
+  .custom-file-browse-uploaded-item
+  .uploaded-item-dot {
+  width: 6px;
+  height: 6px;
+  margin-right: 5px;
+  color: inherit;
+  background-color: #007f00;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  padding: 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .custom-reuploaded-button-wrap
+  .button-custom {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}
+/* File Uploaded Item Section End */
+
+/* Form Check Inline Start */
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-check-inline-wrap
+  .form-check-inline
+  .form-check-label {
+  margin: 0 0 0 4px;
+  font-weight: 400;
+  line-height: 24px;
+}
+/* Form Check Inline End */
+
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap {
+  padding: 30px 0 0 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  button {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+  background-color: inherit;
+  margin: 0 0 0 0;
+  padding: 9px 17px 10px 17px;
+  border: none;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  border-radius: 24px;
+  border: 1px solid transparent;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  button:focus {
+  box-shadow: none;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  button:focus {
+  box-shadow: none;
+}
+
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .green-button {
+  color: #ffffff;
+  background-color: #00a34b;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .green-button:hover {
+  background-color: rgb(0 163 75 / 80%);
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .white-button {
+  color: #5a5959;
+  background-color: #fff;
+  border: 1px solid #58595b;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .white-button:hover {
+  background-color: rgb(0 0 0 / 10%);
+}
+
+.button-custom {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+  background-color: inherit;
+  margin: 0 0 0 0;
+  padding: 9px 17px 10px 17px;
+  border: none;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  border-radius: 24px;
+  border: 1px solid transparent;
+}
+.button-custom:focus {
+  box-shadow: none;
+}
+.button-white-button {
+  color: #5a5959;
+  background-color: #fff;
+  border: 1px solid #58595b;
+}
+.button-white-button:hover {
+  color: #5a5959;
+  border: 1px solid #58595b;
+  background-color: rgb(0 0 0 / 10%);
+}
+
+/* Form Green Tick Field Start */
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .filed-icon-wrap {
+  position: relative;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .filed-icon-wrap
+  .green-tick {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -7px;
+  width: 14.67px;
+  height: 14.67px;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .filed-icon-wrap
+  .green-tick
+  img {
+  display: block;
+  width: 14.67px;
+  height: 14.67px;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-group
+  .filed-icon-wrap
+  .form-control {
+  padding-right: 34px;
+}
+
+/* Form Green Tick Field End */
+
+/* Form Error Field Start */
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .error-field-wrap {
+  position: relative;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .error-field-wrap
+  .error-field-note {
+  position: absolute;
+  left: 15px;
+  bottom: -18px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #c1323b;
+  background-color: inherit;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .error-field-wrap
+  .error-field {
+  border-color: #e35223;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .mandatory-red-note {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #c1323b;
+  background-color: inherit;
+  padding: 0 0 0 21px;
+  margin: 0 0 14px 0;
+  position: relative;
+  display: block;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .mandatory-red-note:before {
+  content: "";
+  background-image: url(../img/warning.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 14.67px;
+  height: 12.67px;
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+/* Form Error Field End */
+
+/* Form Repeat Section Start */
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-repeat-section {
+  padding: 25px 0 0 0;
+}
+/* Form Repeat Section End */
+
+/* Accordion With Bg Shadow Start */
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-with-bg-shadow
+  .accordion-with-bg-shadow-inner
+  .card-list {
+  margin: 0 0 29px 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-with-bg-shadow
+  .accordion-with-bg-shadow-inner
+  .card-list
+  .card-header {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: inherit;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-with-bg-shadow
+  .accordion-with-bg-shadow-inner
+  .card-list
+  .card-header
+  h5 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #242424;
+  background-color: inherit;
+  padding: 0 0 0 0px;
+  margin: 0 0 0px 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-with-bg-shadow
+  .accordion-with-bg-shadow-inner
+  .card-list
+  .card-header
+  h5
+  .btn-link {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #242424;
+  background-color: inherit;
+  padding: 0 0 0 0px;
+  margin: 0 0 0px 0;
+  display: block;
+  width: 100%;
+  text-align: left;
+  position: relative;
+
+  padding: 7.5px 10px 4.5px 10px;
+  box-shadow: 0px -1px 3px rgba(63, 61, 60, 0.15),
+    0px 0px 0px rgba(63, 61, 60, 0.05);
+  -webkit-border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
+  border: 1px solid #d7d7d7;
+  border-bottom: none;
+  background-color: #fff;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-with-bg-shadow
+  .accordion-with-bg-shadow-inner
+  .card-list
+  .card-header
+  h5
+  .btn-link.collapsed {
+  box-shadow: 0px 1px 3px rgba(63, 61, 60, 0.15),
+    0px 0px 0px rgba(63, 61, 60, 0.05);
+  -webkit-border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
+  border: 1px solid #d7d7d7;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-with-bg-shadow
+  .accordion-with-bg-shadow-inner
+  .card-list
+  .card-header
+  h5
+  .btn-link:hover {
+  text-decoration: none;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-with-bg-shadow
+  .accordion-with-bg-shadow-inner
+  .card-list
+  .card-header
+  h5
+  .btn-link:focus {
+  text-decoration: none;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-with-bg-shadow
+  .accordion-with-bg-shadow-inner
+  .card-list
+  .card-header
+  h5
+  .btn-link
+  .accordion-arrow {
+  position: absolute;
+  right: 11px;
+  top: 7px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/accordion-arrow-up.svg);
+  background-repeat: no-repeat;
+  background-position: center 5px;
+  background-size: 14px 8.64px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-with-bg-shadow
+  .accordion-with-bg-shadow-inner
+  .card-list
+  .card-header
+  h5
+  .btn-link.collapsed
+  .accordion-arrow {
+  background-image: url(../img/accordion-arrow-down.svg);
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-with-bg-shadow
+  .accordion-with-bg-shadow-inner
+  .card-list
+  .card-body {
+  padding: 18px 30px 0 16px;
+
+  box-shadow: 0px -1px 3px rgba(63, 61, 60, 0.15),
+    0px 0px 0px rgba(63, 61, 60, 0.05);
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  border: 1px solid #d7d7d7;
+  border-top-color: rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-with-bg-shadow
+  .accordion-with-bg-shadow-inner
+  .card-list
+  .card-body
+  h6 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #242424;
+  background-color: inherit;
+  padding: 0 0 16px 0px;
+  margin: 0 0 0px 0;
+}
+/* Accordion With Bg Shadow End */
+
+/* Accordion Without Bg Shadow Start */
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-without-bg-shadow
+  .accordion-without-bg-shadow-inner
+  .card-list {
+  margin: 0 0 29px 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-without-bg-shadow
+  .accordion-without-bg-shadow-inner
+  .card-list
+  .card-header {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: inherit;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-without-bg-shadow
+  .accordion-without-bg-shadow-inner
+  .card-list
+  .card-header
+  h6 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #58595b;
+  background-color: inherit;
+  padding: 0 0 0 0px;
+  margin: 0 0 0px 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-without-bg-shadow
+  .accordion-without-bg-shadow-inner
+  .card-list
+  .card-header
+  h6
+  .btn-link {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #58595b;
+  background-color: inherit;
+  padding: 0 0 0 0px;
+  margin: 0 0 0px 0;
+  display: block;
+  width: 100%;
+  text-align: left;
+  position: relative;
+
+  padding: 10px 10px 12px 10px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  border: 1px solid #999999;
+  background-color: #fff;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-without-bg-shadow
+  .accordion-without-bg-shadow-inner
+  .card-list
+  .card-header
+  h6
+  .btn-link:hover {
+  text-decoration: none;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-without-bg-shadow
+  .accordion-without-bg-shadow-inner
+  .card-list
+  .card-header
+  h6
+  .btn-link:focus {
+  text-decoration: none;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-without-bg-shadow
+  .accordion-without-bg-shadow-inner
+  .card-list
+  .card-header
+  h6
+  .btn-link
+  .accordion-arrow {
+  position: absolute;
+  right: 11px;
+  top: 10px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/accordion-arrow-up.svg);
+  background-repeat: no-repeat;
+  background-position: center 5px;
+  background-size: 14px 8.64px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-without-bg-shadow
+  .accordion-without-bg-shadow-inner
+  .card-list
+  .card-header
+  h6
+  .btn-link.collapsed
+  .accordion-arrow {
+  background-image: url(../img/accordion-arrow-down.svg);
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-without-bg-shadow
+  .accordion-without-bg-shadow-inner
+  .card-list
+  .card-body {
+  padding: 16px 0 0 0;
+  background-color: #fff;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-without-bg-shadow
+  .accordion-without-bg-shadow-inner
+  .card-list
+  .card-body
+  .row:last-child
+  .form-group {
+  margin-bottom: 0;
+}
+/* Accordion Without Bg Shadow End */
+
+/* Accordion Review All Form Start */
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-review-all-form
+  .accordion-review-all-form-inner
+  .review-card-list {
+  margin: 0 0 29px 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-review-all-form
+  .accordion-review-all-form-inner
+  .review-card-list
+  .review-card-header {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: inherit;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-review-all-form
+  .accordion-review-all-form-inner
+  .review-card-list
+  .review-card-header
+  h4 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #2d637f;
+  background-color: inherit;
+  padding: 0 0 0 0px;
+  margin: 0 0 0px 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-review-all-form
+  .accordion-review-all-form-inner
+  .review-card-list
+  .review-card-header
+  h4
+  .btn-link {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #2d637f;
+  background-color: inherit;
+  padding: 0 0 0 0px;
+  margin: 0 0 0px 0;
+  display: block;
+  width: 100%;
+  text-align: left;
+  position: relative;
+
+  padding: 9px 17px 8px 17px;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid #939598;
+  border-bottom: none;
+  background-color: #fff;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-review-all-form
+  .accordion-review-all-form-inner
+  .review-card-list
+  .review-card-header
+  h4
+  .btn-link.collapsed {
+  border: 1px solid #939598;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-review-all-form
+  .accordion-review-all-form-inner
+  .review-card-list
+  .review-card-header
+  h4
+  .btn-link:hover {
+  text-decoration: none;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-review-all-form
+  .accordion-review-all-form-inner
+  .review-card-list
+  .review-card-header
+  h4
+  .btn-link:focus {
+  text-decoration: none;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-review-all-form
+  .accordion-review-all-form-inner
+  .review-card-list
+  .review-card-header
+  h4
+  .btn-link
+  .accordion-arrow {
+  position: absolute;
+  right: 11px;
+  top: 11px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/accordion-arrow-up.svg);
+  background-repeat: no-repeat;
+  background-position: center 5px;
+  background-size: 14px 8.64px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-review-all-form
+  .accordion-review-all-form-inner
+  .review-card-list
+  .review-card-header
+  h4
+  .btn-link.collapsed
+  .accordion-arrow {
+  background-image: url(../img/accordion-arrow-down.svg);
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .accordion-review-all-form
+  .accordion-review-all-form-inner
+  .review-card-list
+  .review-card-body {
+  padding: 21px 24px 38px 24px;
+
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid #939598;
+  border-top-color: 1px solid #999999;
+  background-color: #fff;
+}
+/* Accordion Review All Form End */
+
+/* Discard Save Modal Start */
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .discard-save-modal
+  .modal-dialog {
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .discard-save-modal
+  .modal-header {
+  padding: 30px 28px 16px 28px;
+  text-align: center;
+  border-bottom: none;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .discard-save-modal
+  .modal-header
+  h3 {
+  text-align: center;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #2d637f;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .discard-save-modal
+  .modal-header
+  h3:after {
+  display: none;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .discard-save-modal
+  .modal-body {
+  padding: 0 28px 25px 28px;
+  text-align: center;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .discard-save-modal
+  .modal-body
+  p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #58595b;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .discard-save-modal
+  .modal-footer {
+  border-top: none;
+  padding: 0 28px 32px 28px;
+  text-align: center;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .discard-save-modal
+  .modal-footer
+  button {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #00a34b;
+  margin: 0 auto;
+  padding: 9px 45px 9px 45px;
+  border: none;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  border-radius: 22px;
+  border: 1px solid transparent;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .discard-save-modal
+  .modal-footer
+  button:hover {
+  background-color: rgb(0 163 75 / 80%);
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .discard-save-modal
+  .modal-footer
+  button.red-button {
+  background-color: #f22f2a;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .discard-save-modal
+  .modal-footer
+  button.red-button:hover {
+  background-color: rgb(242 47 42 / 80%);
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .discard-save-modal
+  .modal-footer
+  button.gray-button {
+  color: #a4a4a4;
+  background-color: #fff;
+  border: 1px solid #a4a4a4;
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .discard-save-modal
+  .modal-footer
+  button.gray-button:hover {
+  background-color: rgb(0 0 0 / 10%);
+}
+.registration-application-section
+  .registration-application-section-sub
+  .registration-application-form-wrap
+  .form-button-wrap
+  .discard-save-modal
+  .modal-footer
+  button:focus {
+  box-shadow: none;
+}
+/* Discard Save Modal End */
+
+/* Registration Application Section End */

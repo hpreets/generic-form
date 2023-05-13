@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Feature_Requests</fullName>
+    <booleanFilter>1</booleanFilter>
+    <columns>SUBJECT</columns>
+    <columns>WHO_NAME</columns>
+    <columns>STATUS</columns>
+    <columns>PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>DUE_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TYPE</field>
+        <operation>equals</operation>
+        <value>Feature Request</value>
+    </filters>
+    <label>All Feature Requests</label>
+</ListView>

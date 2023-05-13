@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commission__c</fullName>
+    <externalId>false</externalId>
+    <label>Commission</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CA PUC</fullName>
+                <default>false</default>
+                <label>CA PUC</label>
+            </value>
+            <value>
+                <fullName>FERC</fullName>
+                <default>false</default>
+                <label>FERC</label>
+            </value>
+            <value>
+                <fullName>FL PSC</fullName>
+                <default>false</default>
+                <label>FL PSC</label>
+            </value>
+            <value>
+                <fullName>IL Commerce Commission</fullName>
+                <default>false</default>
+                <label>IL Commerce Commission</label>
+            </value>
+            <value>
+                <fullName>NC Utilities Commission</fullName>
+                <default>false</default>
+                <label>NC Utilities Commission</label>
+            </value>
+            <value>
+                <fullName>NJ BPU</fullName>
+                <default>false</default>
+                <label>NJ BPU</label>
+            </value>
+            <value>
+                <fullName>NY PSC</fullName>
+                <default>false</default>
+                <label>NY PSC</label>
+            </value>
+            <value>
+                <fullName>OH PUC</fullName>
+                <default>false</default>
+                <label>OH PUC</label>
+            </value>
+            <value>
+                <fullName>PA PUC</fullName>
+                <default>false</default>
+                <label>PA PUC</label>
+            </value>
+            <value>
+                <fullName>TX PUC</fullName>
+                <default>false</default>
+                <label>TX PUC</label>
+            </value>
+            <value>
+                <fullName>MA DPU</fullName>
+                <default>false</default>
+                <label>MA DPU</label>
+            </value>
+            <value>
+                <fullName>MN PUC</fullName>
+                <default>false</default>
+                <label>MN PUC</label>
+            </value>
+            <value>
+                <fullName>NH PUC</fullName>
+                <default>false</default>
+                <label>NH PUC</label>
+            </value>
+            <value>
+                <fullName>IN URC</fullName>
+                <default>false</default>
+                <label>IN URC</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

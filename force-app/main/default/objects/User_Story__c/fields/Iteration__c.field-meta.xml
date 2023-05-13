@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Iteration__c</fullName>
+    <description>This field is a repurposed version of Phase. The current iteration of the field should be used to track a tentative timeline for the user story.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The fiscal year we plan to slot this work into</inlineHelpText>
+    <label>Fiscal Year</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2023</fullName>
+                <default>false</default>
+                <label>2023</label>
+            </value>
+            <value>
+                <fullName>2024</fullName>
+                <default>false</default>
+                <label>2024</label>
+            </value>
+            <value>
+                <fullName>2025</fullName>
+                <default>false</default>
+                <label>2025</label>
+            </value>
+            <value>
+                <fullName>2026</fullName>
+                <default>false</default>
+                <label>2026</label>
+            </value>
+            <value>
+                <fullName>Iteration 1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Phase 1</label>
+            </value>
+            <value>
+                <fullName>Phase 2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Phase 2</label>
+            </value>
+            <value>
+                <fullName>Post Phase 2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Post-Phase 2</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

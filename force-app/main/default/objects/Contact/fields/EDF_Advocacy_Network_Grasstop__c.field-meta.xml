@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EDF_Advocacy_Network_Grasstop__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Leadership member of the EDF Advocacy Network</description>
+    <externalId>false</externalId>
+    <label>EDF Advocacy Network Grasstop</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

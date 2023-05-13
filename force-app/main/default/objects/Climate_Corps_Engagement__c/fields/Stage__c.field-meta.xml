@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Lead - Cold lead, not yet responded
+Contact - Contact responded, open to learning more
+Interested - Contact interested, not convinced
+Readied - Wants to participate
+Committed - Verbally
+Confirmed - Signed app
+Special consideration - see notes</inlineHelpText>
+    <label>Stage</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lead</fullName>
+                <default>false</default>
+                <label>Lead</label>
+            </value>
+            <value>
+                <fullName>Contact</fullName>
+                <default>false</default>
+                <label>Contact</label>
+            </value>
+            <value>
+                <fullName>Interested</fullName>
+                <default>false</default>
+                <label>Interested</label>
+            </value>
+            <value>
+                <fullName>Readied</fullName>
+                <default>false</default>
+                <label>Readied</label>
+            </value>
+            <value>
+                <fullName>Committed</fullName>
+                <default>false</default>
+                <label>Committed</label>
+            </value>
+            <value>
+                <fullName>Application Submitted</fullName>
+                <default>false</default>
+                <label>Application Submitted</label>
+            </value>
+            <value>
+                <fullName>Confirmed Participation</fullName>
+                <default>false</default>
+                <label>Confirmed Participation</label>
+            </value>
+            <value>
+                <fullName>Match Conversation Complete</fullName>
+                <default>false</default>
+                <label>Match Conversation Complete</label>
+            </value>
+            <value>
+                <fullName>Customized - Host Recruits Fellow(s)</fullName>
+                <default>false</default>
+                <label>Customized - Host Recruits Fellow(s)</label>
+            </value>
+            <value>
+                <fullName>Offer Sent</fullName>
+                <default>false</default>
+                <label>Offer Sent</label>
+            </value>
+            <value>
+                <fullName>Offer Accepted</fullName>
+                <default>false</default>
+                <label>Offer Accepted</label>
+            </value>
+            <value>
+                <fullName>Onboarding Conversation In Progress</fullName>
+                <default>false</default>
+                <label>Onboarding Conversation In Progress</label>
+            </value>
+            <value>
+                <fullName>Onboarding Conversation Complete</fullName>
+                <default>false</default>
+                <label>Onboarding Conversation Complete</label>
+            </value>
+            <value>
+                <fullName>Engagement Confirmed</fullName>
+                <default>false</default>
+                <label>Engagement Confirmed</label>
+            </value>
+            <value>
+                <fullName>Onboarding Conversation Not Accepted</fullName>
+                <default>false</default>
+                <label>Onboarding Conversation Not Accepted</label>
+            </value>
+            <value>
+                <fullName>Final Deliverables Received</fullName>
+                <default>false</default>
+                <label>Final Deliverables Received</label>
+            </value>
+            <value>
+                <fullName>Complete</fullName>
+                <default>false</default>
+                <label>Complete</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>Disqualified</fullName>
+                <default>false</default>
+                <label>Disqualified</label>
+            </value>
+            <value>
+                <fullName>Gib is recruiting</fullName>
+                <default>false</default>
+                <label>Gib is recruiting</label>
+            </value>
+            <value>
+                <fullName>Austin is recruiting</fullName>
+                <default>false</default>
+                <label>Austin is recruiting</label>
+            </value>
+            <value>
+                <fullName>Special Consideration (see notes)</fullName>
+                <default>false</default>
+                <label>Special Consideration (see notes)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Receivable_Natural_Account__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+
+AND(TEXT(StageName) = &quot;Received as Unconditional Pledge&quot;, TEXT(Transaction_Type__c)= &quot;Individual&quot;), &quot;14000&quot;,
+
+IF(
+
+AND(TEXT(StageName) = &quot;Received as Unconditional Pledge&quot;, TEXT(Transaction_Type__c)= &quot;Corporate&quot;), &quot;14300&quot;,
+
+IF(
+
+AND(TEXT(StageName) = &quot;Received as Unconditional Pledge&quot;, TEXT(Transaction_Type__c)= &quot;Foundation&quot;), &quot;14100&quot;,
+
+IF(
+
+AND(TEXT(StageName) = &quot;Received as Unconditional Pledge&quot;, TEXT(Transaction_Type__c)= &quot;Other Institutional Giving&quot;), &quot;14220&quot;,
+
+IF(
+
+AND(TEXT(StageName) = &quot;Received as Unconditional Pledge&quot;, TEXT(Transaction_Type__c)= &quot;Government&quot;), &quot;14200&quot;,
+
+IF(
+
+AND(TEXT(StageName) = &quot;Received as Unconditional Pledge&quot;, TEXT(Transaction_Type__c)= &quot;Government Contract&quot;), &quot;14300&quot;, null))))))</formula>
+    <label>Receivable Natural Account</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

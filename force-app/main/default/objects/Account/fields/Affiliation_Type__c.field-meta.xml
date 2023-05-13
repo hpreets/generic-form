@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Affiliation_Type__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Value in this field will be pushed to the Affiliation record for the Organization and the Contact in the Primary Contact field.</inlineHelpText>
+    <label>Affiliation Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Affiliation_Type</valueSetName>
+    </valueSet>
+</CustomField>

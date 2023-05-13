@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EDFBIZ_Company_Memberships__c</fullName>
+    <externalId>false</externalId>
+    <label>EDFBIZ Company Memberships</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bicep</fullName>
+                <default>false</default>
+                <label>Bicep</label>
+            </value>
+            <value>
+                <fullName>BELC</fullName>
+                <default>false</default>
+                <label>BELC</label>
+            </value>
+            <value>
+                <fullName>Renew</fullName>
+                <default>false</default>
+                <label>Renew</label>
+            </value>
+            <value>
+                <fullName>Low Carbon 2.0</fullName>
+                <default>false</default>
+                <label>Low Carbon 2.0</label>
+            </value>
+            <value>
+                <fullName>USCAP</fullName>
+                <default>false</default>
+                <label>USCAP</label>
+            </value>
+            <value>
+                <fullName>WASI</fullName>
+                <default>false</default>
+                <label>WASI</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

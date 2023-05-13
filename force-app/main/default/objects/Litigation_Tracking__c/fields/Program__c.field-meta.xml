@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program__c</fullName>
+    <externalId>false</externalId>
+    <label>Program</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Climate and Energy - Clean Energy</fullName>
+                <default>false</default>
+                <label>Climate and Energy - Clean Energy</label>
+            </value>
+            <value>
+                <fullName>Climate and Energy - Global Climate</fullName>
+                <default>false</default>
+                <label>Climate and Energy - Global Climate</label>
+            </value>
+            <value>
+                <fullName>Climate and Energy - Legal and Regulatory</fullName>
+                <default>false</default>
+                <label>Climate and Energy - Legal and Regulatory</label>
+            </value>
+            <value>
+                <fullName>Climate and Energy - Oil and Gas</fullName>
+                <default>false</default>
+                <label>Climate and Energy - Oil and Gas</label>
+            </value>
+            <value>
+                <fullName>Ecosystems</fullName>
+                <default>false</default>
+                <label>Ecosystems</label>
+            </value>
+            <value>
+                <fullName>Health</fullName>
+                <default>false</default>
+                <label>Health</label>
+            </value>
+            <value>
+                <fullName>Oceans</fullName>
+                <default>false</default>
+                <label>Oceans</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

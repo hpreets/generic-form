@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Probability_greater_than_0</fullName>
+    <active>true</active>
+    <description>Donation records with a stage of projected, solicited or verbally committed can not be saved with a 0% probability</description>
+    <errorConditionFormula>OR(
+AND(ISPICKVAL(StageName,&quot;Projected&quot;),Probability = 0),
+AND(ISPICKVAL(StageName,&quot;Solicited&quot;),Probability = 0),
+AND(ISPICKVAL(StageName,&quot;Verbally Committed&quot;),Probability = 0))</errorConditionFormula>
+    <errorMessage>Donation records with a stage of projected, solicited or verbally committed can not be saved with a 0% probability</errorMessage>
+</ValidationRule>

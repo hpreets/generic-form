@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Influencer_Network_Status__c</fullName>
+    <description>Program attribute</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Individuals who we know, who support EDF’s objectives, and who have a high level of influence in their communities and with Members of Congress, and in some cases, direct access to Members.</inlineHelpText>
+    <label>Influencer Network Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Active Influencer</fullName>
+                <default>false</default>
+                <label>Active Influencer</label>
+            </value>
+            <value>
+                <fullName>Potential Influencer</fullName>
+                <default>false</default>
+                <label>Potential Influencer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

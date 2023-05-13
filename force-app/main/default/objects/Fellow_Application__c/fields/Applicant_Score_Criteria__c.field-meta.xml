@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applicant_Score_Criteria__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Scale_Data_Analysis_Experience__c, &quot;Advanced&quot;, 3, &quot;Intermediate&quot;, 2, &quot;Beginner&quot;, 1, 0)+
+
+CASE(Scale_Relevant_Degree__c, &quot;Specialized graduate degree&quot;, 3, &quot;Graduate degree with concentration or certifications&quot;, 2, &quot;Undergraduate or light course work&quot;, 1, 0) +
+
+CASE(Scale_Project_Mgmt_Consulting__c, &quot;Advanced&quot;, 3, &quot;Intermediate&quot;, 2, &quot;Beginner&quot;, 1, 0) +
+
+CASE(Scale_Project_Type_Experience__c, &quot;2+ years&quot;, 3, &quot;1-2 years&quot;, 2, &quot;6 months-1 year&quot;, 1, 0) +
+
+CASE(Scale_Leadership__c, &quot;Experienced&quot;, 1, 0) +
+
+CASE(Scale_Written_Communication_Enthusiasm__c, &quot;Sufficient&quot;,1,0) +
+
+CASE(Scale_Engineering_Experience__c, &quot;Advanced&quot;, 3, &quot;Intermediate&quot;, 2, &quot;Beginner&quot;, 1, 0) +
+
+CASE(Scale_Extracurricular_Env_Experience__c, &quot;Yes&quot;,1,0) +
+
+CASE(Applicant_Score_Adjustment__c, &quot;+4&quot;, 4, &quot;+3&quot;, 3, &quot;+2&quot;, 2, &quot;+1&quot;,1, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Applicant Score Criteria</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

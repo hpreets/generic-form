@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sys_Missing_from_Contact__c</fullName>
+    <description>Evaluates whether this email should be on the Contact record (i.e., is Current) but is missing.</description>
+    <externalId>false</externalId>
+    <formula>IF ( ISPICKVAL(Status__c, &apos;Current&apos;) &amp;&amp; AND( Email__c!= Donor__r.npe01__HomeEmail__c, Email__c!=Donor__r.npe01__WorkEmail__c
+ , Email__c!=Donor__r.npe01__AlternateEmail__c), TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sys-Missing from Contact</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

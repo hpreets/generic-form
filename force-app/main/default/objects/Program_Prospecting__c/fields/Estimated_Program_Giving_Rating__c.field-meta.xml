@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimated_Program_Giving_Rating__c</fullName>
+    <description>AAAA - $100M+
+AAA- $50 - 99.9M
+AA - $25 - 49.9M
+A - $10 - 24.9M
+B - $5 -9.9M
+C - $1 - 4.9M
+D - $500 - 999.9K
+E - $100 - 499.9K
+F - $25 - 99.9K</description>
+    <externalId>false</externalId>
+    <inlineHelpText>AAAA - $100M+
+AAA- $50 - 99.9M
+AA - $25 - 49.9M
+A - $10 - 24.9M
+B - $5 -9.9M
+C - $1 - 4.9M
+D - $500 - 999.9K
+E - $100 - 499.9K
+F - $25 - 99.9K</inlineHelpText>
+    <label>Estimated Program Giving Rating</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AAAA</fullName>
+                <default>false</default>
+                <label>AAAA</label>
+            </value>
+            <value>
+                <fullName>AAA</fullName>
+                <default>false</default>
+                <label>AAA</label>
+            </value>
+            <value>
+                <fullName>AA</fullName>
+                <default>false</default>
+                <label>AA</label>
+            </value>
+            <value>
+                <fullName>A</fullName>
+                <default>false</default>
+                <label>A</label>
+            </value>
+            <value>
+                <fullName>B</fullName>
+                <default>false</default>
+                <label>B</label>
+            </value>
+            <value>
+                <fullName>C</fullName>
+                <default>false</default>
+                <label>C</label>
+            </value>
+            <value>
+                <fullName>D</fullName>
+                <default>false</default>
+                <label>D</label>
+            </value>
+            <value>
+                <fullName>E</fullName>
+                <default>false</default>
+                <label>E</label>
+            </value>
+            <value>
+                <fullName>F</fullName>
+                <default>false</default>
+                <label>F</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

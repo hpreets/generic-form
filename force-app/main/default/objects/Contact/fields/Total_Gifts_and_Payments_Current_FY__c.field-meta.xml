@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Gifts_and_Payments_Current_FY__c</fullName>
+    <description>Payment: Date = Current FY; Paid = True. Opp: Entity = C3/C4; Stage = Received, Received as Unconditional Pledge, or Received as Conditional Pledge.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Total Payments for current financial year (hard credits only).</inlineHelpText>
+    <label>Total Gifts and Payments Current FY</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Gift_Amount_EDFcontact__c</fullName>
+    <description>Formula based on ‘First HC Gift Amount’ (Customizable Rollup) and ‘First SC Gift Amount’ (DLRS). Based on Close Amount (not Amount). Soft credit is defined by OCR = Funder - Soft Credit, DAF, Workplace Giving, Sponsor, Agency and grabs amount from PSC. Qualifying stages = Received, Received as Unconditional Pledge, Received as Conditional Pledge. All Opp Record Types except PG. Only the master field should be accessible to users.</description>
+    <externalId>false</externalId>
+    <formula>IF((ISBLANK(npsp__First_Soft_Credit_Date__c) &amp;&amp; NOT(ISBLANK(First_Hard_Credit_Date__c)))=TRUE, First_HC_Gift_Amount__c,
+IF((ISBLANK(First_Hard_Credit_Date__c) &amp;&amp; NOT(ISBLANK(npsp__First_Soft_Credit_Date__c)))=TRUE, First_Gift_Amount_SC__c,
+IF((npsp__First_Soft_Credit_Date__c &lt; First_Hard_Credit_Date__c), First_Gift_Amount_SC__c,
+First_HC_Gift_Amount__c)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The Close Amount of the first received Opportunity where the Contact has a hard or soft credit (not including Planned Gifts)</inlineHelpText>
+    <label>First Gift Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

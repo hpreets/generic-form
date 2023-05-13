@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Household_Member_Deceased__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Account.Household_Member_Deceased__c = TRUE , TRUE , FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Household Member Deceased</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

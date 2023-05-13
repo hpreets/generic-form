@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reluctant_Manager__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>How would the applicant fare if asked to convince a reluctant manager or executive team to implement a project?</inlineHelpText>
+    <label>Reluctant Manager</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

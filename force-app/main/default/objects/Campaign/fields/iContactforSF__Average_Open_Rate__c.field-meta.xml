@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>iContactforSF__Average_Open_Rate__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Average open rate for messages in &quot;Released&quot; status for this campaign.</description>
+    <externalId>false</externalId>
+    <formula>if (iContactforSF__Message_Statistic_Count__c  &gt; 0, iContactforSF__Total_Open_Rate__c / iContactforSF__Message_Statistic_Count__c, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Average open rate for messages in &quot;Released&quot; status for this campaign.</inlineHelpText>
+    <label>Average Open Rate</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

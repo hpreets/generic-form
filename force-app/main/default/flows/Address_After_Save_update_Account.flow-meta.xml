@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <assignments>
+        <description>Counts records and assigns to variable.</description>
+        <name>Assign_Count</name>
+        <label>Assign Count</label>
+        <locationX>176</locationX>
+        <locationY>455</locationY>
+        <assignmentItems>
+            <assignToReference>RecordCount</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>Get_Receipt_Report_Addresses</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Account</targetReference>
+        </connector>
+    </assignments>
+    <description>Updates Account fields when Address is created/updated.
+v3 Optimize flow per FB-1490</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Returns values for final update.</description>
+        <name>FinalFieldValBoolean</name>
+        <dataType>Boolean</dataType>
+        <expression>IF({!RecordCount}=0, FALSE, TRUE)</expression>
+    </formulas>
+    <interviewLabel>Address (After Save) update Account {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Address (After Save) update Account</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Retrieves all Receipt/Report Addresses.</description>
+        <name>Get_Receipt_Report_Addresses</name>
+        <label>Get Receipt/Report Addresses</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_Count</targetReference>
+        </connector>
+        <filterLogic>1 AND (2 OR 3)</filterLogic>
+        <filters>
+            <field>npsp__Household_Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.npsp__Household_Account__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Send_Receipts__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Send_Reports__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>npsp__Address__c</object>
+        <queriedFields>Id</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Account</name>
+        <label>Update Account</label>
+        <locationX>176</locationX>
+        <locationY>575</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.npsp__Household_Account__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Receip_report_Address_Exists__c</field>
+            <value>
+                <elementReference>FinalFieldValBoolean</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Receipt_Report_Addresses</targetReference>
+        </connector>
+        <filterFormula>{!$Permission.Flow_Automations_Off} &lt;&gt; TRUE
+&amp;&amp;
+(ischanged({!$Record.Send_Receipts__c}) || ischanged({!$Record.Send_Reports__c}) || {!$Record.Send_Receipts__c} = TRUE || {!$Record.Send_Reports__c} = TRUE)</filterFormula>
+        <object>npsp__Address__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>RecordCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+</Flow>

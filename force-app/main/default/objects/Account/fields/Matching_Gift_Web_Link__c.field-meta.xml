@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Matching_Gift_Web_Link__c</fullName>
+    <description>Link to matching gift portal or website.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter link to matching gift portal or website.</inlineHelpText>
+    <label>Matching Gift Web Link</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Url</type>
+</CustomField>

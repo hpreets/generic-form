@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Court_Forum__c</fullName>
+    <externalId>false</externalId>
+    <label>Court or Forum</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Venue_or_Agency__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>D.C. Circuit Court of Appeals</fullName>
+                <default>false</default>
+                <label>D.C. Circuit Court of Appeals</label>
+            </value>
+            <value>
+                <fullName>District of D.C.</fullName>
+                <default>false</default>
+                <label>District of D.C.</label>
+            </value>
+            <value>
+                <fullName>1st Circuit Court of Appeals</fullName>
+                <default>false</default>
+                <label>1st Circuit Court of Appeals</label>
+            </value>
+            <value>
+                <fullName>2nd Circuit Court of Appeals</fullName>
+                <default>false</default>
+                <label>2nd Circuit Court of Appeals</label>
+            </value>
+            <value>
+                <fullName>3rd Circuit Court of Appeals</fullName>
+                <default>false</default>
+                <label>3rd Circuit Court of Appeals</label>
+            </value>
+            <value>
+                <fullName>4th Circuit Court of Appeals</fullName>
+                <default>false</default>
+                <label>4th Circuit Court of Appeals</label>
+            </value>
+            <value>
+                <fullName>5th Circuit Court of Appeals</fullName>
+                <default>false</default>
+                <label>5th Circuit Court of Appeals</label>
+            </value>
+            <value>
+                <fullName>6th Circuit Court of Appeals</fullName>
+                <default>false</default>
+                <label>6th Circuit Court of Appeals</label>
+            </value>
+            <value>
+                <fullName>7th Circuit Court of Appeals</fullName>
+                <default>false</default>
+                <label>7th Circuit Court of Appeals</label>
+            </value>
+            <value>
+                <fullName>8th Circuit Court of Appeals</fullName>
+                <default>false</default>
+                <label>8th Circuit Court of Appeals</label>
+            </value>
+            <value>
+                <fullName>9th Circuit Court of Appeals</fullName>
+                <default>false</default>
+                <label>9th Circuit Court of Appeals</label>
+            </value>
+            <value>
+                <fullName>10th Circuit Court of Appeals</fullName>
+                <default>false</default>
+                <label>10th Circuit Court of Appeals</label>
+            </value>
+            <value>
+                <fullName>11th Circuit Court of Appeals</fullName>
+                <default>false</default>
+                <label>11th Circuit Court of Appeals</label>
+            </value>
+            <value>
+                <fullName>U.S. Supreme Court</fullName>
+                <default>false</default>
+                <label>U.S. Supreme Court</label>
+            </value>
+            <value>
+                <fullName>PUC California</fullName>
+                <default>false</default>
+                <label>PUC California</label>
+            </value>
+            <value>
+                <fullName>PUC Texas</fullName>
+                <default>false</default>
+                <label>PUC Texas</label>
+            </value>
+            <value>
+                <fullName>PUC Illinois</fullName>
+                <default>false</default>
+                <label>PUC Illinois</label>
+            </value>
+            <value>
+                <fullName>PUC Ohio</fullName>
+                <default>false</default>
+                <label>PUC Ohio</label>
+            </value>
+            <value>
+                <fullName>PUC Pennsylvania</fullName>
+                <default>false</default>
+                <label>PUC Pennsylvania</label>
+            </value>
+            <value>
+                <fullName>PUC New York</fullName>
+                <default>false</default>
+                <label>PUC New York</label>
+            </value>
+            <value>
+                <fullName>PUC New Jersey</fullName>
+                <default>false</default>
+                <label>PUC New Jersey</label>
+            </value>
+            <value>
+                <fullName>PUC Florida</fullName>
+                <default>false</default>
+                <label>PUC Florida</label>
+            </value>
+            <value>
+                <fullName>PUC North Carolina</fullName>
+                <default>false</default>
+                <label>PUC North Carolina</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>US Court of Appeals</controllingFieldValue>
+            <valueName>D.C. Circuit Court of Appeals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US Court of Appeals</controllingFieldValue>
+            <valueName>1st Circuit Court of Appeals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US Court of Appeals</controllingFieldValue>
+            <valueName>2nd Circuit Court of Appeals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US Court of Appeals</controllingFieldValue>
+            <valueName>3rd Circuit Court of Appeals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US Court of Appeals</controllingFieldValue>
+            <valueName>4th Circuit Court of Appeals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US Court of Appeals</controllingFieldValue>
+            <valueName>5th Circuit Court of Appeals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US Court of Appeals</controllingFieldValue>
+            <valueName>6th Circuit Court of Appeals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US Court of Appeals</controllingFieldValue>
+            <valueName>7th Circuit Court of Appeals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US Court of Appeals</controllingFieldValue>
+            <valueName>8th Circuit Court of Appeals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US Court of Appeals</controllingFieldValue>
+            <valueName>9th Circuit Court of Appeals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US Court of Appeals</controllingFieldValue>
+            <valueName>10th Circuit Court of Appeals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US Court of Appeals</controllingFieldValue>
+            <valueName>11th Circuit Court of Appeals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US Supreme Court</controllingFieldValue>
+            <valueName>U.S. Supreme Court</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US District Court</controllingFieldValue>
+            <valueName>District of D.C.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PUC</controllingFieldValue>
+            <valueName>PUC California</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PUC</controllingFieldValue>
+            <valueName>PUC Texas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PUC</controllingFieldValue>
+            <valueName>PUC Illinois</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PUC</controllingFieldValue>
+            <valueName>PUC Ohio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PUC</controllingFieldValue>
+            <valueName>PUC Pennsylvania</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PUC</controllingFieldValue>
+            <valueName>PUC New York</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PUC</controllingFieldValue>
+            <valueName>PUC New Jersey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PUC</controllingFieldValue>
+            <valueName>PUC Florida</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PUC</controllingFieldValue>
+            <valueName>PUC North Carolina</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

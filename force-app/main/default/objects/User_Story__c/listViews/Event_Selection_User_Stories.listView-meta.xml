@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Selection_User_Stories</fullName>
+    <columns>NAME</columns>
+    <columns>Solution_Selection_Requirement__c</columns>
+    <columns>User_Story_Title__c</columns>
+    <columns>Epic__c</columns>
+    <columns>Source__c</columns>
+    <columns>Status__c</columns>
+    <columns>Current_System_Meets_Requirements__c</columns>
+    <columns>User_Story_Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Theme__c</field>
+        <operation>equals</operation>
+        <value>Event Management</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed,Cancelled</value>
+    </filters>
+    <label>Event Selection User Stories</label>
+</ListView>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Type__c</fullName>
+    <description>Field created for Heller migration 2021.</description>
+    <externalId>false</externalId>
+    <label>Transaction Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bequest</fullName>
+                <default>false</default>
+                <label>Bequest</label>
+            </value>
+            <value>
+                <fullName>CGA, DGA</fullName>
+                <default>false</default>
+                <label>CGA, DGA</label>
+            </value>
+            <value>
+                <fullName>CGA, DGA Distribution</fullName>
+                <default>false</default>
+                <label>CGA, DGA Distribution</label>
+            </value>
+            <value>
+                <fullName>CLT</fullName>
+                <default>false</default>
+                <label>CLT</label>
+            </value>
+            <value>
+                <fullName>CLT Distribution</fullName>
+                <default>false</default>
+                <label>CLT Distribution</label>
+            </value>
+            <value>
+                <fullName>Corporate</fullName>
+                <default>false</default>
+                <label>Corporate</label>
+            </value>
+            <value>
+                <fullName>CRT</fullName>
+                <default>false</default>
+                <label>CRT</label>
+            </value>
+            <value>
+                <fullName>CRT Distribution</fullName>
+                <default>false</default>
+                <label>CRT Distribution</label>
+            </value>
+            <value>
+                <fullName>Distribution</fullName>
+                <default>false</default>
+                <label>Distribution</label>
+            </value>
+            <value>
+                <fullName>Foundation</fullName>
+                <default>false</default>
+                <label>Foundation</label>
+            </value>
+            <value>
+                <fullName>Government</fullName>
+                <default>false</default>
+                <label>Government</label>
+            </value>
+            <value>
+                <fullName>Government Contract</fullName>
+                <default>false</default>
+                <label>Government Contract</label>
+            </value>
+            <value>
+                <fullName>Individual</fullName>
+                <default>false</default>
+                <label>Individual</label>
+            </value>
+            <value>
+                <fullName>Individual - Catalyst Circle</fullName>
+                <default>false</default>
+                <label>Individual - Catalyst Circle</label>
+            </value>
+            <value>
+                <fullName>Individual - Membership</fullName>
+                <default>false</default>
+                <label>Individual - Membership</label>
+            </value>
+            <value>
+                <fullName>In-Kind</fullName>
+                <default>false</default>
+                <label>In-Kind</label>
+            </value>
+            <value>
+                <fullName>Matching Gift</fullName>
+                <default>false</default>
+                <label>Matching Gift</label>
+            </value>
+            <value>
+                <fullName>Other Institutional Giving</fullName>
+                <default>false</default>
+                <label>Other Institutional Giving</label>
+            </value>
+            <value>
+                <fullName>PIF Distribution</fullName>
+                <default>false</default>
+                <label>PIF Distribution</label>
+            </value>
+            <value>
+                <fullName>Workplace - Catalyst Circle</fullName>
+                <default>false</default>
+                <label>Workplace - Catalyst Circle</label>
+            </value>
+            <value>
+                <fullName>Workplace - Membership</fullName>
+                <default>false</default>
+                <label>Workplace - Membership</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

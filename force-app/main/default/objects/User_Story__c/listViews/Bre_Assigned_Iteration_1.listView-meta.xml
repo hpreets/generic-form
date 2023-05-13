@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bre_Assigned_Iteration_1</fullName>
+    <columns>NAME</columns>
+    <columns>Release__c</columns>
+    <columns>Status__c</columns>
+    <columns>Guided_Walkthrough_Session__c</columns>
+    <columns>User_Story_Description__c</columns>
+    <columns>Epic__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Build_Assigned_To__c</field>
+        <operation>contains</operation>
+        <value>Bre</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed</value>
+    </filters>
+    <label>Bre Assigned User Stories</label>
+</ListView>

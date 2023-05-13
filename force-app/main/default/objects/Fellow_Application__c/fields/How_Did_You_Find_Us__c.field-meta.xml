@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_Did_You_Find_Us__c</fullName>
+    <description>Could be Picklist</description>
+    <externalId>false</externalId>
+    <label>How did you find out about EDFCC?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Campus Presentation with EDF staff</fullName>
+                <default>false</default>
+                <label>Campus Presentation with EDF staff</label>
+            </value>
+            <value>
+                <fullName>EDF Staff webinar</fullName>
+                <default>false</default>
+                <label>EDF Staff webinar</label>
+            </value>
+            <value>
+                <fullName>Career services job posting</fullName>
+                <default>false</default>
+                <label>Career services job posting</label>
+            </value>
+            <value>
+                <fullName>Career Services staff</fullName>
+                <default>false</default>
+                <label>Career Services staff</label>
+            </value>
+            <value>
+                <fullName>EDF website</fullName>
+                <default>false</default>
+                <label>EDF website</label>
+            </value>
+            <value>
+                <fullName>Student group newsletter</fullName>
+                <default>false</default>
+                <label>Student group newsletter</label>
+            </value>
+            <value>
+                <fullName>Word of Mouth  from an Alumni Fellow</fullName>
+                <default>false</default>
+                <label>Word of Mouth  from an Alumni Fellow</label>
+            </value>
+            <value>
+                <fullName>Word of Mouth from another source</fullName>
+                <default>false</default>
+                <label>Word of Mouth from another source</label>
+            </value>
+            <value>
+                <fullName>Online Job postings (e.g, indeed.com, idealist.org, greenbiz.com)</fullName>
+                <default>false</default>
+                <label>Online Job postings (e.g, indeed.com, idealist.org, greenbiz.com)</label>
+            </value>
+            <value>
+                <fullName>National Black MBA Conference</fullName>
+                <default>false</default>
+                <label>National Black MBA Conference</label>
+            </value>
+            <value>
+                <fullName>Prospanica conference</fullName>
+                <default>false</default>
+                <label>Prospanica conference</label>
+            </value>
+            <value>
+                <fullName>Other (please specify)</fullName>
+                <default>false</default>
+                <label>Other (please specify)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

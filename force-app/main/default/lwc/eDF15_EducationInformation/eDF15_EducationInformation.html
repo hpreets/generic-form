@@ -1,0 +1,260 @@
+<!--
+  @description       :
+  @author            : Sai Teja
+  @last modified on  : 05-23-2022
+  @last modified by  : Sai Teja
+-->
+<template>
+    <template if:false={isChild}>
+        <c-e-d-f13_-header></c-e-d-f13_-header>
+        <c-e-d-f28_-dashboard-menu></c-e-d-f28_-dashboard-menu>
+    </template>
+     <!-- body tag div -->
+     <div class={backgroundImageClass}>
+        <div class="bg-welcome">
+            <div class="registration-application-section">
+                <div class="registration-application-section-inner">
+                    <div class="registration-application-section-sub">
+                        <h3>Education Information</h3>
+                        <div class="registration-application-form-wrap">
+                            <form action="" method="post">
+
+                                <!-- <div class="row">
+                                    <span>
+                                        User Id : {userId} <br/>
+                                        User Name : {currentUserName}<br/>
+                                        Contact Id : {contactId}
+                                    </span>
+                                </div> -->
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <!-- <c-custom-lookup class="graduate-university" field-label="Graduate University" child-object-api-name='Fellow_Application__c' target-field-api-name='University_School_1__c' value={graduateUniversity} onvalueselected={graduateUniversityChangeHandler} required={enableRequired}>
+                                        </c-custom-lookup> -->
+                                        <lightning-combobox name="Graduate University" label="Graduate University" placeholder="Select university" options={parentOptions}
+                                        onchange={graduateUniversityChangeHandler} value={graduateUniversity} read-only={readOnly}></lightning-combobox>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <lightning-combobox name="School within University" label="School within University" placeholder="Select university" options={childOptions}
+                                        onchange={schoolWithinUniversityChangeHandler} value={schoolWithinUniversity} read-only={readOnly}></lightning-combobox>
+                                        <!-- <c-custom-lookup field-label="School within University" child-object-api-name='Fellow_Application__c' target-field-api-name='GRAD_School_within_University__c' value={schoolWithinUniversity} onvalueselected={schoolWithinUniversityChangeHandler}>
+                                        </c-custom-lookup> -->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <label>School / University, if not listed above</label>
+                                        <input type="text" class="form-control school-university-other" value={schoolUniversityOther} onchange={schoolUniversityOtherChangeHandler} readonly={readOnly}>
+                                        <span><a href="javascript:void(0);" title="" onclick={openDualDegreeFields}>Click here to add an additional university/dual degree</a></span>
+                                    </div>
+                                </div>
+                                <template if:true={addDualDegree}>
+                                    <!-- <div class="dualDegree"> -->
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <!-- <c-custom-lookup class="graduate-Dual-university" field-label="Dual Degree University" child-object-api-name='Fellow_Application__c' target-field-api-name='GRAD_University_Dual_Degree__c' value={dualGraduateUniversity} onvalueselected={dualGraduateUniversityChangeHandler}>
+                                            </c-custom-lookup> -->
+                                            <lightning-combobox name="Dual Degree University" label="Dual Degree University" placeholder="Select Dual University" options={parentDualOptions}
+                                                onchange={dualGraduateUniversityChangeHandler} value={dualGraduateUniversity} read-only={readOnly}></lightning-combobox>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <!-- <c-custom-lookup field-label="School within University" child-object-api-name='Fellow_Application__c' target-field-api-name='GRAD_Dual_Degree_School_in_University__c' value={schoolWithinDualUniversity} onvalueselected={schoolWithinDualUniversityChangeHandler}>
+                                            </c-custom-lookup> -->
+                                            <lightning-combobox name="School within University" label="School within University" placeholder="Select Dual University" options={childDualtOptions}
+                                                onchange={schoolWithinDualUniversityChangeHandler} value={schoolWithinDualUniversity} read-only={readOnly}></lightning-combobox>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <label>School / University, if not listed above</label>
+                                            <input type="text" class="form-control school-university-other" value={schoolDualUniversityOther} onchange={schoolDualUniversityOtherChangeHandler} readonly={readOnly}>
+                                        </div>
+                                    </div>
+                                <!-- </div> -->
+                                </template>
+                                <div class="row custom-select-arrow-wrap">
+                                    <!-- <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group custom-select-arrow-left">
+                                        <label>Graduate Degree(s) you are Pursuing</label>
+                                        <select class="custom-select custom-select-section" size="6">
+                                            <option selected>Available</option>
+                                            <option value="1">Graduate Certificate</option>
+                                            <option value="2">Master of Architecture</option>
+                                            <option value="3">Master of Arts</option>
+                                            <option value="4">Master of Computer Applic...</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group custom-select-arrow-right">
+                                        <span class="registration-application-field-note phone-field-note">(select all that apply)</span>
+                                        <select class="custom-select custom-select-section" size="6">
+                                            <option selected>Chosen</option>
+                                            <option value="1">Graduate Certificate</option>
+                                            <option value="2">Master of Public Admin (MPA)</option>
+                                        </select>
+                                    </div> -->
+                                    <div class="col-12 form-group">
+                                        <lightning-dual-listbox
+                                                                name="graduatedegree"
+                                                                label="Graduate Degree(s) you are Pursuing"
+                                                                source-label="Available"
+                                                                selected-label="Chosen"
+                                                                options={graduateDegreeOptions}
+                                                                value={graduateDegreeSelected}
+                                                                onchange={graduateDegreeChangeHandler}
+                                                                disabled={readOnly}>
+                                        </lightning-dual-listbox>
+                                        <br/>
+                                    </div>
+                                </div>
+                                <div class="row note-info-wrap">
+                                    <div class="col-12 form-group note-info">
+                                        <div class="note-info-inner clearfix"><span class="note-info-icon"></span> <span class="note-info-content">If you are pursuing a dual or joint degree, please enter both  degrees here and list your dual degree school above</span></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <label>Graduate Degree(s), if not listed above</label>
+                                        <input type="text" class="form-control graduate-degree-other" value={graduateDegreeOther} onchange={graduateDegreeOtherChangeHandler} readonly={readOnly}>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group ">
+                                        <label>Graduate Degree Concentration(s)</label>
+                                        <input type="text" class="form-control graduate-degree-concentration" value={graduateDegreeConcentration} onchange={graduateDegreeConcentrationChangeHandler} readonly={readOnly}>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group date-picker-wrap">
+                                        <!--<label>Graduate Degree Start Date</label>-->
+                                        <!-- <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+                                            <input type="text" id="example" class="form-control graduate-degree-start-date" onchange={graduateDegreeStartDateChangeHandler}>
+                                            <span class="date-picker-icon"></span>
+                                        </div> -->
+                                    <lightning-input label="Graduate Degree Start Date" type="date" date-style="short" value={graduateDegreeStartDate} onchange={graduateDegreeStartDateChangeHandler} required={enableRequired} read-only={readOnly}></lightning-input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group date-picker-wrap">
+                                        <!--<label>Expected Graduation Date	</label>-->
+                                        <!-- <div id="date-picker-example2" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+                                            <input type="text" id="example2" class="form-control expected-graduation-date" onchange={expectedGraduationDateChangeHandler}>
+                                            <span class="date-picker-icon"></span>
+                                        </div> -->
+                                        <lightning-input label="Expected Graduation Date" type="date" date-style="short" value={expectedGraduationDate} onchange={expectedGraduationDateChangeHandler} required={enableRequired} read-only={readOnly}></lightning-input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <!-- <label>Undergraduate University</label>
+                                        <select class="form-control">
+                                            <option selected>-- None -- </option>
+                                            <option>...</option>
+                                        </select>  -->
+                                        <!-- <c-custom-lookup field-label="Undergraduate University" child-object-api-name='Fellow_Application__c' target-field-api-name='University_School_2__c' value={undergraduateUniversity} onvalueselected={undergraduateUniversityChangeHandler} required={enableRequired}>
+                                        </c-custom-lookup> -->
+                                        <lightning-combobox name="Undergraduate University" label="Undergraduate University" placeholder="Select university" options={underGraduateOptions}
+                                        onchange={undergraduateUniversityChangeHandler} value={undergraduateUniversity} read-only={readOnly}></lightning-combobox>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <label>Undergraduate University, if not listed above	</label>
+                                        <input type="text" class="form-control undergraduate-university-other" value={undergraduateUniversityOther} onchange={undergraduateUniversityOtherChangeHandler} readonly={readOnly}>
+                                    </div>
+                                </div>
+                                <div class="row custom-select-arrow-wrap">
+                                    <!-- <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group custom-select-arrow-left">
+                                        <label class="label-info-tool-tip-icon">Undergraduate Degree(s) earned</label>
+                                        <select class="custom-select custom-select-section" size="6">
+                                            <option selected>Available</option>
+                                            <option value="1">Associate of Arts (AS)</option>
+                                            <option value="2">Associate of Science (AS)</option>
+                                            <option value="3">Associate of Medicine (AM)</option>
+                                            <option value="4">Accociate of Agro (AA)</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-6 col-xl-6 form-group custom-select-arrow-right">
+                                        <span class="registration-application-field-note phone-field-note">(select all that apply)</span>
+                                        <select class="custom-select custom-select-section" size="6">
+                                            <option selected>Chosen</option>
+                                            <option value="1">Assiciate of Science (AS)</option>
+                                        </select>
+                                    </div> -->
+                                    <div class="col-12 form-group">
+                                        <lightning-dual-listbox name="undergraduatedegreeearned"
+                                                                    label="Undergraduate Degree(s) earned"
+                                                                    source-label="Available"
+                                                                    selected-label="Chosen"
+                                                                    options={undergraduateDegreeEarnedOptions}
+                                                                    value={undergraduateDegreeEarnedSelected}
+                                                                    onchange={undergraduateDegreeEarnedChangeHandler} required={enableRequired} disabled={readOnly}></lightning-dual-listbox>
+                                                                    <br/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <label>Undergraduate Degree(s) earned, if not listed above</label>
+                                        <input type="text" class="form-control undergraduate-degree-earned-other" value={undergraduateDegreeEarnedOther} onchange={undergraduateDegreeEarnedOtherChangeHandler} readonly={readOnly}>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <lightning-input type="text" value={undergradMajor} label="Undergraduate Major(s)" onchange={undergradMajorChangeHandler} read-only={readOnly}></lightning-input>
+                                        <!--<label>Undergraduate Major(s)</label>
+                                        <input type="text" class="form-control undergrad-major" value={undergradMajor} onchange={undergradMajorChangeHandler} required={enableRequired}>-->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <!--<label>Please list any relevant coursework, training, or certifications you have completed.</label>
+                                        <textarea class="form-control other-courses-certifications" rows="4" onchange={otherCoursesCertificationsChangeHandler} readonly={readOnly}>{otherCoursesCertifications}</textarea>-->
+                                        <span class="registration-application-field-note phone-field-note">1000 characters max</span>
+                                        <lightning-textarea
+                                        max-length="1000"
+                                        name="courses"
+                                        value={otherCoursesCertifications}
+                                        label="Please list any relevant coursework, training, or certifications you have completed."
+                                        onchange={otherCoursesCertificationsChangeHandler}
+                                        read-only={readOnly}></lightning-textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-button-wrap no-padding-top">
+                                    <template if:false={isChild}>
+                                        <button type="button" class="btn btn-primary white-button margin-right" onclick={backToPreviousTab}>Back</button>
+                                            <template if:false={isDeadlinePassed}>
+                                                <button type="button" class="btn btn-primary green-button margin-right" onclick={updateEducationInformation}>Save and next</button>
+                                            </template>
+                                        <button type="button" class="btn btn-primary white-button" onclick={navigateToDashboard}>Cancel</button>
+                                    </template>
+
+                                    <template if:true={isChild}>
+                                        <template if:false={isDeadlinePassed}>
+                                            <template if:true={readOnly}>
+                                                <button type="button" disabled class="btn btn-primary green-button margin-right" onclick={updateEducationInformation}>Save</button>
+                                            </template>
+                                            <template if:false={readOnly}>
+                                                <button type="button" class="btn btn-primary green-button margin-right" onclick={updateEducationInformation}>Save</button>
+                                            </template>
+                                        </template>
+                                    </template>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- End of body tag div -->
+
+    <template if:false={isChild}>
+        <c-e-d-f22_footer></c-e-d-f22_footer>
+    </template>
+
+</template>

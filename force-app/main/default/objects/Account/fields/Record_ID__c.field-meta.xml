@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_ID__c</fullName>
+    <description>We have 2 fields to support continuing the Account ID number values from LCRM in NPSP (Account Autonumber Backup and Record ID). When a record has a blank value in Account Autonumber Backup and a value in Record ID, it was a migrated record from LCRM. When a record has a value in both fields and they don&apos;t match, it means the record was created during the Delta. It has a value in the Account Autonumber Backup field, but it was created in LCRM, so it retains that value. When the field values match, it is an entirely new record.</description>
+    <displayFormat>ACC-{0000000}</displayFormat>
+    <externalId>false</externalId>
+    <label>Account Autonumber Backup</label>
+    <trackHistory>false</trackHistory>
+    <type>AutoNumber</type>
+</CustomField>

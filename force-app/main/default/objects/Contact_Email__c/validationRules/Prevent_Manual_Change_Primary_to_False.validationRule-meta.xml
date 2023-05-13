@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Manual_Change_Primary_to_False</fullName>
+    <active>false</active>
+    <description>Prevents user from changing a record from Primary TRUE to FALSE while leaving it Current.  User should mark another record as Primary and other records will have Primary removed automatically.</description>
+    <errorConditionFormula>PRIORVALUE(Primary__c) = TRUE &amp;&amp; Primary__c = FALSE &amp;&amp;
+ Is_Automation_Bypassed__c = FALSE</errorConditionFormula>
+    <errorMessage>A Contact can never have Current Contact Email records without one being marked as Primary. To change which Email record is Primary, make the change on the record that will become Primary. All other records will automatically have Primary deselected.</errorMessage>
+</ValidationRule>

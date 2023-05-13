@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ongoing_Support</fullName>
+    <active>true</active>
+    <description>Feedback for continuing support requests</description>
+    <label>Ongoing Support</label>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Approved</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BP_Doc_Update_Status__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Needed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deployment_Status__c</picklist>
+        <values>
+            <fullName>Added to Change Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deployed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manual Deployment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Environment__c</picklist>
+        <values>
+            <fullName>Production</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Feedback_Category__c</picklist>
+        <values>
+            <fullName>Data is missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I can%E2%80%99t do something I need to do</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I would love it if</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Feedback_Source__c</picklist>
+        <values>
+            <fullName>Launch Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Launch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Testing Phase</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Feedback_Status__c</picklist>
+        <values>
+            <fullName>Address via User Story</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Discussion Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Further Discussion Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Known Salesforce Limitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Not An Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Salesforce%2FNPSP Release to Correct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QC Passed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready for IT Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolution Documented</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Feedback_Type__c</picklist>
+        <values>
+            <fullName>Configuration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data cleanup or project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Migrated Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New User Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reports%2C Dashboards%2C List Views</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training or User Questions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Deactivation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Experience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Management</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Migrated_Data_Update_Status__c</picklist>
+        <values>
+            <fullName>Deferred to Launch</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Remigration Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remigration Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remigration Needed - Prod and HellerFul</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority__c</picklist>
+        <values>
+            <fullName>Could</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Critical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Must</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Should</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Script_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Table Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discussion in Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Process - New Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready to Update</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Steps_to_Test__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Detail out in a numbered list the Steps a user should take to test a specific functionality.</inlineHelpText>
+    <label>Steps to Test</label>
+    <length>15000</length>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

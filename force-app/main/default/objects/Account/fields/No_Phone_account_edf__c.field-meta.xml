@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Phone_account_edf__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Do not contact this constituent by phone</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Do not contact this constituent by phone</inlineHelpText>
+    <label>No Phone</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Match_Gift_Amount__c</fullName>
+    <description>The amount of the gift being matched</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The amount of the gift being matched</inlineHelpText>
+    <label>Match Gift Amount</label>
+    <precision>18</precision>
+    <required>true</required>
+    <scale>2</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

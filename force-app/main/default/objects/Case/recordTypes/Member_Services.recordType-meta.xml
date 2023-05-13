@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Member_Services</fullName>
+    <active>true</active>
+    <businessProcess>EDF Member Services</businessProcess>
+    <label>Member Services</label>
+    <picklistValues>
+        <picklist>Case_Topic__c</picklist>
+        <values>
+            <fullName>AD%2FExchange Admin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Account Request %28Non-AD%2FExchange%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Activism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Animal Testing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Annual Report Listing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BYOD Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Backup%2FRestore Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Becoming a Sustainer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancellation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catalyst Circle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cease Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change Amount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Climate - General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaints</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Information Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Partnerships</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Card Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cultivation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DLO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deceased Donor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Defend Our Future</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donation History Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donor Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donor Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate Record</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate Sustainer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDAction Fund</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDF Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecosystems - General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email  List Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employment Status Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FRx Forecaster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FRx Reporter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facilities Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Positive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health - General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Issue EDF Is Not Working On</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Known Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legislation and Questions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost%2FStolen Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail Donation Form EDF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail Donation Form PAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail Donation form EDAF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mailing Preferences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Major Gifts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Making a Donation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matching Gifts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Device Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Name Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Natural Gas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Hire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OCR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oceans - General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opposed to Climate Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planned Giving</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premium Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect Delete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchase Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receipt Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remarks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal Question</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request for Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Pitch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seafood Selector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seeking staff member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Personally</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Webteam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smart Power</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Requests</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stock Gifts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student Question</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecom Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telemarketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Termination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trouble Making a Donation Online</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown Concern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsubscribe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vendor Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virus%2FMalware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vocus PR%2FGR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Walmart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong Number</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_follow_up_required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Member Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online giving and activism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program Work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refund</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sustainer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sentiment__c</picklist>
+        <values>
+            <fullName>negative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>positive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

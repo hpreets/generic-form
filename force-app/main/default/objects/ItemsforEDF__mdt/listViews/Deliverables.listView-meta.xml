@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deliverables</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>Tile_Body__c</columns>
+    <columns>Button_Label__c</columns>
+    <columns>Section_Name__c</columns>
+    <columns>Button_URL__c</columns>
+    <columns>Mapping_Field__c</columns>
+    <columns>IsContactField__c</columns>
+    <columns>Due_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Deliverables</label>
+    <language>en_US</language>
+</ListView>

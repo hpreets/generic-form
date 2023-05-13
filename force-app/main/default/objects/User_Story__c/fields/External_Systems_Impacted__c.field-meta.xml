@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Systems_Impacted__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Does this request and its solution impact any external systems? Do we need to coordinate deployments with any other external groups? Do we need to pause replications or integrations?</inlineHelpText>
+    <label>External Systems Impacted</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recommendation_Rationale__c</fullName>
+    <description>Include reasoning for your recommendation - why is this constituent a prospective donor to this specific program or project?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Include reasoning for your recommendation - why is this constituent a prospective donor to this specific program or project? Additional context can be attached under Files as needed.</inlineHelpText>
+    <label>Recommendation Rationale</label>
+    <length>1500</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

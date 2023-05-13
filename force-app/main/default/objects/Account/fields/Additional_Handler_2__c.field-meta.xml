@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Handler_2__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Tertiary EDF contact for this account</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Tertiary EDF contact for this account</inlineHelpText>
+    <label>Relationship Manager 3</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Accounts (Additional Handler 2)</relationshipLabel>
+    <relationshipName>Accounts4</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>
